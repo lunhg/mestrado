@@ -16,9 +16,9 @@ mas percebi que uma ecologia de saberes almeja por uma [simetria](https://sites.
 
 Coloquei duas versões.
 
-A primeira é de 27 de julho. Com indicações do Fenerich. O arquivo é o diss-v.01-27junho.pdf
+A primeira é de 27 de julho. Com indicações do Fenerich. O arquivo é o [diss-v.01-27junho.pdf](https://bitbucket.org/cravista/mestrado/src/e53a5fa54f8e4beb9f6ab0f18411dd00223bad19/diss-v.01-27junho.pdf?fileviewer=file-view-default)
 
-A segunda é que estou corrigindo (TODO: incompleto), com cortes e as considerações do Castelões e do Fenerich. O arquivo é o main.pdf
+A segunda é que estou corrigindo (TODO: incompleto), com cortes e as considerações do Castelões e do Fenerich. O arquivo é o [main.pdf](https://bitbucket.org/cravista/mestrado/src/6cc8721ea1be1f08e8eec647543add1214edd7fa/main.pdf?fileviewer=file-view-default)
 
 ## Pareceres
 
