@@ -1,0 +1,231 @@
+%% abtex2-modelo-trabalho-academico.tex, v-1.9.2 laurocesar
+
+%% Copyright 2012-2014 by abnTeX2 group at http://abntex2.googlecode.com/ 
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%% 
+%% The Current Maintainer of this work is the abnTeX2 team, led
+%% by Lauro César Araujo. Further information are available on 
+%% http://abntex2.googlecode.com/
+%%
+%% This work consists of the files abntex2-modelo-trabalho-academico.tex,
+%% abntex2-modelo-include-comandos and abntex2-modelo-references.bib
+%%
+%------------------------------------------------------------------------
+% ------------------------------------------------------------------------ 
+% abnTeX2: Modelo de Trabalho Academico (tese de doutorado, dissertacao de
+% mestrado e trabalhos monograficos em geral) em conformidade com 
+% ABNT NBR 14724:2011: Informacao e documentacao - Trabalhos academicos -
+% Apresentacao
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+
+\documentclass[
+	% -- opções da classe memoir --
+	12pt,				% tamanho da fonte
+	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	twoside,			% para impressão em verso e anverso. Oposto a oneside
+	a4paper,			% tamanho do papel. 
+	% -- opções da classe abntex2 --
+	%chapter=TITLE,		        % títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,		        % títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	        % títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,           % títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+	french,				% idioma adicional para hifenização
+	spanish,			% idioma adicional para hifenização
+        italian,                        % idioma adicional para hifenização
+	brazil				% o último idioma é o principal do documento
+	]{abntex2}
+%https://code.google.com/p/abntex2/wiki/Texmaker
+% ---
+% Pacotes
+% ---
+\input{./pacotes}
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\input{./cabecalho}
+\makeindex
+% ----
+% Início do documento
+% ----
+\begin{document}
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+\pretextual
+
+% ---
+% Capa
+% ---
+\imprimircapa
+% ---
+
+% ---
+% Folha de rosto
+% (o * indica que haverá a ficha bibliográfica)
+% ---
+\imprimirfolhaderosto*
+% ---
+
+% ---
+% Inserir a ficha bibliografica
+% ---
+%\input{./ficha_catalografica}
+
+% ---
+% Inserir errata
+% ---
+%\begin{errata}
+%\end{errata}
+
+% \includepdf{folhadeaprovacao_final.pdf}
+%\input{./folha_aprovacao}
+
+% ---
+% Dedicatória
+'% ---
+%\begin{dedicatoria}
+%   \vspace*{\fill}
+%   \centering
+%   \noindent
+%   \textit{ Este trabalho é dedicado às crianças adultas que,\\
+%   quando pequenas, sonharam em se tornar cientistas.} \vspace*{\fill}
+%\end{dedicatoria}
+% ---
+% Agradecimentos
+% ---
+%\begin{agradecimentos}
+%A você...\footnote{...principalmente pela atenção até nas notas de rodapé.}
+%\end{agradecimentos}
+% ---
+
+% ---
+% Epígrafe do livecoding
+% ---
+\begin{epigrafe}
+Alguém poderia imiaginar uma interface musical na qual um músico especifica o som resultante desejado em uma linguagem descritiva na qual poderia ser então traduzido em parâmetros de partículas e renderizados em som. Uma alternativa poderia especificar um exemplo: "Faça (soundfile), but with less vibrato" (Curtis Roads, 2001)\footnote{Tradução de: \emph{One can imagine a musical interface in which a musician specifies the desired sonic result in a musically descriptive language which would then be translated into particle parameters and rendered into sound. An alternative would be to specify an example: "Make me a sound like this (soundfile), but with less vibrato"}}
+\end{epigrafe}
+
+% ---
+% RESUMOS
+% ---
+%\input{./resumos}
+% ---
+% inserir lista de ilustrações
+% ---
+\pdfbookmark[0]{\listfigurename}{lof}
+%\listoffigures*
+%\cleardoublepage
+% ---
+% inserir lista de tabelas
+% ---
+%\pdfbookmark[0]{\listtablename}{lot}
+%\listoftables*
+%\cleardoublepage
+% ---
+% inserir lista de abreviaturas e siglas
+% ---
+%\input{./siglas}
+% ---
+% inserir o sumario
+% ---
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+% ----------------------------------------------------------
+% Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
+% ----------------------------------------------------------
+\input{./introducao}
+
+%------------------------------------------------------
+% PARTE
+% ----------------------------------------------------------
+\part{Ecologia de saberes no \emph{livecoding}}\label{parte1}
+
+%\begingroup
+%\let\clearpage\relax
+\chapter{Pergunta para o método: \emph{live coding} é música?}\label{cap:introducao}
+\include{./01-Introducao}
+\include{./02-Metodologia}
+
+\chapter{Trabalhos Relacionados}\label{cap:trabalhos_relacionados}
+\include{./03-Trabalhos_relacionados}
+%\endgroup
+
+% ----------------------------------------------------------
+% PARTE
+% ----------------------------------------------------------
+\part{Implementação computacional}\label{parte2}
+
+\chapter{Mapeamento dos gêneros musicais no \emph{live coding}}\label{cap:resultados}
+\include{./03.5-Genero}
+\include{./04-Resultados}
+
+\chapter{Conclusão}
+
+
+% ---
+% Conclusão (outro exemplo de capítulo sem numeração e presente no sumário)
+% ---em numeração e presente no sumário)
+% ---
+%\input{./conclusao}
+% ---
+\postextual
+
+% ---
+% Bibliografia
+% ---
+\bibliography{main}
+
+% ----------------------------------------------------------
+% Glossário
+% ----------------------------------------------------------
+%
+% Consulte o manual da classe abntex2 para orientações sobre o glossário.
+%
+%\glossary
+
+% ----------------------------------------------------------
+% Apêndices
+% ----------------------------------------------------------
+
+% Imprime uma página indicando o início dos apêndices
+%\partapendices
+
+% ---
+% Inicia os apêndices
+% ---
+\begin{apendicesenv}
+
+%\include{./apendice/dados_imagens}
+%\include{./apendice/recursividade}
+%\include{./apendice/webaudioapi_wavepotruntime}
+
+
+\end{apendicesenv}
+
+
+\phantompart
+\printindex
+%---------------------------------------------------------------------
+
+\end{document}
