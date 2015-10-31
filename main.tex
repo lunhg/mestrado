@@ -109,15 +109,40 @@
 % Agradecimentos
 % ---
 %\begin{agradecimentos}
-%A você...\footnote{...principalmente pela atenção até nas notas de rodapé.}
+\newpage
+
+\ \vfil\vfil
+
+\begin{flushright}
+\large{\textbf{Agradecimentos}}
+
+\small{À via que gerou o um. Ao um que gerou o dois. Ao dois que gerou o três. E ao três que gerou as dez mil coisas \\
+
+Aos dez mil seres que fugiram do repouso e da obscuridade e que chegaram em direção ao movimento e ao brilho. E tocaram o som imaterial que constituiu a harmonia. \\
+
+Aos homens que detestaram o abandono, a indignidade e a obscuridade. Individualmente, qualificaram a si mesmos assim.\\
+
+Aos que diminuiram para que outros possam crescer, e aos que cresceram para outros fossem diminutos. \\
+
+À Educação, cumeeira de ferro que a morte não atinge, esforço-me para agir de acordo. \\
+
+Aos professores Luiz Eduardo Castelões, Alexandre Fenerich e Flávio Luiz Schiavonni por serem fundamentais nas críticas e no apoio institucional, no momento em que vislumbramos o sucateamento acadêmico. À FAPEMIG por apoiar esta pesquisa. Aos amigxs que estão, ou moraram em Juiz de Fora, fundamentais para a continuação do trabalho (Glerm, Anna Flávia, Tiago Rubini). Aos amigxs de campinas que de alguma forma me ajudaram a suportar a distância (Doshi, Larissa, Dani, Tati, Catatau, Rebechi, Felício).}
+
+TODO...
+
+\end{flushright}
+
+\vfil \ 
+
+\newpage
+
 %\end{agradecimentos}
 % ---
 
 % ---
 % Epígrafe do livecoding
 % ---
-\epigraph{\emph{Criei todas as festas, todos os triunfos, todos os dramas. Experimentei inventar novas flores, novos astros, novas carnes, novas línguas. Acreditei adquirir poderes sobrenaturais. Ora bem! eis que devo enterrar minha imaginação e minhas lembranças!  Que bela glória de artista e narrador arrebatada!}}{Arthur Rimbaud }
-%Alguém poderia imiaginar uma interface musical na qual um músico especifica o som resultante desejado em uma linguagem descritiva na qual poderia ser então traduzido em parâmetros de partículas e renderizados em som. Uma alternativa poderia especificar um exemplo: "Faça um , but with less vibrato" (Curtis Roads, 2001)\footnote{Tradução de: \emph{One can imagine a musical interface in which a musician specifies the desired sonic result in a musically descriptive language which would then be translated into particle parameters and rendered into sound. An alternative would be to specify an example: "Make me a sound like this (soundfile), but with less vibrato"}}
+\epigraph{Alguém poderia imaginar uma interface musical na qual um músico especifica o som resultante desejado em uma linguagem descritiva, na qual poderia ser então traduzido em parâmetros de partículas e renderizados em som. Uma alternativa poderia especificar um exemplo: "Faça um som assim (arquivo de som), mas com pouco vibrato"\footnote{Tradução de: \emph{One can imagine a musical interface in which a musician specifies the desired sonic result in a musically descriptive language which would then be translated into particle parameters and rendered into sound. An alternative would be to specify an example: "Make me a sound like this (soundfile), but with less vibrato"}}}{Curtis \citeonline{roads_microsound_2001}}
 \newpage
 
 % ---
@@ -165,7 +190,6 @@
 %\let\clearpage\relax
 \chapter{Pergunta para o método: \emph{live coding} é música?}\label{cap:introducao}
 \include{./01-Introducao}
-%\include{./04-Resultados}
 
 \chapter{Metodologia}\label{cap:metodologia}
 \include{./02-Metodologia}
@@ -180,22 +204,38 @@
 
 \chapter{Estudos de casos}\label{cap:estudos_de_caso}
 
-Comparo três casos do pesquisador australiano Andrew Sorensen que considero simbólicos. A comparação será feita com as improvisações \emph{Study in Keith} (2009), 
+Comparo três casos do pesquisador australiano Andrew Sorensen que considero simbólicos. As improvisações \emph{Study in Keith} (2009), \autoref{sec:studyinkeith}, \emph{Day of Triffords} (2010), e \emph{The Disklavier Sessions} (2012), serão analisadas com a intenção de expor uma variedade em um único \emph{live coder}. 
 
-\section{Study in Keith} 
+Isto é, se em teoria o \emph{live coding} é uma ferramenta, uma \emph{motoserra}, e pode replicar qualquer gênero musical, em casos específicos serão replicados recortes destes gêneros. Para investigar a replicação destes gêneros, serão analisados os universos de conceitos de cada improvisação.
+
+\section{Study in Keith}\label{sec:studyinkeith}
+
+Segundo Andrew Sorensen, ``\emph{A Study In Keith} é um trabalho para piano solo (NI's Akoustik Piano), inspirado nos concertos \emph{Sun Bear} de Keith Jarrett's'' \cite{sorensen_keith_2009}.
+
+O NI, é uma abreviação para \emph{Native Instruments}, uma empresa de manufatura para  de tecnologias para áudio \footnote{Tradução parcial  de \emph{Native Instruments is a leading manufacturer of software and hardware for computer-based audio production and DJing. The company's mission is to develop innovative, fully-integrated solutions for all musical styles and professions. The resulting products regularly push technological boundaries and open up new creative horizons for professionals and amateurs alike.} Disponível em \url{http://www.native-instruments.com/en/company/}.}. O \emph{Akoustic Piano} é uma extensão (\emph{plugin}) VST\footnote{\emph{Virtual Studio Technology}. Disponível em \url{http://www.steinberg.net/}.}, que emula diferentes pianos acústicos, e suas reverberações, em 10 diferentes tipos de dinâmicas e tempos de sustentação. Entre os instrumentos utilizados, incluem o \emph{Bösendorfer 290 Imperial}, \emph{Steinway D}, e \emph{Bechstein D 280}\footnote{Disponível em \url{http://www.kvraudio.com/product/akoustik-piano-by-native-instruments}.}
+
+Os concertos \emph{Sun Bear} são originalmente dez LPs  de improvisações de Keith Jarret, gravados pela \emph{ECM Records}\footnote{http://www.ecmrecords.com/} em 1976 no Japão, e lançados em 1978. Kyoto, 5 de novembro\footnote{Disponível em \url{https://www.youtube.com/watch?v=T2TfIQNxhjc}.}. Osaka, 8 de novembro. Nagoya, 12 de novembro\footnote{\url{https://www.youtube.com/watch?v=3a7ezm3D1jA}.}. Tokyo, 14 de novembro. Sapporo, 18 de Novembro.
+
+Uma nota pertinente sobre esta improvisação feita pelo próprio Sorensen: nos primeiros dois minutos do vídeo, existe um silêncio. Este silêncio é decorrente da construção das estruturas lógicas do programa. (\Idem{sorensen_keith_2009}). Este comportamento, do tempo de codificação, ao tempo de ação musical, é similar em outro vídeo analisado na  \autoref{sec:dayofthetriffords}. 
+
+\subsection{Concertos \emph{Sun Bear}}
+
+Existe uma crítica não datada de \citeauthoronline{ginnel_allmusic} separa
+
+\begin{citacao}
+Na abertura de concerto Kyoto, a meditação orientada ao evangelho de Jarrett está em pleno funcionamento, no nível de pico de suas apresentações solo em Bremen e Koln, e os shows em Osaka e Nagoya tem receptáculos de primeira linha, muitas vezes parecidos com \emph{folk} (\ldots). O concerto de Tóquio leva um tempo para engrenar, mas quando Jarrett finalmente se bloqueia em um de seus vampiros de \emph{grooves}, ele nos traz consigo, e não há um bis memoravelmente melódico. Em Sapporo, Jarrett quebra de um padrão bem que flui em um ritmo nervoso que lembra um de C & W dedilhar da guitarra, e há algumas coisas barrelhouse exuberante e focos de dissonância na parte dois. Cada concerto é colocado em um único CD, enquanto o sexto disco muito breve é ​​reservada para os encores de Nagoya, Tóquio e Sapporo. Enquanto Sun Bear quebra pouco de terreno que seus álbuns anteriores piano solo já não tivesse coberto, não deixa de ser ricamente inventivo dentro parâmetro pessoal de Jarrett de expressões idiomáticas. Se o preço não é uma barreira, o devoto Jarrett não precisa hesitar.\footnote{Tradução de \emph{In the opening Kyoto concert, Jarrett's gospel-driven muse is in full play, up to the level of his peak solo performances in Bremen and Koln, and the Osaka and Nagoya concerts have pockets of first-rate, often folk-like, even profound, lyrical ideas. The Tokyo concert takes a while to get in gear, but when Jarrett finally locks into one of his grooving vamps, he carries us along, and there is a memorably melodic encore. In Sapporo, Jarrett breaks from a nicely flowing pattern into a jumpy rhythm that reminds one of C&W guitar fingerpicking, and there's some exuberant barrelhouse stuff and outbreaks of dissonance in part two. Each concert is placed on a single CD, while the much briefer sixth disc is reserved for the encores from Nagoya, Tokyo, and Sapporo. While Sun Bear breaks little ground that his earlier solo piano albums had not already covered, it is nevertheless richly inventive within Jarrett's personal parameter of idioms. If price is not a barrier, the Jarrett devotee need not hesitate.}.}
+\end{citacao}\todo{\tiny corrigir citacao}
+
 
 \section{The Disklavier Sessions}
 
 Neste trabalho, Sorensen controla um piano. Através da programação com o software \emph{Extempore}, Sorensen controla o mecanismo interno de um piano acústico fabricado pela Yamaha. Esse piano, batizado de \emph{Disklavier}, é peculiar por permitir a memorização (em componentes eletrônicos inseridos no corpo acústico) de uma performance.
 
-É interessante nesta memorização, o processo de codificação dos eventos musicais em eventos MIDI.  
+TODO...
 
- Nesse vídeo, além do controle do instrumento musical
-através de dispositivos adequados, o músico externaliza para o público o processo de
-criação e edição do código-fonte que controla o dispositivo.
+\section{Day of the Triffords}\label{sec:dayofthetriffords}
 
-\section{Strange Places}
-
+TODO ...
 \chapter{Conclusão}
 
 
