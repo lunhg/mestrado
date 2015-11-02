@@ -110,26 +110,25 @@
 % ---
 %\begin{agradecimentos}
 \newpage
-
-\ \vfil\vfil
-
 \begin{flushright}
-\large{\textbf{Agradecimentos}}
+\huge{\textbf{Agradecimentos}}
 
-\small{À via que gerou o um. Ao um que gerou o dois. Ao dois que gerou o três. E ao três que gerou as dez mil coisas \\
-
-Aos dez mil seres que fugiram do repouso e da obscuridade e que chegaram em direção ao movimento e ao brilho. E tocaram o som imaterial que constituiu a harmonia. \\
-
-Aos homens que detestaram o abandono, a indignidade e a obscuridade. Individualmente, qualificaram a si mesmos assim.\\
-
-Aos que diminuiram para que outros possam crescer, e aos que cresceram para outros fossem diminutos. \\
-
-À Educação, cumeeira de ferro que a morte não atinge, esforço-me para agir de acordo. \\
-
-Aos professores Luiz Eduardo Castelões, Alexandre Fenerich e Flávio Luiz Schiavonni por serem fundamentais nas críticas e no apoio institucional, no momento em que vislumbramos o sucateamento acadêmico. À FAPEMIG por apoiar esta pesquisa. Aos amigxs que estão, ou moraram em Juiz de Fora, fundamentais para a continuação do trabalho (Glerm, Anna Flávia, Tiago Rubini). Aos amigxs de campinas que de alguma forma me ajudaram a suportar a distância (Doshi, Larissa, Dani, Tati, Catatau, Rebechi, Felício).}
-
-TODO...
-
+\LARGE{À Via que gerou o um. Ao um que gerou o dois. Ao dois que gerou o três. E ao tr\^es que gerou as dez mil coisas.} \\
+\ \\
+\large{Aos dez mil seres que fugiram do repouso e da obscuridade e que chegaram em direção ao movimento e ao brilho.} \\
+\ \\
+\normalsize{E tocaram o som imaterial que constituiu a harmonia.} \\
+\ \\
+\small{Aos homens que detestaram o abandono, a indignidade e a obscuridade.} \\
+\ \\
+\footnotesize{Individualmente, qualificaram a si mesmos assim.} \\
+\ \\
+\scriptsize{Aos que diminuiram para que outros possam crescer, e aos que cresceram para outros fossem diminutos.} \\
+\ \\
+\tiny{À Educação, cumeeira de ferro que a morte não atinge, esforço-me para agir de acordo.\footnote{Adaptação do poema 42 do Tao Te King.}} \\
+\ \\
+\ \\
+\small{Aos professores Luiz Eduardo Castelões, Alexandre Fenerich e Flávio Luiz Schiavonni por serem fundamentais nas críticas e no apoio institucional, no momento em que vislumbramos o sucateamento acadêmico. À FAPEMIG por apoiar esta pesquisa. Aos amigxs que estão, ou moraram em Juiz de Fora, fundamentais para a continuação do trabalho (Glerm, Anna Flávia, Tiago Rubini). Aos amigxs de campinas que de alguma forma me ajudaram a suportar a distância de esforços, nostalgias e amizades (Doshi, Larissa, Dani, Tati, Catatau, Rebechi, Felício).}
 \end{flushright}
 
 \vfil \ 
@@ -186,10 +185,11 @@ TODO...
 % ----------------------------------------------------------
 %\part{Ecologia de saberes no \emph{livecoding}}\label{parte1}
 
-%\begingroup
-%\let\clearpage\relax
+\begingroup
+\let\clearpage\relax
 \chapter{Pergunta para o método: \emph{live coding} é música?}\label{cap:introducao}
 \include{./01-Introducao}
+\endgroup
 
 \chapter{Metodologia}\label{cap:metodologia}
 \include{./02-Metodologia}
@@ -204,9 +204,21 @@ TODO...
 
 \chapter{Estudos de casos}\label{cap:estudos_de_caso}
 
-Comparo três casos do pesquisador australiano Andrew Sorensen que considero simbólicos. As improvisações \emph{Study in Keith} (2009), \autoref{sec:studyinkeith}, \emph{Day of Triffords} (2010), e \emph{The Disklavier Sessions} (2012), serão analisadas com a intenção de expor uma variedade em um único \emph{live coder}. 
+Neste capítulo, busco comparar três casos do pesquisador australiano Andrew Sorensen que considero simbólicos. As improvisações \emph{Study in Keith} (2009), \autoref{sec:studyinkeith}, \emph{Day of Triffords} (2010), e \emph{The Disklavier Sessions} (2012), serão analisadas com a intenção de expor uma variedade em um único \emph{live coder}, aos invés de um corte cirúrgico em um único exemplo.
 
-Isto é, se em teoria o \emph{live coding} é uma ferramenta, uma \emph{motoserra}, e pode replicar qualquer gênero musical, em casos específicos serão replicados recortes destes gêneros. Para investigar a replicação destes gêneros, serão analisados os universos de conceitos de cada improvisação.
+Os exemplos replicam diferentes categorias sonoras, de forma limitada, por meio de uma improvisação de regras estruturais (algoritmos). De certa forma, é possível generalizar uma lista de conceitos $X,~Y,~Z$, com um elemento para um tipo de improvisação (\autoref{eq:universo}).
+
+\begin{equation}
+U = [\alpha, (\ldots), X, Y, Z, (\ldots), \omega]
+\end{equation}\label{eq:universo}
+
+Por sua vez, cada conceito é uma outra lista, de objetos, características e processos. Estes podem definir como cada improvisação de Sorensen será direcionada, o que pode levar a diferentes categorizações musicais (\label{eq:conceitos}):
+
+\begin{equation}
+X = [O_x, F_x, P_x]; Y = [O_y, F_y, P_y], Z = [O_z, F_z, P_z]
+\end{equation}\label{eq:conceitos}
+
+Neste trabalho, assumo que, para todos os conceitos, uma mesma linguagem $L$ está sendo usada por Sorensen para expressar regras. Esta linguagem é o LISP.
 
 \section{Study in Keith}\label{sec:studyinkeith}
 
@@ -220,22 +232,31 @@ Uma nota pertinente sobre esta improvisação feita pelo próprio Sorensen: nos 
 
 \subsection{Concertos \emph{Sun Bear}}
 
-Existe uma crítica não datada de \citeauthoronline{ginnel_allmusic} separa
+TODO ...
+
+\subsection{Algorithms are Thoughts, Chainsaws are Tools}
+
+``Algorithms are Thoughts, Chainsaws are Tools'' é o nome dado ao vídeo de Stephen \citeonline{ramsay_algorithms_2010}, contendo uma análise da performance de \emph{Study in Keith}. Ramsay apresenta o vídeo como:
 
 \begin{citacao}
-Na abertura de concerto Kyoto, a meditação orientada ao evangelho de Jarrett está em pleno funcionamento, no nível de pico de suas apresentações solo em Bremen e Koln, e os shows em Osaka e Nagoya tem receptáculos de primeira linha, muitas vezes parecidos com \emph{folk} (\ldots). O concerto de Tóquio leva um tempo para engrenar, mas quando Jarrett finalmente se bloqueia em um de seus vampiros de \emph{grooves}, ele nos traz consigo, e não há um bis memoravelmente melódico. Em Sapporo, Jarrett quebra de um padrão bem que flui em um ritmo nervoso que lembra um de C & W dedilhar da guitarra, e há algumas coisas barrelhouse exuberante e focos de dissonância na parte dois. Cada concerto é colocado em um único CD, enquanto o sexto disco muito breve é ​​reservada para os encores de Nagoya, Tóquio e Sapporo. Enquanto Sun Bear quebra pouco de terreno que seus álbuns anteriores piano solo já não tivesse coberto, não deixa de ser ricamente inventivo dentro parâmetro pessoal de Jarrett de expressões idiomáticas. Se o preço não é uma barreira, o devoto Jarrett não precisa hesitar.\footnote{Tradução de \emph{In the opening Kyoto concert, Jarrett's gospel-driven muse is in full play, up to the level of his peak solo performances in Bremen and Koln, and the Osaka and Nagoya concerts have pockets of first-rate, often folk-like, even profound, lyrical ideas. The Tokyo concert takes a while to get in gear, but when Jarrett finally locks into one of his grooving vamps, he carries us along, and there is a memorably melodic encore. In Sapporo, Jarrett breaks from a nicely flowing pattern into a jumpy rhythm that reminds one of C&W guitar fingerpicking, and there's some exuberant barrelhouse stuff and outbreaks of dissonance in part two. Each concert is placed on a single CD, while the much briefer sixth disc is reserved for the encores from Nagoya, Tokyo, and Sapporo. While Sun Bear breaks little ground that his earlier solo piano albums had not already covered, it is nevertheless richly inventive within Jarrett's personal parameter of idioms. If price is not a barrier, the Jarrett devotee need not hesitate.}.}
-\end{citacao}\todo{\tiny corrigir citacao}
+Um curta sobre \emph{livecoding} apresentado como parte do Grupo de Estudos de Crítica de Códigos, em 2010, por Stephen Ramsay. Apresenta uma leitura ao vivo $[$\emph{live reading}$]$ de uma performance do compositor Andrew Sorensen. Também fala sobre J.D. Salinger, the Rockets, tocando instrumentos, Lisp, do clima em Brisbane e kettle drums. \footnote{Tradução de \emph{A short film on livecoding presented as part of the Critical Code Studies Working Group, March 2010, by Stephen Ramsay. Presents a "live reading" of a performance by composer Andrew Sorensen. It also talks about J. D. Salinger, the Rockettes, playing musical instruments, Lisp, the weather in Brisbane, and kettle drums.}.}
+\end{citacao}
+É interessante aqui notar que este vídeo contém comentários. Abaixo realizei uma compilação de fragmentos de alguns dos comentários que considerei pertinentes. 
+
+O primeiro comentário destaca a função de uma partitura-programação \cite[p.~5]{fenerich_marulho_2014}, escrita em linguagem LISP. Amanda French nega a utilização do termo \emph{partitura} para explicitar diferenças no uso da programação-partitura, em uma performance de improvisação com o computador, para uma performance não-improvisada com partitura:
+
+\begin{citacao}
+$[$Amanda French$]$: A noção de partitura não se aplica aqui, é como não fosse possível aplicá-lo ao músico de \emph{jazz} ou tocador de \emph{bluegrass}. (\ldots). Levanta a questão, para mim, se, em uma sessão de \emph{livecoding} *feita* constituído no ato de digitar em um programa existente, seria tão convincente -- Eu acho que isso pode definitivamente ter pontos de interesse. Ou qual seria o análogo do \emph{livecoding} para uma performance não-improvisada de música?\footnote{Tradução parcial de \emph{The notion of "sheet music" doesn't apply here, as it wouldn't apply to a jazz musician or a bluegrass picker. Even the name of his environment, Impromptu, makes that point. Raises the question for me precisely of whether a livecoding session that *did* consist of simply typing in an existing program would be as compelling -- I think it would definitely have its points of interest, actually. Or what would the livecoding analog be to a non-improvisational live performance of music?}}
+\end{citacao}
+
+Um segundo comentário, coloca a pergunta de Amanda em outra perspectiva:
+
+\begin{citacao}
+(\ldots) ao ver como o \emph{livecoding} sugere o que associamos de forma típica à música improvisada, podemos imaginar uma forma na qual uma performance musical sugere o \emph{livecoding}? O que torna o \emph{livecoding} diferente, e pode a performance de música tradicional imitar isso? Para responder esta questão, parece importante notar que as formas nas quais a música improvisada muitas vezes apela para alguma noção de autenticidade ou gênio. Enquanto o \emph{livecoding} ele mesmo à noção de virtuosismo de código, ``autenticidade'' parece fora de lugar aqui. Se música improvisada sugere expressão, o \emph{livecoding} sugere um conjunto de restrições na expressão, descrevendo os parâmetros através dos quais a máquina (midi) ganha expressão \footnote{Tradução nossa de \emph{(\ldots) having seen how livecoding suggests what we typically associate with improvised music, can we imagine a way in which a music performance suggests livecoding? What makes livecoding different, and can a traditional music performance mimic it? To answer this question, it seems important to note the ways in which improvised music often appeals to some notion of authenticity or genius. While livecoding might lend itself to some notion of coding virtuosity, "authenticity" seems out of place here. If improvised music is expression, livecoding suggests a setting of constraints on expression, describing the parameters through which the machine (midi) gets expressed.}}
+\end{citacao}
 
 
-\section{The Disklavier Sessions}
 
-Neste trabalho, Sorensen controla um piano. Através da programação com o software \emph{Extempore}, Sorensen controla o mecanismo interno de um piano acústico fabricado pela Yamaha. Esse piano, batizado de \emph{Disklavier}, é peculiar por permitir a memorização (em componentes eletrônicos inseridos no corpo acústico) de uma performance.
-
-TODO...
-
-\section{Day of the Triffords}\label{sec:dayofthetriffords}
-
-TODO ...
 \chapter{Conclusão}
 
 
