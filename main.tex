@@ -111,7 +111,7 @@
 % ---
 % Epígrafe do livecoding
 % ---
-\epigraph{Alguém poderia imaginar uma interface musical na qual um músico especifica o som resultante desejado em uma linguagem descritiva, na qual poderia ser então traduzido em parâmetros de partículas e renderizados em som. Uma alternativa poderia especificar um exemplo: "Faça um som assim (arquivo de som), mas com pouco vibrato"\footnote{Tradução de: \emph{One can imagine a musical interface in which a musician specifies the desired sonic result in a musically descriptive language which would then be translated into particle parameters and rendered into sound. An alternative would be to specify an example: "Make me a sound like this (soundfile), but with less vibrato"}}}{Curtis \citeonline{roads_microsound_2001}}
+\epigraph{Alguém poderia imaginar uma interface musical na qual um músico especifica o som resultante desejado em uma linguagem descritiva, na qual poderia ser então traduzido em parâmetros de partículas e renderizados em som. Uma alternativa poderia especificar um exemplo: "Faça um som assim (arquivo de som), mas com pouco vibrato}{Curtis \citeonline{roads_microsound_2001}}
 \newpage
 
 % ---
@@ -159,91 +159,28 @@
 \let\clearpage\relax
 \chapter{Pergunta para o método: \emph{live coding} é música?}\label{cap:introducao}
 \include{./01-Introducao}
-
-
 \endgroup
 
+\begingroup
+\let\clearpage\relax
 \chapter{Metodologia}\label{cap:metodologia}
 \include{./02-Metodologia}
-%\endgroup
+\endgroup
 
-% ----------------------------------------------------------
-% PARTE
-% ----------------------------------------------------------
-%\part{Trabalhos }\label{parte2}
+\begingroup
+\let\clearpage\relax
 \chapter{Trabalhos Relacionados}\label{cap:trabalhos_relacionados}
 \include{./03-Trabalhos_relacionados}
+\endgroup
 
+\begingroup
+\let\clearpage\relax
 \chapter{Estudos de casos}\label{cap:estudos_de_caso}
-
-Neste capítulo, apresento \emph{Study in Keith} de Andrew \cite{sorensen_study_2009}, considerando o que foi exposto na \autoref{eq:espaco_pesquisa}, no \autoref{cap:metodologia} na pág. X.
-
-Mais especificamente, este capítulo objetiva estudar como ocorre a união entre as regras de validação, localização transversal e de gosto específicos do \emph{livecoding} e de \emph{Keith Jarret} (ver \autoref{eq:keith}) no espaço conceitual de \emph{Study in Keith}.
-
-\begin{equation}
-\mathcal{C}_\emph{Study in Keith} = \mathcal{C}_\emph{livecoding} \bigcup \mathcal{C}_\emph{Sun Bear Concerts}
-\end{equation}\label{eq:espaco_pesquisa}
-
-A variável $\mathcal{C}_\emph{Study in Keith}$ será discutida na \autoref{sec:studyinkeith}. A variável $\mathcal{C}_\emph{livecoding}$ foi discutida no capítulo anterior. A variável $\mathcal{C}_\emph{Sun Bear Concerts}$ será discutida na \autoref{sec:sunbear}.
-
-De forma análoga à \autoref{eq:keith}, o espaço conceitual de $\mathcal{C}_\emph{Sun Bear Concerts}$ pode ser definido pela função de interpretação de regras:
-
-\begin{equation}
-\mathcal{C}_\emph{Sun Bear Concerts} = <<<\mathcal{R}_\emph{Sun Bear Concerts}, \mathcal{T}_\emph{Sun Bear Concerts},  \mathcal{E}_\emph{Sun Bear Concerts} >>> 
-\end{equation}\label{eq:sunbear}
-
-Neste trabalho, assumo que, para todos os conceitos, uma mesma linguagem $L$ está sendo usada por Sorensen para expressar regras. De um lado técnico da Ciências da Computação, esta linguagem é o LISP. Do lado da ``linguagem musical'', estamos falando de um estilo pessoal de tocar \emph{Jazz} de \emph{Keith Jarret}, ou em outras palavras, uma união entre uma linguagem de programação específica, e um espaço conceitual de Andrew Sorensen sobre \emph{Keith Jarret}
-
-\begin{equation}
-\mathcal{L}_\emph{Study in Keith} = \mathcal{L}_\emph{LISP} \bigcup \mathcal{C}_\emph{Andrew Sorensen $\Rightarrow$ Keith Jarret}
-\end{equation}\label{eq:sunbear}
-
-\section{Study in Keith}\label{sec:studyinkeith}
-
-Segundo Andrew Sorensen, ``\emph{A Study In Keith} é um trabalho para piano solo (NI's Akoustik Piano), inspirado nos concertos \emph{Sun Bear} de Keith Jarrett's'' \cite{sorensen_keith_2009}.
-
-O NI, é uma abreviação para \emph{Native Instruments}, uma empresa de manufatura para  de tecnologias para áudio \footnote{Tradução parcial  de \emph{Native Instruments is a leading manufacturer of software and hardware for computer-based audio production and DJing. The company's mission is to develop innovative, fully-integrated solutions for all musical styles and professions. The resulting products regularly push technological boundaries and open up new creative horizons for professionals and amateurs alike.} Disponível em \url{http://www.native-instruments.com/en/company/}.}. O \emph{Akoustic Piano} é uma extensão (\emph{plugin}) VST\footnote{\emph{Virtual Studio Technology}. Disponível em \url{http://www.steinberg.net/}.}, que emula diferentes pianos acústicos, e suas reverberações, em 10 diferentes tipos de dinâmicas e tempos de sustentação. Entre os instrumentos utilizados, incluem o \emph{Bösendorfer 290 Imperial}, \emph{Steinway D}, e \emph{Bechstein D 280}\footnote{Disponível em \url{http://www.kvraudio.com/product/akoustik-piano-by-native-instruments}.}
-
-Os concertos \emph{Sun Bear} são originalmente dez LPs  de improvisações de Keith Jarret, gravados pela \emph{ECM Records}\footnote{http://www.ecmrecords.com/} em 1976 no Japão, e lançados em 1978. Kyoto, 5 de novembro\footnote{Disponível em \url{https://www.youtube.com/watch?v=T2TfIQNxhjc}.}. Osaka, 8 de novembro. Nagoya, 12 de novembro\footnote{\url{https://www.youtube.com/watch?v=3a7ezm3D1jA}.}. Tokyo, 14 de novembro. Sapporo, 18 de Novembro.
-
-Uma nota pertinente sobre esta improvisação feita pelo próprio Sorensen: nos primeiros dois minutos do vídeo, existe um silêncio. Este silêncio é decorrente da construção das estruturas lógicas do programa. (\Idem{sorensen_keith_2009}). Este comportamento, do tempo de codificação, ao tempo de ação musical, é similar em outro vídeo analisado na  \autoref{sec:dayofthetriffords}. 
-
-\subsection{Concertos \emph{Sun Bear}}\label{sec:sunbear}
-
-TODO ...
-
-\subsection{Algorithms are Thoughts, Chainsaws are Tools}
-
-``Algorithms are Thoughts, Chainsaws are Tools'' é o nome dado ao vídeo de Stephen \citeonline{ramsay_algorithms_2010}, contendo uma análise da performance de \emph{Study in Keith}. Ramsay apresenta o vídeo como:
-
-\begin{citacao}
-Um curta sobre \emph{livecoding} apresentado como parte do Grupo de Estudos de Crítica de Códigos, em 2010, por Stephen Ramsay. Apresenta uma leitura ao vivo $[$\emph{live reading}$]$ de uma performance do compositor Andrew Sorensen. Também fala sobre J.D. Salinger, the Rockets, tocando instrumentos, Lisp, do clima em Brisbane e kettle drums. \footnote{Tradução de \emph{A short film on livecoding presented as part of the Critical Code Studies Working Group, March 2010, by Stephen Ramsay. Presents a "live reading" of a performance by composer Andrew Sorensen. It also talks about J. D. Salinger, the Rockettes, playing musical instruments, Lisp, the weather in Brisbane, and kettle drums.}.}
-\end{citacao}
-É interessante aqui notar que este vídeo contém comentários. Abaixo realizei uma compilação de fragmentos de alguns dos comentários que considerei pertinentes. 
-
-O primeiro comentário destaca a função de uma partitura-programação \cite[p.~5]{fenerich_marulho_2014}, escrita em linguagem LISP. Amanda French nega a utilização do termo \emph{partitura} para explicitar diferenças no uso da programação-partitura, em uma performance de improvisação com o computador, para uma performance não-improvisada com partitura:
-
-\begin{citacao}
-$[$Amanda French$]$: A noção de partitura não se aplica aqui, é como não fosse possível aplicá-lo ao músico de \emph{jazz} ou tocador de \emph{bluegrass}. (\ldots). Levanta a questão, para mim, se, em uma sessão de \emph{livecoding} *feita* constituído no ato de digitar em um programa existente, seria tão convincente -- Eu acho que isso pode definitivamente ter pontos de interesse. Ou qual seria o análogo do \emph{livecoding} para uma performance não-improvisada de música?\footnote{Tradução parcial de \emph{The notion of "sheet music" doesn't apply here, as it wouldn't apply to a jazz musician or a bluegrass picker. Even the name of his environment, Impromptu, makes that point. Raises the question for me precisely of whether a livecoding session that *did* consist of simply typing in an existing program would be as compelling -- I think it would definitely have its points of interest, actually. Or what would the livecoding analog be to a non-improvisational live performance of music?}}
-\end{citacao}
-
-Um segundo comentário, coloca a pergunta de Amanda em outra perspectiva:
-
-\begin{citacao}
-(\ldots) ao ver como o \emph{livecoding} sugere o que associamos de forma típica à música improvisada, podemos imaginar uma forma na qual uma performance musical sugere o \emph{livecoding}? O que torna o \emph{livecoding} diferente, e pode a performance de música tradicional imitar isso? Para responder esta questão, parece importante notar que as formas nas quais a música improvisada muitas vezes apela para alguma noção de autenticidade ou gênio. Enquanto o \emph{livecoding} ele mesmo à noção de virtuosismo de código, ``autenticidade'' parece fora de lugar aqui. Se música improvisada sugere expressão, o \emph{livecoding} sugere um conjunto de restrições na expressão, descrevendo os parâmetros através dos quais a máquina (midi) ganha expressão \footnote{Tradução nossa de \emph{(\ldots) having seen how livecoding suggests what we typically associate with improvised music, can we imagine a way in which a music performance suggests livecoding? What makes livecoding different, and can a traditional music performance mimic it? To answer this question, it seems important to note the ways in which improvised music often appeals to some notion of authenticity or genius. While livecoding might lend itself to some notion of coding virtuosity, "authenticity" seems out of place here. If improvised music is expression, livecoding suggests a setting of constraints on expression, describing the parameters through which the machine (midi) gets expressed.}}
-\end{citacao}
-
-
+\include{./04-Estudo_de_caso}
+\endgroup
 
 \chapter{Conclusão}
 
-
-% ---
-% Conclusão (outro exemplo de capítulo sem numeração e presente no sumário)
-% ---em numeração e presente no sumário)
-% ---
-%\input{./conclusao}
-% ---
 \postextual
 
 % ---
@@ -264,23 +201,16 @@ Um segundo comentário, coloca a pergunta de Amanda em outra perspectiva:
 % ----------------------------------------------------------
 
 % Imprime uma página indicando o início dos apêndices
-%\partapendices
+\partapendices
 
 % ---
 % Inicia os apêndices
 % ---
 \begin{apendicesenv}
-
-%\include{./apendice/dados_imagens}
-%\include{./apendice/recursividade}
-%\include{./apendice/webaudioapi_wavepotruntime}
-
-
+\include{./A-ModeloImproviso}
 \end{apendicesenv}
-
 
 \phantompart
 \printindex
 %---------------------------------------------------------------------
-
 \end{document}
