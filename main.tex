@@ -46,16 +46,23 @@
         italian,                        % idioma adicional para hifenização
 	brazil				% o último idioma é o principal do documento
 	]{abntex2}
-%https://code.google.com/p/abntex2/wiki/Texmaker
+
 % ---
 % Pacotes
 % ---
 \input{./pacotes}
+
+% ---
+% MACROS
+% ---
+\input{./macros}
+
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
 \input{./cabecalho}
 \makeindex
+
 % ----
 % Início do documento
 % ----
@@ -145,6 +152,8 @@
 % ----------------------------------------------------------
 \textual
 
+\input{./aviso}
+
 % ----------------------------------------------------------
 % Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
 % ----------------------------------------------------------
@@ -154,32 +163,19 @@
 % PARTE
 % ----------------------------------------------------------
 %\part{Ecologia de saberes no \emph{livecoding}}\label{parte1}
-
-\begingroup
-\let\clearpage\relax
-\chapter{Pergunta para o método: \emph{live coding} é música?}\label{cap:introducao}
 \include{./01-Introducao}
-\endgroup
-
-\begingroup
-\let\clearpage\relax
-\chapter{Metodologia}\label{cap:metodologia}
+\newpage
 \include{./02-Metodologia}
-\endgroup
-
-\begingroup
-\let\clearpage\relax
-\chapter{Trabalhos Relacionados}\label{cap:trabalhos_relacionados}
-\include{./03-Trabalhos_relacionados}
-\endgroup
-
-\begingroup
-\let\clearpage\relax
-\chapter{Estudo de caso}\label{cap:estudos_de_caso}
+\newpage
 \include{./04-Estudo_de_caso}
-\endgroup
-
+\newpage
 \chapter{Conclusão}
+\begin{frame}
+\centering
+\Large{ESTE CAPÍTULO NÃO ESTÁ CORRIGIDO.} 
+
+\emph{APENAS FOI INSERIDO PARA CONTEMPLAR O SUMÁRIO}
+\end{frame}
 
 \postextual
 
@@ -206,9 +202,12 @@
 % ---
 % Inicia os apêndices
 % ---
-%\begin{apendicesenv}
-%\include{./A-ModeloImproviso}
-%\end{apendicesenv}
+\begin{apendicesenv}
+\include{./C-nuvem}
+\include{./A-ModeloImproviso}
+%\include{./B-conjunto_conceitos}
+
+\end{apendicesenv}
 
 \phantompart
 \printindex

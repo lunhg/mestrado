@@ -1,0 +1,44 @@
+% --- 
+% CONFIGURAÇÕES DE PACOTES
+% --- 
+
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ---
+
+\newcommand{\traducao}[2]{``#1'' \footnote{Tradução nossa de \emph{#2}.}}
+\newcommand{\tabletraducao}[2]{``#1'' \tablefootnote{Tradução nossa de \emph{#2}.}}
+\newcommand{\traducaoparcial}[2]{``#1'' \footnote{Tradução parcial nossa de \emph{#2}.}}
+\newcommand{\csf}[2]{$\mathcal{#1}_\emph{#2}$}
+\newcommand{\verautopref}[1]{(ver \autoref{#1}, p.~\pageref{#1})}
+\newcommand{\traduzcitacao}[4]{\begin{citacao}
+#1\cite[#3]{#4}\footnote{Tradução de \emph{#2}}.
+\end{citacao}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% An example environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremheaderfont{\normalfont\bfseries}
+\theorembodyfont{\normalfont}
+\theoremstyle{break}
+\def\theoremframecommand{{\color{deepred}\vrule width 5pt \hspace{5pt}}}
+\newshadedtheorem{exa}{Example}[chapter]
+\newenvironment{example}[1]{%
+		\begin{exa}[#1]
+}{%
+		\end{exa}
+}

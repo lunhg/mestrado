@@ -15,6 +15,8 @@
 \usepackage{tabularx}
 \usepackage{minted}
 \usepackage{amsmath,amssymb}
+\usepackage{framed}
+\usepackage[amsmath,framed]{ntheorem}
 \usepackage{pdfpages}
 
 % ---
@@ -34,6 +36,10 @@
 % Epigrade
 % ---
 \usepackage{epigraph}
+
+% Front end para amsthm (\declaretheorem)
+\usepackage{thmtools}    
+
 % ---
 % Pacotes de citações
 % ---
@@ -42,6 +48,10 @@
 
 %TODO
 \usepackage[colorinlistoftodos]{todonotes}
+%\usepackage{ntheorem}
+
+\usepackage{tablefootnote}
+
 
 %%%%%%%%%%% syntax highlight %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{listings}
@@ -53,36 +63,12 @@
 \definecolor{deepgreen}{rgb}{0,0.5,0}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-% --- 
-% CONFIGURAÇÕES DE PACOTES
-% --- 
-
-% ---
-% Configurações do pacote backref
-% Usado sem a opção hyperpageref de backref
-\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
-% Texto padrão antes do número das páginas
-\renewcommand{\backref}{}
-% Define os textos da citação
-\renewcommand*{\backrefalt}[4]{
-	\ifcase #1 %
-		Nenhuma citação no texto.%
-	\or
-		Citado na página #2.%
-	\else
-		Citado #1 vezes nas páginas #2.%
-	\fi}%
-% ---
-
-\newcommand{\figuracentrada}[4]{
-\begin{figure}
-\begin{center}
-\includegraphics[scale=#4]{#1}
-\caption{#2}
-\label{#3}
-\end{center}
-\end{figure}
+\usepackage{tikz}
+\tikzset{
+  treenode/.style = {shape=rectangle, rounded corners,
+                     draw, align=center,
+                     top color=white, bottom color=blue!20},
+  root/.style     = {treenode, font=\Large, bottom color=red!30},
+  env/.style      = {treenode, font=\ttfamily\normalsize},
+  dummy/.style    = {circle,draw}
 }
-
-\newcommand{\traducao}[2]{``#1'' \footnote{Tradução nossa de \emph{#2}.}}
-\newcommand{\traducaoparcial}[2]{``#1'' \footnote{Tradução parcial nossa de \emph{#2}.}}
