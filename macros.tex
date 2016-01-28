@@ -19,15 +19,22 @@
 	\fi}%
 % ---
 
-\newcommand{\traducao}[2]{``#1'' \footnote{Tradução nossa de \emph{#2}.}}
+\newcommand{\traducao}[2]{``#1''\footnote{Tradução nossa de \emph{#2}.}}
 \newcommand{\tabletraducao}[2]{``#1'' \tablefootnote{Tradução nossa de \emph{#2}.}}
 \newcommand{\traducaoparcial}[2]{``#1'' \footnote{Tradução parcial nossa de \emph{#2}.}}
 \newcommand{\csf}[2]{$\mathcal{#1}_\emph{#2}$}
-\newcommand{\verautopref}[1]{(ver \autoref{#1}, p.~\pageref{#1})}
 \newcommand{\traduzcitacao}[4]{\begin{citacao}
 #1\cite[#3]{#4}\footnote{Tradução de \emph{#2}}.
 \end{citacao}
 }
+
+\newcommand{\disponivelem}[1]{\footnote{Disponível em \url{#1}}}
+\newcommand{\sorensen}[2]{#1\disponivelem{#2}}
+\newcommand{\ver}[1]{(ver \autoref{#1}, p.~\pageref{#1})}
+\newcommand{\traducaoapud}[5]{``#1'' \apud[#3]{#4}{#5}\traducao{#2}}
+\newcommand{\pressingtwo}[2]{$\mathcal{#1}'_{#2}$}
+\newcommand{\pressingthree}[3]{$\mathcal{#1}'^{#3}_{#2}$} 
+\newcommand{\metafora}[1]{\scriptsize \MakeTextUppercase{#1} \normalsize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % An example environment
@@ -36,7 +43,7 @@
 \theorembodyfont{\normalfont}
 \theoremstyle{break}
 \def\theoremframecommand{{\color{deepred}\vrule width 5pt \hspace{5pt}}}
-\newshadedtheorem{exa}{Example}[chapter]
+\newshadedtheorem{exa}{Exemplo}[chapter]
 \newenvironment{example}[1]{%
 		\begin{exa}[#1]
 }{%

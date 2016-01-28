@@ -78,14 +78,14 @@
 % ---
 % Capa
 % ---
-\imprimircapa
+%\imprimircapa
 % ---
 
 % ---
 % Folha de rosto
 % (o * indica que haverá a ficha bibliográfica)
 % ---
-\imprimirfolhaderosto*
+%\imprimirfolhaderosto*
 % ---
 
 % ---
@@ -105,32 +105,25 @@
 % ---
 % Dedicatória
 % ---
-\include{./dedicatoria}
+%\include{./dedicatoria}
 
 % ---
 % Agradecimentos
 % ---
-\include{./agradecimentos}
-
-%\end{agradecimentos}
+%\include{./agradecimentos}
 % ---
 
 % ---
 % Epígrafe do livecoding
 % ---
-\epigraph{Alguém poderia imaginar uma interface musical na qual um músico especifica o som resultante desejado, em uma linguagem descritiva, na qual poderia ser então traduzida em parâmetros de partículas e renderizados em som. Uma alternativa poderia especificar um exemplo: "Faça um som assim (arquivo de som), mas com pouco vibrato''}{Curtis \citeonline{roads_microsound_2001}}
-\newpage
+%\epigraph{Alguém poderia imaginar uma interface musical na qual um músico especifica o som resultante desejado, em uma linguagem descritiva, na qual poderia ser então traduzida em parâmetros de partículas e renderizados em som. Uma alternativa poderia especificar um exemplo: "Faça um som assim (arquivo de som), mas com pouco vibrato''}{Curtis \citeonline{roads_microsound_2001}}
+%\newpage
 
 % ---
 % RESUMOS
 % ---
 \input{./resumos}
-% ---
-% inserir lista de ilustrações
-% ---
-\pdfbookmark[0]{\listfigurename}{lof}
-%\listoffigures*
-%\cleardoublepage
+
 % ---
 % inserir lista de tabelas
 % ---
@@ -147,12 +140,20 @@
 \pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents*
 \cleardoublepage
+
+% ---
+% inserir lista de ilustrações
+% ---
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+
 % ----------------------------------------------------------
 % ELEMENTOS TEXTUAIS
 % ----------------------------------------------------------
 \textual
 
-\input{./aviso}
+%\input{./aviso}
 
 % ----------------------------------------------------------
 % Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
@@ -160,7 +161,7 @@
 \input{./introducao}
 
 %------------------------------------------------------
-% PARTE
+% PRINCIPAL
 % ----------------------------------------------------------
 %\part{Ecologia de saberes no \emph{livecoding}}\label{parte1}
 \include{./01-Introducao}
@@ -169,15 +170,11 @@
 \newpage
 \include{./04-Estudo_de_caso}
 \newpage
-\chapter{Conclusão}
-\begin{frame}
-\centering
-\Large{ESTE CAPÍTULO NÃO ESTÁ CORRIGIDO.} 
 
-\emph{APENAS FOI INSERIDO PARA CONTEMPLAR O SUMÁRIO}
-\end{frame}
-
-\postextual
+% ---
+% Conclusão
+% ---
+\input{./conclusao}
 
 % ---
 % Bibliografia
@@ -203,9 +200,7 @@
 % Inicia os apêndices
 % ---
 \begin{apendicesenv}
-\include{./C-nuvem}
-\include{./A-ModeloImproviso}
-%\include{./B-conjunto_conceitos}
+\include{./A-nuvem}
 
 \end{apendicesenv}
 

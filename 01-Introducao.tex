@@ -1,94 +1,330 @@
 \chapter{Trabalhos relacionados}\label{cap:introducao}
 
-Giovanni \citeonline[p.~117]{mori_analysing_2015} sugere que conceitos de práticas diversas, especialmente aqueles desenvolvidos no campo da Música, são agregados durante uma \emph{sessão} de \emph{live coding}: ``\emph{Live coding} é uma técnica artística de improvisação. Pode ser empregada em muitos contextos performativos diferentes: dança, música, imagens em movimento e mesmo tecelagem.'' \cite[p.~117]{mori_analysing_2015}\footnote{Tradução de \emph{Live coding is an improvisatory artistic technique. It can be employed in many different performative contexts: dance, music, moving images and even weaving. I have concentrated my attention on the music side, which seems to be the most prominent.}} (ver \autoref{fig:wavecoding}).
-
-\begin{figure}[!h]
-  \centering
-  \includegraphics[scale=0.85]{imagens/wavecoding.jpg}
-  \caption{Performance por Alex McLean,  David Griffiths, e \emph{Wavecoding group} (2015) utilizando uma máquina manual de tecelagem para realização de uma improvisação audiovisual em Falmouth, Cornwall (\url{http://fo.am/kernow/}) \textbf{Fonte}: \url{http://www.pawfal.org/dave/blog/category/slub/}.}
-  \label{fig:wavecoding}
-\end{figure}
-
-Estas agregações dependem muito do contexto. Por exemplo, o \emph{live coding} pode ocorrer formalmente ou informalmente. Um exemplo da primeira situação é a performance \emph{screenBashing} (2015) de Magno Caliman (ver \autoref{fig:screenbashing}), realizada durante um concerto em Campinas-SP no ano de 2015. 
-
-\begin{figure}[!h]
-  \centering
-  \includegraphics[scale=0.5]{imagens/screenbashing.png}
-  \caption{Performance de \emph{screenBashing} durante o XIII ENCUN 2015 - Campinas (SP). A performance é um exemplo claro da estética \emph{noise} dentro do \emph{live coding}. Utiliza a linguagem C para gerar saídas textuais, utilizadas como texturas visuais, e o programa \emph{SuperCollider} para síntese sonora. \textbf{Fonte}: \url{https://vimeo.com/148626379}.}
-  \label{fig:screenbashing}
-\end{figure}
-
-Informalidades incluem performances conhecidas como \emph{algoraves}. Apresentamos um exemplo do duo mexicano Mico Rex, em um circuito que percorreu as cidades de Brighton, Londres, Karlesruhe, Colonia e Dusseldorf (2013), evento permeado de música eletrônica de pista produzida pela programação de algoritmos (ver \autoref{fig:algorave}). \citeonline[p.~356]{collins_algorave:_2014} descreve o \emph{algorave} como uma atividade de \emph{code DJing}, ou um ``Disk Jockey codificado'':
+Giovanni \citeonline[p.~117]{mori_analysing_2015} define a improvisação de códigos em relação à Música, Imagens em Movimento, Dança ou Tecelagem. É importante esclarecer que essa definição denota a aplicação desta técnica em qualquer outra área, onde o fluxo criativo é essencial:
 
 \begin{citacao}
-Executantes de \emph{algorave} apresentam um campo eclético de musicistas eletrônicos, usando predominantemente um laptop, mas também incluindo alguns experimentos no controle de hardware (\ldots) Por exemplo, \emph{sick lincoln} simultaneamente combinou DJ codificado no \emph{SuperCollider}, \emph{live coding} em um aplicativo \emph{Web Audio API}/\emph{javascript} e refabricação de \emph{patchs} de um sistema algorítmico no Max/MSP.\footnote{Tradução nossa de \emph{Algorave performers present an eclectic range of electronic musicians, predominantly using laptop alone, but also including some experiments in control of hardware (\ldots)  For example, \emph{sick lincoln} has simultaneously combined code DJing from SuperCollider, live coding from a Web Audio API javascript app and live repatching of a Max/MSP algorithmic hip hop system}. Sobre \emph{Web Audio API} e Javascript, ver \citeonline{roberts_gibber:_2012}. Javascript é uma linguagem de programação utilizada para realização de rotinas em páginas \emph{web}. Sobre Max/MSP, \url{}}
+\traducao{\emph{Live coding} é uma técnica artística de improvisação. Pode ser empregada em muitos contextos diferentes de performance: dança, música, imagens em movimento e mesmo tecelagem. Eu concentrei minha atenção no lado musical, que parece ser o mais proeminente.}{Live coding is an improvisatory artistic technique. It can be employed in many different performative contexts: dance, music, moving images and even weaving. I have concentrated my attention on the music side, which seems to be the most prominent.}
+\end{citacao}
+
+Neste trabalho vamos situar a improvisação de códigos do ponto de vista musical. Descartamos uma discussão específica sobre imagens em movimento para evitar cair em uma digressão infinita, já que este é outro campo proeminente. A discussão sobre tecelagem \ver{sec:tecelagem} busca ilustrar características históricas da computação: \traducao{Um dos potenciais da tecelagem que eu fiquei mais interessado é a capacidade de demonstrar fundamentos de \emph{softwares} por fios -- parcialmente tornar a natureza física do código da computação auto-evidente, mas também como uma maneira de modelar novas formas de aprender e a entender o que são os computadores.}{One of the potentials of weaving I’m most interested in is being able to demonstrate fundamentals of software in threads – partly to make the physical nature of computation self evident, but also as a way of designing new ways of learning and understanding what computers are.}\cite{griffths_weave2_2015}. Os exemplos de dança \ver{sec:danca} ilustram duas situações. O primeiro é a música que serve como meio para entretenimento em ambientes \emph{rave} \ver{sec:algorave}, e o segundo nega a música como resultado da improvisação de códigos \ver{sec:coreografia}. Por último, a característica musical das improvisações de códigos serão explorados como uma construção histórica \ver{sec:musica}.
+
+\section{Tecelagem}\label{sec:tecelagem}
+
+Uma introdução sobre a relação entre o computador e a máquina de tear busca contextualizar uma investigação informal que ocorreu em 2015, realizado por um grupo de investigação em improvisação de codificação têxtil (\emph{weavecoding}). Por outro lado, foi uma forma de introduzir o assunto para potenciais leitores de um programa de pesquisa que inclui a Moda (PPG-ACL UFJF).
+
+Os computadores atuais são máquinas desenvolvidas com base no modelo teórico elaborado por Alan Turing (1912-1954). Uma representação simplista considera uma fita abstrata de tamanho variável (o quanto for necessário), dividida em células, cada uma com um alfabeto finito (cuja quantidade de símbolos para sua representação também é finita). Um cabeçote leitor desta fita. Um registrador de estados desta fita. E uma tabela de ação que indica o que será escrito nesta fita, e como esta fita se comportará \ver{fig:turing}.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.1]{imagens/turing.jpg}
+  \caption{Implementação de uma máquina de Turing. \textbf{Fonte}: wikimedia.org }
+  \label{fig:turing}
+\end{figure}
+
+ Um modelo anterior ao de Turing foi elaborado por Charles Babbage (1791 -- 1871), \emph{a máquina analítica},  entre 1834 e 1836, revisado em 1837. Sua construção ocorreu após um colapso na construção de sua \emph{máquina diferencial}. O projeto não vingou, mas a partir de 1838, Babbage se envolveu com a exploração intelectual dos conceitos elaborados, para otimizar o projeto e reduzir seu custo de construção. Uma sequência de seminários em Turin, a partir de 1840, resultaram na publicação de uma descrição em francês por um cientista italiano (L.F. Menebrea). A Condessa de Lovelace (Ada Augusta Byron King), traduziu, sob supervisão de Babbage, esta publicação para o inglês. De maneira bastante sumarizada, programas prototípicos para foram escritos ambos por Ada e Babbage, e são considerados os primeiros algoritmos computacionais. O primeiro programa escrito era dedicado ao cálculo de uma sequência numérica conhecida como \emph{Números de Bernoulli} \footnote{Allan G. Broomley, \emph{Charles Babbage’s Analytical Engine, 1838}. Disponível em \url{http://athena.union.edu/~hemmendd/Courses/cs80/an-engine.pdf}}.
+
+Segundo \citeonline[p.14--21]{McLean2011}, o mecanismo do projeto de Babbage é inspirado na máquina de tear de Joseph-Marie Jacquard (1752 -- 1834). A principal contribuição da invenção, para a computação, foi um sistema que consiste em um cabeçote leitor de cartões perfurados. A organização dos furos indica uma rotina têxtil \ver{fig:jacquard}. O cartão perfurado, no computador mecânico de Babbage indicava estados binários que conduzem ao cálculo numérico:
+
+\begin{citacao}
+\traducao{A indústria têxtil vislumbrou a primeira máquina programável de ampla utilização: a cabeça de tear Jacquard, uma tecnologia ainda usada. Longas tiras de cartão são alimentados na cabeça de tear Jacquard, que lê padrões perfurados no cartão para guiar a intrincada padronização de tecidos. O cabeçote Jacquard não computa, mas foi admirado por Charles Babbage, inspirando o trabalho na sua máquina analítica mecânica, a primeira concepção de um computador universal programável. Embora Babbage não tenha obtido sucesso em construir a máquina analítica, seu projeto inclui um mecanismo de entrada de cartão similar ao cabeçote Jacquard, mas com  padrões perfurados descrevendo cálculos abstratos ao invés de fios têxteis.}{
+The textile industry saw the first programmable machine to reach wide use: the head of the Jacquard loom, a technology still used today. Long strips of card are fed into the Jacquard head, which reads patterns punched into the card to guide intricate patterning of weaves. The Jacquard head does not itself compute, but was much admired by Charles Babbage, inspiring work on his mechanical analytical engine (Essinger, 2004), the first conception of a programmable universal computer. Although Babbage did not succeed in building the analytical engine, his design includes a similar card input mechanism to the Jacquard head, but with punched patterns describing abstract calculations rather than textile weaves.
+}
 \end{citacao}
 
 \begin{figure}[!h]
   \centering
-  \includegraphics[scale=0.3]{imagens/algorave.jpg}
-  \caption{Performance de Mico Rex durante o \emph{Algorave tour} (2013) \textbf{Fonte}: \url{http://www.pawfal.org/dave/blog/2013/04/life-on-an-algorave-tour/}.}
+  \includegraphics[scale=0.82]{imagens/Jacquard.jpg}
+  \caption{Cartões perfurados da máquina de tear Jacquard. \textbf{Fonte}: wikimedia.org }
+  \label{fig:jacquard}
+\end{figure} 
+
+\newpage
+
+\subsection{Weavecoding}
+
+Para definir \emph{weavecoding} ilustramos uma investigação informal (um encontro de acadêmicos e não-acadêmicos no Foam Kernow). O grupo \emph{Weaving codes}\disponivelem{http://kairotic.org/about/} foi formado para  investigar \traducao{padrões a partir das perspectivas de tecelagem e música, e através do desenvolvimento de uma linguagem de computador e código para descrever a construção de tecidos}{We pursue these questions in the Weaving Codes- Coding Weaves project, by investigating patterns from the perspectives of weaving and music, and by developing a computer language and code for describing the construction of weaves}. É formado por membros da Universidades de Leeds, Nottingham Trent, Cambridge, Aberdeen, Copenhague; um museu (\emph{Albert Museum}), uma rede de laboratórios transdisciplinares (FoAM Kernow \disponivelem{http://fo.am/kernow/}); o Centro Dinamarquês para Pesquisa Têxtil, e Escola Robert Schumman de Música e Mídia de  Düsseldorf. 
+
+Uma pequena digressão: dois membros deste grupo, Alex McLean e Dave Griffths, são praticantes e organizadores de improvisações de código como artistas-programadores. A principal contribuição dos autores provavelmente foi a divulgação de uma heurística para uma improvisação com computadores, \emph{Lubeck04}, mais conhecido como \traducao{Mostre-nos suas telas}{Show Us Your Screens}, dentro de um manifesto publicado como \traducao{Programação de Algoritmo Ao vivo e Organização Temporária para sua Promoção}{Live Algorithm Programming and Temporary Organization for its Promotion} \cite{ward_live_2004}. Este tema será discutido adiante \ver{sec:showusyourscreens}.
+
+Do manifesto à codificação têxtil, \citeonline{griffths_weave2_2015} apresenta um interessante exemplo. A partir de quatro tarefas fundamentais (rotinas), descritas no Exemplo \autoref{ex:weaving}, é possível elaborar um padrão como o apresentado na \autoref{fig:weaving}. A primeira rotina é \emph{repeat}, uma repetição de ações por contagem $[$\emph{loop}$]$; a segunda é \emph{twist}, ou dar a volta em determinados pontos; a terceira,  \emph{weave-forward}, tecer à frente do ponto; e a quarta, \emph{weave-back}, tecer atrás do ponto . Do lado direito da imagem (ver p.~\pageref{fig:weaving}), é simbolizado o ``código criptografado de tecido'', ou as operações fundamentais para um determinado padrão têxtil. Do lado esquerdo, seu resultado-padrão, uma textura de losangos e zigue-zagues.  
+
+\begin{example}{Um código-fonte que gera um tecido semelhante à \autoref{fig:weaving}.}
+\label{ex:weaving}
+\begin{minted}[fontsize=\footnotesize]{cl}
+(twist 3 4 5 14 15 16)
+(weave-forward 3)
+(twist 4 15)
+(weave-forward 1)
+(twist 4 8 11 15)
+
+(repeat 2
+ (weave-back 4)
+ (twist 8 11)
+ (weave-forward 2)
+ (twist 9 10)
+ (weave-forward 2)
+ (twist 9 10)
+ (weave-back 2)
+ (twist 9 10)
+ (weave-back 2)
+ (twist 8 11)
+ (weave-forward 4))
+\end{minted}
+\end{example}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.31]{imagens/weaving.jpg}
+    %\caption{``Um dos potenciais da tecelagem que eu fiquei mais interessado é a capacidade de demonstrar fundamentos de \emph{softwares} por fios -- parcialmente tornar a natureza física do código da computação auto-evidente, mas também como uma maneira de modelar novas formas de aprender e a entender o que são os computadores''\protect\footnotemark. \textbf{Fonte}: \citeonline{griffths_weave2_2015}.}
+    \caption{Tecido resultante da prática \emph{Weaving code}. \textbf{Fonte}: \citeonline{griffths_weave2_2015}.}
+  \label{fig:weaving}
+\end{figure}
+
+
+
+Agora estamos em ponto de esclarecer a improvisação de códigos têxteis (\emph{weavecoding}). Por outro lado será possível ilustrar uma performance arquetípica de \emph{live coding}: programadores escrevendo códigos com suas telas projetadas \cite[p.~129]{McLean2011}. \citeonline[online]{griffths_weave_2015} descreve uma reunião no laboratório transdisciplinar Foam Kernow para realização de tecelagem, música e imagens em movimento. A tecelagem é programada por meio de um dispositivo tangível, uma matriz de botões acopláveis, desenvolvida por Ellen Harlizius-Klück (investigadora da história da matemática, filosofia e tecelagem da Grécia Antiga na Universidade de Copenhague\disponivelem{http://www.saumweberei.de/}) e Alex McLean. Imagens em movimento foram projetadas como capturas das atividades têxteis e processadas por Griffths. 
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.95]{imagens/wavecoding.jpg}
+  \caption{ Alex McLean manipulando uma Matriz de botões para tecelagem, conectado a um Raspberry Pi. \textbf{Fonte}: \citeonline{griffths_weave_2015}.}
+  \label{fig:wavecoding}
+\end{figure}
+
+\begin{citacao}
+
+\traducao{
+Uma das idéias originais era combinar tecelagem e codificação em um cenário de atuação, ambos para fornecer uma forma de tornar a codificação ao vivo mais inclusiva com a tecelagem, e ao mesmo tempo esclarecer os processos de pensamentos digitais envolvolvidos na tecelagem (\ldots) Nossa audiência consistiu de pesquisadores de artesanato, biólogos antropológicos, arquitetos, designers de jogos e tecnólogos -- foi mais do que antecipamos! Alex e eu disponibilizamos alguns códigos de música do \emph{slub} para tecer, e minha parte favorita foi projetar a tecelagem ao vivo.
+}{
+One of the original ideas we had was to combine weaving and coding in a performance setting, to both provide a way to make livecoding more inclusive with weaving, and at the same time to highlight the digital thought processes involved in weaving. (\ldots) Our audience consisted of craft researchers, anthropological biologists, architects, game designers and technologists -- – so it all went on quite a lot longer than we anticipated! Alex and I provided some slub livecoded music to weave by, and my favourite part was the live weaving projection.
+}
+\end{citacao}
+
+\todo[color=lightred]{\tiny está faltando ligação entre este parágrafo e o anterior}
+
+Esta descrição de Griffths possui uma domentação audiovisual \disponivelem{https://www.youtube.com/watch?v=XrnIVUp9QgM} que expõe uma categorização musical\footnote{\cfcite{janotti_jr._a_2003,sa_musica_2006,sa_se_2009}} da técnica \emph{live coding}. Essa música é semelhante àquela tocada em ambientes \emph{rave}; o \emph{algorave} será discutido adiante no contexto da dança \ver{sec:algorave}.
+
+%A permissividade entre improvisadores e outros profissionais se caracterizou neste encontro como uma ética. Trocar informações sobre programação caracterizou a improvisação de códigos como parte de uma cultura \emph{hacker}: \traducaoapud{Ser um hacker, é ser alguém que 'programa entusiasticamente' e que acredita que a computação e o compartilhamento de informação é um bem positivo, e que é seu dever ético facilitar o acesso}{Being a hacker, is being someone that "program enthusiastically" and who believe that computing and information sharing is a positive good", and that it is their ethical duty to facilitate access}{p.~1}{wark2006}{zapico_hacker_2013}. Esta é uma definição bastante geral que não contempla contextos diversos. Mas o que queremos pontuar é que o crescimento de conhecimento, para McLean e Griffths, está inserido em um método de exploração criativa. 
+
+
+\section{Dança}\label{sec:danca}
+
+A Dança é ilustrada de duas maneiras. A primeira é apresentada como fim de uma improvisação musical. Uma música para dançar em ambientes de entretenimento. O segundo caso foge do escopo musical como discutido anteriormente; se por um lado a programação-partitura utilizada por uma coreógrafa representa uma alternativa aos resultado sonoros e imagéticos, por outro a sensação de quietude sonora é uma posição interessante que diverge da maioria dos trabalhos apresentados, mas é poco discutido no âmbito musical.
+
+\subsection{Algorave}\label{sec:algorave}
+
+A compositora colombiana Alexandra Cárdenas, em entrevista com \citeonline{chesire_algorave_2013}, cita Nick Collins e Alex McLean como os criadores do termo \emph{algorave}. Surgiu durante uma \emph{gig} (um termo utilizado no início do \emph{jazz} para caracterizar um trabalho temporário). Após sintonizarem em uma estação de rádio, decidiram codificar uma música semelhante:
+
+\begin{citacao}
+\traducao{
+Algorave 'comecou como uma piada', de acordo com Alex McLean, um pesquisador de música computacional e um dos três de uma banda chamada \emph{Slub} que têm improviado códigos por 13 anos. Ele veio com um termo enquanto conduzia uma \emph{gig} em Nottingham com seu amigo Nick Collins (que tocava ``datapop'' sob o nome Sick Lincoln) no final de 2011. 'Nós sintonizamos em uma estação pirata tocando \emph{happy hardcore}, e nós pensamos que seria bom programar alguma música \emph{rave}.' Deste então, McLean organizou oito \emph{algoraves} informais no mundo.
+}
+{
+Algorave "started as a joke", according to Alex McLean, a computer-music researcher and one-third of a band called Slub that's been live coding for 13 years. He came up with the term while driving to a gig in Nottingham with his friend Nick Collins (who plays "datapop" under the name Sick Lincoln) in late 2011. "We tuned into a pirate station playing happy hardcore, and we thought it would be good to program some rave music." Since then, McLean has organised eight informal algoraves around the world. 
+}
+\end{citacao}
+
+Em seu artigo ``Algorave: Live Performance of Algorithmic Electronic Dance Music'', \citeonline[p.~356]{collins_algorave_2014} sustentam que as estruturas das práticas do \emph{algorave} são anteriores à improvisação de códigos, e já era utilizado na Música Eletrônica para Dançar. O que mantêm a relação entre os dois é a prática de projeção do código \ver{sec:laptoptoplap}.
+
+\begin{citacao}
+\traducao{
+\emph{Algorave} não é sustentado exclusivamente por \emph{live coders}, mas estes têm mantido uma forte presença em todos os eventos até agora. É assim talvez porque a tradição do \emph{live coding} de projetar telas motiva todo o esforço; onde algoritmos não estão visíveis por períodos de tempo durante uma \emph{algorave}, se corre o risco das coisas parecerem muito como um evento de música eletrônica padrão.
+}
+{Algorave is not exclusively a preserve of live coders, but they have maintained a strong presence at every event thus far. This is perhaps because the live coding tradition of projecting screens help motivates the whole endeavour; where algorithms are not made visible for periods during an algorave, we run the risk of things feeling much like a standard electronic music event.}
+
+\end{citacao}
+
+Focando no aspecto histórico, \citeauthoronline{collins_algorave_2014} descrevem uma sequência de apresentações que estruturam as práticas musicais. Em 1992, Charles Ames disponibiliza o \emph{Cybernetic Composer}, \traducao{um \emph{software} com um sistema baseado em Inteligência Artificial que compõe musica em uma variedade de estilos populares.}{an AI based software system that composes music in a variety of popular styles. Disponível em \url{http://www.kurzweilai.net/charles-ames}}. Em 1994, o duo \emph{Koan}, formado pelos DJs Daniel Roeth e William Grey, realizam adaptações para entretenimento com base no \emph{ambient music} de Brian \citeonline{eno_music_1978}. \emph{Aphex Twin} (Richard David James) cria em 1997 o termo \emph{live club algorithm}. Em 1999, o protocolo para edição audiovisual ao vivo \emph{bbcut} \cite{collins_bbcut_2003} é incluído nos \emph{opcodes} do \emph{CSound}\footnote{Disponível em \url{https://csound.github.io/}.}, e do \emph{Supercollider}. Em 2000 o então duo \emph{Slub}, realizam performances, autodenominadas \emph{generative techno}, com abordagem \emph{gabba}. Em 2001 é identificado a utilização de redes neurais para composição de padrões semelhantes ao \emph{drum'n'bass}. Em 2004 é fundado o TOPLAP em uma casa noturna de Hamburgo.
+
+Ilustramos três casos recentes, onde a improvisação de códigos é uma técnica utilizada. Junto com a improvisação de códigos, são utilizados um instrumento eletrônico, voz, e um instrumento elétrico. O inglês Canute, o mexicano Mico Rex e a colombiana residente na Alemanha, Alexandra Cárdenas.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.71]{imagens/canute.png}
+  \caption{Performance do duo Canute (Karlesruhe, 2015) \textbf{Fonte}: \url{https://www.youtube.com/watch?v=uAq4BAbvRS4}.}
+  \label{fig:canute}
+\end{figure}
+
+Em um registro audiovisual (\autoref{fig:canute}), Matthew Yee-King e Alex McLean (\emph{Canute}) conduzem uma improvisação com um \emph{laptop} e uma bateria eletrônica. Vídeos ou animações não são projetados. McLean improvisa códigos (escritos no ambiente de programação \emph{Tidal}), projetado em uma superfície plana, bem como nos executantes. Yee-King toca a bateria segundo o resultado sonoro do programa executado por McLean.  
+
+Segundo \citeonline[p.~2]{mclean_tidal_2010}, é uma linguagem de composição generativa, onde \traducao{padrões podem ser compostos de numerosos subpadrões em uma variedade de maneiras e profundidade arbitrária, para produzir $[$partes$]$ inteiras complexas de partes simples}{patterns may be composed of numerous subpatterns in a variety of ways and to arbitrary depth, to produce complex wholes from simple parts}. Isto é, funções e amostras sonoras representadas por letras e organizadas com auxílio de símbolos delimitadores (como ``$[$'' e ``$]$''), criam ritmos que podem ser recombinados, permutadas e rotacionadasem padrões mais complexos.  Ademais, existem efeitos de panoramização, atraso (\emph{delay}), filtros e comunicação de rede.
+Um código exemplar e uma transcrição são ilustrados no Exemplo \autoref{ex:tidal}.
+
+\begin{citacao}
+\traducao{Tidal é uma linguagem de padrões embebida em uma linguagem de programação Haskell, consistindo de representação de padrão, uma biblioteca de padrões geradores e combinadores, um $[$mecanismo$]$ de agendamento de eventos e uma interface para programar ao vivo. Esta é uma extensiva re-escrita de um trabalho anterior introduzido sobre o título \emph{Petrol} $[$\citeonline{mclean_petrol_2010}$]$. Extensões incluem melhoramentos de representação de padrão e um uma integração totalmente configurável do protocolo Open Sound Control $[$\citeonline{osc}$]$ \cite{mclean_tidal_2010}
+}
+{Tidal is a pattern language embedded in the Haskell programminglanguage, consisting of pattern representation, a library of pattern generators and combinators, an event scheduler and programmer’s live coding interface. This is an extensive re-write of earlier work introduced under the working title of Petrol [15]. Extensions include improved pattern representation and fully configurable integration with the Open Sound Control (OSC) protocol [16]
+}
+\end{citacao}
+
+\begin{example}{Código Tidal de uma polifonia de poliritmos}
+\begin{minted}{haskell}
+# bd - bass drum (bumbo)
+# sn - snare drum (caixa)
+d1 \$ sound "bd [sn bd] [silence bd] sn"
+   |+| vowel "a e i o u"
+   |+| pan "0 0.5 1 0.5"
+\end{minted}
+\end{example}\label{ex:tidal}
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.61]{imagens/tidal_ritmo.png}
+  \caption{Transcrição de um simples ritmo codificado no \autoref{ex:tidal} \textbf{Fonte}: autor.}
+  \label{fig:canute2}
+\end{figure}
+
+O registro audiovisual cita termos como \emph{club} e \emph{chordpunch} para descrever gêneros musicais para o código improvisado. É importante lembrar que McLean também utiliza outras categorizações musicais em outras performances. É curioso notar que em alguns momentos do vídeo, certas modificações nos códigos causam uma perturbação brusca em sistema de ritmos (percebido pelo fluxo musical); em alguns momentos Yee-King mantêm o fluxo, mas em outros o instante musical codificado leva um curto período de tempo para ser sincronizado. Sugerimos que este não é  \emph{a priori} um erro do instrumentista, mas sim de questões de performance que serão mencionados na \autoref{sec:showusyourscreens}.
+
+Griffiths registra uma \emph{rave} na embarcação  MS Stubnitz, em Canary Wharf, Londres, em 2013. Cárdenas e Ernesto Romero/Jorge Ramírez (Mico Rex, \autoref{fig:micorex}) tocam neste evento. Encontramos um registro audiovisual de curta duração da apresentação do duo Mico Rex\disponivelem{https://vimeo.com/65309754}, mas não de Cárdenas. Exemplos sonoros específicos estão disponíveis nas redes sociais \emph{SoundCloud} e \emph{Vimeo} \footnote{\url{https://soundcloud.com/tiemposdelruido} e \url{https://soundcloud.com/micorex/}.}.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.31]{imagens/cardenas.jpg}
+  \caption{Performance do duo Mico Rex (Londres, 2013) \textbf{Fonte}: \url{http://www.pawfal.org/dave/blog/tag/algorave/}.}
+  \label{fig:cardenas}
+\end{figure}
+
+Notas descritivas especificam instrimentos e linguagens de programação. MicoRex utiliza voz e \emph{programação} ao vivo com o ambiente de programação SuperCollider. Realiza performances de \emph{electro-pop}, \emph{8bits/glitch}, \emph{electro}, \emph{punk} e \emph{breakz}\disponivelem{http://algorave.com/micorex/}. Cárdenas realiza suas performances com guitarra e programação ao vivo com o SuperCollider. É interessante lembrar que Cárdenas possui uma formação em Composição e Violão clássico na Universidade de Los Andes\disponivelem{http://cargocollective.com/tiemposdelruido/Alexandra-Cardenas} e que além de recorrerer ao \emph{techno} e \emph{dubstep}, se apropria do \emph{noise} através de distorções, e composição mista de retroalimentação de sinais em instrumentos expandidos (como a utilização de objetos diversos na guitarra em conjunto com Processamento Digital de Sinais).
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.31]{imagens/algorave.jpg}
+  \caption{Performance do duo Mico Rex (Londres, 2013) \textbf{Fonte}: \url{http://www.pawfal.org/dave/blog/tag/algorave/}.}
+  \label{fig:micorex}
+\end{figure}
+
+O SuperCollider\disponivelem{https://supercollider.github.io/} é um ambiente de programação desenvolvido por James McCartney. Realiza síntese sonora em \emph{tempo real}\ver{sec:jit} e permite a programação de rotinas musicais\ver{fig:sc}. O exemplo \autoref{ex:artificial} um código de Frederick Olofson que ilustra uma codificação de uma sonoridade de \emph{games}, recorrente no \emph{algorave}.  Um sintetizador recria o timbre do videogame \emph{Atari2600} (laçado no EUA em 1977); mais especificamente é um simulador do \emph{chip} TIA (\emph{Television Interface Adapter}), responsável pela geração de gráficos e imagens no videogame\disponivelem{https://www.atariage.com/2600/archives/schematics_tia/index.html}. O exemplo é relativamente simples; a frequência portadora do sintetizador segue padrões de movimentos brownianos diferentes que variam entre 28 e 31 $Hz$, alternados com 23 e 26 $Hz$. Enquanto isso a frequência moduladora segue um padrão repetitivo que alterna 10 e 16 $Hz$ com 11 e 16 $Hz$.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.31]{imagens/sc_ide_overview.png}
+  \caption{Ambiente de programação e composição \emph{SuperCollider}. \textbf{Fonte}: \url{https://supercollider.github.io/}.}
+  \label{fig:sc}
+\end{figure}
+
+\begin{example}{Definição de uma unidade sonora e sua execução}
+\textbf{Fonte}: \url{http://supercollider.sourceforge.net/audiocode-examples/}
+
+\begin{lstlisting}[style=SuperCollider-IDE]
+// Simple synth definition using the Atari2600 UGen:
+(
+SynthDef(\atari2600, {|out= 0, gate= 1, tone0= 5,
+tone1= 8, freq0= 10, freq1= 20, amp= 1, pan= 0|
+  var e, z;
+  e= EnvGen.kr(Env.asr(0.01, amp, 0.05), gate, doneAction:2);
+  z= Atari2600.ar(tone0, tone1, freq0, freq1, 15, 15);
+  Out.ar(out, Pan2.ar(z*e, pan));
+}).store
+)
+
+// And a pattern to play it:
+(
+Pbind(
+  \instrument, \atari2600,
+  \dur, Pseq([0.25, 0.25, 0.25, 0.45], inf),
+  \amp, 0.8,
+  \tone0, Pseq([Pseq([2, 5], 32), Pseq([3, 5], 32)], inf),
+  \tone1, 14,
+  \freq0, Pseq([Pbrown(28, 31, 1, 32), Pbrown(23, 26, 3, 32)], inf),
+  \freq1, Pseq([Pn(10, 16), Pn(11, 16)], inf)
+).play
+)
+\end{lstlisting}
+\end{example}\label{ex:artificial}
+
+
+\subsection{Coreografia}\label{sec:coreografia}
+
+A segunda situação de ``dança'' é ilustrada na \autoref{fig:iclcdanca}, com uma performance coreografada por  Kate Sicchio (2015). Envolve ambientes de apresentação formal (teatros, auditórios), como na performance \emph{HTB2.0} de Kate Sicchio\disponivelem{https://www.youtube.com/watch?v=iOAffWTBVE0}. A coreografia segue uma partitura, que é codificada durante a performance. Uma bailarina improvisa movimentos conforme o que está indicado na partitura. No entanto sua conexão com a partitura não é visual ou sonora, e sim tátil:
+
+\begin{citacao}
+\traducao{Esta peça é uma exploração de eletrônica codificada ao vivo e movimentos improvisados. Uma dançarina veste uma peça de atuadores táteis. Estes atuadores são programados em tempo-real via OSC\footnote{N.A.: ``\emph{Open Sound Control} é um protocolo de comunicação entre computadores, sintetizadores sonorosm e outros dispositivos multimídia que são otimizados para as modernas tecnologias de rede''. Disponível em \url{http://opensoundcontrol.org/introduction-osc}} para 'zunir' sobre os lados direito e esquerdo da dançarina para indicar qual lado do corpo a dançarina deve mover. A partitura é codificada ao vivo pela coreógrafa enquanto a dançarina responde por uma retroalimentação háptica. Esta peça explora o \emph{live coding} de corpos, e movimento como saída, ao invés de saídas sonoras ou visuais como encontrado em muitas execuções de \emph{live coding}
+}{
+This dance piece is an exploration of live coded electronics and improvisational movement. A dancer wears a custom garment of haptic actuators. These actuators are programmed real-time via OSC to 'buzz' on the right and left sides of the dancer to indicate which side of the body the dancer will move. The score is being live coded by choreographer while the dancer is responding to the haptic feedback. This piece explores live coding of bodies and movement as output rather than a sonic or visual output as found in many live coding performances.
+}
+\end{citacao}
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.6]{imagens/iclcdanca.png}
+  \caption{Dançarina (anônima) controlada por Kate Sicchio através de uma codificação improvisada. \textbf{Fonte}: \url{https://www.youtube.com/watch?v=uAq4BAbvRS4}.}
   \label{fig:algorave}
 \end{figure}
 
-O campo de atuação do \emph{live coding} é dinâmico, e depende de sua aplicação. Expomos três limites da prática, mas certamente existem outras abordagens. Enumerar todas pode ofuscar aquilo que queremos chamar a atenção: a multiplicidade de conceitos, seus limites e transições.
+É interessante notar uma sensação de quietude sonora na performance. Como aponta a própria coreógrafa, a maioria das performances de improviso de códigos segue o seguinte procedimento: o código é criado, e um som, uma nota, uma imagem ou um vídeo são gerados, combinados, transformados. Mesmo em algumas performances de daça pesquisadas, a dança aparecia como um ornamentoou um suporte para a projeção audiovisual. A criatividade deste trabalho toca um conceito técnico fundamental da computação: qual é o \emph{dispositivo de entrada e de saída} praticado nas improvisações de códigos? Sicchio responde o corpo já é um dispositivo de entrada e saída de interações sociais e pode ser controlado por outro humano através de comandos de rede.  
 
-Uma primeira exposição desses diversos conceitos pode ser visualizada na \autoref{fig:nuvemlivecoding}; a figura foi feita com o auxílio de um programa descrito no \autoref{app:C}, e melhor explorada no \autoref{app:A}. 
+
+\section{Música}\label{sec:musica}
+
+A situação ``musical'' será exemplificada de duas maneiras. A primeira é a performance de concerto. A segunda será exemplificada como performances telepresenciais e virtuais.
+
+Um exemplo recente do primeiro caso é o improviso \emph{screenBashing} de Magno Caliman (ver \autoref{fig:screenbashing}), realizado durante o XIII ENCUN\footnote{Encontro Nacional de Compositores Universitários em Campinas-SP no ano de 2015.}. Será útil para ilustração de uma \traducao{(\ldots) performance de \emph{livecoding} arquetípica $[$que$]$envolve programadores escrevendo códigos no palco, com suas telas projetadas para a audiência}{The archetypal live coding performance involves programmers writing code on stage, with their screens projected for an audience}\cite[p.~1]{mclean_tidal_2010}
+
+O executante senta-se ao computador como um pianista, com uma penumbra usual dos sistemas de iluminação das casas de concerto. Uma tela de projeção expõe o estado atual de seu \emph{laptop}: um editor de texto é aberto e o executante começa a programar em linguagem C, uma pequena iteração (\emph{for loop}) que repete caracteres diversos, que serão improvisados ao longo do concerto. Assim que termina de escrever um pequeno programa, o executante abre um console (ou terminal nos sistemas operacionais Unix) e solicita para o sistema operacional (no caso um Mac OsX) compilar o programa. A compilação é um processo no qual a representação textual humana é convertida em uma linguagem apropriada para o computador. Este processo não demora, e o programa é executado. O resultado é uma sequência de caracteres de texto como texturas visuais, semi-transparentes. E tudo isso com uma sensação de quietude sonora.  O executante então abre códigos preparados no ambiente de programação  \emph{SuperCollider}\disponivelem{https://supercollider.github.io} para síntese de texturas sonoras ruidosas. Um novo programa visual, na linguagem C, é improvisado e sobreposto à imagem anterior. Um novo som de textura ruidosa é adicionado. Este processo é repetido até o fim da peça. A acumulação dos sons às imagens cria um contínuo sonoro sincrético, que exige cada vez mais e mais do processamento do computador. A improvisação finaliza com um congelamento do sistema operacional, em razão deste acúmulo de memória.
 
 \begin{figure}[!h]
-\begin{center}
-\centering
-\includegraphics[scale=0.8]{./imagens/livecoding_cloud1.png}
-\caption{Nuvem de palavras do \citeonline{ICLC2015},  1$^o$ Congresso Internacional de Live Coding. \textbf{Fonte}: autor.}
-\label{fig:nuvemlivecoding}
-\end{center}
+  \centering
+  \includegraphics[scale=0.5]{imagens/screenbashing.png}
+  \caption{Performance de \emph{screenBashing}. \textbf{Fonte}: \url{https://vimeo.com/148626379}.}
+  \label{fig:screenbashing}
 \end{figure}
 
+\subsection{Telepresença e espaços virtuais}
 
-\section{Improvisação e Sistemas Criativos}\label{sec:universo}
+Até agora comentamos performances presenciais, mas também existem os exemplos virtuais. Podem usar imagens em movimento no caso de um \emph{live coding} preocupado com texturas visuais. Mas no caso de uma performance ``musical'', esta característica pode ser suprimida. 
 
-Qualquer que seja a categorização dada ao \emph{live coding}, o termo \emph{live} transparece um assunto articulador: \emph{improvisação}. Definições do \emph{Universo de Conceitos para McLean}, e  o \emph{Modelo de Improvisação} de Pressing, serão discutidos na \autoref{cap:metodologia} como o método de investigação realizado.
+Uma performance virtual de \emph{live coding} é aquela em que dois ou mais executantes, em locais diferentes mas conectados pela \emph{internet}, compartilham do mesmo código. Por compartilharem do mesmo código podem também compartilhar do mesmo som. Um detalhe pode dividir esta performance entre telepresenciais e assíncronas. Enquanto a performance telepresencial necessita compartilhar o som digitalizado, na performance assíncrona esta característica é delegada individualmente para cada executante.  
 
+\citeonline[p.~152--153]{junior_supercopair_2015} descrevem uma performance telepresencial em 2014, por Ben Swift, Henry Gardner e Andrew Sorensen, realizada \traducao{entre dois intérpretes-programadores localizados na Alemanha e Estados Unidos usando um servidor SSH localizado na Australia}{between two live coders located in Germany and United States using an SSH server located in Australia.}.  \citeauthoronline{junior_supercopair_2015} ainda descrevem um esforço conjunto de performance remota entre  O autor ainda descreve um esforço Por outro lado, execuções remotas assíncronas (isto é, entre duas ou mais pessoas, em tempos diferentes) são realizadas em \emph{softwares} como \emph{Gibber} \cite{roberts_gibber:_2012}\disponivelem{http://gibber.mat.ucsb.edu/} e \emph{Wavepot}\disponivelem{http://www.wavepot.com}.    
 
-\section{\emph{live coding}}\label{cap:trabalhos_relacionados}
+\subsection{Proto-história}\label{sec:protohistoria}
 
-Na \autoref{sec:groove}, descrevemos um trabalho de \citeonline{mathews_groove_1970}, GROOVE, ainda pouco observado por \emph{live coders}. Seu paradigma composicional é diverso do MUSIC N, e o primeiro de Mathews com reflexões nos aspectos performáticos. Não foi usado para ambientes de performance, mas a peça \emph{The expanding universe} da compositora Laurie \citeonline{spiegel_expanding_1975} foi considerada.
+O \emph{Universo de Conceitos} do \emph{live coding} contêm numerosos exemplos. Expomos alguns \emph{Espaços Conceituais} através de exemplos recentes. Se existem outras abordagens, musicalmente e visualmente diversas, a improvisação é o tema articulador. Seria possível dizer que cada uma cria seu próprio \emph{Sistema Criativo} \citeonline{mclean_music_2006}. Métodos de análise que expliquem cada uma dessas improvisações, como \emph{Modelos de Improvisação} ainda é um campo em exploração, através de investigações de \emph{Inteligência Artificial}. Neste sentido, este capítulo busca construir espaços conceituais, e especialmente aqueles citados como ``proto-históricos'', isto é, cujas características são semelhantes (ou remeteram algo para o autor deste documento) ao conjunto de regras práticas publicadas por \citeauthoronline{ward_live_2004}.
 
-Na \autoref{sec:grossi}, \citeonline{mori_pietro_2015}  descreve um caso prematuro de \emph{live coding} na Itália, com o compositor Pietro Grossi (1917-2002).Divergente em algumas das propostas de Max Mathews, sacrificou a questão timbrística para trabalhar na questão performática.
+Para uma discussão apropriada, descrevemos na \autoref{sec:groove} um trabalho de \citeonline{mathews_groove_1970}, GROOVE, ainda pouco observado por \emph{live coders}. É o primeiro de trabalho de Mathews com reflexões nos aspectos performáticos. Não foi usado para ambientes de performance, mas a peça \emph{The expanding universe} da compositora Laurie \citeonline{spiegel_expanding_1975} foi considerada como exemplar por sua execução instrumental e disponibilidade \emph{online}.
+
+Na \autoref{sec:grossi}, \citeonline{mori_pietro_2015}  descreve um caso prematuro de \emph{live coding} na Itália, com o compositor Pietro Grossi (1917-2002). Divergente em algumas das propostas de Max Mathews, sacrificou a questão timbrística para trabalhar na questão performática.
 
 Descrevemos, na seção \autoref{sec:baiasaofranscisco}, as atividades dos grupos \emph{The Hub} e \emph{The League of Automatic Composers} como fundamentais para o entendimento histórico do \emph{live coding}.
 
 Sugerimos na \autoref{sec:jit} apontar a tecnologia JIT \cite{aycock_brief_2003} como um sujeito sócio-técnico fundamental para que o \emph{live coding} fosse possível.
 
-Uma revisão de um trecho da publicação ``\emph{Live Algorithm Programming and Temporary Organization for its Promotion}'', de \citeauthoronline{mclean_patterns_2009}, será feita na \autoref{sec:laptoptoplap} para discutir identidade cultural da organização TOPLAP. 
+Um recorte do documento-manifesto ``\emph{Live Algorithm Programming and Temporary Organization for its Promotion}'', de \citeauthoronline{mclean_patterns_2009}, será feita na \autoref{sec:laptoptoplap} para discutir identidade cultural da organização TOPLAP. 
 
-Na \autoref{sec:showusyourscreens}, ``Show us your screens'', é revisto como o manifesto que define as regras heurísticas do \emph{live coding}.
+Na \autoref{sec:showusyourscreens}, ``Show us your screens'', é revisto como o manifesto que define as regras práticas do \emph{live coding}.
 
 \subsection{GROOVE}\label{sec:groove}
 
-GROOVE, ou \emph{Generated Real-time Operations On Voltage-controlled Equipment} foi um computador desenvolvido na Bell Labs por \cite{mathews_groove_1970}. Alex \citeonline{di_nunzio_genesi_2010} discute como um precedente direto do MUSIC V, mas como um projeto bifurcado da família MUSIC N\footnote{Desenvolvidos a partir de 1957. \emph{softwares} MUSIC I, II, III, IV, IV-B, IV-BF, V (que passou por modificações no IRCAM), MUSIC 360, MUSIC 11}.
+GROOVE, ou \emph{Generated Real-time Operations On Voltage-controlled Equipment} foi um computador desenvolvido na Bell Labs por \cite{mathews_groove_1970}. Alex \citeonline{di_nunzio_genesi_2010} discute como um precedente direto do família de \emph{softwares} MUSIC N\footnote{Desenvolvidos a partir de 1957. As versões \emph{softwares} MUSIC I, II, III, IV, IV-B, IV-BF, V (que passou por modificações no IRCAM), MUSIC 360, MUSIC 11 acarretaram no desenvolvimento do \emph{software} CSound, disponível em \url{https://csound.github.io/}.}.
 
 Seu desenvolvimento iniciou em 1968 na \emph{Bell Labs}. Segundo o próprio Mathews, o funcionamento do sistema oferece algumas possibilidades a partir de três conceitos: \emph{criação}, \emph{retroalimentação} e \emph{ciberficação}. O primeiro conceito foi implementado com um sistema de arquivos, onde as funções criadas no processo criativo são memorizadas, e podem ser editadas. O segundo conceito se relaciona com o terceiro:
 
-\begin{citacao}
-O GROOVE provê oportunidades para uma retroalimentação imediata de observações dos efeitos das funções temporais para as entradas do computador, que compõem a função. No modo de composição do sistema GROOVE, um ser humano está em um ciclo de retroalimentação, como mostrado na figura 1 $[$\autoref{fig:groove_sistema}$]$. Assim ele é capas de modificar as funções instantâneamente como um resultado de suas observações daqueles efeitos.\cite[p.~715]{mathews_groove_1970}
-\footnote{Tradução nossa de \emph{GROOVE provides opportunity for immediate feedback from observations of the effects of time functions to computer inputs which compose the function. In the compose mode of the GROOVE system, a human beign is in the feedback loop (\ldots) Thus he is able to modify the functions instanteneously as a result of his observations of their effects.}}
-\end{citacao}
+\traduzcitacao{
+O GROOVE provê oportunidades para uma retroalimentação imediata de observações dos efeitos das funções temporais para as entradas do computador, que compõem a função. No modo de composição do sistema GROOVE, um ser humano está em um ciclo de retroalimentação, como mostrado na figura 1 $[$\autoref{fig:groove_sistema}$]$. Assim ele é capaz de modificar as funções instantâneamente como um resultado de suas observações daqueles efeitos
+}
+{
+GROOVE provides opportunity for immediate feedback from observations of the effects of time functions to computer inputs which compose the function. In the compose mode of the GROOVE system, a human beign is in the feedback loop (\ldots) Thus he is able to modify the functions instanteneously as a result of his observations of their effects.
+}
+{p.~715}{mathews_groove_1970}
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.5]{./imagens/GROOVE.png}
-\caption{Esquema de concepção do projeto GROOVE descrito no artigo homônimo por Max Mathews \textbf{Fonte}: \cite{mathews_groove_1970}.}
+\includegraphics[scale=0.618]{./imagens/GROOVE.png}
+\caption{Esquema de concepção do projeto GROOVE. \textbf{Fonte}: \cite{mathews_groove_1970}.}
 \label{fig:groove_sistema}
 \end{center}
 \end{figure} 
 
 O terceiro conceito observa a existência de uma relação entre um humano e uma máquina. Mathews descreve-o como uma \emph{engenharia humana}. Esta engenharia consistiu na observação de um tempo diferencial entre o que o(a) musicista cria e o que edita:
 
-\begin{citacao} 
-O conceito final é mais nebuloso. Desde que o GROOVE é um sistema homem-máquina, a engenharia humana do sistema foi a mais importante. Por exemplo, nós descobrimos que o controle do programa de tempo necessita ser bastante diferente para a composição do que para a edição, e o programa foi modificado de acordo. (\ldots) O intérprete de computador não deve tentar definir todo o som em tempo real. Ao invés, o computador deve ter uma partitura e o intérprete deve influenciar a forma como a partitura é tocada. Seus modos de influência podem ser mais variados do que aqueles que um regente convencional, que pode principalmente controloar o tempo, intensidade, e estilo.\cite[p.~715-716]{mathews_groove_1970}
-\footnote{Tradução nossa de \emph{The final concept is more nebulous. Since GROOVE is a man-computer system, the human engeneering of the system is most important. For example, we discovered that the control of the program time needs to be quite different for composing than for editing, and the program was modiffied accordingly. (\ldots) The computer performer should not attempt to define the entire sound in real-time. Instead, the computer should have a score and the performer should influence the way in which the score is played. His modes of influence can be much more varied than that a conventional conductor who primarily controls tempo, loudness, and style.}.}
-\end{citacao}
+\traduzcitacao{
+O conceito final é mais nebuloso. Desde que o GROOVE é um sistema homem-máquina, a engenharia humana do sistema foi a mais importante. Por exemplo, nós descobrimos que o controle do programa de tempo necessita ser bastante diferente para a composição do que para a edição, e o programa foi modificado de acordo. (\ldots) O intérprete de computador não deve tentar definir todo o som em tempo real. Ao invés, o computador deve ter uma partitura e o intérprete deve influenciar a forma como a partitura é tocada. Seus modos de influência podem ser mais variados do que aqueles que um regente convencional, que pode principalmente controloar o tempo, intensidade, e estilo
+}
+{
+The final concept is more nebulous. Since GROOVE is a man-computer system, the human engeneering of the system is most important. For example, we discovered that the control of the program time needs to be quite different for composing than for editing, and the program was modiffied accordingly. (\ldots) The computer performer should not attempt to define the entire sound in real-time. Instead, the computer should have a score and the performer should influence the way in which the score is played. His modes of influence can be much more varied than that a conventional conductor who primarily controls tempo, loudness, and style.
+}
+{p.~715-716}{mathews_groove_1970}
 
 Como exemplo , selecionamos uma descrição da compositora Laurie \citeonline{spiegel_expanding_1975} (ver \autoref{fig:groove}) para sumarizar as características do GROOVE, durante a produção de \emph{The Expanding Universe} \footnote{Disponível em \url{https://www.youtube.com/watch?v=dYUZmsfm4Ww}.}, entre as salas 2D-506 da Bell Labs (contendo o computador DDP-224) e a sala analógica 2D-562 (laboratório de Mathews). A ``performance'' da obra era realizada, com a programação de funções temporais e a manipulação de parâmetros dessas funções através de dispositivos físicos:
 
@@ -98,7 +334,7 @@ Todas as músicas no GROOVE eram representadas na memória digital como funçõe
 
 \begin{figure}[!h]
   \begin{center}
-  \includegraphics[scale=0.5]{./imagens/spiegel.jpg}
+  \includegraphics[scale=0.618]{./imagens/spiegel.jpg}
   \caption{\small Laurie Spiegel configurando a saída analógica do GROOVE, durante a produção de \emph{The Expanding Universe}. \textbf{Fonte}: \cite{spiegel_expanding_1975}.}
   \label{fig:groove}
   \end{center}
@@ -107,34 +343,78 @@ Todas as músicas no GROOVE eram representadas na memória digital como funçõe
 Embora não declare ser uma peça minimalista, a descrição de \emph{The Expanding Universe} considera, de maneira asséptica, os fenômenos psicoacústicos como elementos composicionais. Por exemplo, a utilização da continuidade progressiva de sons (ou \emph{drones} transitórios) como elemento criativo permite, segundo a compositora, à sensibilização do ouvido, o que não seria possível na música minimalista instrumental:
 
 \begin{citacao}
- A violência da perturbação sonora, disjunção, descontinuidade e mudanças súbitas desanitizam o ouvinte e nos afastam, de forma que não estamos mais abertos aos sons mais sutis. Mas com continuidade e gentileza, o ouvido se torna re-sensibilizado para mais e mais fenômenos auditoriais sutis dentro do som que estamos imersos. Em vez de sermos arrastados, como nas cascatas de muitas notas executadas em blocos de tempo que mudam repentinamente, tal como tantas vezes consite a música "minimalista", abrimos nossos ouvidos mais e mais para os mais fenômenos que nos envolvem. Isto também não é música ambiente, um termo que veio a ser usado alguns anos depois. Esta é música para atenção concentrada, uma experiência musical do através, pensando que, lógico, existe também um pano de fundo. \footnote{Tradução de\emph{The violence of sonic disruption, disjunction, discontinuity and sudden change desensitizes the listener and pushes us away so we are no longer open to the subtlest sounds. But with continuity and gentleness, the ear becomes increasingly re-sensitized to more and more subtle auditory phenomena within the sound that immerses us. Instead of being swept along, as with cascades of many running notes in suddenly-changing blocks of time, such as “minimalist” music so often consists of, we open up our ears more and more to the more minute phenomena that envelope us. This is also not “ambient music”, a term that came into use some years later. This is music for concentrated attention, a through-composed musical experience, though of course it also can be background.}}
+ A violência da perturbação sonora, disjunção, descontinuidade e mudanças súbitas desanitizam o ouvinte e nos afastam, de forma que não estamos mais abertos aos sons mais sutis. Mas com continuidade e gentileza, o ouvido se torna re-sensibilizado para mais e mais fenômenos auditoriais sutis dentro do som que estamos imersos. Em vez de sermos arrastados, como nas cascatas de muitas notas executadas em blocos de tempo que mudam repentinamente, tal como tantas vezes consite a música "minimalista", abrimos nossos ouvidos mais e mais para os fenômenos que nos envolvem. Isto também não é música ambiente, um termo que veio a ser usado alguns anos depois. Esta é música para atenção concentrada, uma experiência musical do através, pensando que, lógico, existe também um pano de fundo. \footnote{Tradução de\emph{The violence of sonic disruption, disjunction, discontinuity and sudden change desensitizes the listener and pushes us away so we are no longer open to the subtlest sounds. But with continuity and gentleness, the ear becomes increasingly re-sensitized to more and more subtle auditory phenomena within the sound that immerses us. Instead of being swept along, as with cascades of many running notes in suddenly-changing blocks of time, such as “minimalist” music so often consists of, we open up our ears more and more to the more minute phenomena that envelope us. This is also not “ambient music”, a term that came into use some years later. This is music for concentrated attention, a through-composed musical experience, though of course it also can be background.}}
 \end{citacao}
 
-Nesta citação podemos sumarizar um conceito para o \emph{live coding}: processo. Porém, o significado de processo pode ser desenvolvido infinitamente. Isso não será realizado. O significado de processo para Spiegel é diverso daquele considerado no \emph{live coding}, e uma digressão desta pode afastar demais o foco do trabalho principal. Para compreender o significado de processo no \emph{live coding}, será necessário continuar.
+Nesta citação podemos sumarizar um conceito para o \emph{live coding}: Música como um Processo Gradual \cfcite{reich_music_1968}. Porém, o significado de processo pode ser desenvolvido infinitamente. Isso não será realizado. O Processo para Spiegel é diverso daquele considerado no \emph{live coding}, e uma digressão desta pode afastar demais o foco do trabalho principal. Para compreesão deste termo, será necessário explorar outros aspectos correlacionados no decorrer deste trabalho.
+
+Para finalizar esta sessão, a figura \autoref{fig:groove} sugere um conceito rotineiro para o \emph{live coder}. Esta rotina é uma atividade constante de improvisação códigos para aquisição de destreza para uma performance. \citeonline{iazzetta_musica_2009,soares_luteria_2015} lembram que esta atividade, de codificar como se construísse um instrumento musical, se caracteriza por sua conexão com a esfera composicional, nomeado \emph{luteria composicional}.
+
+\subsection{GRASS}
 
 \subsection{Pietro Grossi}\label{sec:grossi}
 
-Embora pouco conhecido no contexto geral da música européia, o compositor Pietro Grossi foi  um dos pioneiros da \emph{Computer Music} Italiana. O pensamento musical que rege seus programas de computador sacrifica questões timbrísticas para concentrar na performance. O primeiro \emph{software} desenvolvido foi o DCMP (\emph{Digital Computer Music Program}) e, segundo \cite{mori_pietro_2015}, ao usar este programa,
+Embora pouco conhecido no contexto geral da música européia, o compositor Pietro Grossi foi  um dos pioneiros da \emph{Computer Music} Italiana. O pensamento musical que rege seus programas de computador sacrifica questões timbrísticas para concentrar na performance. O primeiro \emph{software} desenvolvido foi o DCMP (\emph{Digital Computer Music Program}) e, segundo \citeonline[p.~126]{mori_pietro_2015}, ao usar este programa,
 
 \begin{citacao}
-(\ldots) o intéprete era capaz de produzir e reproduzir música em tempo real, digitando alguns comandos específicos e os parâmetros composicionais desejados. O som resultante vinha imediatamente depois da operação de decisão, sem qualquer atraso causado por cálculos. Haviam muitas escolhas de reprodução no programa: era possível salvar na memória do computador peças de músicas pré-existentes, para elaborar qualquermaterial sonoro no disco rígido, para administrar arquivos musicais e iniciar um processo de composição automático, baseado em algoritmos que trabalham com procedimentos ``pseudo-casuais''. Exsitia também uma abundância de escolhas para mudanças na estrutura da peça. Um dos mais importantes aspectos do trabalho de Grossi foi que todas intervenções eram instantâneas: o operado não tinha que esperar pelo computador terminar todas operações requisitadas, e depois ouvir os resultados. Cálculos de dados e reprodução sonoras eram simultâneos. Esta simultaneidade não era comum no campo da \emph{Computer Music} daquele tempo, e Grossi deliberadamente escolheu trabalhar desta forma, perdendo muito no lado da qualidade sonora. Seu desejo era poder escutar os sons resultantes imediatamente. \cite[p.~126]{mori_pietro_2015} \footnote{Tradução nossa de \emph{(\ldots) the performer was able to produce and reproduce music in real time by typing some specific commands and the desired composition's parameters. The sound result came out immediately after the operator's decision, without any delay caused by calculations. There were many reproduction choices inscribed in this software: it was possible to save on the computer memory pieces of pre-existing music, to elaborate any sound material in the hard disk, to manage the music archive and to start an automated music composition process based on algorithms that worked with “pseudo-casual” procedures. There were also plenty of choices for piece structure modifications. One of the most important aspects of Grossi’s work was that all the interventions were instantaneous: the operator had not to wait for the computer to finish all the requested operations and then hear the results. Data calculation and sound reproduction were simultaneous. This simultaneity was not common in the computer music field of that time and Grossi deliberately chose to work in this way, losing much on the sound quality’s side. His will was to listen to the sound result immediately.}}
+(\ldots) o intéprete era capaz de produzir e reproduzir música em tempo real, digitando alguns comandos específicos e os parâmetros composicionais desejados. O som resultante vinha imediatamente depois da operação de decisão, sem qualquer atraso causado por cálculos. Haviam muitas escolhas de reprodução no programa: era possível salvar na memória do computador peças de músicas pré-existentes, para elaborar qualquer material sonoro no disco rígido, para administrar arquivos musicais e iniciar um processo de composição automático, baseado em algoritmos que trabalham com procedimentos ``pseudo-casuais''. Exsitia também uma abundância de escolhas para mudanças na estrutura da peça. Um dos mais importantes aspectos do trabalho de Grossi foi que todas intervenções eram instantâneas: o operador não tinha que esperar pelo computador terminar todas operações requisitadas, e depois ouvir os resultados. Cálculos de dados e reprodução sonoras eram simultâneos. Esta simultaneidade não era comum no campo da \emph{Computer Music} daquele tempo, e Grossi deliberadamente escolheu trabalhar desta forma, perdendo muito no lado da qualidade sonora. Seu desejo era poder escutar os sons resultantes imediatamente. \footnote{Tradução nossa de \emph{(\ldots) the performer was able to produce and reproduce music in real time by typing some specific commands and the desired composition's parameters. The sound result came out immediately after the operator's decision, without any delay caused by calculations. There were many reproduction choices inscribed in this software: it was possible to save on the computer memory pieces of pre-existing music, to elaborate any sound material in the hard disk, to manage the music archive and to start an automated music composition process based on algorithms that worked with “pseudo-casual” procedures. There were also plenty of choices for piece structure modifications. One of the most important aspects of Grossi’s work was that all the interventions were instantaneous: the operator had not to wait for the computer to finish all the requested operations and then hear the results. Data calculation and sound reproduction were simultaneous. This simultaneity was not common in the computer music field of that time and Grossi deliberately chose to work in this way, losing much on the sound quality’s side. His will was to listen to the sound result immediately.}}
 \end{citacao}
 
-Esta abordagem parte de uma abordagem ``preguiçosa'' (\emph{lazy}). Grossi dizia sobre si mesmo, como ``uma pessoa que está consciente de que o seu tempo é limitado e não quer perder tempo em fazer coisas inúteis ou na espera de alguma coisa quando não é necessário.''\footnote{Tradução nossa de \emph{a person who is aware that his or her time is limited and do not want to waste time in doing useless things or in waiting for something when it is not necessary.}}. Neste sentido, defendia que o desenvolvimento de novos timbres deveria esperar por melhores implementações de \emph{hardware}.
+Esta abordagem parte de uma abordagem ``preguiçosa'' (\emph{lazy}). Grossi dizia sobre si mesmo, como ``uma pessoa que está consciente de que o seu tempo é limitado e não quer perder tempo em fazer coisas inúteis ou na espera de alguma coisa quando não é necessário.''\footnote{Tradução nossa de \emph{a person who is aware that his or her time is limited and do not want to waste time in doing useless things or in waiting for something when it is not necessary.}}. Neste sentido, defendia que o desenvolvimento de novos timbres gerados por computador deveria esperar por melhores implementações de \emph{hardware}. 
 
-O sacrifício do timbre reflete a utilização o computador como uma paródia do piano, ou até mesmo de um violino. Grava em 1967 ``Mixed Paganini''\footnote{Disponível em \url{https://www.youtube.com/watch?v=ZQSP_wF7wSY}.}, uma execução ultra-virtuosística dos \emph{Capricci op.1} de Niccolò Paganini; foi executada no computador Olivetti GE-115 \citeonline[p.~126]{mori_pietro_2015}.
+O  disco ``\emph{GE-115 - Computer Concerto}'' (1967)\footnote{Disponível em \url{http://www.discogs.com/Studio-Di-Fonologia-Musicale-Di-Firenze-GE-115-Computer-Concerto/release/575632}.},  contêm gravações de peças executadas em um computador fabricado pela \emph{General Eletrics}. Utilizam apenas uma forma de onda quadrada (pulsos) como timbre. Todas transformações sonoras derivam da soma instantânea das notas tocadas. Enquanto algumas peças são transcrições da ``\emph{Oferenda Musical}'' de J.S.Bach, três peças originais estão incluídas: ``\emph{Mixed Paganini}'' \footnote{Disponível em \url{https://www.youtube.com/watch?v=ZQSP_wF7wSY}.}, ``\emph{Permutations Of Five Sounds}''\footnote{Disponível em \url{https://www.youtube.com/watch?v=m0WVLJ2LxeY}.} e ``\emph{Continuous}''\footnote{Disponível em \url{https://www.youtube.com/watch?v=bf8jMA_zizc}.}. 
 
-Sumarizamos o seguinte conceito: \emph{reflexividade}, ou a \traducao{habilidade de um de um programa manipular como dados algo que representa o estado do programa durante sua própria execução, o mecanismo para codificação de estados de execução é chamado \emph{reificação}.\cite[p.~1]{malefant_reflection_1996}}{the ability of a program to manipulate as data something representing the state of the program during its own execution, the mechanism for encoding execution states as data being called reification.}
 
-\subsubsection{Just In Time (JIT)}\label{sec:jit}
+A partir desta abordagem de Grossi, pontuamos o conceito de \emph{reflexividade}, ou a \traducao{habilidade de um programa manipular como dados algo que representa o estado do programa durante sua própria execução, o mecanismo para codificação de estados de execução é chamado \emph{reificação}.\cite[p.~1]{malefant_reflection_1996}}{the ability of a program to manipulate as data something representing the state of the program during its own execution, the mechanism for encoding execution states as data being called reification.}. 
 
-A reflexividade é uma característica de diversos ambientes de \emph{live coding}. O \emph{SuperCollider} foi o primeiro dos ambientes de programação musical a implementar esta caracterísitca, a partir da tecnologia \emph{Just In Time Compilation} (Compilação JIT)
+%Por outro lado, também é importante lembrar que Grossi também contribui para performances remotas. Giovanni Mori descreve uma transmissão por telefone, subsidiada por uma companhia italiana,  entre duas cidades, durante uma conferência de tecnoclogia. Esta transmissão foi o estímulo inicial para o desenvolvimento do \emph{software TELETAU}: um compuonnected to the BITNET computer network, to exploit remotely the CNR computer calculation resources
+%and to immediately listen the sound results produced by TAU2. Practically, every person connected to this
+%network was able to use the TAU2-TAUMUS
 
-Segundo \citeonline{aycock_brief_2003}, o primeiros programas JIT foram Genesis (com base no LISP, 1960), LC$^2$ (\emph{Language for Conversational Computing}, 1968) e APL (1970). Este último tinha duas novidades técnicas, a partir dos termos \emph{drag-along} e \emph{beating}; estes são hoje chamados de \emph{lazy evaluation} (avaliação preguiçosa). 
+%\begin{citacao}
+%\traducao{$[$Pietro$]$ Grossi fez sua primeira experiência do tipo durante uma conferência de tecnologia em Rimini em 1970, onde o músico reproduzia algumas de suas composições, bem como sons randômicos, empregando um terminal de vídeo conectado pelo telefone para o computador da CNR em Pisa. RAI, empresa de radiodifusão italiana, emprestou suas pontes de rádio $[$Comunicação entre duas antenas$]$ para enviar sinais sonoros entre Pisa e Rimini. É como se fosse o primeiro experimento de telemática musical no mundo.}{Grossi made his first experience of this kind during a conference on technology in Rimini in 1970, where the musician reproduced many of his compositions and random sounds as well, by employing a video terminal connected via telephone to the CNR's computer in Pisa. RAI, the Italian public broadcasting company, lent its powerful FM radio bridges to send back sound signals from Pisa to Rimini. It is likely to be the first official experiment of musical telematics in the world. \textbf{in Giomi, Francesco, Ligabue, Marco 1999. L’istante zero. Conversazioni e riflessioni con Pietro Grossi, Firenze, Sismel Edizioni del Galluzzo}
+%}
+%\end{citacao}
 
-Atualmente, esta técnica têm sido largamente implementada para navegadores de internet \cite{roberts_web_2013}. Programas como Gibber\footnote{Disponível em \url{http://gibber.mat.ucsb.edu/}.} \cite{roberts_gibber:_2012} e \emph{wavepot}\footnote{Disponível em \url{https://www.wavepot.com}.} são exemplares; permitem a agregação do conceito de \emph{reflexividade} ao conceito \emph{redes}, que será apresentado na próxima seção.
 
-%Durante a pesquisa, desenvolvemos em parceria com o pesquisador Flávio Schiavonni um ambiente JIT para síntese sonora, inspirado no GROOVE.
+
+\subsubsection{Just In Time Library (JITLib)}\label{sec:jit}
+
+A reflexividade é uma característica de diversos ambientes de \emph{live coding}. Segundo \citeonline{aycock_brief_2003}, o primeiros programas JIT foram Genesis (com base no LISP, 1960), LC$^2$ (\emph{Language for Conversational Computing}, 1968) e APL (1970). Este último deu origem ao conceito \emph{lazy evaluation} (avaliação preguiçosa). 
+
+O \emph{SuperCollider} foi o primeiro dos ambientes de programação musical a implementar esta caracterísitca. Com a divulgação da biblioteca JITLib\footnote{Disponível em \url{http://doc.sccode.org/Overviews/JITLib.html}.}, os primeiros Espaços Conceituais do \emph{live coding} se estruturam de maneira bastante formal na comunidade de músicos-programadores. Isto é, durante o ato de codificação podemos codificar a execução de um som antes mesmo de definí-lo (ver \autoref{cod:proxy}).
+
+\begin{example}{Exemplo de avaliação preguiçosa no \emph{Supercollider}.}
+
+Um tipo de variável específica começa com o caractere $~$ para indicar um ambiente propício para a avaliação preguiçosa. Mesmo antes de sua definição, podemos tocar um sintetizador:
+
+  \begin{minted}{c}
+    // play some output to the hardware busses,
+    // this could be any audio rate key.
+    ~out.play;
+    ~out = { SinOsc.ar([400, 408] * 0.8, 0, 0.2) };
+  \end{minted}
+
+Depois que o código acima é escrito e executado, podemos escrever outros códigos para substituir o sintetizador durante sua execução (\emph{runtime}):
+  
+  \begin{minted}{c}
+    // replacing the node. 
+    // the crossfade envelope is created internally.
+    ~out = { SinOsc.ar([443, 600 - Rand(0,200)], 0, 0.2) };
+    ~out = { Resonz.ar(Saw.ar(40 + [0,0.2], 1), [1200, 1600], 0.1) 
+           + SinOsc.ar(60 * [1,1.1],0,0.2) };
+    ~out = { Pan2.ar(PinkNoise.ar(0.1), LFClipNoise.kr(2)) };
+  \end{minted}
+    
+  \textbf{Fonte}: \url{http://doc.sccode.org/Tutorials/JITLib/proxyspace_examples.html}
+\label{cod:proxy}
+\end{example}
+
+Outros \emph{softwares} e ambientes também merecem menção: \emph{ixiLang}\footnote{Disponível em \url{http://www.ixi-audio.net/ixilang/}}\emph{ChucK}\footnote{Disponível em \url{http://chuck.cs.princeton.edu/}.}, \emph{Extempore}\footnote{Disponível em \url{http://benswift.me/extempore-docs/}.}, \emph{Impromptu}\footnote{Disponível em \url{http://impromptu.moso.com.au/}}, \emph{SonicPi}\footnote{Disponível em \url{http://sonic-pi.net/}}
+
+Esta técnica têm sido largamente implementada em navegadores de internet \cite{roberts_web_2013}, ou remotamente \cite{junior_supercopair_2015}. Isto é, entre duas pessoas distantes uma da outra, mas concetadas através da \emph{internet} ou de redes privadas.
+
+Trabalhos neste caminho incluem o Gibber\footnote{Disponível em \url{http://gibber.mat.ucsb.edu/}. \cfcite{roberts_gibber:_2012}} e \emph{Wavepot}\footnote{Disponível em \url{https://www.wavepot.com}.}. Com base neste último, impĺementamos um ambiente chamado \emph{Termpot}\footnote{Disponível em \url{https://jahpd.github.io/termpot}. \cfcite{lunhani_termpot_2015}.}.
 
 
 \subsection{Baía de São Franscisco}\label{sec:baiasaofranscisco}
@@ -145,7 +425,7 @@ Na segunda metade da década de setenta, Jim Horton começou a adquirir micro-co
 
 Ademais, em 1977, Horton colaborou com duas peças que interligavam estes microcontroladores. A primeira era construída sobre algoritmos inspirados nas teorias matemáticas de Leonard Euler (séc. XVIII). A segunda peça também explorava a comunicação entre os microcontroladores, de forma que \traducao{notas ocasionais da minha (Bischof) máquina faziam a máquina de Jim transpor atividades melódicas de acordo com minha nota base\cite[online]{brown_indigenous_2013}}{the occasional tones of my machine caused Jim’s machine to transpose its melodic activity according to my "key" note. }.
 
-Em 1978, Bischof, Behrman, Gold e Horton gravaram um \emph{Extended Play} (EP)\footnote{Gravação muito longa para um \emph{demo} e insuficiente para um disco, de vinil na época.} a partir de uma performance em 26 de Novembro de 1978, lançado pela pela Lovely Music (NY) em 1980 como \emph{The Hub: Computer Network Music}. Durante este tempo, foi formado o grupo \emph{``The League of Automatic Music Composers''}, que além de  Bischof, Perkis, Brown, contava com Scot Gresham-Lancaster, Mark Trayle e Phil Stone. Aquele era um momento onde os \emph{happenings} já eram manifestações artísticas consolidadas. Não demorou muito para que o público participasse da atividade:
+Em 1978, Bischof, Behrman, Gold e Horton gravaram um \emph{Extended Play} (EP)\footnote{Gravação muito longa para um \emph{demo} e insuficiente para um disco, de vinil na época.} a partir de uma performance. O disco foi lançado pela pela Lovely Music (NY) em 1980 como \emph{The Hub: Computer Network Music}. Durante este tempo, foi formado o grupo \emph{``The League of Automatic Music Composers''}, que além de  Bischof, Perkis, Brown, contava com Scot Gresham-Lancaster, Mark Trayle e Phil Stone. Aquele era um momento onde os \emph{happenings} já eram manifestações artísticas consolidadas. Não demorou muito para que o público participasse da atividade:
 
 \begin{citacao}
 Na primavera de 1979, montamos uma série quinzenal regular de apresentações informais sob os auspícios da \emph{Bay Center for the Performing Arts}. Todos outros domingos à tarde passávamos algumas horas configurando nossa rede de KIMs na sala \emph{Finnish Hall}, na Berkeley, e deixávamos a rede tocando, com retoques aqui e ali, por uma ou duas horas. Os membros da audiência poderiam ir e vir como quisessem, fazer perguntas, ou simplesmente sentar e ouvir. Este foi um evento comunitário de tipos como outros compositores aparecendo, tocando ou compartilhando circuitos eletrônicos que tinham projetado e construído. Um interesse na construção de instrumentos eletrônicos de todos os tipos parecia estar "no ar". Os eventos da sala \emph{Finn Hall} foram feitos para uma cena com paisagens sonoras geradas por computador misturado com os sons de grupos de dança folclórica ensaiando no andar de cima e as reuniões ocasionais do Partido Comunista na sala de trás do edifício velho venerável. A série durou cerca de 5 meses que eu me lembre.\cite[online]{brown_indigenous_2013}\footnote{Tradução nossa de: \emph{In the spring of 1979, we set up a regular biweekly series of informal presentations under the auspices of the East Bay Center for the Performing Arts. Every other Sunday afternoon we spent a few hours setting up our network of KIMs at the Finnish Hall in Berkeley and let the network play, with tinkering here and there, for an hour or two. Audience members could come and go as they wished, ask questions, or just sit and listen. This was a community event of sorts as other composers would show up and play or share electronic circuits they had designed and built. An interest in electronic instrument building of all kinds seemed to be "in the air." The Finn Hall events made for quite a scene as computer-generated sonic landscapes mixed with the sounds of folk dancing troupes rehearsing upstairs and the occasional Communist Party meeting in the back room of the venerable old building. The series lasted about 5 months as I remember.}}
@@ -153,7 +433,7 @@ Na primavera de 1979, montamos uma série quinzenal regular de apresentações i
 
 Nesta seção sumarizamos os conceito \emph{rede de composições}. Este conceito pode ser melhor compreendido através de uma descrição do processo criativo da banda:
 
-\traduzcitacao{Os membros da liga geralmente adaptavam composições solo para usar dentro da banda. Estes solos eram desenvolvidos independentemente por cada compositor, e eram tipicamente baseados em esquemas de algoritmos de um tipo ou outro. Existiam características de improvisação diferentes para muitas delas, como bem as músicas eram diferentes em detalhes. Teorias matemáticas sistemas de afinação experimentais, algoritmos de inteligência artificial, projetos de instrumentos de improvisação, e performance interativa eram algumas das áreas exploradas nestes trabalhos (\ldots) Os solos tocavam simultaneamente no cenário de grupo, se tornando ``sub''-composições que interagem, cada uma enviando e recebendo dados pertinentes para o funcionamento musical}
+\traduzcitacao{Os membros da liga geralmente adaptavam composições solo para usar dentro da banda. Estes solos eram desenvolvidos independentemente por cada compositor, e eram tipicamente baseados em esquemas de algoritmos de um tipo ou outro. Existiam características de improvisação diferentes para muitas delas, como bem as músicas eram diferentes em detalhes. Teorias matemáticas, sistemas de afinação experimentais, algoritmos de inteligência artificial, projetos de instrumentos de improvisação, e performance interativa eram algumas das áreas exploradas nestes trabalhos (\ldots) Os solos tocavam simultaneamente no cenário de grupo, se tornando ``sub''-composições que interagem, cada uma enviando e recebendo dados pertinentes para o funcionamento musical}
 {League members generally adapted solo compositions for use within the band. These solos were developed independently by each composer and were typically based on algorithmic schemes of one kind or another. There was a distinctly improvisational character to many of these as the music was always different in its detail. Mathematical theories of melody, experimental tuning systems, artificial intelligence algorithms, improvisational instrument design, and interactive performance were a few of the areas explored in these solo works. (\ldots) The solos, played simultaneously in the group setting, became interacting "sub"-compositions, each sending and receiving data pertinent to its musical functioning.}
 {online}
 {brown_indigenous_2013}
@@ -161,51 +441,70 @@ Nesta seção sumarizamos os conceito \emph{rede de composições}. Este conceit
 
 \subsection{Ron Kuivila}
 
-Segundo \citeonline{mclean_patterns_2009}, Ron Kuivila realiza a primeiras performance de \emph{live coding} em 1985 com a performance \emph{Water Surfaces} na STEIM\footnote{\emph{STudio for Electro-Instrumental Music}, disponível em \url{http://steim.org/about/}.}, em Amsterdã \cite{blackwell_programming_2005}. 
+Segundo \citeonline{mclean_patterns_2009} comenta alguma importância a performance \emph{Water Surfaces}, realizada na edição de 1985 da STEIM \footnote{\emph{STudio for Electro-Instrumental Music}, disponível em \url{http://steim.org/about/}.}, em Amsterdã, como significativa para o \emph{live coding}. . A performance chamou a atenção, e foi incuída na primeira faixa do disco ``\emph{TOPLAP001 - A prehistory of live coding}'', como uma reconstrução da peça, 2007 \footnote{Disponível em \url{http://toplap.org/wiki/TOPLAP_CDs}.}; uma nota sobre a performance descreve o seguinte: \traducao{
+Esta obra usou programação FORTH ao vivo; Curtis \citeonline{roads_steim_1986} testemunhou e relatou a performance de Ron Kuivila feita na STEIM em Amsterdã, em 1985; a performance original termina com a quebra do sistema\ldots
+}{
+This work used live FORTH programming; Curtis Roads witnessed and reported a performance by Ron Kuivila at STEIM in 1985; the original performance apparently closed with a system crash\ldots
+}
 
-O disco ``\emph{TOPLAP001 - A prehistory of live coding}'' traz uma reconstrução da peça realizada em 2007 \footnote{Disponível em \url{http://toplap.org/wiki/TOPLAP_CDs}.}; uma nota sobre a performance descreve o seguinte: \traducao{Esta obra usou programação FORTH ao vivo; Curtis Roads testemunhou e relatou a performance de Ron Kuivila feita na STEIM em Amsterdã, em 1985; a performance original termina com a quebra do sistema.}{This work used live FORTH programming; Curtis Roads witnessed and reported a performance by Ron Kuivila at STEIM in 1985; the original performance apparently closed with a system crash\ldots}\footnote{FORTH é uma linguagem de programação elaborada por Charles Moore (1938-). Entre seus paradigmas de programação, utiliza da \emph{reflexividade}.}. 
+
+\traduzcitacao{Ronald Kuivila programou um computador Apple II no palco para cirar sons densos, rodopiantes e métricos, disposto em camadas e dobravam sobre si. Considerando o equipamento usado, os sons eram surpreendentemente grandes em escala. Kuivila teve problemas em controlar a peça devido q problemas sistêmicos. Ele finalmente entrou em dificuldades técnicas e finalizou a performance}{Ronald Kuivila programmed an Apple II computeronstage to create dense, whirling, metric sounds that layered in and folded over each other. Considering the equipment used, the sounds were often surprisingly gigantic in scale. Kuivila had trouble controlling the piece due to system problems. He finally gave in to technical difficulties and ended the performance}
+{p.~47}
+{roads_steim_1986}
+%FORTH é uma linguagem de programação elaborada por Charles Moore (1938-). Entre seus paradigmas de programação, utiliza da \emph{reflexividade} como dispositivo de escrita e observação dos algoritmos elaborados.
 
 Ge \citeonline{wang_historical_2005}, em uma comunicação pessoal com Curtis Roads, cita a seguinte declaração: \traducao{Eu vi o \emph{software} FORTH de Ron Kuivila quebrar e queimar no palco em Amsterdã em 1985, mas antes disso, não fez uma música muito interessante. A performance consistiu de digitação}{I saw Ron Kuivila's Forth software crash and burn onstage in Amsterdam in 1985, but not before making some quite interesting music. The performance consisted of typing.}
 
-Nenhuma fonte sonora foi encontrada disponível online. Porém este conceito é revisitado por Magno Caliman em \emph{scriptBashing} (2015): a recodificação de um programa escrito em linguagem C cria centenas (na ordem de 800) processos paralelos só no plano visual. Outros processos, com a criação de sintetizadores no SuperCollider, embora parcialmente visíveis, são adicionados na pilha de memória. A performance acaba com um silêncio decorrente da saturação da memória RAM.
+Nenhuma fonte sonora foi encontrada disponível online. 
 
+\subsubsection{Quebra de sistemas}\label{sec:quebra}
 
-\subsection{Live Algorithm Programming and Temporary Organization for its Promotion}\label{sec:laptoptoplap}
+Poucas informações sobre a peça em questão foram encontradas. Neste sentido, realizamos um pequeno resgate de outra peça apresentada no início deste capítulo, para uma aproximação conceitual.
 
-Este acrônimo deriva  do manifesto ``\emph{Live Algorithm Programming and Temporary Organization for its Promotion}'', LAPTOP, \cite{ward_live_2004,blackwell_programming_2005}.
+O conceito de \emph{término de uma performance com a quebra do sistema} é revisitado não-intencionalmente em \emph{screenBashing} (ver \autoref{fig:screenbashing}, p.\pageref{fig:screenbashing}). Isto é, durante uma breve conversa após a performance, o compositor Magno Calimanão foram relatou quebras do sistema durante ensaios.
 
-No \emph{Wiki} do site oficial\footnote{Disponível em \url{http://toplap.org/wiki/Main_Page}.}, a cada visita, a ordem das letras são permutadas, criando diferentes significados. Por exemplo, \emph{Transdimensional Organisation for the Pragmatics of Live Algorithm Programming}, \emph{Terrestrial Organisation for the Proliferation of Live Artistic Programming}, \emph{Temporal Organisation for the Proliferation of Live AudioVisual Programming} e outros. 
+A performance consistiu no processo de escrita de diversos programas em linguagem C, e na execução sucessiva de códigos preparados no \emph{SuperCollider}. Um período de silêncio antecede os primeiros resultados visuais, seguidos de resultados sonoros derivados dos códigos pré-escritos no ambiente \emph{SuperCollider}, criando uma síncrese bastante peculiar\footnote{``Fusão mental espontânea e irresistível, completamente livre de qualquer lógica, que acontece entre um som e uma imagem quando estas ocorrem ao mesmo tempo''\cfcite[p.~68]{chion_introduction_1990}.}. No aspecto de sua forma, ocorreu uma aglutinação de texturas contínuas em um mesmo campo visual (a projeção da tela), e em um mesmo campo sonoro (sons ruidosos). No campo visual, a tela é pouco a pouco  A aglutinação decorre em um aumento da textura sonora, e da intensidade sonora no espaço aural, .
 
-Este comportamento, de permutar ordem das letras, de algum título, ou até mesmo do próprio nome para gerar pseudônimos, já era praticada por Click Nilson (Nick Collins), que define bem o \emph{live coding}: \traducao{Live coding celebra a efemeralidade de sua própria definição}{Live coding celebrates the ephemerality of definition itself. Disponível em \url{http://lurk.org/groups/livecode/messages/topic/ofAxZpxsKFpDRLnoA48Bh}.}
+A execução de cada um deles criou centenas processos paralelos na  memória do computador (aproximadamente 1000). Contínuos sonoros e visuais terminam com um silêncio brusco, e o congelamento da imagem, decorrente desta saturação.
 
-Este manifesto expõe os ambientes de performance, bem como alguns ritos técnicos do improvisador. Espaços de Música Eletrônica de Pista se misturam com a Música algorítmica e a Música de processos:
+\subsection{LAPTOP}\label{sec:laptoptoplap}
+
+``\emph{Live Algorithm Programming and Temporary Organization for its Promotion}'' \cite{ward_live_2004,blackwell_programming_2005} é um primeiro documento-manifesto sobre o \emph{live coding} como modalidade artística. O seu acrônimo LAPTOP representa o principal equipamento técnico utilizado.
+
+Este manifesto expõe os ambientes de performance, bem como alguns ritos técnicos do improvisador. O fragmento de texto abaixo é um recorte que descreve os Espaços Conceituais do \emph{algorave} e do \emph{Code DJing}:
 
 \begin{citacao}
-O \emph{Livecoding} permite a exploração de espaços algorítmicos abstratos como uma improvisação intelectual. Como uma atividade intelectual, pode ser colaborativa. Codificação e teorização podem ser atos sociais. Se existe um público, revelar, provocar e desafiar eles com uma matemática complexa se faz com a esperança de que sigam, ou até mesmo participem da expedição. Estas questões são, de certa forma, independentes do computador, quando a valorização e exploração de algoritmo é que importa. Outro experimento mental pode ser encarado com um DJ ao vivo codificando e escrevendo uma lista de instruções para o seu \emph{set} (realizada com o iTunes, mas aparelhos reais funcionam igualmente bem). Eles passam ao HDJ $[$ \emph{Headphone Disk Jockey} $]$ de acordo com este conjunto de instruções, mas no meio do caminho modificam a lista. A lista está em um retroprojetor para que o público possa acompanhar a tomada de decisão e tentar obter um melhor acesso ao processo de pensamento do compositor. \cite[p.~245]{ward_live_2004} \footnote{Tradução nossa de: \emph{Live coding allows the exploration of abstract algorithm spaces as an intellectual improvisation. As an intellectual activity it may be collaborative. Coding and theorising may be a social act. If there is an audience, revealing, provoking and challenging them with the bare bone mathematics can hopefully make them follow along or even take part in the expedition. These issues are in some ways independent of the computer, when it is the appreciation and exploration of algorithm that matters.   Another thought experiment can be envisaged in which a live coding DJ writes down an instruction list for their set (performed with iTunes, but real decks would do equally well). They proceed to HDJ according to this instruction set, but halfway through they modify the list. The list is on an overhead projector so the audience can follow the decision making and try to get better access to the composer’s thought process.}}
+O \emph{Livecoding} permite a exploração de espaços algorítmicos abstratos como uma improvisação intelectual. Como uma atividade intelectual, pode ser colaborativa. Codificação e teorização podem ser atos sociais. Se existe um público, revelar, provocar e desafiar eles com uma matemática complexa se faz com a esperança de que sigam, ou até mesmo participem da expedição. Estas questões são, de certa forma, independentes do computador, quando a valorização e exploração do algoritmo é o que importa. Outro experimento mental pode ser encarado com um DJ ao vivo codificando e escrevendo uma lista de instruções para o seu \emph{set} (realizada com o iTunes, mas aparelhos reais funcionam igualmente bem). Eles passam ao HDJ $[$ \emph{Headphone Disk Jockey} $]$ de acordo com este conjunto de instruções, mas no meio do caminho modificam a lista. A lista está em um retroprojetor para que o público possa acompanhar a tomada de decisão e tentar obter um melhor acesso ao processo de pensamento do compositor. \cite[p.~245]{ward_live_2004} \footnote{Tradução nossa de: \emph{Live coding allows the exploration of abstract algorithm spaces as an intellectual improvisation. As an intellectual activity it may be collaborative. Coding and theorising may be a social act. If there is an audience, revealing, provoking and challenging them with the bare bone mathematics can hopefully make them follow along or even take part in the expedition. These issues are in some ways independent of the computer, when it is the appreciation and exploration of algorithm that matters.   Another thought experiment can be envisaged in which a live coding DJ writes down an instruction list for their set (performed with iTunes, but real decks would do equally well). They proceed to HDJ according to this instruction set, but halfway through they modify the list. The list is on an overhead projector so the audience can follow the decision making and try to get better access to the composer’s thought process.}}
 \end{citacao}
 
-O trecho acima fornece informações a respeito do espaços conceitual do \emph{algorave}, ou das pŕaticas de \emph{Disk Jockey} com a utilização da a atividade de programação em linguagem de computador. Adiante podemos ver outros dois conceitos aglutinados: Música de Processos, ou Música de algoritmos simples, e Música Generativa \footnote{Para mais informações, ver \citeonline{reich_music_1968} e \citeonline[p.~128]{mailman_agency_2013}. Sobre Música generativa, \citeonline{eno_generative_1996} }:
+Adiante podemos ver outros dois conceitos aglutinados: a Música de Processos\footnote{Sobre a Música como um Processo Gradual, \cfcite{reich_music_1968}. Uma outra abordagem é apresentada por \citeonline[p.~128]{mailman_agency_2013}, e descreve a Música Minimalista de Processos como uma Música de Algoritmos Simples,  um processo determinístico que age sobre focos de quadros temporais.}, e a Música Generativa \footnote{\cfcite{eno_generative_1996}: ``Música Generativa é sensitiva às circuntâncias, isso quer dizer que irá reagir diferentemente dependendo das suas condições iniciais, onde ocorre e assim por diante.''. Tradução de: \emph{Generative music is sensitive to circumstances, that is to say it will react differently depending on its initial condition, on where it's happening and so on.}}:
 
 \begin{citacao}
 Contudo, alguns músicos exploram suas idéias como processos de \emph{software}, muitas vezes ao ponto que o \emph{software} se torna a essência da música. Neste ponto, os músicos podem ser pensados como programadores explorando seu código manifestado como som. Isso não reduz seu papel principal como um músico, mas complementa, com a perspectiva única na composição de sua música. \textbf{Termos como ``música generativa'' e ``música de processos'' tem sido inventados e apropriados para descrever esta nova perspectiva de composição}. Muita coisa é feita das supostas propriedades da chamada ``música generativa'' que separa o compositor do resultado do seu trabalho. Brian Eno compara o fazer da música generativa com o semear de sementes que são deixadas para crescer, e sugere abrir mão do controle dos nossos processos, deixando eles ``brincarem ao vento''. \footnote{\opcit[p.~245-246]{ward_live_2004}. Tradução nossa de \emph{Indeed, some musicians explore their ideas as software processes, often to the point that a software becomes the essence of the music. At this point, the musicians may also be thought of as programmers exploring their code manifested as sound. This does not reduce their primary role as a musician, but complements it, with unique perspective on the composition of their music. Terms such as “generative music” and “processor music” have been invented and appropriated to describe this new perspective on composition. Much is made of the alleged properties of so called “generative music” that separate the composer from the resulting work. Brian Eno likens making generative music to sowing seeds that are left to grow, and suggests we give up control to our processes, leaving them to “play in the wind”.}}
 \end{citacao}
 
-\subsubsection{\emph{Algoraves}}\label{sec:algorave}
+\subsubsection{TOPLAP}
 
-Algorave é  um tipo de música eletronica de pista, que se utiliza de algoritmos, processos, e teorias generativas; seus processos criativos replicam alguns regimes de escuta, tais como \emph{dance}, \emph{drum'n'bass}, \emph{cyberpunk}. No entanto, \emph{algorave} é um termo anterior ao advento do \emph{live coding}: 
+Uma permutação na ordem das letras do acrônimo LAPTOP dá origem ao acrônimo TOPLAP. \citeonline[p.~246]{ward_live_2004} e \citeonline{ramsay_algorithms_2010} apontam que este acrônimo é polissêmico; isto quer dizer que as primeira, terceira  e quinta letras possuem diversos significados (ver \autoref{fig:TOPLAP}):
 
 \begin{citacao}
-\emph{Algorave} não é sustentado exclusivamente por \emph{live coders}, mas estes têm mantido uma forte presença em todos os eventos até agora. É assim talvez, porque a tradição do \emph{live coding} de projetar telas motiva todo o esforço; onde algoritmos não estão visíveis por períodos de tempo durante uma algorave, se corre o risco das coisas parecerem muito como um evento de música eletrônica padrão. \cite[p.~356]{collins_algorave:_2014} \footnote{Tradução nossa de \emph{Algorave is not exclusively a preserve of live coders, but they have maintained a strong presence at every event thus far. This is perhaps because the live coding tradition of projecting screens help motivates the whole endeavour; where algorithms are not made visible for periods during an algorave, we run the risk of things feeling much like a standard electronic music event.}}
+\traducao{A organização TOPLAP (www.toplap.org), cuja sigla possui diversas interpretações, uma sendo \emph{Organização Temporária para a Proliferação da Programação de Algoritmos Ao Vivo}, foi criada para promover e explorar o \emph{live coding}. TOPLAP nasceu em um escurecido pelo fumo em Hamburgo à uma da manhã em 15 de Fevereiro de 2004.}{The organisation TOPLAP (www.toplap.org), whose acronym has a number of interpretations,  one being the Temporary Organisation for the Proliferation for Live Algorithm Programming, has been set up to promote and explore live coding. TOPLAP was born in a smoky Hamburg bar at 1am on Sunday 15th February 2004}
 \end{citacao}
 
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.5]{imagens/TOPLAP.png}
+  \caption{Definição do siginificado de TOPLAP. \textbf{Fonte}: \citeonline{ramsay_algorithms_2010}.}
+  \label{fig:TOPLAP}
+\end{figure}
 
-\citeonline{collins_algorave:_2014} apresentam dados a respeito da história da \emph{algorave}, de 1992 a 2004. Em 1992, Charles Ames disponibiliza o \emph{Cybernetic Composer}, \traducao{um \emph{software} com um sistema baseado em Inteligência Artificial que compõe música em uma variedade de estilos populares.}{an AI based software system that composes music in a variety of popular styles.}\footnote{Disponível em \url{http://www.kurzweilai.net/charles-ames}}. Em 1994, o duo \emph{Koan}, formado pelos DJs Daniel Roeth e William Grey, realizam adaptações para entretenimento com base no \emph{ambient music} de Brian \citeonline{eno_music_1978}. \emph{Aphex Twin} (Richard David James) reinvindica em 1997 o termo \emph{live club algorithm}. Em 1999, o protocolo para edição audiovisual ao vivo \emph{bbcut} \cite{collins_bbcut_2003} é incluído nos \emph{opcodes} do \emph{CSound}\footnote{Disponível em \url{https://csound.github.io/}.}, e do \emph{Supercollider}. Em 2000 o \emph{Slub}, realizam performances, autodenominadas \emph{generative techno}, com abordagem \emph{gabba}. Em 2001 é identificado a utilização de redes neurais para composição de padrões semelhantes ao \emph{drum'n'bass}. Em 2004 é fundado o TOPLAP, organização internacional  de \emph{live coding}, em uma casa noturna de Hamburgo. \footnote{\loccit{collins_algorave:_2014}.}
+O símbolo ``|'' é uma representação gráfica do operador lógico \emph{OR} (OU), bastante utilizado em algoritmos condicionais. Isto é, \emph{Temporary }| \emph{Trasnational} | \emph{Terrestrial} | \emph{Transdimensional} significa que as letras ímpares ``T'', e ``Ps'', podem significar um ou outro termo indicado pelo algoritmo.
 
-De maneira sumarizada, escolhemos os conceitos: \emph{música de processos, música generativa, Inteligência Artifical, e música de pista} como conceitos relacionados ao manifesto ``\emph{Live Algorithm Programming and Temporary Organization for its Promotion}''.
+Este comportamento, de permutar ordem das letras é praticado por Nick Collins (1975-); a permutação de suas letras é utilizada pelo pesquisador para gerar pseudônimos como Click Nilson, ou Sick Lincoln. Junto com McLean, Collins cunhou o termo \emph{Algorave}.
 
 \subsection{\emph{Show us your screens}}\label{sec:showusyourscreens}
 
-Além das performances inaugurais nos festivais Europeus, e do manifesto ``Live Algorithm Programming and Temporary Organization for its Promotion'', ``\emph{Show Us Your Screens}''  \cite[p.~22; online]{griffiths_fluxus:_2008,mccallum_show_2011}, contêm as regras heurísticas do \emph{live coding}:
+Além das performances inaugurais nos festivais Europeus, o manifesto Lubeck04, \traducao{iniciado em um ônibus de trânsito Ryanair\disponivelem{https://www.ryanair.com/pt/pt/}, em  Hamburgo, para o aeroporto Lübeck\cite[p.~247]{ward_live_2004}}{begun on a Ryanair transit bus from Hamburg to Lubeck airport}, mais conhecido como ``\emph{Show us your screens}'', prescreve algumas regras práticas do \emph{live coding}. 
 
 \begin{citacao}
 Exigimos:
@@ -236,8 +535,8 @@ Nós reconhecemos que:
 
 • Codificação ao vivo pode ser acompanhada por uma impressionante exibição de destreza manual e a glorificação da interface de digitação.
 
-• Performance envolve contínuos de interação, cobrindo talvez o âmbito dos controles, no que diz respeito ao parâmetro espaço da obra de arte, ou conteúdo gestual, particularmente direcionado para o detalhe expressivo. Enquanto desvios na tradicional taxa de reflexos táteis da expressividade, na música instrumental, não são aproximadas no código, por que repetir o passado? Sem dúvida, a escrita de código e expressão do pensamento irá desenvolver suas próprias nuances e costumes.
-\footnote{Tradução nossa de:\emph{We demand: \begin{inparaenum}[•]
+• Performance envolve contínuos de interação, cobrindo talvez o âmbito dos controles, no que diz respeito ao parâmetro espaço da obra de arte, ou conteúdo gestual, particularmente direcionado para o detalhe expressivo. Enquanto desvios na tradicional taxa de reflexos táteis da expressividade, na música instrumental, não são aproximadas no código, por que repetir o passado? Sem dúvida, a escrita de código e expressão do pensamento irá desenvolver suas próprias nuances e costumes. 
+\footnote{\loccit{ward_live_2004}. Tradução nossa de:\emph{We demand: \begin{inparaenum}[•]
 \item Give us access to the performer's mind, to the whole human instrument.
 \item Obscurantism is dangerous. Show us your screens.
 \item Programs are instruments that can change themselves.
@@ -262,92 +561,64 @@ nuances and customs.
 \end{inparaenum}}}
 \end{citacao}
 
-``Dar acesso à mente do intérprete'' e ``obscurantismo é perigoso'' descrevem um meio de evitar qualquer código mal intencionado; isto é uma hipótese: \begin{inparaenum}[\itshape i)\upshape]
-\item programas de \emph{live coding} geralmente são programas em fase de desenvolvimento;
-\item programas em desenvolvimento possuem, inevitavelmente, \emph{bugs}\footnote{Segundo James S. Huggins, historicamente ``O termo \emph{bug} é usado de forma limitada para designar qualquer falha ou problema em conexões ou no trabalho com aparatos elétricos'' Tradução nossa de \emph{The term "bug" is used to a limited extent to designate any fault or trouble in the connections or working of electric apparatus.} (ver \url{http://www.jamesshuggins.com/h/tek1/first_computer_bug.htm}). Nesse sentido, um \emph{bug} em um programa é uma falha de operação, geralmente causada por algum erro de lógica, por parte do programador.}
-\item \emph{bugs} podem ser explorados e levar à corrupção do sistema.
-\end{inparaenum} Se esta hipótese estiver correta, justificaria a atitude de exposição da \emph{imagem-texto}. No entanto não encontrei algum estudo crítico descrevendo se isso é verdade a partir do ponto de vista do público, isto é, será que o público pode estar realmente interessado na exposição da \emph{imagem-texto}? Será que essa exposição não pode ser perigosa para o processo artístico e para a experiência do público? Embora sejam questões que fogem do escopo do trabalho, são importantes, necessitando verificar algumas performances para averiguar.
+Surgiu como uma resposta ao artigo ``Using Contemporary Technology in Live Performance; the Dilemma of the Performer'' de \citeonline{schloss_dilemma_2003}. A crítica principal de \citeauthoronline{ward_live_2004} refere-se ao sétimo dos questionamentos sugeridos para uma performance de improvisação ao vivo com computadores.
 
-``Programas são instrumentos'' e ``O programa será transcendido - Língua Artificial é o caminho'', são frases que fazem menção direta à experiência de usuário (\emph{live coder}), isto é, um sistema que é programável de maneira facilitada. A seguinte hipótese pode ser feita: quanto mais simplificada a linguagem de programação, mais expressão visual ou musical um espetáculo poderá ter (o que pode não ser verdade, e sim que a expressão musical estaria no nível sensível). Por ``Língua Artifical'' entendo que o \emph{live coder} pode criar \emph{mini-linguagens} ou Linguagens de Domínio Específico (DSL)\footnote{Sobre esse tema recomendo o texto ``Minilanguages, finding a notation that sings'' de \citeonline{raymond_minilanguages_2003}: ``Historicamente, linguagens de dominio especifico sao do tipo que sao chamadas de 'pequenas linguagens' ou 'minilinguagens' no mundo do Unix, porque os primeiros exemplos eram pequenos e de pouca complexidade, em relaçao às linguagens de propósito geral (\ldots) Nós manteremos o termo tradicional 'minilinguagem'para engatizar que no decorrer do curso é geralmente utilizado para projetar e mantê-las o menor e simples possível'' \cite[$3^o$ parágrafo]{raymond_minilanguages_2003}. Tradução nossa de \emph{Historically, domain-specific languages of this kind have been called ‘little languages’ or ‘minilanguages’ in the Unix world, because early examples were small and low in complexity relative to general-purpose languages (\ldots) We'll keep the traditional term ‘minilanguage’ to emphasize that the wise course is usually to keep these designs as small and simple as possible.}} que possibilitam criar programas para criar um espetáculo audiovisual ou musical. Segundo \citeonline{collins_algorave:_2014}, tais DSLs estariam no formato de ``mini-linguagens'' bem desenvolvidas para a tarefa específica de codificar música ao vivo, operando técnicas composicionais como a transformação de um padrão musical (como por exemplo, técnicas barrocas como inversão e retrogradação ou técnicas aleatórias, como emabaralhamento de um conjunto de eventos sonoros), facilitando a espontaneidade no processo criativo:
+Poderia ser dito que o \emph{live coding} é parte de uma construção histórica de uma tradição musical da \emph{Computer Music Journal}. Porém o documento publicado por \citeauthoronline{ward_live_2004} foi essencial para a divulgação de uma ideologia e de suas regras práticas. Foi escrito como resposta para um problema colocado por \citeonline[p.~241]{schloss_dilemma_2003}:
 
 \begin{citacao}
-Existe um número crescente de sistemas de \emph{livecoding} com ``mini-linguagens'' amigáveis, que facilitam o \emph{loop} e contruções de camadas centrais típicas para dançar música. \emph{Ixilang} é um exemplo primário, e possui um editor de código estruturado que, enquanto baseado em texto, suporta correspondências visuais. \emph{Tidals} é outro, e, embora com foco na rapidez de utilização ao invés da facilidade de aprendizagem, está começando a ter mais ampla aceitação. Ambos \emph{ixilang} e \emph{Tidal} promovem padrões em termos de funções transformadoras como embaralhamento, inversão e extrapolação de formas diferentes.  \cite[p~.357]{collins_algorave:_2014}\footnote{Tradução nossa de: \emph{There are increasingly user friendly “mini-language” livecoding systems which facilitate loop and layer-centric con-structions typical to dance music. ixilang is a primary example, and features a structured code editor which while text-based, supports visual correspondences. Tidal is another, and although its focus is on speed of use rather than ease of learning, is beginning to see wider take-up. Both ixilang and Tidal promote pattern in terms of transformative functions as scrambling, reversal and extrapolation in different ways}.}
+\traducao{Para reiterar, agora que nós temos computadores rápidos o suficiente para execução ao vivo, nós temos novas possibilidades, e um novo problema. Do começo da evidência arqueológica da música até agora, música era tocada acusticamente, e sempre foi fisicamente evidente como o som era produzido; alí existia uma relação de proximiidade entre gesto e resultado. Agora nós não temos mais que seguir as leis da física (ultimamente temos, mas não nos termos do que o observador vê), uma vez que nós temos completo poder do computador como intérprete e intermediário entre nosso corpo físico e o som produzido. Por esta causa, a ligação entre gesto e resultado foi completamente perdido, se é que existe ligação. Isto significa que nós podemos ir além da relação de causa-e-efeito entre executante e instrumento que faz a mágica. Mágica é bom; muita mágica é fatal }{
+To reiterate, now that we have fast enough computers toperform live, we have new possibilities, and a new problem.From the beginning of the archeological evidence of musicuntil now, music was played acoustically, and thus it wasalways physically evident how the sound was produced; there was a nearly one-to-one relationship between gesture andresult. Now we don’t have to follow the laws of physicsanymore (ultimately we do, but not in terms of what theobserver observes), because we have the full power of computers as interpreter and intermediary between our physicalbody and the sound production. Because of this, the link between gesture and result can be completely lost, if indeed there is a link at all. This means that we can go so far beyond the usual cause-and-effect relationship between performer and instrument that it seems like magic. Magic is great; too much magic is fatal
+} 
 \end{citacao}
 
-
-``O código deve ser visto assim como ouvido'' entraria em um problema próprio de programas de pesquisa em notação musical, sendo que o processo de correlação entre o que está escrito e o que está sendo ouvido leva um tempo ou pode mesmo nem existir. Mesmo com o convite expressado pelo manifesto ``\emph{Live Algorithm Programming and Temporary Organization for its Promotion}'' no início do capítulo, a questão não está nem no uso do computador nem em alguma abordagem musical, e conforme a performance avança, a imagem-texto vai se tornando tão poluída que poderia causar um desinteresse.
+Segundo \citeonline[p.~239]{schloss_dilemma_2003}, é necessário: \traducao{considerar a visão do observador sobre os modos de performance das interações físicas e mapeamentos de gestos em som, para fazer uma performance convincente e efetiva}{Its now necessary, (\ldots) ;to consider the observer’s view of the performer’s modes of physical interactions and mappings from gesture to sound, in order to make the performance convincing and effective.}:
 
 \begin{citacao}
-Codificação e teorização podem ser atos sociais. Se existe um público, revelar, provocar e desafiar eles com uma matemática complexa se faz com a esperança de que sigam, ou até mesmo participem da expedição. Estas questões são, de certa forma, independentes do computador, quando a valorização e exploração de algoritmo é que importa.\cite[p.~204]{ward_live_2004}
+\traducao{1. Causa-e-efeito é importante, pelo menos para o observador/audiência em uma sala de concerto. 
+\ \\
+2.Corolário: Mágica na performance é bom. Muita mágica é fatal! (chato).
+\ \\
+3. Um componente visual é essencial para a audiência, tal como existe um aparato visual de entrada para parâmetros e gesos.
+\ \\
+4. Sutileza é importante. Grandes gestos são facilmente visíveis de longe, o que é bom, mas eles são movimentos de desenho animado se comparados à execução de um instrumento musical.
+\ \\
+5. Esforço é importante. Neste sentido, nós estamos em desvantagem de desempenho na performance musical com o computador.
+\ \\
+6. Improvisação no palco é bom, mas ``mimar'' o aparato no palco não é improvisação, é edição. É provavelmente mais apropriado fazer isso no estúdio antes do concerto, ou se durante o concerto, com o console no meio ou atrás da sala de concerto.
+\ \\
+7. Pessoas que representam devem representar. Um concerto de música de computador não é uma desculpa/oportunidade para um programador(a) se sentar no palco. Sua presença melhora ou impede o desempenho da representação?
+}{1. Cause-and-effect is important, at least for the observer/audience in a live concert venue. 2. Corollary: Magic in a performance is good. Too much magic is fatal! (Boring). 3. A visual component is essential to the audience, such that there is a visual display of input parameters/gestures. The gestural aspect of the sound becomes easier to experience. 4. Subtlety is important. Huge gestures are easily visible from far away, which is nice, but they are cartoon- movements compared to playi
+ng a musical instrument. 5. Effort is important. In this regard, we are handicapped in computer music performance. 6. Improvisation on stage is good, but “baby-sitting” the apparatus on stage is not improvisation, it is editing. It is probably more appropriate to do this either in the studio before the concert, or if at the concert, then at the console in the middle or back of the concert hall. 7. People who perform should be performers. A computer music concert is not an excuse/opportunity for a computer programmer to finally be on stage. Does his/her presence enhance the performance or hinder it?} \end{citacao}
+
+Escolhemos um ponto de interesse particular; a frase ``Algoritmos são pensamentos, motosserras são ferramentas'' foi muito discutida no processo de qualificação desta tese. Particularmente, existe um vídeo , em formato de \emph{Vlog}, que discute o \emph{live coding} sob esta perspectiva.
+ 
+\subsubsection{Algorithms are Thoughts, Chainsaws are Tools}
+
+``Algorithms are Thoughts, Chainsaws are Tools'' é o nome dado ao vídeo de Stephen \citeonline{ramsay_algorithms_2010}, publicado no Vimeo, em  27 de fevereiro de 2010, como um \emph{Coffee-Table Movie}. É uma análise pessoal da performance de \emph{Strange Places} de Andrew Sorensen. O nome do vídeo é derivado de uma das regras práticas apresentadas na \autoref{sec:showusyourscreens}, p. \pageref{sec:showusyourscreens}; mais especificamente, o sexto item:
+
+\begin{citacao}
+Codificação ao vivo não é sobre ferramentas. Algoritmos são pensamentos. Motosserras são ferramentas. É por isso que às vezes algoritmos são mais difíceis de perceber do que motosserras \cite[p.~22; item 6]{griffiths_fluxus:_2008}.
 \end{citacao}
 
-``Algoritmos são pensamentos. Motosserras são ferramentas.'', ``Introspecção dos algoritmos.'' e ``A externalização hábil de algoritmo'' descrevem uma atividade constante de formalizações lógicas, do processo febril de explorar uma complexidade própria do que se criou, de ficar digitando sem parar um teclado de computador. Alguns colegas e amigos não programadores, músicos e não músicos, utilizam a expressão ``gostar de apertar botão'' para se referir à caricatura do programador em um espaço reservado, no qual controla dispositivos diversos.
+O algoritmo como pensamento é um Espaço Conceitual abstrato; pode conter qualquer fundamento teórico pertinente para uma improvisação específica. O dispositivo usado (motoserra, máquina de tecelagem ou o computador) é um meio pelo qual o algoritmo toma sua forma sonora. É interessante aqui notar que este vídeo contém uma descrição e comentários que podem elucidar a frase-alvo sob o prisma da partitura musical. Abaixo realizei uma compilação de fragmentos de alguns dos comentários que considerei pertinentes. Ramsey apresenta a seguinte descrição do vídeo:
 
-``Sem \emph{backup}'' indica o comportamento do \emph{live coder} após uma improvisação, que não memoriza em discos rígidos, cd's ou \emph{pendrives} o documento criado (isto é, o código textual, em alguma extensão apropriada para a linguagem utilizada, por exemplo, \emph{.pl}, Perl, \emph{.scheme}, Scheme, \emph{.js}, JavaScript), da mesma forma que um músico de improvisação dificilmente transcreveria o que tocou em uma partitura, no máximo gravando o áudio da performance.
+\begin{citacao}
+Um curta sobre \emph{livecoding} apresentado como parte do Grupo de Estudos de Crítica de Códigos, em 2010, por Stephen Ramsay. Apresenta uma leitura ao vivo $[$\emph{live reading}$]$ de uma performance do compositor Andrew Sorensen. Também fala sobre J.D. Salinger, the Rockets, tocando instrumentos, Lisp, do clima em Brisbane e tímpanos \footnote{\loccit{ramsay_algorithms_2010} Tradução de \emph{A short film on livecoding presented as part of the Critical Code Studies Working Group, March 2010, by Stephen Ramsay. Presents a "live reading" of a performance by composer Andrew Sorensen. It also talks about J. D. Salinger, the Rockettes, playing musical instruments, Lisp, the weather in Brisbane, and kettle drums.}.}.
+\end{citacao}
 
-A respeito de ``Não é necessário para uma audiência leiga compreender'' e ``A codificação ao vivo pode ser acompanhada por uma impressionante exibição de destreza'' pode indicar uma proximidade com aquele modelo de prática musical virtuosística (como um espetáculo de habilidades técnicas); mais especificamente, este modelo poderia partir daquilo que  \citeonline{magnusson_herding_2014} chama de ``adoção de um método pré-romântico de compor através da performance em tempo real, onde tudo fica aberto a mudar -- o processo composicional o design do instrumento e a inteligência do sistema tocando a peça.'' \cite[p.~4]{magnusson_herding_2014}\footnote{Tradução nossa de: \emph{live coding adopts a pre-Romantic method of composing through performance in real time, where everything remains open to change -- the compositional process, the instrument design, and the inteligence of the system performing the piece.}}
+Amanda French nega a utilização do termo \emph{partitura} para explicitar diferenças no uso da programação-partitura, em uma performance de improvisação com o computador, para uma performance não-improvisada com partitura.
 
-%\section{Três apropriações ideológicas}\label{sec:algoritmos}
+\begin{citacao}
+A noção de partitura não se aplica aqui, é como não fosse possível aplicá-lo ao músico de \emph{jazz} ou tocador de \emph{bluegrass}. (\ldots). Levanta a questão, para mim, se, em uma sessão de \emph{livecoding} *feita*, constite simplismente no ato de digitar em um programa existente, seria tão convincente -- Eu acho que isso pode definitivamente ter pontos de interesse. Ou qual seria o análogo do \emph{livecoding} para uma performance não-improvisada de música?\footnote{\loccit{ramsay_algorithms_2010} Tradução parcial de \emph{The notion of "sheet music" doesn't apply here, as it wouldn't apply to a jazz musician or a bluegrass picker. Even the name of his environment, Impromptu, makes that point. Raises the question for me precisely of whether a livecoding session that *did* consist of simply typing in an existing program would be as compelling -- I think it would definitely have its points of interest, actually. Or what would the livecoding analog be to a non-improvisational live performance of music?}}
+\end{citacao}
 
-%Não é nossa intenção discutir a Música de Processos, a Música Algorítmica, e a Música Generativa de maneira pormenorizada, mas sim construir o espaço conceitual para esta pesquisa.  O primeiro conhecimento, a Música de Processos, é incluída de maneira indireta. Será discutido na \autoref{sec:alg_simples}. O segundo conhecimento, é incluído de maneira um pouco mais específica, na \autoref{sec:alg_complexo}. A apropriação de uma prática contemporânea, \emph{Disk Jockey} (DJ), será comentado na \autoref{sec:musica_vanguarda_pista}.
+Um segundo comentário de Matt King, coloca a pergunta de Amanda em outra perspectiva:
 
+\begin{citacao}
+O que torna o \emph{livecoding} diferente, e pode a performance de música tradicional imitar isso? Para responder esta questão, parece importante notar que as formas nas quais a música improvisada muitas vezes apela para alguma noção de autenticidade ou gênio. Enquanto o \emph{livecoding} ele mesmo à noção de virtuosismo de código, ``autenticidade'' parece fora de lugar aqui. Se música improvisada sugere expressão, o \emph{livecoding} sugere um conjunto de restrições na expressão, descrevendo os parâmetros através dos quais a máquina $[$midi$]$ ganha expressão \footnote{Tradução nossa de \emph{(\ldots) What makes livecoding different, and can a traditional music performance mimic it? To answer this question, it seems important to note the ways in which improvised music often appeals to some notion of authenticity or genius. While livecoding might lend itself to some notion of coding virtuosity, "authenticity" seems out of place here. If improvised music is expression, livecoding suggests a setting of constraints on expression, describing the parameters through which the machine (midi) gets expressed.}}
+\end{citacao}
 
-%\subsection{Música de Processos}\label{sec:alg_simples}
-
-%Segundo \citeauthoronline{wooler_framework_2005}, a Música de Processos é uma ``Música resultante de um conjunto de processos colocados em movimento pelo compositor, tais como  'In C' de Terry Rilley e 'It's gonna rain' de Steve Reich'' \apud[p.~1]{wooler_framework_2005}{eno_generative_1996}\footnote{Tradução nossa de \emph{Music resulting from processes set in motion by the composer “In C” by Terry Riley and “Its gonna rain” by Steve Reich}}; o que é chamado de ``procedural'' por \citeauthoronline{wooler_framework_2005}, é chamado por Joshua \citeonline{mailman_agency_2013} em seu artigo ``\emph{Agency, Determinism, Focal Time Frames and Processive Minimalist Music}'', música de processos mínimos, ou música minimalista de processos determinísticos. O autor faz menção aqui ao compositor Alvin Lucier (1931-) e sua peça \emph{Crossings} (1984). Segundo o autor,
-
-%\begin{citacao}
-%A longa forma de \emph{Crossings} (1984) de Alvin Lucier é especialmente clara; ela surge processivamente, neste caso de um glissando de som senoidal puro que lentamente (mais de 16 minutos) ascende de infra-sons para a ultra-sons. Um processo discreto combina com este glissando, criando uma série de processos contínuos de curto alcance. Uma orquestra dividida alterna no jogo de alturas consecutivas, em uma escala cromática ascendente ascendente que interage com o glissando. Um grupo inicia e sustenta um intervalo acima daquela do glissando de tal modo que a uma dissonância mútua cria batimentos; conforme o glissando aumenta, a velocidade do batimento diminui; quando se alcança um uníssono com os instrumentos, os batimentos momentaneamente cessam; como o glissando ascende acima da nota dos instrumentos, batimentos gradualmente aceleram. Eventualmente, o outro conjunto entra e sustenta um intervalo de um semitom acima, começando esse processo de curto alcance novamente.\cite[p.~128]{mailman_agency_2013}\footnote{Tradução nossa de \emph{The long-range form of Alvin Lucier’s Crossings (1984) is especially clear; it arises processively, in this case from a glissando of a pure sine tone that slowly (over sixteen minutes) ascends from infrasonic to ultrasonic. A discrete process combines with this glissando, creating a series of short-range continuous processes. A divided orchestra alternates in playing the consecutive pitches of a rising chromatic scale that interacts with the glissando. One ensemble initiates and sustains a pitch just higher than that of the glissando such that their mutual dissonance creates beats; as the glissando rises, the speed of the beats slows; when it reaches a unison with the instruments, the beats momentarily cease; as the glissando ascends above the pitch of the instruments, the beats gradually accelerate. Eventually, the other ensemble enters and sustains a pitch a semitone higher, starting this short-range process again.}}
-%\end{citacao}
-
-%Essa descrição é um breve comentário da peça, mas descreve um simples processo de ação musical, bem como relata de forma clara os resultados sonoros. É possível presumir que existe, na execução de \emph{Crossings}, um simples algoritmo que permeia toda a peça: uma alternância de um ritmo lento de dois grupos instrumentais defasados temporalmente em relação ao som emitido pelo alto-falante\footnote{Esse tipo de algoritmo pode ser facilmente implementado em uma linguagem de programação musical, como o SuperCollider (ver \autoref{crossings}).}.
-
-%Uma vez que na MP também é possível notar a influência de um algoritmo, é necessário evitar confusão com o uso original da MP, tal qual em compositores como Reich, Lucier e Riley; já o seu uso apropriado é realizado por Adrian Ward, Julian Rohruber, Frederick Olofsson, Alex McLean, Dave Griffiths, Nick Collins e Amy Alexander. Sugiro portanto comparar o fragmento do manifesto citado na página 53 com um fragmento do manifesto \emph{Music as a Gradual Process} do compositor Steve \citeonline{reich_music_1968}: 
-
-%\begin{citacao}
-%O que é distintivo sobre processos musicais é que eles determinam todos detalhes de nota-a-nota (som-a-som) e toda a forma simultaneamente (pense em um \emph{Round} ou um \emph{Canon}). \textbf{Eu estou interessado em processos perceptivos. Eu quero ser capaz de ouvir o processo acontecendo através da música que soa.} Para facilitar a descrição detalhada de um processo musical, a escuta  deve acontecer muito gradualmente. \cite[p.~1]{reich_music_1968}.\footnote{Tradução nossa de: \emph{The distinctive thing about musical processes is that they determine all the note-to-note (sound-to-sound) details and the over all form simultaneously. (Think of a round or infinite canon.) I am interested in perceptible processes. I want to be able to hear the  process happening throughout the sounding music. To facilitate closely detailed listening a musical process should happen extremely gradually. }}
-%\end{citacao}
-
-%Quanto ao manifesto de Adrian Ward, Julian Rohruber, Frederick Olofsson, Alex McLean, Dave Griffiths, Nick Collins e Amy Alexande, tenho uma primeira impressão que essa transformação gradual do som não está presente da mesma forma que em Reich, Lucier ou Rilley; vejo que o uso a reminiscência do termo ``processo'' a partir de ``procedural'' e ``processador'' se dá mais pela atividade de reprogramação em uma CGS ou CGC, mais especificamente, para fins de entretenimento. Aqui o \emph{processo} é formalizado como algoritmo, colocado na situação de constante modificação.
-
-%Já no manifesto de Reich o som não é programado, mas se prevê um comportamento musical em constante modificação a partir de uma ação mínima sobre aquilo que produz o som. Um exemplo interessante é seu \emph{Pendulum Music} (1968), onde deixa oscilar microfones posicionados acima de alto-falantes, com os cabos presos no teto; através de um único tipo de ação, restrita apenas pelas distâncias tomadas por intérpretes antes de colocar os microfones em movimento e pela comprimento do cabo preso ao teto\footnote{Seria possível incluir aqui também a resistência do ar ao movimento do objeto.}, ocorrerá um \emph{processo físico} (desaceleração das oscilações que influenciam quando o microfone passará pelo alto-falante) que desencadeará um \emph{processo perceptivo} (escuta de diferentes momentos de quando estes microfones passam pelo alto-falante até um momento estacionário). 
-
-%Tal técnica faz uso deliberado de um fenômeno conhecido como microfonia, um \emph{processo recursivo} onde os sons projetados pelo alto-falante são retro-alimentaados pelo microfone. A retroalimentação já era usada por Pauline \citeonline{oliveros_tape_1969}, como por exemplo em \emph{Beaultifoul Soup} (1967), peça para fita de dois canais, elaborada através de um circuito em retroalimentação (a compositora indica uma atividade musical econômica que ao longo do tempo causa "interessantes mudanças timbrísticas em sons sustentados" \footnote{\cfcite[p.~43]{oliveros_tape_1969} Tradução nossa de: \emph{interesting timbre changes on sustained sounds}}). Uma proposta posterior também foi realizada por Alvin Lucier (1931-) em \emph{I'm sitting in a room} (1969) quando retroalimenta seu próprio discurso em uma sala, incrementando sinais ao gravador, criando um \emph{drone}, ou um som de duração indefinida\footnote{É interessante comentar, nesse contexto, o uso deliberado de \emph{drones} no \emph{livecoding} através de uma apropriação da \emph{Drone Music}.}. Esta técnica de retroalimentação também pode ser utilizada no \emph{live coding}, por exemplo, no SuperCollider (ver \autoref{apendice_delays}).
-
-%\subsection{Música Generativa}\label{sec:alg_complexo}
-
-%Brian Eno foi mencionado por \citeonline{ward_live_2004}, embora a inclusão pareça ser polisêmica. Chamamos  mesmo em um fragmento de texto de \citeonline{eno_music_1978}:
-
-%\begin{citacao}
-%O conceito de música projetada especificamente como pano-de-fundo ambiental foi um pioneirismo da indústria Muzak nos anos cinquenta, e tem sido conhecido genericamente como Muzak. As conotações que este termo carrega são particularmente associadas com um tipo de material que as indústria Muzak produz - melodias familiares arranjadas e orquestradas de maneira leve e derivativa. Compreensivelmente, isso leva ouvintes atentos (e compositores) a dispensar inteiramente o conceito de música ambiental como digna de atenção (\ldots) Se as empresas existentes de música enlatada se baseiam em regularizar ambientes cobrindo as idiossincrasias acústicas e atmosféricas, a Música AMbiental intenciona em melhorá-las. \textbf{Se o pano-de-fundo convencional é produzido removendo todo o sentido de dúvida e incerteza (e portanto o interesse genuíno) da música, a Música Ambiental retém essas qualidades} \cite[online]{eno_music_1978}\footnote{\emph{The concept of music designed specifically as a background feature in the environment was pioneered by Muzak Inc. in the fifties, and has since come to be known generically by the term Muzak. The connotations that this term carries are those particularly associated with the kind of material that Muzak Inc. produces - familiar tunes arranged and orchestrated in a lightweight and derivative manner. Understandably, this has led most discerning listeners (and most composers) to dismiss entirely the concept of environmental music as an idea worthy of attention.(\ldots)Whereas the extant canned music companies proceed from the basis of regularizing environments by blanketing their acoustic and atmospheric idiosyncracies, Ambient Music is intended to enhance these. Whereas conventional background music is produced by stripping away all sense of doubt and uncertainty (and thus all genuine interest) from the music, Ambient Music retains these qualities.} Grifo nosso.}
-%\end{citacao} 
-
-%É interessante que neste contexto podemos fazer referência à \emph{Discreet Music} (1975) e \emph{Ambient 1: Music for Airports} (1978); tais peças fazem uso deliberado de laços de fitas que criam sistemas de atrasos (\emph{delays}). Se tais procedimento criativos não eram novos na época \footnote{Nesse sentido indicamos as peças de Steve Reich e Alvin Lucier e Pauline Oliveros já citadas.}; geralmente essas abordagens podem criar \emph{drones} que ficam variando em seu espectro.
-
-%Um exemplo interessante de \emph{live coding} com \emph{drones}, que utiliza pequenos impulsos sonoros no SuperCollider (ver \autoref{sc_drone}). Aqui o processo de escuta é contínuo, semelhante à práticas da música eletroacústica,onde algoritmos são pré-concebidos e modificados durante a performance.  Cole Ingraham utiliza um objeto que gera impulsos sonoros aperiódicos, e o mantêm como um plano sonoro que se mantêm, e vai sendo. Paralelamente, sons contínuos vai permeando este plano dos impulsos, a partir de senóides com um vibrato. É interessante notar que em alguns momentos, o \emph{live coder} deixa de programar para prestar atenção no resultado sonoro obtido, ao invés de ficar constantemente re-programando o código-fonte.
-
-%\begin{figure}
-%\begin{center}
-%\includegraphics[scale=0.5]{./imagens/sc_drone.png}
-%\caption{Improviso com \emph{drones} no SuperCollider \textbf{Fonte}: \url{https://www.youtube.com/watch?v=b8j4umQ2lIE}. }
-%\label{sc_drone}
-%\end{center}
-%\end{figure}
-
-%\subsection{Música eletrônica de Pista}\label{sec:musica_vanguarda_pista}
-
-%Somado a todos esses elementos, existe a imagem já descrita de um DJ que se utiliza destas técnicas e estéticas para controlar seu \emph{set} (embora seja possível assumir que esta personagem pode utilizar outros dispositivos, como sintetizadores e baterias eletrônicas, todos eles presentes em um computador) e promover uma música na qual a dança é elemento central. É importante deixar claro que uma cultura DJ possui suas peculiaridades dependentes de contexto social: por exemplo, um dj europeu/norte-americano está em uma configuração social diversa do dj latino-americano e africano. Se até o momento temos discutido práticas musicais, na sua maioria, a partir de pessoas que falam o inglês como sua primeira língua, é natural supor que esta cultura DJ que falamos no \emph{livecoding} faz parte de uma cultura anglófona.
-
-%Esse fenômeno de apropriação das MA, MG, MP e DJ, na cultura musical dos países rotulados como desenvolvidos, pode ser entendido a partir daquilo que Fernando  \citeonline{iazzetta_musica_2009} chamou de "sinergia de produções, que em sua diversidade compartilham dos mesmos elementos sociais e culturais" \cite[p.~152]{iazzetta_musica_2009}. Mais especificamente, trata-se de um fenômeno em sentido mais amplo das produções musicais usando o computador; mas buscarei encarar a questão no \emph{livecoding} da mesma maneira, como uma sinergia entre boates, casas noturnas e ambientes informais com ambientes de produção de conhecimento (universidades, escolas de música, faculdades de engenharia).
-
-%Primeiro é necessário esclarecer se a apropriação foi intencional ou não.  O discurso do manifesto de \citeonline{ward_live_2004} indica uma consciência parcial dos autores a respeito desta sinergia. No entanto é discutível se esse cruzamento de gêneros é mais um reflexo das transformações sociais e culturais que o computador trouxe consigo do que algo intencional: o uso deliberado de muitas ferramentas de um estúdio portátil, a expansão de possibilidades de produção musical através das redes de computadores, a troca de informações a respeito do uso de novos \emph{softwares} entre músicos acadêmicos e não-acadêmicos , trouxe à tona diferentes comunidades daquela ou outra tecnologia. De forma semelhante, no \emph{livecoding}, as novas possibilidades tecnológicas em contato com modos de fazer música já estabelecidos possiblitaram a emancipação de novas práticas, o que por sua vez, capacitou o cruzamento de estéticas (tudo isso, no entanto, visto apenas pela ótica das culturas de pessoas que falam o inglês como primeira língua).
-
-%Poderia ser questionado se o intercruzamento de gêneros musicais no \emph{livecoding} depende dos \emph{softwares}.  \citeauthoronline{iazzetta_musica_2009} responderia não, mas que dependem de uma articulação entre produções musicais e seus compositores, que carregam diferentes formações teóricas. Esse problema é colocada da seguinte forma:
-
-
-%Embora seja possível considerar uma "comunidade Max/MSP", ela está dentro de uma população contendo as comunidades "SuperCollider", "PureData", "ChucK", indicando apenas alguns. 
-
-%Dentro dessa população, surgem as pequenas comunidades de \emph{softwares} de \emph{live coding}, pela utilização e invenção de mini-linguagens pouco usadas, se comparadas com as do parágrafo acima. No contexto anglófono, essas pequenas comunidades apropriam um termo, segundo \citeonline{collins_algorave:_2014}, \emph{algorave}. 
+Michel Pasin defende que o ato de improvisação musical requer conhecimentos técnicos prévios, mas não necessariamente correlacionados ao conhecimento do que é uma partitura: \traducao{Em geral, é somente dominando um instrumento que você pode esquecer sobre a técnica e concentrar em 'dizer' coisas com o instrumento.}{In general, it is only by mastering an instrument that you can forget about the technique and concentrate on 'saying' things with the instrument.}. 
 
  
 
