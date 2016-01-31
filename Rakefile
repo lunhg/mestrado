@@ -49,7 +49,7 @@ namespace :tex do
 
   task :main do
     ENV['FILE']="main"
-    ENV['SCORES'] = "Jarret"
+    ENV['SCORES'] = "Jarret scyJ5370"
     Rake::Task["tex:lytex"].invoke
     Rake::Task["tex:compile"].invoke
   end

@@ -6,24 +6,30 @@ Giovanni \citeonline[p.~117]{mori_analysing_2015} define a improvisação de có
 \traducao{\emph{Live coding} é uma técnica artística de improvisação. Pode ser empregada em muitos contextos diferentes de performance: dança, música, imagens em movimento e mesmo tecelagem. Eu concentrei minha atenção no lado musical, que parece ser o mais proeminente.}{Live coding is an improvisatory artistic technique. It can be employed in many different performative contexts: dance, music, moving images and even weaving. I have concentrated my attention on the music side, which seems to be the most prominent.}
 \end{citacao}
 
-Neste trabalho vamos situar a improvisação de códigos do ponto de vista musical. Descartamos uma discussão específica sobre imagens em movimento para evitar cair em uma digressão infinita, já que este é outro campo proeminente. A discussão sobre tecelagem \ver{sec:tecelagem} busca ilustrar características históricas da computação: \traducao{Um dos potenciais da tecelagem que eu fiquei mais interessado é a capacidade de demonstrar fundamentos de \emph{softwares} por fios -- parcialmente tornar a natureza física do código da computação auto-evidente, mas também como uma maneira de modelar novas formas de aprender e a entender o que são os computadores.}{One of the potentials of weaving I’m most interested in is being able to demonstrate fundamentals of software in threads – partly to make the physical nature of computation self evident, but also as a way of designing new ways of learning and understanding what computers are.}\cite{griffths_weave2_2015}. Os exemplos de dança \ver{sec:danca} ilustram duas situações. O primeiro é a música que serve como meio para entretenimento em ambientes \emph{rave} \ver{sec:algorave}, e o segundo nega a música como resultado da improvisação de códigos \ver{sec:coreografia}. Por último, a característica musical das improvisações de códigos serão explorados como uma construção histórica \ver{sec:musica}.
+Neste trabalho vamos situar a improvisação de códigos do ponto de vista musical. Descartamos uma discussão específica sobre imagens em movimento para evitar cair em uma digressão infinita, já que este é outro campo proeminente. A discussão sobre tecelagem \ver{sec:tecelagem} conecta uma história da computação com a prática investigada. Os exemplos de dança \ver{sec:danca} ilustram duas situações. O primeiro é a Música Eletrônica para Dançar \footnote{\cfcite{hillegonda_dj_2013}.} \ver{sec:algorave}, e o segundo nega o som como resultado da improvisação de códigos \ver{sec:coreografia}. Por último, a característica musical das improvisações de códigos serão explorados do ponto de vista histórico \ver{sec:musica}.
 
 \section{Tecelagem}\label{sec:tecelagem}
 
-Uma introdução sobre a relação entre o computador e a máquina de tear busca contextualizar uma investigação informal que ocorreu em 2015, realizado por um grupo de investigação em improvisação de codificação têxtil (\emph{weavecoding}). Por outro lado, foi uma forma de introduzir o assunto para potenciais leitores de um programa de pesquisa que inclui a Moda (PPG-ACL UFJF).
+Contextualizar a atividade têxtil é uma forma de criar uma imagem mental, de como funciona o processo de computação. Seria possível usar a imagem de um ábaco. Mas essa última imagem não considera potenciais leitores de um programa de pesquisa que inclui investigadores na área de Moda (PPG-ACL UFJF). Não aprofundaremos o assunto de Moda, mas sim buscamos ilustrar um código de computador. Nas palavras de \citeonline{griffths_weave2_2015},
 
-Os computadores atuais são máquinas desenvolvidas com base no modelo teórico elaborado por Alan Turing (1912-1954). Uma representação simplista considera uma fita abstrata de tamanho variável (o quanto for necessário), dividida em células, cada uma com um alfabeto finito (cuja quantidade de símbolos para sua representação também é finita). Um cabeçote leitor desta fita. Um registrador de estados desta fita. E uma tabela de ação que indica o que será escrito nesta fita, e como esta fita se comportará \ver{fig:turing}.
+\begin{citacao}
+ \traducao{Um dos potenciais da tecelagem que eu fiquei mais interessado é a capacidade de demonstrar fundamentos de \emph{softwares} por fios -- parcialmente tornar a natureza física da computação auto-evidente, mas também como uma maneira de modelar novas formas de aprender e a entender o que são os computadores.}{One of the potentials of weaving I’m most interested in is being able to demonstrate fundamentals of software in threads – partly to make the physical nature of computation self evident, but also as a way of designing new ways of learning and understanding what computers are.}
+\end{citacao}
 
-\begin{figure}[!h]
-  \centering
-  \includegraphics[scale=0.1]{imagens/turing.jpg}
-  \caption{Implementação de uma máquina de Turing. \textbf{Fonte}: wikimedia.org }
-  \label{fig:turing}
-\end{figure}
+\subsection{Charles Babbage e Joseph-Marie Jacquard}
 
- Um modelo anterior ao de Turing foi elaborado por Charles Babbage (1791 -- 1871), \emph{a máquina analítica},  entre 1834 e 1836, revisado em 1837. Sua construção ocorreu após um colapso na construção de sua \emph{máquina diferencial}. O projeto não vingou, mas a partir de 1838, Babbage se envolveu com a exploração intelectual dos conceitos elaborados, para otimizar o projeto e reduzir seu custo de construção. Uma sequência de seminários em Turin, a partir de 1840, resultaram na publicação de uma descrição em francês por um cientista italiano (L.F. Menebrea). A Condessa de Lovelace (Ada Augusta Byron King), traduziu, sob supervisão de Babbage, esta publicação para o inglês. De maneira bastante sumarizada, programas prototípicos para foram escritos ambos por Ada e Babbage, e são considerados os primeiros algoritmos computacionais. O primeiro programa escrito era dedicado ao cálculo de uma sequência numérica conhecida como \emph{Números de Bernoulli} \footnote{Allan G. Broomley, \emph{Charles Babbage’s Analytical Engine, 1838}. Disponível em \url{http://athena.union.edu/~hemmendd/Courses/cs80/an-engine.pdf}}.
+Os computadores atuais são máquinas desenvolvidas com base no modelo teórico elaborado por Alan Turing (1912-1954). Uma representação simplista considera uma fita abstrata de tamanho variável (o quanto for necessário), dividida em células, cada uma com um alfabeto finito (cuja quantidade de símbolos para sua representação também é finita). Um cabeçote leitor desta fita. Um registrador de estados desta fita. E uma tabela de ação que indica o que será escrito nesta fita, e como esta fita se comportará.% \ver{fig:turing}.
 
-Segundo \citeonline[p.14--21]{McLean2011}, o mecanismo do projeto de Babbage é inspirado na máquina de tear de Joseph-Marie Jacquard (1752 -- 1834). A principal contribuição da invenção, para a computação, foi um sistema que consiste em um cabeçote leitor de cartões perfurados. A organização dos furos indica uma rotina têxtil \ver{fig:jacquard}. O cartão perfurado, no computador mecânico de Babbage indicava estados binários que conduzem ao cálculo numérico:
+%\begin{figure}[!h]
+%  \centering
+%  \includegraphics[scale=0.1]{imagens/turing.jpg}
+%  \caption{Implementação de uma máquina de Turing. \textbf{Fonte}: wikimedia.org }
+%  \label{fig:turing}
+%\end{figure}
+
+ Um modelo anterior ao de Turing foi elaborado por Charles Babbage (1791 -- 1871), \emph{a máquina analítica},  entre 1834 e 1836, revisado em 1837. Sua construção ocorreu após um colapso na construção de sua \emph{máquina diferencial}. O projeto não vingou, mas a partir de 1838, Babbage se envolveu com a exploração intelectual dos conceitos elaborados, para otimizar o projeto e reduzir seu custo de construção. Uma sequência de seminários em Turin (1840) resultou em uma publicação sobre a máquina analítica, em francês, escrita por um cientista italiano (L.F. Menebrea). A Condessa de Lovelace (Ada Augusta Byron King), traduziu, sob supervisão de Babbage, esta publicação para o inglês. Historicamente, os primeiros programas de computador (para serem executados na máquina analítica) foram escritos ambos por Ada e Babbage. O primeiro programa escrito era dedicado ao cálculo de uma sequência numérica conhecida como \emph{Números de Bernoulli} \footnote{Allan G. Broomley, \emph{Charles Babbage’s Analytical Engine, 1838}. Disponível em \url{http://athena.union.edu/~hemmendd/Courses/cs80/an-engine.pdf}}. Apenas uma parte da máquina foi construída antes da morte de Babbage\disponivelem{http://www.sciencemuseum.org.uk/objects/computing_and_data_processing/1878-3.aspx}.
+
+Segundo \citeonline[p.14--21]{McLean2011}, o mecanismo do projeto de Babbage é inspirado na máquina de tear de Joseph-Marie Jacquard (1752 -- 1834). A principal contribuição da invenção, para a computação, foi um sistema que consiste em um cabeçote leitor de cartões perfurados. Na máquina de tear de Jacquard, a organização dos furos indicam, até hoje, uma rotina têxtil \ver{fig:jacquard}. Já no computador mecânico de Babbage, o cartão perfurado indicava estados binários que conduzem ao cálculo numérico:
 
 \begin{citacao}
 \traducao{A indústria têxtil vislumbrou a primeira máquina programável de ampla utilização: a cabeça de tear Jacquard, uma tecnologia ainda usada. Longas tiras de cartão são alimentados na cabeça de tear Jacquard, que lê padrões perfurados no cartão para guiar a intrincada padronização de tecidos. O cabeçote Jacquard não computa, mas foi admirado por Charles Babbage, inspirando o trabalho na sua máquina analítica mecânica, a primeira concepção de um computador universal programável. Embora Babbage não tenha obtido sucesso em construir a máquina analítica, seu projeto inclui um mecanismo de entrada de cartão similar ao cabeçote Jacquard, mas com  padrões perfurados descrevendo cálculos abstratos ao invés de fios têxteis.}{
@@ -40,9 +46,11 @@ The textile industry saw the first programmable machine to reach wide use: the h
 
 \newpage
 
-\subsection{Weavecoding}
+\subsection{Weavecoding}\label{sec:weavecoding}
 
-Para definir \emph{weavecoding} ilustramos uma investigação informal (um encontro de acadêmicos e não-acadêmicos no Foam Kernow). O grupo \emph{Weaving codes}\disponivelem{http://kairotic.org/about/} foi formado para  investigar \traducao{padrões a partir das perspectivas de tecelagem e música, e através do desenvolvimento de uma linguagem de computador e código para descrever a construção de tecidos}{We pursue these questions in the Weaving Codes- Coding Weaves project, by investigating patterns from the perspectives of weaving and music, and by developing a computer language and code for describing the construction of weaves}. É formado por membros da Universidades de Leeds, Nottingham Trent, Cambridge, Aberdeen, Copenhague; um museu (\emph{Albert Museum}), uma rede de laboratórios transdisciplinares (FoAM Kernow \disponivelem{http://fo.am/kernow/}); o Centro Dinamarquês para Pesquisa Têxtil, e Escola Robert Schumman de Música e Mídia de  Düsseldorf. 
+Se até hoje o mesmo sistema de Jacquard é utilizado, e considerado que a indústria têxtil possui suas aplicações computacionais, como improvisadores de códigos realizam uma bricolagem de improvisação audiovisual, computação e atividade têxtil? Exemplificamos o caso com um grupo que criou o conceito \emph{weavecoding}. Para definí-lo, ilustramos uma investigação informal (um encontro de acadêmicos e não-acadêmicos no Foam Kernow\disponivelem{http://fo.am/kernow/}).
+
+O grupo \emph{Weaving codes}\disponivelem{http://kairotic.org/about/} foi formado para  investigar \traducao{padrões a partir das perspectivas de tecelagem e música, e através do desenvolvimento de uma linguagem de computador e código para descrever a construção de tecidos}{We pursue these questions in the Weaving Codes- Coding Weaves project, by investigating patterns from the perspectives of weaving and music, and by developing a computer language and code for describing the construction of weaves}. É formado por membros da Universidades de Leeds, Nottingham Trent, Cambridge, Aberdeen, Copenhague; um museu (\emph{Albert Museum}), uma rede de laboratórios transdisciplinares (FoAM Kernow ); o Centro Dinamarquês para Pesquisa Têxtil, e Escola Robert Schumman de Música e Mídia de  Düsseldorf. 
 
 Uma pequena digressão: dois membros deste grupo, Alex McLean e Dave Griffths, são praticantes e organizadores de improvisações de código como artistas-programadores. A principal contribuição dos autores provavelmente foi a divulgação de uma heurística para uma improvisação com computadores, \emph{Lubeck04}, mais conhecido como \traducao{Mostre-nos suas telas}{Show Us Your Screens}, dentro de um manifesto publicado como \traducao{Programação de Algoritmo Ao vivo e Organização Temporária para sua Promoção}{Live Algorithm Programming and Temporary Organization for its Promotion} \cite{ward_live_2004}. Este tema será discutido adiante \ver{sec:showusyourscreens}.
 
@@ -75,20 +83,24 @@ Do manifesto à codificação têxtil, \citeonline{griffths_weave2_2015} apresen
 \begin{figure}[!h]
     \centering
     \includegraphics[scale=0.31]{imagens/weaving.jpg}
-    %\caption{``Um dos potenciais da tecelagem que eu fiquei mais interessado é a capacidade de demonstrar fundamentos de \emph{softwares} por fios -- parcialmente tornar a natureza física do código da computação auto-evidente, mas também como uma maneira de modelar novas formas de aprender e a entender o que são os computadores''\protect\footnotemark. \textbf{Fonte}: \citeonline{griffths_weave2_2015}.}
     \caption{Tecido resultante da prática \emph{Weaving code}. \textbf{Fonte}: \citeonline{griffths_weave2_2015}.}
   \label{fig:weaving}
 \end{figure}
 
-
-
-Agora estamos em ponto de esclarecer a improvisação de códigos têxteis (\emph{weavecoding}). Por outro lado será possível ilustrar uma performance arquetípica de \emph{live coding}: programadores escrevendo códigos com suas telas projetadas \cite[p.~129]{McLean2011}. \citeonline[online]{griffths_weave_2015} descreve uma reunião no laboratório transdisciplinar Foam Kernow para realização de tecelagem, música e imagens em movimento. A tecelagem é programada por meio de um dispositivo tangível, uma matriz de botões acopláveis, desenvolvida por Ellen Harlizius-Klück (investigadora da história da matemática, filosofia e tecelagem da Grécia Antiga na Universidade de Copenhague\disponivelem{http://www.saumweberei.de/}) e Alex McLean. Imagens em movimento foram projetadas como capturas das atividades têxteis e processadas por Griffths. 
+Esta experiência de \emph{weavecoding} pode ser aplicada em uma performance \ver{fig:weavecoding}. Griffths ilustra uma performance arquetípica da improvisação de códigos: programadores escrevendo enquanto os resultados são projetados em superfícies planas. Como veremos, é interessante que o que está sendo escrito também seja projetado \cite[p.~129]{McLean2011}, o que não é o caso desta imagem. A tecelagem é programada por meio de um dispositivo tangível \ver{fig:weavecoding2}, uma matriz de botões acopláveis, desenvolvida por Ellen Harlizius-Klück (investigadora da história da matemática, filosofia e tecelagem da Grécia Antiga na Universidade de Copenhague\disponivelem{http://www.saumweberei.de/}) e Alex McLean \ver{fig:weavecoding2}. Imagens em movimento foram projetadas como capturas das atividades têxteis e processadas por Griffths. 
 
 \begin{figure}[!h]
   \centering
-  \includegraphics[scale=0.95]{imagens/wavecoding.jpg}
+  \includegraphics[scale=0.71]{imagens/weaving.png}
+  \caption{Performance no Foam Kernow. \textbf{Fonte}: \citeonline{griffths_weave_2015}.}
+  \label{fig:weavecoding}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.85]{imagens/weavecoding.jpg}
   \caption{ Alex McLean manipulando uma Matriz de botões para tecelagem, conectado a um Raspberry Pi. \textbf{Fonte}: \citeonline{griffths_weave_2015}.}
-  \label{fig:wavecoding}
+  \label{fig:weavecoding2}
 \end{figure}
 
 \begin{citacao}
@@ -102,14 +114,12 @@ One of the original ideas we had was to combine weaving and coding in a performa
 
 \todo[color=lightred]{\tiny está faltando ligação entre este parágrafo e o anterior}
 
-Esta descrição de Griffths possui uma domentação audiovisual \disponivelem{https://www.youtube.com/watch?v=XrnIVUp9QgM} que expõe uma categorização musical\footnote{\cfcite{janotti_jr._a_2003,sa_musica_2006,sa_se_2009}} da técnica \emph{live coding}. Essa música é semelhante àquela tocada em ambientes \emph{rave}; o \emph{algorave} será discutido adiante no contexto da dança \ver{sec:algorave}.
-
-%A permissividade entre improvisadores e outros profissionais se caracterizou neste encontro como uma ética. Trocar informações sobre programação caracterizou a improvisação de códigos como parte de uma cultura \emph{hacker}: \traducaoapud{Ser um hacker, é ser alguém que 'programa entusiasticamente' e que acredita que a computação e o compartilhamento de informação é um bem positivo, e que é seu dever ético facilitar o acesso}{Being a hacker, is being someone that "program enthusiastically" and who believe that computing and information sharing is a positive good", and that it is their ethical duty to facilitate access}{p.~1}{wark2006}{zapico_hacker_2013}. Esta é uma definição bastante geral que não contempla contextos diversos. Mas o que queremos pontuar é que o crescimento de conhecimento, para McLean e Griffths, está inserido em um método de exploração criativa. 
+Esta descrição de Griffths possui uma domentação audiovisual \disponivelem{https://www.youtube.com/watch?v=XrnIVUp9QgM}. É interessante notar que a menção ao grupo \emph{Slub} auxilia a discussão musical. Por hora apenas mencionamos sua inserção no cenário da Música Eletrônica de Dança\footnote{\cfcite{hillegonda_dj_2013}}. Subgêneros como \emph{rave}, \emph{gabba} e \emph{rotterdam}, são algumas das principais categorizações musicais\footnote{\cfcite{janotti_jr._a_2003,sa_musica_2006,sa_se_2009}} aplicadas à improvisação de códigos \ver{sec:algorave}.
 
 
 \section{Dança}\label{sec:danca}
 
-A Dança é ilustrada de duas maneiras. A primeira é apresentada como fim de uma improvisação musical. Uma música para dançar em ambientes de entretenimento. O segundo caso foge do escopo musical como discutido anteriormente; se por um lado a programação-partitura utilizada por uma coreógrafa representa uma alternativa aos resultado sonoros e imagéticos, por outro a sensação de quietude sonora é uma posição interessante que diverge da maioria dos trabalhos apresentados, mas é poco discutido no âmbito musical.
+A Dança é ilustrada de duas maneiras. A primeira é dança como fim de uma improvisação musical. O segundo caso foge do escopo sonoro; uma coreógrafa codifica apenas a orientação espacial de uma bailarina, resultando em uma sensação de quietude sonora. É uma posição que diverge da maioria dos trabalhos apresentados, mas é pouco discutido no âmbito musical.
 
 \subsection{Algorave}\label{sec:algorave}
 
@@ -117,7 +127,7 @@ A compositora colombiana Alexandra Cárdenas, em entrevista com \citeonline{ches
 
 \begin{citacao}
 \traducao{
-Algorave 'comecou como uma piada', de acordo com Alex McLean, um pesquisador de música computacional e um dos três de uma banda chamada \emph{Slub} que têm improviado códigos por 13 anos. Ele veio com um termo enquanto conduzia uma \emph{gig} em Nottingham com seu amigo Nick Collins (que tocava ``datapop'' sob o nome Sick Lincoln) no final de 2011. 'Nós sintonizamos em uma estação pirata tocando \emph{happy hardcore}, e nós pensamos que seria bom programar alguma música \emph{rave}.' Deste então, McLean organizou oito \emph{algoraves} informais no mundo.
+Algorave 'comecou como uma piada', de acordo com Alex McLean, um pesquisador de música computacional e um dos três de uma banda chamada \emph{Slub}, que têm improvisado códigos por 13 anos. Ele veio com um termo enquanto conduzia uma \emph{gig} em Nottingham com seu amigo Nick Collins (que tocava ``datapop'' sob o nome Sick Lincoln) no final de 2011. 'Nós sintonizamos em uma estação pirata tocando \emph{happy hardcore}, e nós pensamos que seria bom programar alguma música \emph{rave}.' Deste então, McLean organizou oito \emph{algoraves} informais no mundo.
 }
 {
 Algorave "started as a joke", according to Alex McLean, a computer-music researcher and one-third of a band called Slub that's been live coding for 13 years. He came up with the term while driving to a gig in Nottingham with his friend Nick Collins (who plays "datapop" under the name Sick Lincoln) in late 2011. "We tuned into a pirate station playing happy hardcore, and we thought it would be good to program some rave music." Since then, McLean has organised eight informal algoraves around the world. 
@@ -134,7 +144,7 @@ Em seu artigo ``Algorave: Live Performance of Algorithmic Electronic Dance Music
 
 \end{citacao}
 
-Focando no aspecto histórico, \citeauthoronline{collins_algorave_2014} descrevem uma sequência de apresentações que estruturam as práticas musicais. Em 1992, Charles Ames disponibiliza o \emph{Cybernetic Composer}, \traducao{um \emph{software} com um sistema baseado em Inteligência Artificial que compõe musica em uma variedade de estilos populares.}{an AI based software system that composes music in a variety of popular styles. Disponível em \url{http://www.kurzweilai.net/charles-ames}}. Em 1994, o duo \emph{Koan}, formado pelos DJs Daniel Roeth e William Grey, realizam adaptações para entretenimento com base no \emph{ambient music} de Brian \citeonline{eno_music_1978}. \emph{Aphex Twin} (Richard David James) cria em 1997 o termo \emph{live club algorithm}. Em 1999, o protocolo para edição audiovisual ao vivo \emph{bbcut} \cite{collins_bbcut_2003} é incluído nos \emph{opcodes} do \emph{CSound}\footnote{Disponível em \url{https://csound.github.io/}.}, e do \emph{Supercollider}. Em 2000 o então duo \emph{Slub}, realizam performances, autodenominadas \emph{generative techno}, com abordagem \emph{gabba}. Em 2001 é identificado a utilização de redes neurais para composição de padrões semelhantes ao \emph{drum'n'bass}. Em 2004 é fundado o TOPLAP em uma casa noturna de Hamburgo.
+Focando no aspecto histórico, \citeauthoronline{collins_algorave_2014} descrevem uma sequência de eventos (desenvolvimentos de \emph{softwares} e apresentações). Em 1992, Charles Ames disponibiliza o \emph{Cybernetic Composer}, \traducao{um \emph{software} com um sistema baseado em Inteligência Artificial que compõe musica em uma variedade de estilos populares.}{an AI based software system that composes music in a variety of popular styles. Disponível em \url{http://www.kurzweilai.net/charles-ames}}. Em 1994, o duo \emph{Koan}, formado pelos DJs Daniel Roeth e William Grey, realizam adaptações para entretenimento com base no \emph{ambient music} de Brian \citeonline{eno_music_1978}. \emph{Aphex Twin} (Richard David James) cria em 1997 o termo \emph{live club algorithm}. Em 1999, o protocolo para edição audiovisual ao vivo \emph{bbcut} \cite{collins_bbcut_2003} é incluído nos \emph{opcodes} do \emph{CSound}\footnote{Disponível em \url{https://csound.github.io/}.}, e do \emph{Supercollider}. Em 2000 o então duo \emph{Slub}, realizam performances, autodenominadas \emph{generative techno}, com abordagem \emph{gabba}. Em 2001 é identificado a utilização de redes neurais para composição de padrões semelhantes ao \emph{drum'n'bass}. Em 2004 é fundado o TOPLAP em uma casa noturna de Hamburgo.
 
 Ilustramos três casos recentes, onde a improvisação de códigos é uma técnica utilizada. Junto com a improvisação de códigos, são utilizados um instrumento eletrônico, voz, e um instrumento elétrico. O inglês Canute, o mexicano Mico Rex e a colombiana residente na Alemanha, Alexandra Cárdenas.
 
@@ -145,10 +155,7 @@ Ilustramos três casos recentes, onde a improvisação de códigos é uma técni
   \label{fig:canute}
 \end{figure}
 
-Em um registro audiovisual (\autoref{fig:canute}), Matthew Yee-King e Alex McLean (\emph{Canute}) conduzem uma improvisação com um \emph{laptop} e uma bateria eletrônica. Vídeos ou animações não são projetados. McLean improvisa códigos (escritos no ambiente de programação \emph{Tidal}), projetado em uma superfície plana, bem como nos executantes. Yee-King toca a bateria segundo o resultado sonoro do programa executado por McLean.  
-
-Segundo \citeonline[p.~2]{mclean_tidal_2010}, é uma linguagem de composição generativa, onde \traducao{padrões podem ser compostos de numerosos subpadrões em uma variedade de maneiras e profundidade arbitrária, para produzir $[$partes$]$ inteiras complexas de partes simples}{patterns may be composed of numerous subpatterns in a variety of ways and to arbitrary depth, to produce complex wholes from simple parts}. Isto é, funções e amostras sonoras representadas por letras e organizadas com auxílio de símbolos delimitadores (como ``$[$'' e ``$]$''), criam ritmos que podem ser recombinados, permutadas e rotacionadasem padrões mais complexos.  Ademais, existem efeitos de panoramização, atraso (\emph{delay}), filtros e comunicação de rede.
-Um código exemplar e uma transcrição são ilustrados no Exemplo \autoref{ex:tidal}.
+O registro audiovisual do duo Canute, Matthew Yee-King e Alex McLean, reforça improvisos de códigos arquetípicos \ver{fig:canute}. Aqui a projeção segue à risca duas recomendações, ``Mostre-nos suas telas''\label{sec:showusyourscreens} e ``Obscurantismo é perigoso''\ver{sec:obscurantismo}. Os instrumentos utilizados são um \emph{laptop} e uma bateria eletrônica.  McLean improvisa códigos, escritos no ambiente de programação \emph{Tidal} \ver{ex:tidal}. Segundo \citeonline[p.~2]{mclean_tidal_2010}, \emph{Tidal} é uma linguagem de composição generativa, onde \traducao{padrões podem ser compostos de numerosos subpadrões em uma variedade de maneiras e profundidade arbitrária, para produzir $[$partes$]$ inteiras complexas de partes simples}{patterns may be composed of numerous subpatterns in a variety of ways and to arbitrary depth, to produce complex wholes from simple parts}. Isto é, funções e amostras sonoras representadas por letras e organizadas com auxílio de símbolos delimitadores (como ``$[$'' e ``$]$''), criam ritmos que podem ser recombinados, permutadas e rotacionadas em padrões mais complexos.  Ademais, existem efeitos de panoramização, atraso (\emph{delay}), filtros e comunicação de rede. Um código exemplar e uma transcrição são ilustrados no Exemplo \ver{ex:tidal}.
 
 \begin{citacao}
 \traducao{Tidal é uma linguagem de padrões embebida em uma linguagem de programação Haskell, consistindo de representação de padrão, uma biblioteca de padrões geradores e combinadores, um $[$mecanismo$]$ de agendamento de eventos e uma interface para programar ao vivo. Esta é uma extensiva re-escrita de um trabalho anterior introduzido sobre o título \emph{Petrol} $[$\citeonline{mclean_petrol_2010}$]$. Extensões incluem melhoramentos de representação de padrão e um uma integração totalmente configurável do protocolo Open Sound Control $[$\citeonline{osc}$]$ \cite{mclean_tidal_2010}
@@ -159,22 +166,26 @@ Um código exemplar e uma transcrição são ilustrados no Exemplo \autoref{ex:t
 
 \begin{example}{Código Tidal de uma polifonia de poliritmos}
 \begin{minted}{haskell}
-# bd - bass drum (bumbo)
-# sn - snare drum (caixa)
-d1 \$ sound "bd [sn bd] [silence bd] sn"
-   |+| vowel "a e i o u"
-   |+| pan "0 0.5 1 0.5"
+// bd - bass drum (bumbo)
+// sn - snare drum (caixa)
+// simples ritmo em 100 BPM
+d1 \$ every 2 (palindrome (density 0.5) (sound "bd [sn bd] [silence bd] sn"))  // RITMO
+   |+| (density 1/5) vowel "a e i o u"                                         // FILTRO
+   |+| (densiy 1/4)  pan "0 0.5 1 0.5"                                         // PANORAMA
+   |+| (density 1/7) delayfeedback "0.8 0.6 0.4 0.2 0.1 0.5 0.25"              // DELAY
 \end{minted}
-\end{example}\label{ex:tidal}
+\label{ex:tidal}
+\end{example}
 
 \begin{figure}[!h]
   \centering
-  \includegraphics[scale=0.61]{imagens/tidal_ritmo.png}
+  \input{./scyJ5370}
   \caption{Transcrição de um simples ritmo codificado no \autoref{ex:tidal} \textbf{Fonte}: autor.}
   \label{fig:canute2}
 \end{figure}
 
-O registro audiovisual cita termos como \emph{club} e \emph{chordpunch} para descrever gêneros musicais para o código improvisado. É importante lembrar que McLean também utiliza outras categorizações musicais em outras performances. É curioso notar que em alguns momentos do vídeo, certas modificações nos códigos causam uma perturbação brusca em sistema de ritmos (percebido pelo fluxo musical); em alguns momentos Yee-King mantêm o fluxo, mas em outros o instante musical codificado leva um curto período de tempo para ser sincronizado. Sugerimos que este não é  \emph{a priori} um erro do instrumentista, mas sim de questões de performance que serão mencionados na \autoref{sec:showusyourscreens}.
+
+O registro audiovisual cita termos como \emph{club} e \emph{chordpunch}. Estes descrevem gêneros musicais para o código improvisado. É importante lembrar que McLean também utiliza outras categorizações musicais em outras performances. É curioso notar que em alguns momentos do vídeo, certas modificações nos códigos causam uma perturbação brusca em sistema de ritmos (percebido pelo fluxo musical); em alguns momentos Yee-King mantêm o fluxo, mas em outros o instante musical codificado leva um curto período de tempo para ser sincronizado. Sugerimos que este não é  \emph{a priori} um erro do instrumentista, mas sim de questões de performance que serão mencionados na \autoref{sec:showusyourscreens}.
 
 Griffiths registra uma \emph{rave} na embarcação  MS Stubnitz, em Canary Wharf, Londres, em 2013. Cárdenas e Ernesto Romero/Jorge Ramírez (Mico Rex, \autoref{fig:micorex}) tocam neste evento. Encontramos um registro audiovisual de curta duração da apresentação do duo Mico Rex\disponivelem{https://vimeo.com/65309754}, mas não de Cárdenas. Exemplos sonoros específicos estão disponíveis nas redes sociais \emph{SoundCloud} e \emph{Vimeo} \footnote{\url{https://soundcloud.com/tiemposdelruido} e \url{https://soundcloud.com/micorex/}.}.
 
@@ -620,7 +631,4 @@ O que torna o \emph{livecoding} diferente, e pode a performance de música tradi
 
 Michel Pasin defende que o ato de improvisação musical requer conhecimentos técnicos prévios, mas não necessariamente correlacionados ao conhecimento do que é uma partitura: \traducao{Em geral, é somente dominando um instrumento que você pode esquecer sobre a técnica e concentrar em 'dizer' coisas com o instrumento.}{In general, it is only by mastering an instrument that you can forget about the technique and concentrate on 'saying' things with the instrument.}. 
 
- 
-
-
-
+\subsubsection{Obscurantismo é perigoso, mostre-nos suas telas}\label{sec:obscurantismo}

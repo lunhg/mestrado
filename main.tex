@@ -67,6 +67,7 @@
 % Início do documento
 % ----
 \begin{document}
+\pagenumbering{roman}
 % Retira espaço extra obsoleto entre as frases.
 \frenchspacing 
 
@@ -137,6 +138,7 @@
 % ---
 % inserir o sumario
 % ---
+
 \pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents*
 \cleardoublepage
@@ -152,18 +154,19 @@
 % ELEMENTOS TEXTUAIS
 % ----------------------------------------------------------
 \textual
-
-%\input{./aviso}
+\input{./aviso}
 
 % ----------------------------------------------------------
 % Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
 % ----------------------------------------------------------
 \input{./introducao}
+\newpage
 
 %------------------------------------------------------
 % PRINCIPAL
 % ----------------------------------------------------------
 %\part{Ecologia de saberes no \emph{livecoding}}\label{parte1}
+\pagenumbering{arabic}
 \include{./01-Introducao}
 \newpage
 \include{./02-Metodologia}
