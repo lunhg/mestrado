@@ -1,19 +1,55 @@
 \chapter{Metodologia}\label{cap:metodologia}
 
-O \emph{Quadro Conceitual de Sistemas Criativos} \ver{sec:csf} foi utilizado como método de análise para uma improvisação de códigos \ver{cap:estudos_de_caso}.  Em termos cognitivos, este trabalho segue a aplicação de \emph{imagens mentais} \ver{sec:imagem_mental} e \emph{espaços conceituais}\ver{sec:espaco_conceitual}, cuja abordagem descreve um modelo computacional para o laço cognitivo entre o que é feito, observado, e transformado.
+Este capítulo busca investigar um método analítico de improvisações que possibilita estruturar \emph{imagens mentais}  e \emph{espaços conceituais} do que está sendo observado como atividade criativa \ver{sec:diferencas}. O \traducao{Quadro Conceitual de Sistemas Criativos}{Creative System Frameworks} \ver{sec:csf} será utilizado como método de análise para uma improvisação de códigos \ver{cap:estudos_de_caso}.
 
+\section{Criatividade e Sistemas Criativos}\label{sec:diferencas}
+
+ Esta teoria supõe uma diferença entre criatividade, Computação criativa, Sistemas criativos e Comportamentos criativos. Sumarizamos estas diferenças  na \autoref{tab:criatividade}.
+
+\begin{table}[!h]
+\caption{Definições formais de criatividade por \citeonline[p.~451]{wiggins_framework_2006}}
+\small
+    \begin{tabular}{ | p{4cm} | p{11.25cm} |}
+    \hline 
+    \hline 
+
+    \tiny{Criatividade} 
+    & \tiny{``A performance de tarefas que, quando executados por um humano, são consideradas criativas''  \tablefootnote{Tradução de \emph{The performance of tasks which, if performed by a human, would be deemed creative.}.}} \\
+    \hline
+
+    \tiny{Computação criativa} 
+    & \tiny{``O estudo e suporte, através de meios e métodos computacionais, do comportamento exibido por sistemas naturais e artificiais, que são considerados criativos''. \tablefootnote{Tradução de \emph{The study and support, through computational means and methods, of behaviour exhibited by natural and artificial systems, which would be deemed creative if exhibited by humans.}.}} \\
+    \hline
+
+    \tiny{Sistemas criativos} 
+    & \tiny{``Uma coleção de processos, naturais ou automáticos, que são capazes de alcançarem ou simularem comportamentos que em humanos seria considerado criativo''} \\
+    \hline
+
+    \tiny{Comportamento Criativo} 
+    & \tiny{``Um ou mais dos comportamentos exibidos por um sistema criativo''\tablefootnote{Tradução de \emph{One or more of the behaviours exhibited by a creative system.}}} \\
+    \hline
+    \hline
+   
+    \end{tabular}
+\label{tab:criatividade}
+\end{table}
 
 %\begin{citacao}
 %Por definição, criatividade cria, i.e., produz alguma coisa nova. Mas se estamos comprometidos com uma abordagem mecanicista do mundo -- nenhum milagre é permitido -- iremos acreditar que tudo o que ocorre é, em princípio,  previsível. Iremos acreditar também que qualquer coisa nova deve ser construída de componentes existentes. Isso implica que nada pode ser intrinsicamente novo. \cite[p.~2]{thornton_quantitative_2007}\footnote{Tradução de \emph{By definition, creativity creates, i.e., it produces something new. But if we are committed to a mechanistic account of the world — no miracles allowed — we believe that everything that occurs is predictable in principle. We also believe that any new thing must be constructed from existing components. This implies that nothing can ever be intrinsically new.}}
 %\end{citacao}
 
-Por exemplo, um paradigma de criatividade descrito por \citeonline[p.~119]{McLean2011} ilustra a \emph{prática reflexiva} do artista plástico (no caso Paul Klee). Supondo que o pintor cria uma imagem mental do que irá fazer,  perturba o vazio do quadro através do movimento inicial da mão que segura o pincel. Após observar o que fez, reage ao resultado dentro de seu próprio sistema estético. Essa reação é acompanhada de uma re-elaboração da imagem mental feita anteriormente. O processo continua até que o ofício seja considerado completo (\emph{obra}). 
+Por exemplo, a criatividade como uma \emph{prática reflexiva}, descrita por \citeonline[p.~119]{McLean2011}. Ilustra o pintor Paul Klee. Supondo que o artista cria uma imagem mental do que irá fazer (de onde vem essa imagem mental, pode ser uma experiência real, uma lembrança, uma exploração intelectual, uma aula). Decide então esboçar em um desenho. O próximo passo será visualizar o que fez, escolher os gestos apropriados, e readequar outros. Como parte do esboço, pode elaborar seu espectro de cores, e como se organizam no espaço, se são pontos, linhas (com cores quentes ou frias), planos estruturais e questões de luz. Com uma parte decidida, pode ir para o quadro e começar a materializar o esboço. No meio do caminho, percebe que aquilo que foi considerado adequado no esboço, é inadequado para a situação prática, e readequa, direatamente no quadro ou pode voltar ao esboço e redefinir os elementos e depois voltar ao quadro. Após observar o que fez, reage ao resultado dentro de seu próprio sistema estético. Essa reação é acompanhada de uma re-elaboração da imagem mental feita anteriormente, e por novas estratégias de conversão entre a imagem mental e a imagem física. O processo continua até que o ofício seja considerado completo (\emph{obra}). 
 
-Este paradigma não é o mesmo utilizado pelo(a) improvisador(a)-programador(a). O material, e o objetivo são diversos do(a) artista plástico(a). Seu material é o texto, mas não o texto discursivo, e sim o texto que descreve uma rotina de tarefas computacionais. Seu objetivo não é chegar a uma obra finalizada, mas sim não descontinuar o processo. McLean chama esse processo de bricolagem \ver{fig:feedback}. 
+Este não é o mesmo processo utilizado pelo(a) improvisador(a)-programador(a). O material, e o objetivo são diversos do(a) artista plástico(a). Seu material é o texto, mas não o texto discursivo, e sim o texto que descreve uma rotina de tarefas computacionais. Seu objetivo não é chegar a uma obra finalizada, mas sim não descontinuar o processo. McLean chama esse processo de programação por bricolagem \ver{fig:processo_criativo}. Em ambos os casos, na prática reflexiva e na bricolagem, são necessários conceitos que suportem a intenção (e vontade) do ofício. Conceitos elaborados através de restrições de idéias podem ser sistematizados, com o auxílio de esquemas visuais. Esta abordagem é muito semelhante à posição defendida por McLean, onde conceitos podem ser representados geometricamente. No caso do(a) improvisador(a)-programador(a), \emph{espaços conceituais} são reelaborados indefinidamente, começando por uma \emph{estratégia transversal}, passando para a observação, reação, e reformulação da imagem mental.
 
-Em ambos os casos, na prática reflexiva e na bricolagem, são necessários conceitos que suportem a intenção (e vontade) do ofício. Isso quer dizer que conceitos são elaborados através de restrições de idéias, que  podem ser construídos com o auxílio de esquemas visuais. Esta abordagem é muito semelhante à posição defendida por McLean, onde conceitos podem ser representados geometricamente. No caso do(a) improvisador(a)-programador(a), \emph{espaços conceituais} são contínuamente reelaborados, começando por uma \emph{estratégia transversal}, passando para a observação, reação, e reformulação da imagem mental.
+\begin{citacao}
+\traducao{A Figura 6.2 $[$\autoref{fig:processo_criativo}$]$ caracteriza a programação por bricolagem como um laço retroalimentado envolvendo o algoritmo escrito, sua interpretação, e a percepção do programador e sua reação do resultado ou comportamento $[$do algoritmo$]$. (\ldots). No começo o programador tem um conceito meio-formado que só atinge consistência interna através do processo de ser expresso como um algoritmo. O laço interno é onde o programador elabora o objetivo de suas imaginações, e o laço externo é onde essa trajetória está fundamentada na pragmática do que elas realmente têm que fazer. Através deste processo ambos algoritmos e conceitos são desenvolvidos até que o programador sinta que um se aplica com o outro, ou de outra forma julga o processo criativo finalizado.
+}{
+Figure 6.2 characterises bricolage programming as a creative feedback loop encompassing the written algorithm, its interpretation, and the programmer’s perception and reaction to its output or behaviour. (\ldots). At the beginning, the programmer may have a half-formed concept, which only reaches internal consistency through the process of being expressed as an algorithm. The inner loop is where the programmer elaborates upon their imagination of what might be, and the outer where this trajectory is grounded in the pragmatics of what they have actually made. Through this process both algorithm and concept are developed, until the programmer feels they accord with one another, or otherwise judges the creative process to be finished.
+}  
+\end{citacao}
 
- \begin{figure}[!h]
+ \begin{figure}[h]
   \centering
   \includegraphics[scale=0.5]{imagens/processo_criativo.png}
   \caption{Modelo de bricolagem para o processo criativo realizado por um artista-programador. \textbf{Fonte}: \citeonline[p.~122]{McLean2011}. }
@@ -21,21 +57,17 @@ Em ambos os casos, na prática reflexiva e na bricolagem, são necessários conc
 \end{figure}
 
 
+\subsection{O programa será transcendido - Língua Artificial é o caminho}\label{sec:imagem_mental}
 
-
-\section{Imagem Mental do improvisador-programador}\label{sec:imagem_mental}
-
-Definir verbalmente, ``imagem mental'', em termos visuais, estabelece uma relação entre a observação e a verbalização. Por observação não queremos dizer apenas a visão, mas estados conduzidos por órgãos perceptivos. Para \citeonline[p.~24]{McLean2011}, imagens mentais se relacionam com quaisquer estados quase-perceptuais: \traducao{Por exemplo o uso de entonação prosódica na fala é \emph{paralinguística}, não inteiramente notada em texto escrito, mas ainda assim simboliza um conteúdo significativo.}{For example the use of prosodic intonation in speech is \emph{paralinguistic}, not entirely notated in written text, yet symbolising meaningful content}. Isto é, na teoria da \emph{Codificação Dual} \apud[p.~25--29]{paivio_dual_1990}{McLean2011}, é estabelecida uma relação de colaboração entre hierarquias de linguagem e códigos de percepção. Esta colaboração estrutura a informação comunicada: \traducao{humanos são capazes de compreender linguagem enquanto simultaneamente atendem às figuras $[$de linguagem$]$.}{humans are able to comprehend language while simultaneously attending to imagery.}:
+Definir verbalmente, ``imagem mental'', em termos visuais, estabelece uma relação entre a observação e a verbalização. Por observação não queremos dizer apenas a visão, mas estados conduzidos pela comunicação. Para \citeonline[p.~24]{McLean2011}, imagens mentais se relacionam com quaisquer estados quase-perceptuais: \traducao{Por exemplo o uso de entonação prosódica na fala é \emph{paralinguística}, não inteiramente notada em texto escrito, mas ainda assim simboliza um conteúdo significativo.}{For example the use of prosodic intonation in speech is \emph{paralinguistic}, not entirely notated in written text, yet symbolising meaningful content}. Isto é, na teoria da \emph{Codificação Dual} \apud[p.~25--29]{paivio_dual_1990}{McLean2011}, é estabelecida uma relação de colaboração entre hierarquias de linguagem e códigos de percepção. Esta colaboração estrutura a informação comunicada:
 
 \begin{citacao}
 \traducao{Seu $[$Paivio$]$ argumento não é que existem dois códigos, mas sim que existe uma hierarquia de códigos, que se ramificam no topo em códigos lingüísticos discretos e códigos de percepção contínua, que Paivio nomeia como \emph {logogens} e \emph{imagens} respectivamente. (\ldots) \textbf{A explicação oferecida pela teoria da Codificação Dual é que existem sistemas de símbolos distindos, mas integrados, para linguagens e figuras}.}{His contention is not that there are two codes, but rather that there is a hierarchy of code, which branch at the top into discrete linguistic codes and contionuous perceptual codes, which Paivio names \emph{logogens} and \emph{imagens} respectively (\ldots) The explanation offered by Dual Coding Theory is that there are distinct, yet integrated symbol systems for imagery and language.}
 \end{citacao}
 
-Por exemplo, quando falamos em ``código de computador'' não estamos nos referindo a um código escrito em uma linguagem específica. A imagem formada pode constituir na visualização mental de um conjunto de caracteres que, organizados de maneiras padronizadas, permitem a execução de alguma tarefa em algum computador. 
+Para Paivio e McLean,\traducao{humanos são capazes de compreender linguagem enquanto simultaneamente atendem às figuras $[$de linguagem$]$.}{humans are able to comprehend language while simultaneously attending to imagery.}. Por exemplo, quando falamos em \textbf{código de computador}, podemos imaginar um computador, e provavelmente uma pessoa escrevendo um texto. Pode ser também que apenas o computador e o texto escrito apareçam na mente. Pode ser também que apenas o texto escrito, em uma linguagem que não sabemos, seja a imagem mental. Dependendo da experiência acumulada com este objeto \textbf{código}, podemos visualizar outras possibilidades. Mas e o que vêm à mente quando imaginamos algo anterior ao código de computador, sendo que este último materializa a imaginação? ou melhor, quais são os mecanismos que o improvisador utiliza para estimular sua imaginação?
 
-Um sistema integrado entre códigos linguísticos e perceptuais é contextualizado por McLean no caso da improvisação de códigos (\emph{live coding}): se atentarmos para uma partitura-programação, veremos que o programador lida com duas hierarquias. A primeira delas inclue a execução de uma \emph{estratégia transversal}, uma formalização da imagem criada para a notação do código. Isso inclue o comentário, que explica textualmente a imagem e seu resultado; a disposição espacial do código; o destacamento de sintaxe (cores); nomes de variáveis; e nomes de métodos. 
-
-A segunda hierarquia é descrita através do \emph{Quadro de estruturação das Dimensões Cognitivas da Notação} \apud[p.~95--97]{church_cognitive_2008}{McLean2011}. No caso, é um referencial para a elaboração de novas linguagens, cuja sintaxe pode ser moldada para  atividades específicas (\traducao{Linguagens de Domínio Específico}{DomainSpecific Languages } ou DSL). Para McLean, DSLs ``provêm termos padronizados para descrever demandas particulares em um domínio de uma tarefa''.\ver{tab:dimensoes}.
+Um sistema integrado entre códigos linguísticos e perceptuais é contextualizado por McLean no caso da improvisação de códigos (\emph{live coding}): se atentarmos para uma partitura-programação, veremos que o programador lida com duas hierarquias. A primeira delas inclue a execução de uma \emph{estratégia transversal}, uma formalização da imagem criada para a notação do código. Isso inclue o comentário, que explica textualmente a imagem e seu resultado; a disposição espacial do código; o destacamento de sintaxe (cores); nomes de variáveis; e nomes de métodos. A segunda hierarquia é descrita através do \emph{Quadro de estruturação das Dimensões Cognitivas da Notação} \apud[p.~95--97]{church_cognitive_2008}{McLean2011}. No caso, é um referencial para a elaboração de novas linguagens, cuja sintaxe pode ser moldada para  atividades específicas (\traducao{Linguagens de Domínio Específico}{DomainSpecific Languages } ou DSL). Para McLean, DSLs ``provêm termos padronizados para descrever demandas particulares em um domínio de uma tarefa'' \ver{tab:dimensoes}. No capítulo anterior, \ver{sec:showusyourscreens}, o item ``O programa será transcendido - Língua Artificial é o caminho.'' trata justamente desta questão, de uma língua que traduza, a partir de algumas restrições, a imagem mental:
 
 \begin{table}[!h]
 \caption{Dimensões cognitivas da Notação para linguagens de programação. \textbf{Fonte}: \apud{church_cognitive_2008}{McLean2011}.}
@@ -102,9 +134,7 @@ A segunda hierarquia é descrita através do \emph{Quadro de estruturação das 
 \label{tab:dimensoes}
 \end{table} 
 
-Não explicaremos todas, pois não são dimensões autônomas, o que diverge do foco de nosso trabalho. McLean exemplifica a viscosidade: a possibilidade de diferentes soluções para o mesmo resultado. Isto é, se uma Notação secundária é possível. Por exemplo, em um \emph{patch} de PD, cuja imagem mental é uma onda quadrada. Podemos utilizar objetos nativos ou objetos extendidos \ver{fig:pd}. 
-
-Uma dimensão notória, discutida nos corredores de universidades, são as Operações Mentais Difíceis que, devido à não-Invisibilidade de Dependências Escondidas, podem afastar o compositor de seu objetivo musical. Programas como PureData, Max/MSP e em menor grau, CSound, SuperCollider e ChucK praticam a invisibilidade de dependências em diferentes graus.
+Não explicaremos todas, pois não são dimensões autônomas, o que diverge do foco de nosso trabalho. McLean exemplifica a interdependência entre viscosidade e notação secundária: a possibilidade de diferentes soluções para o mesmo resultado. Isto é, se uma Notação secundária é possível. Por exemplo, em um \emph{patch} de PD, cuja imagem mental é uma onda quadrada. Podemos utilizar objetos nativos ou objetos extendidos \ver{fig:pd}. Uma outra interdependência de dimensões, entre as Operações Mentais Difíceis e a não-Invisibilidade de Dependências Escondidas, é notória do ponto de vista pedagógico. Podem afastar o compositor de seu objetivo musical, mais ou menos estruturado em uma teoria. DSLs como PureData, Max/MSP, CSound, SuperCollider, Tidal, praticam a invisibilidade de dependências em diferentes graus. Porém, entre os improvisadores de código, é considerado virtuosismo o praticante recorrer às Operações Mentais difíceis com o mínimo possível de Invisibilidade de Dependências. Por exemplo, utilizar linguagens de baixo nível como C \ver{sec:concerto}, ou de alto nível como Perl \cite{mclean_hacking_2004} e ainda assim, elaborar sons e imagens de maneira criativa.
 
 \begin{figure}[!h]
   \centering
@@ -114,11 +144,10 @@ Uma dimensão notória, discutida nos corredores de universidades, são as Opera
 \end{figure}
 
  
-\subsection{Tidal}\label{sec:tidal}
+\subsection{Bricolagem como estratégia transversal}\label{sec:tidal}
 
 Vamos ilustrar um pequeno processo da \emph{estratégia transversal} com o \emph{software} Tidal.
-
-Segundo \citeonline[p.~2]{mclean_tidal_2010}, \emph{Tidal} é uma linguagem de composição generativa, onde \traducao{padrões podem ser compostos de numerosos subpadrões em uma variedade de maneiras e para uma profundidade arbitrária, para produzir $[$partes$]$ inteiras complexas de partes simples}{patterns may be composed of numerous subpatterns in a variety of ways and to arbitrary depth, to produce complex wholes from simple parts}. Amostras sonoras representam imagens mentais de suas fontes (por exemplo ``sn'' para \emph{snare}, caixa-clara), com ritmos organizados com o auxílio de símbolos delimitadores de tempo (como ``$[$'' e ``$]$''). Ritmos podem ser recombinados, permutados e rotacionados em padrões mais complexos. Existem efeitos de panoramização, atraso (\emph{delay}), filtros e comunicação de rede. A citação abaixo é uma descrição técnica. No Exemplo \ref{ex:tidal}. a imagem mental é a demanda da linguagem, que é produzir Música Eletrônica para Dançar.
+Segundo \citeonline[p.~2]{mclean_tidal_2010}, \emph{Tidal} é uma linguagem de composição generativa, onde \traducao{padrões podem ser compostos de numerosos subpadrões em uma variedade de maneiras e para uma profundidade arbitrária, para produzir $[$partes$]$ inteiras complexas de partes simples}{patterns may be composed of numerous subpatterns in a variety of ways and to arbitrary depth, to produce complex wholes from simple parts}. Amostras sonoras representam imagens mentais de suas fontes (por exemplo ``sn'' para \emph{snare}, caixa-clara), com ritmos organizados com o auxílio de símbolos delimitadores de tempo (como espaço, `` ``, e colchetes, ``$[$'',``$]$'', \verb|{| e \verb|}|). Ritmos podem ser revertidos (\verb|rev|), diminuidos e aumentados (\verb|slow|, \verb|density|), iterados (\verb|every|) para recombinação permutação, padrões mais complexos (\verb|can|), como o algoritmode bjorklund que simula ritmos tradicionais\footnote{\cfcite{toussaint_euclidean_2005}}. Efeitos de panoramização, atraso (\emph{delay}), filtros e comunicação de rede. No Exemplo \ref{ex:tidal}. a imagem mental é a demanda da linguagem, que é produzir Música Eletrônica para Dançar.
 
 \begin{citacao}
 \traducao{Tidal é uma linguagem de padrões embebida em uma linguagem de programação Haskell, consistindo de representação de padrão, uma biblioteca de padrões geradores e combinadores, um $[$mecanismo$]$ de agendamento de eventos e uma interface para programar ao vivo. Esta é uma extensiva re-escrita de um trabalho anterior introduzido sobre o título \emph{Petrol} $[$\citeonline{mclean_petrol_2010}$]$. Extensões incluem melhoramentos de representação de padrão e um uma integração totalmente configurável do protocolo Open Sound Control $[$\citeonline{osc}$]$ \cite{mclean_tidal_2010}
@@ -169,10 +198,9 @@ d1 \$ (sound "bass3 sn [silence house] sn:4")
 -- e depois volta ao normal.
 d1 \$ every 4 (density 0.5) (sound "bass3 sn [silence house] sn:4")
 \end{minted}
-
-
-
 \end{example}
+
+Para \citeonline[p.~130]{McLean2011}, esta estratégia criativa, de programar ``no momento'', a partir de um arquivo de texto em branco, com uma imagem mental do resultado sonoro (ou visual), é caracterizada pela  bricolagem. No início do exemplo acima, o programador elabora um meio-conceito do que quer fazer, cuja expressão apenas ganha existência através da codificação \ver{fig:processo_criativo}. As fases de observação, e reação levam o improvisador programador à reconceitualização, e um novo código é escrito. No entanto, ao invés de finalizar, o improvisador segue desenvolvendo.
 
 \section{Sistemas criativos}\label{sec:sistemas}
 
@@ -182,51 +210,13 @@ Para  \citeonline[p.~450]{wiggins_framework_2006}, criatividade pode ser discuti
 \mathcal{U} = \emptyset
 \end{equation}\label{eq:vazio}
 
- Wiggins define o Universo de Conceitos (\csf{U}{x}) como um conjunto não estrito dos \emph{Espaços Conceituais} (\csf{E}{x}) de Margaret \citeonline{boden_creative_1990}. Isto é, um Universo de Conceitos a respeito de alguma coisa, no nosso caso da improvisação de códigos \ver{eq:ul}. 
+ Wiggins define o Universo de Conceitos (\csf{U}{x}) como um conjunto não estrito dos \emph{Espaços Conceituais} (\csf{C}{x}) de Margaret \citeonline{boden_creative_1990}. Isto é, um Universo de Conceitos a respeito de alguma coisa, no nosso caso da improvisação de códigos \ver{eq:ul}. 
 
 \begin{equation}
-\mathcal{U}_\emph{livecoding} = [\mathcal{E}_\emph{Tecelagem}, \mathcal{E}_\emph{Audiovisual}, \mathcal{E}_\emph{Dança} \mathcal{E}_\emph{Música}, \ldots, ?]
+\mathcal{U}_\emph{livecoding} = [\mathcal{C}_\emph{Tecelagem}, \mathcal{C}_\emph{Audiovisual}, \mathcal{C}_\emph{Dança} \mathcal{C}_\emph{Música}, \ldots, ?]
 \end{equation}\label{eq:ul}
 
-\traducao{Boden concebe o processo de criatividade como uma identificação e/ou localização de novos objetos conceituais em um espaço conceitual.}{Boden conceives the process of creativity as the identification and/or location of new conceptual objects in a conceptual space.}. Uma definição semelhante de \citeonline[p.~2]{thornton_quantitative_2007} reafirma a criação de uma imagem mental de uma \emph{metáfora} (que pode situar sons, palavras, imagens, cheiros,tato,gostos):\traducao{Qualquer ato criativo é fundado na conceitualização ou realização de um ponto dentro de um espaço conceitual particular}{Any creative act is thus founded on conceptualisation or the realisation of a point within a particular ‘conceptual space’}. 
-
-\section{Espaços conceituais e o processo de bricolagem}\label{sec:espaco_conceitual}
-
-Vamos retornar à \autoref{fig:processo_criativo}. Três processos-chave são considerados: a primeira é a formação de um espaço de conceitos diante de imagem mental que o improvisador-programador experenciou. 
-
-\begin{citacao}
-\traducao{A Figura 6.2 $[$\autoref{fig:processo_criativo}$]$ caracteriza a programação por bricolagem como um laço retroalimentado envolvendo o algoritmo escrito, sua interpretação, e a percepção do programador e sua reação do resultado ou comportamento $[$do algoritmo$]$. (\ldots). No começo o programador tem um conceito meio-formado que só atinge consistência interna através do processo de ser expresso como um algoritmo. O laço interno é onde o programador elabora o objetivo de suas imaginações, e o laço externo é onde essa trajetória está fundamentada na pragmática do que elas realmente têm que fazer. Através deste processo ambos algoritmos e conceitos são desenvolvidos até que o programador sinta que um se aplica com o outro, ou de outra forma julga o processo criativo finalizado.
-}{
-Figure 6.2 characterises bricolage programming as a creative feedback loop encompassing the written algorithm, its interpretation, and the programmer’s perception and reaction to its output or behaviour. (\ldots). At the beginning, the programmer may have a half-formed concept, which only reaches internal consistency through the process of being expressed as an algorithm. The inner loop is where the programmer elaborates upon their imagination of what might be, and the outer where this trajectory is grounded in the pragmatics of what they have actually made. Through this process both algorithm and concept are developed, until the programmer feels they accord with one another, or otherwise judges the creative process to be finished.
-}  
-\end{citacao}
-
-\begin{table}[!h]
-\caption{Definições formais de criatividade por \citeonline[p.~451]{wiggins_framework_2006}}
-\small
-    \begin{tabular}{ | p{4cm} | p{11.25cm} |}
-    \hline 
-    \hline 
-
-    \tiny{Criatividade} 
-    & \tiny{``A performance de tarefas que, quando executados por um humano, são consideradas criativas''  \tablefootnote{Tradução de \emph{The performance of tasks which, if performed by a human, would be deemed creative.}.}} \\
-    \hline
-
-    \tiny{Computação criativa} 
-    & \tiny{``O estudo e suporte, através de meios e métodos computacionais, do comportamento exibido por sistemas naturais e artificiais, que são considerados criativos''. \tablefootnote{Tradução de \emph{The study and support, through computational means and methods, of behaviour exhibited by natural and artificial systems, which would be deemed creative if exhibited by humans.}.}} \\
-    \hline
-
-    \tiny{Sistemas criativos} 
-    & \tiny{``Uma coleção de processos, naturais ou automáticos, que são capazes de alcançarem ou simularem comportamentos que em humanos seria considerado criativo''} \\
-    \hline
-
-    \tiny{Comportamento Criativo} 
-    & \tiny{``Um ou mais dos comportamentos exibidos por um sistema criativo''\tablefootnote{Tradução de \emph{One or more of the behaviours exhibited by a creative system.}}} \\
-    \hline
-   
-    \end{tabular}
-\label{tab:criatividade}
-\end{table}
+\traducao{Boden concebe o processo de criatividade como uma identificação e/ou localização de novos objetos conceituais em um espaço conceitual.}{Boden conceives the process of creativity as the identification and/or location of new conceptual objects in a conceptual space.}. Uma definição semelhante de \citeonline[p.~2]{thornton_quantitative_2007} reafirma a criação de uma imagem mental de uma \emph{metáfora} (que pode situar sons, palavras, imagens, cheiros,tato,gostos):\traducao{Qualquer ato criativo é fundado na conceitualização ou realização de um ponto dentro de um espaço conceitual particular}{Any creative act is thus founded on conceptualisation or the realisation of a point within a particular ‘conceptual space’}. Neste sentido, selecionamos a imagem mental da metáfora sonora, a partir de um espaço conceitual da Música. Dentro espaço conceitual da Música, selecionamos um específico que vem do \emph{jazz}. Nossa escolha não foi por gosto (ainda que o autor e o orientador gostem), mas sim por ilustrar a intenção de readequação da figura do intérprete concertista para os propósitos do programador \ver{sec:obscurantismo}.  
 
 \subsection{Quadro Conceitual de sistemas criativos}\label{sec:csf}
 
@@ -236,11 +226,11 @@ Uma maneira adequada de descrever um sistema criativo (ou parte dele) considera 
 O universo, $\mathcal{U}$, é um espaço multidimensional, no qual dimensões são capazes de representar qualquer coisa, e todos os possíveis conceitos distintos correspondentes àqueles pontos em $\mathcal{U}$ (\ldots) Para tornar a proposta um espaço-tipo possível, permitirei que $\mathcal{U}$ contenha todos os conceitos abstratos, bem como os concretos, e que é possível representar os artefatos tanto completos e incompletos \cite[p.~451]{wiggins_framework_2006}.\footnote{Tradução de \emph{The universe, U, is a multidimensional space, whose dimensions are capable of representing anything, and all possible distinct concepts correspond with distinct points in U. (\ldots) To make the proposal as state-spacelike as possible, I allow that U contains all abstract concepts as well as all concrete ones, and that it is therefore possible to represent both complete and incomplete artefacts}}
 \end{citacao}
 
-Wiggins esclarece que Boden não reconhece de forma explícita $\mathcal{U}$, ``ela borra a distinção entre as regras que determinam a adesão do espaço (\ldots) e outras disposições que possam permitir a construção e/ou detecção de um conceito representado por um ponto no espaço'' (\emph{Idem, ibdem}).
+Wiggins esclarece que Boden não reconhece de forma explícita $\mathcal{U}$, ``ela borra a distinção entre as regras que determinam a adesão do espaço (\ldots) e outras disposições que possam permitir a construção e/ou detecção de um conceito representado por um ponto no espaço'' (\emph{Idem, ibdem}). Espaços conceituais $\mathcal{C}$, finitos ou infinitos são definidos como restrições de um universo $\mathcal{U}$, caracterizando um conjunto não-determinístico de conhecimentos, representações, e conceitos:
 
-Espaços conceituais $\mathcal{C}$, finitos ou infinitos são definidos como restrições de um universo $\mathcal{U}$, caracterizando um conjunto não-determinístico de conhecimentos: \traducao{A noção-chave na teoria de Boden é aquele do espaço conceitual. Enquanto nenhuma definição formal é provida, é comum interpretar esta frase literalmente, tomando o espaço conceitual sendo um espaço de conceitualizações, ou representações de conceitos \cite[p~.7]{thornton_quantitative_2007}.}{The key notion in Boden’s theory is that of the conceptual space. While no formal definition has been provided, it is common to interpret the phrase literally, taking the conceptual space to be a space of conceptualisations or concept representations.}
-
-\citeonline{mclean_music_2006} ainda descreve regras que validam concepções diferentes entre espaços conceituais $\mathcal{C}$ diversos em um Universo de Conceitos $\mathcal{U}$ (ver \autoref{tab:universodeconceitos}).
+\begin{citacao}
+\traducao{A noção-chave na teoria de Boden é aquele do espaço conceitual. Enquanto nenhuma definição formal é provida, é comum interpretar esta frase literalmente, tomando o espaço conceitual sendo um espaço de conceitualizações, ou representações de conceitos \cite[p~.7]{thornton_quantitative_2007}.}{The key notion in Boden’s theory is that of the conceptual space. While no formal definition has been provided, it is common to interpret the phrase literally, taking the conceptual space to be a space of conceptualisations or concept representations.}
+\end{citacao}
 
 \begin{table}[!h]
 \caption{Definições formais do Universo de possibilidades de \citeonline{wiggins_framework_2006}, ou Universo de Conceitos por \citeonline{mclean_music_2006}.}
@@ -314,19 +304,15 @@ Espaços conceituais $\mathcal{C}$, finitos ou infinitos são definidos como res
 \label{tab:universodeconceitos}
 \end{table}
 
-\section{O modelo de improvisação}\label{sec:im}
-
-McLean realiza uma comparação entre o \emph{Universo de possibilidades} de Wiggins com o \emph{Modelo de Improvisação} de Pressing. No entanto, McLean argumenta que:
+\citeonline{mclean_music_2006} ainda descreve regras que validam concepções diferentes entre espaços conceituais $\mathcal{C}$ diversos em um Universo de Conceitos $\mathcal{U}$ (ver \autoref{tab:universodeconceitos}). McLean realiza uma comparação entre o \emph{Universo de possibilidades} de Wiggins com o \emph{Modelo de Improvisação} de Pressing \ver{sec:im}. No entanto, McLean argumenta que:
 
 \begin{citacao}
-Pressing discute comportamento criativo no contexto do Modelo de Improvisação, e de fato é parte da Ferramenta de Estruturação de Sistemas Criativos. (\ldots) Durante a transferência de notação do Modelo de Improvisação para a Ferramenta de Sistemas Criativos, nós consideramos improvisação musical de uma maneira clara e temos uma linguage comum na qual comparar com outros modelos \footnote{Tradução de \emph{However Pressing does discuss creative behaviour in the context of the IM, and indeed the CSF is in part. (\ldots) In transferring the IM to the notation of the CSF we may consider music improvisation in a clearer manner and have a common language in which to compare it with other models.}}.
+Pressing discute comportamento criativo no contexto do Modelo de Improvisação, e de fato é parte do Quadro conceitual de Sistemas Criativos. (\ldots) Durante a transferência de notação do Modelo de Improvisação para a Ferramenta de Sistemas Criativos, nós consideramos improvisação musical de uma maneira clara e temos uma linguagem comum na qual comparar com outros modelos \footnote{Tradução de \emph{However Pressing does discuss creative behaviour in the context of the IM, and indeed the CSF is in part. (\ldots) In transferring the IM to the notation of the CSF we may consider music improvisation in a clearer manner and have a common language in which to compare it with other models.}}.
 \end{citacao}
 
-Segundo Pressing, o Modelo de Improvisação é ``um esboço para uma teoria geral da improvisação integrada com preceitos da Psicologia Cognitiva (\ldots) teoria do comportamento de improvisação na música'' \cite[p.~2]{pressing_improvisation_1987}. 
+\section{O modelo de improvisação}\label{sec:im}
 
-Este modelo será utilizado para especificar performances exemplares, como o caso investigado neste trabalho, \emph{Study in Keith}. Por exemplo, uma improvisação particionada em diferentes sequências pode ser parcialmente mapeada em categorias, como blocos sonoros, referentes conceituais e normas estilísticas, conjuntos de objetivos e processos.
-
-Um sumário sobre o modelo de improvisação é apresentado na \autoref{tab:modelo_improvisacao}.
+Segundo Pressing, o Modelo de Improvisação é ``um esboço para uma teoria geral da improvisação integrada com preceitos da Psicologia Cognitiva (\ldots) teoria do comportamento de improvisação na música'' \cite[p.~2]{pressing_improvisation_1987}. Este modelo será utilizado para especificar elementos de uma performance exemplar, como o caso investigado neste trabalho. Por exemplo, uma improvisação particionada em diferentes sequências pode ser parcialmente mapeada em categorias, como blocos sonoros, referentes conceituais e normas estilísticas, conjuntos de objetivos e processos. Este nos pareceu um modelo mais transparente para o compositor, músico e intérprete. O que não quer dizer que é possível readequar ambos para nosso interesse. Um sumário sobre o modelo de improvisação é apresentado na \autoref{tab:modelo_improvisacao}. Por seu caráter lógico, parece ser uma possibilidade interessante, e assumiremos como tal.
 
 \begin{table}[!h]
 \caption{Definições formais do Modelo de improvisação de Jeff \citeonline{pressing_improvisation_1987}, segundo \citeonline[p.~2]{mclean_music_2006}.}
@@ -441,7 +427,7 @@ O Universo de Conceitos da pesquisa, \csf{U}{pesquisa}, é um recorte do univers
     child { node [env] {\csf{C}{\ldots}}};
 \end{tikzpicture}
 
-No primeiro capítulo, incluímos um subjconjunto neste Espaço Conceitual da Pesquisa. Este subconjunto é constituído pelos termos representados na \autoref{fig:nuvemlivecoding} (p.~\pageref{fig:nuvemlivecoding}), e no \autoref{app:A} (p.~\pageref{app:A}). 
+No primeiro capítulo, incluímos um subjconjunto neste Espaço Conceitual da Pesquisa \ver{app:A}). 
 
 \begin{tikzpicture}
   [
@@ -528,34 +514,4 @@ Por outro lado \csf{C}{Study in Keith} pode ser definido pelo modelo de improvis
 
 \section{Formalização}\label{sec:formaliza}
 
-O espaço conceitual do \emph{livecoding} é definido como uma função de interpretação das regras de validação (o que pode ser ou não considerado como próprio de uma categorização musical), de gosto (questões de estilo) e de localização transversal de conceitos (conceitos internos que permitem o cruzamento com outros conceitos):
-
-\begin{example}{Delimitação de regras para o \emph{live coding} e para \emph{Study in Keith}.}
-\begin{equation}
-\mathcal{C}_\emph{livecoding} = <<<\mathcal{R}_\emph{livecoding}, \mathcal{T}_\emph{livecoding},  \mathcal{E}_\emph{livecoding} >>> 
-\end{equation}
-
-As regras de validação foram estudadas neste trabalho como as regras heurísticas do \emph{live coding}. Isto é, que conjunto de métodos são utilizados para caracterizar uma performance de \emph{live coding} como tal? Elementos históricos, e ideológicos (divulgados em manifestos), são levantados para responder esta pergunta .
-
-\begin{equation}
-\mathcal{R}_\emph{live coding} = \mathcal{R}_\emph{Proto-história} \bigcup  \mathcal{R}_\emph{Manifestos}
-\end{equation}
-
-Por outro lado, este estudo abandonou a investigação das regras de gosto, tema que pode ser melhor explorado em trabalhos posteriores, a partir de \citeonline{janotti_jr._a_2003,sa_musica_2006,sa_se_2009}.
-
-A tarefa de localização transversal de conceitos é trabalhada no último capítulo. O espaço conceitual de \emph{Study in Keith} está contido no espaço conceitual do \emph{live coding} através da união entre os conceitos deste último, com os espaços conceituais dos concertos \emph{Sun Bears}, de Keith Jarret, \csf{C}{Sun Bears} $\subset$ \csf{C}{live coding}. 
-
-\end{example}
-
-Expomos na equação \ref{eq:espaco_lc} o espaço conceitual multidimensional do \emph{Study in Keith}. Isto é, a aplicação de regras de validação do \emph{live coding} e regras de validação dos Concertos \emph{Sun Bear}:
-
-\begin{example}{Aplicação}\label{eq:espaco_lc}
-O espaço conceitual não-estrito da pesquisa é um função de interpretação das regras de validação do \emph{live coding}, e das regras de validação do disco \emph{Sun Bears}, sobre o Universo de conceitos do \emph{livecoding}
-\begin{equation}
-\mathcal{C}_\emph{pesquisa} = [[\mathcal{R}_\emph{live coding} \bigcup \mathcal{R}_\emph{Sun Bears}]](\mathcal{U}_\emph{live coding} )
-\end{equation}
-\end{example}
-
-\section{Discussão}
-
- A manutenção deste conhecimento, nesta forma, desenvolve um pensamento cirúrgico no conceito ``criatividade na improvisação de códigos musicais''. Mas compramos a idéia por que supomos algum valor \cite[p.~20]{santos_filosofia_2008}, ``Afinal, se há compra e venda é porque as teorias e disciplinas têm alguma utilidade. Doutro modo, seriam simplesmente deitadas ao lixo.''. O preço estabelecido não é grande, e só uma parte da teoria será utilizada para a análise de um trecho de uma improvisação musical discutido no \autoref{cap:estudos_de_caso}.
+O espaço conceitual do \emph{livecoding} é definido como uma função de interpretação das regras de validação (o que pode ser ou não considerado como próprio de uma categorização musical), de gosto (questões de estilo) e de localização transversal de conceitos (conceitos internos que permitem o cruzamento com outros conceitos). As regras de validação foram estudadas neste trabalho como as regras heurísticas do \emph{live coding}. Isto é, que conjunto de métodos são utilizados para caracterizar uma performance de \emph{live coding} como tal? Elementos históricos, e ideológicos (divulgados em manifestos), são levantados para responder esta pergunta. Por outro lado, este estudo abandonou a investigação das regras de gosto, tema que pode ser melhor explorado em trabalhos posteriores, a partir de \citeonline{janotti_jr._a_2003,sa_musica_2006,sa_se_2009}. A tarefa de localização transversal de conceitos é trabalhada no último capítulo. O espaço conceitual de \emph{Study in Keith} está contido no espaço conceitual do \emph{live coding} através da união entre os conceitos deste último, com os espaços conceituais dos concertos \emph{Sun Bears}, de Keith Jarret, misturados. No entanto o espaço conceitual não será investigado em sua totalidade, e sim apenas uma sonoridade.

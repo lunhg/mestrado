@@ -34,8 +34,8 @@ house = \relative c,{
     %staffkeysig 
     %bartimesig: 
     \time 4/4 
-    \repeat volta 2{r2 a''2|
-                    r2 a2|
+    \repeat volta 2{r2 r8 a''4.|
+                    r2 r8 a4.  |
     } % 8
 }% end of last bar in partorvoice
 
@@ -62,8 +62,8 @@ bassthree = \relative c{
     %staffkeysig 
     %bartimesig: 
     \time 4/4 
-    \repeat volta 2{a4 r4. a8 r4      | % 2
-                    a4 r4. a8 r4      | % 2
+    \repeat volta 2{a2 r2       | % 2
+                    a2 r2       | % 2
    } % 8
 }% end of last bar in partorvoice
 
