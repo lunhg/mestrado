@@ -8,3 +8,8 @@
 **.idx
 **.synctex.gz
 **.*~
+**.lof
+**.thm
+snippet**
+**.lytex
+**.dep
