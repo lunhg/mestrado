@@ -26,18 +26,16 @@ namespace :tex do
   desc "compile tex"
   task :compile do
     begin
-      sh "pdflatex -synctex=1 -interaction=nonstopmode -shell-escape ./#{ENV['FILE']}.tex"
+      sh "pdflatex -synctex=1 -interaction=nonstopmode -shell-escape -file-line-error #{ENV['FILE']} | egrep \".*:[0-9]*:.*|LaTeX Warning:\""
       begin
         # we need a error
         File.read("#{ENV['FILE']}.blg")
       rescue Exception => _e
         puts _e
-        
-        sh "bibtex #{ENV['FILE']}"
-        
-        sh "pdflatex -synctex=1 -interaction=nonstopmode -shell-escape ./#{ENV['FILE']}.tex"
-        sh "pdflatex -synctex=1 -interaction=nonstopmode -shell-escape ./#{ENV['FILE']}.tex"
-        sh "evince ./#{ENV['FILE']}.pdf &"
+        sh "bibtex -terse ./#{ENV['FILE']}.aux"
+        sh "pdflatex -synctex=1 -interaction=nonstopmode -shell-escape -file-line-error ./#{ENV['FILE']}.tex | egrep \".*:[0-9]*:.*|LaTeX Warning:\""
+        sh "pdflatex -synctex=1 -interaction=nonstopmode -shell-escape -file-line-error ./#{ENV['FILE']}.tex | egrep \".*:[0-9]*:.*|LaTeX Warning:\""
+        puts "=> #{ENV['FILE']}.pdf produced!"
       ensure
         # now we need test
         File.read("#{ENV['FILE']}.blg")

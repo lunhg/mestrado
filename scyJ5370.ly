@@ -27,8 +27,8 @@
     }
 
 ACbvoiceAA = \relative c,{
-    \set Staff.instrumentName = #"Contrabass"
-    \set Staff.shortInstrumentName = #"Cb."
+    \set Staff.instrumentName = #"House bass"
+    \set Staff.shortInstrumentName = #"house"
 
     \clef "bass_8"
     %staffkeysig
@@ -49,8 +49,8 @@ ACbvoiceAA = \relative c,{
  
 
 ASnDrvoiceBA = \relative c{
-    \set Staff.instrumentName = #"Snare Drum"
-    \set Staff.shortInstrumentName = #"Sn. Dr."
+    \set Staff.instrumentName = #"Snare drum"
+    \set Staff.shortInstrumentName = #"snare"
     \clef percussion
     %staffkeysig 
     %bartimesig: 
@@ -69,20 +69,20 @@ ASnDrvoiceBA = \relative c{
  
 
 ABDrvoiceCA = \relative c{
-    \set Staff.instrumentName = #"Bass Drum"
-    \set Staff.shortInstrumentName = #"B. Dr."
-    \clef percussion
+    \set Staff.instrumentName = #"bass3"
+    \set Staff.shortInstrumentName = #"B.3"
+    \clef "bass"
     %staffkeysig 
     %bartimesig: 
     \time 2/4 
-    \repeat volta 2{g'4.^"fb:1" g8      | % 1
-    r^"fb:0.8" g g4      | % 2
-    g4.^"fb:0.6" g8      | % 3
-    r^"fb:0.4" g g4      | % 4
-    g4.^"fb:0.2" g8      | % 5
-    r^"fb:0.1" g g4      | % 6
-    g4.^"fb:0.05" g8      | % 7
-    r^"fb:0.25" g g4      |} % 8
+    \repeat volta 2{a4.^"fb:1" a8      | % 1
+    r^"fb:0.8" a a4      | % 2
+    a4.^"fb:0.6" a8      | % 3
+    r^"fb:0.4" a a4      | % 4
+    a4.^"fb:0.2" g8      | % 5
+    r^"fb:0.1" a a4      | % 6
+    a4.^"fb:0.05" a8      | % 7
+    r^"fb:0.25" a a4      |} % 8
     \bar "|." 
 }% end of last bar in partorvoice
 
