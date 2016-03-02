@@ -305,7 +305,7 @@ Apresentamos três exemplos de pesquisadores brasileiros. O primeiro é uma nota
 
 \subsection{FooBarBaz}\label{sec:foobarbaz}
 
-FooBarBaz é um grupo de improvisação de códigos formado por Gilson Beck, Renato Fabbri, Ricardo Fabbri e Vilson Vieira. Sua primeira apresentação foi durante o Festival Contato 2011. Neste trabalho, consideramos o grupo similar ao contexto descritoem uma seção anterior \ver{sec:algorave}. Os membros são ativos em um laboratório virtual conhecido como \emph{labMacambira}\disponivelem{http://labmacambira.sourceforge.net/}. Além de cientistas, participam \emph{hackativistas}, ex-programadores do Google, músicos e artistas plásticos interessados em processos criativos com assistência computacional. Por outro lado, as atividades do grupo estão sincronizadas com algumas das ideologias do \emph{live coding} \ver{sec:showusyourscreens}, como por exemplo, a criação de um manifesto próprio \cite{vieira_vivace:_2015}\disponivelem{http://void.cc/freakcoding/}.
+FooBarBaz é um grupo de improvisação de códigos formado por Gilson Beck, Renato Fabbri, Ricardo Fabbri e Vilson Vieira. Sua primeira apresentação foi durante o Festival Contato 2011. Os membros são ativos em um laboratório virtual conhecido como \emph{labMacambira}\disponivelem{http://labmacambira.sourceforge.net/}. Além de cientistas, participam \emph{hackativistas}, ex-programadores do Google, músicos e artistas plásticos interessados em processos criativos com assistência computacional. É interessante notar que as atividades do FooBarBaz estão sincronizadas com algumas das ideologias da improvisação de códigos, com base em regras práticas \ver{sec:showusyourscreens}. Outro ponto interessante deste grupo foi a elaboração de um manifesto próprio, chamado de \emph{Manifesto Freakcoding}, que inclue, como parte executável do manifesto, um ambiente de programação audiovisual chamado \emph{Vivace} \cite{vieira_vivace:_2015}.
  
 \begin{figure}[!h]
   \centering
@@ -314,9 +314,9 @@ FooBarBaz é um grupo de improvisação de códigos formado por Gilson Beck, Ren
   \label{fig:foobarbaz}
 \end{figure}
 
-Enumeramos três características que possibilitaram a criação musical do grupo: \emph{i}) abordagem ecosistêmica, ou diversidade de \emph{softwares}; \emph{ii}) atividade de escrita o mais simples possível; \emph{iii}) codificação como processo psico-social -- humor, como a inclusão da figura da vaca, através do programa \emph{cowsay} (``uma vaca falante configurável''\disponivelem{http://www.nog.net/~tony/warez/})  e REM \ver{fig:foobarbaz}. 
+Enumeramos três características que permearam as atividades do grupo, como FooBarBaz, e que ainda permeiam o contexto do \emph{labMacambira}: \emph{i}) abordagem ecosistêmica, ou diversidade de \emph{softwares}; \emph{ii}) atividade de escrita o mais simples possível; \emph{iii}) codificação como processo psico-social -- humor, como a inclusão da figura da vaca, através do programa \emph{cowsay} (``uma vaca falante configurável''\disponivelem{http://www.nog.net/~tony/warez/}), e de fotos de vacas, e REM \ver{fig:foobarbaz}. 
 
-O FooBarBaz descrevem 3 dias de improvisações, com a utilização de dois ambientes/linguagens de programação musical (ChucK e PD), uma linguagem de propósito geral (Python), uma ferramenta de linha de comando (C) e dois diferentes editores de texto (Emacs e Vim). Focando na improvisação de códigos com o ChucK (ver, exemplo \ref{cod:lookup}), é possível notar uma prática de improviso enraizada no sequenciamento de propriedades de uma amostra sonora, através da manipulação de listas. O escopo de cada lista, definido pelos colchetes $[$ e $]$, podem conter informações como o arquivo de áudio utilizado, e numericamente, da posição de um \emph{sample} da amostra sonora total, modificação na taxa de amostragem, duração da amostra, 
+O membros do grupo FooBarBaz descrevem 3 dias de improvisações no Festival Contato, com a utilização de dois ambientes/linguagens de programação musical (ChucK e PD), uma linguagem de propósito geral (Python), uma ferramenta de linha de comando (C) e dois diferentes editores de texto (Emacs e Vim). Focando na improvisação de códigos com o ChucK (ver, exemplo \ref{cod:lookup}), é possível notar uma prática de improviso enraizada no sequenciamento de propriedades de uma amostra sonora, através da manipulação de listas. O escopo de cada lista, definido pelos colchetes $[$ e $]$, podem conter informações como o nome arquivo de áudio utilizado, e numericamente, sequências das posição de um \emph{sample} da amostra sonora total, dos parâmetros de diferentes taxas de amostragem, de diferentes durações da amostra, e de diferentes níveis de ganho. 
 
 \begin{example}{Arquivo \emph{foo.ck}.}\label{cod:lookup}
 \begin{minted}[fontsize=\scriptsize]{c}
@@ -328,7 +328,7 @@ O FooBarBaz descrevem 3 dias de improvisações, com a utilização de dois ambi
 \end{minted}
 \end{example}
 
-O funcionamento aparentemente simplista deste código é possível através do carregamento de outros dois códigos, sendo que o primeiro depende do seugndo, um código elaborado por Graham Coleman\disponivelem{http://www.dtic.upf.edu/~gcoleman/}, que estrutura uma \emph{grade temporal} (TimeGrid). Ou seja, o pensamento musical do código está carregado de um agenciamento de sequências de um tempo discretizado. Termos como \emph{sincronização temporal} e \emph{tempo mínimo} explicitam uma preocupação na correta execução de ritmos definidos nas litas do exemplo anterior (ver exemplo \ref{cod:tg}).
+O funcionamento aparentemente simplista deste código é possível através do carregamento de outros dois códigos, sendo que o primeiro depende do segundo, um código elaborado por Graham Coleman\disponivelem{http://www.dtic.upf.edu/~gcoleman/}, que estrutura uma \emph{grade temporal} (TimeGrid).
 
 \begin{example}{Arquivo \enph{tg.ck}.}\label{cod:tg}
 \begin{minted}[fontsize=\scriptsize]{c}
@@ -371,6 +371,7 @@ public class TimeGrid {
 \end{minted}  
 \end{example}
 
+Esta grade temporal é uma instância, ou seja, é possível criar diferentes grades temporais. Cada uma delas memoriza o fluxo temporal através de propriedades, tais a posição de uma unidade de tempo (\emph{beat}), compasso (\emph{meas}) e seção (\emph{sect}), e deslocamentos temporais (\emph{measPhase}, \emph{measOffset}). Existe também um mecanismo de sincronização (\emph{sync}, \emph{tmin}), o que caracteriza o conceito de níveis métricos da amostra sonora processada
 
 \subsection{Música de concerto e imagens em movimento}\label{sec:concerto}
 
