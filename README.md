@@ -1,24 +1,24 @@
 # Mestrado
 
-## Live coding e o computador como instrumento: assimetria de gêneros musicais na rede social Soundcloud.
+## Live coding: um algoritmo gerador de sonoridade tonal no A Study in Keith (2009), de Andrew Sorensen
 
-O trabalho antes se chamava *Live coding: ecologia de gêneros musicais na improvisação de algoritmos computacionais*
+O trabalho antes se chamava *Live coding: ecologia de gêneros musicais na improvisação de algoritmos computacionais*, também se chamou *Live coding e o computador como instrumento: assimetria de gêneros musicais na rede social Soundcloud.*
 
-mas percebi que uma ecologia de saberes almeja por uma [simetria](https://sites.google.com/a/abaetenet.net/nansi/) mesmo reconhecendo ser assimétrica. Acredito que a comunidade de _live coding_ ainda não percebeu que é demasiadamente assimétrica. De qualquer forma foram os resultados (gráficos no último capítulo) que me levaram a considerar isso.
+Existe uma ecologia de saberes na improvisação dódigos, que almeja por uma [simetria](https://sites.google.com/a/abaetenet.net/nansi/), mas é assimétrica. De qualquer forma, foram os resultados gráficos no último capítulo da [primeira versão]((https://raw.github.com/jahpd/mestrado/src/e53a5fa54f8e4beb9f6ab0f18411dd00223bad19/diss-v.01-27junho.pdf), levaram a considerar isso.
+
+No entanto isso é um problema (ou um _bug_), da musicologia com os moldes da pesquisa científica, seja ela antropológica, computacional, etc... Seremos obrigados, em uma pesquisa, a recortar o objeto de estudo; e na música, restringir sempre gera problemas (o que por outra lado é bom, pois estimula compor). Por isso buscamos dar uma geral psicológica, como autor, como vejo o livecoding internacional, em Minas Gerais, que não tem nenhum livecoding? Destas noticias, buscar uma compilacao historica. Da historia, apontar um pensamento científico. E do pensamento científico, aplicá-lo à Análise musical.
 
 ## Baixando
 
-É necessário o git. No macosx tem, no linux tem. No terminal faça:
+É necessário o git. No macosx tem, no linux tem. Você só precisa abrir uma conta (consciente de que o Github faz algo estarrecedor: ele vai engolir todos os códigos). No terminal faça:
 
-    git clone git@bitbucket.org:cravista/mestrado.git
+    git clone https://www.github.com/jahpd/mestrado.git
+
+É possível também baixá-lo através do [Github Desktop]()
 
 ## Lendo
 
-Coloquei duas versões.
-
-A primeira é de 27 de julho. Com indicações do Fenerich. O arquivo é o [diss-v.01-27junho.pdf](https://bitbucket.org/cravista/mestrado/src/e53a5fa54f8e4beb9f6ab0f18411dd00223bad19/diss-v.01-27junho.pdf?fileviewer=file-view-default)
-
-A segunda é que estou corrigindo (TODO: incompleto), com cortes e as considerações do Castelões e do Fenerich. O arquivo é o [main.pdf](https://bitbucket.org/cravista/mestrado/src/8b109876c866798c72e4f504d2969cc67c273b66/main.pdf?at=master&fileviewer=file-view-default)
+O arquivo gerado é (main.pdf)[main.pdf]. 
 
 ## Pareceres
 
