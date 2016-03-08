@@ -1,53 +1,60 @@
+require "json"
+
 namespace :tex do
 
   desc "clean som auxiliar tex files"
   task :clean do
-    ["aux", "log", "bbl", "blg", "brf", "idx", "synctex.gz", "thm", "toc", "lytex"].each{|e| sh "rm *.#{e}"}
+    ["aux", "log", "bbl", "blg",
+     "brf", "idx", "synctex.gz",
+     "thm", "toc", "lytex", "dep"].each do |ext|
+      Dir["./*.tex"].each do |file|
+        name = file.split(".tex")[0].split("./")[1]
+        if File.exists? "#{name}.#{ext}"
+          sh "rm #{name}.#{ext}"
+        end
+      end
+    end
+    Dir.glob("./snippet-*.ly").each do |file|
+      sh "rm #{file}"
+    end
+    Dir.glob("./*/").each do |folder|
+      f = folder.split("./")[1]
+      if f.length == 3
+        sh "rm -r #{f}"
+      end
+    end
   end
 
   desc "compile lilypond"
   task :lytex do    
-    ENV['SCORES'].split(" ").each do |e|
-      begin
-        File.read("#{e}.lytex")
-      rescue Exception => error
-        File.open("#{e}.lytex", "w+") do |f|
-          f.write "\\lilypondfile\{#{e}.ly\}"
+    Dir.glob("./*.ly") do |file|
+      name = file.split("./")[1].split(".ly")[0]
+      lytex = "#{name}.lytex"
+      if not File.exists?(lytex)
+        File.open(lytex, "w+") do |f|
+          f.write "\\lilypondfile\{#{name}.ly\}"
           f.close
         end
-
-        sh "lilypond-book #{e}.lytex"
-      ensure
-        File.read("#{e}.lytex")
+        sh "lilypond-book #{lytex}"
       end
     end
   end
-  
   desc "compile tex"
   task :compile do
-    begin
-      sh "pdflatex -synctex=1 -interaction=nonstopmode -shell-escape -file-line-error #{ENV['FILE']} | egrep \".*:[0-9]*:.*|LaTeX Warning:\""
-      begin
-        # we need a error
-        File.read("#{ENV['FILE']}.blg")
-      rescue Exception => _e
-        puts _e
-        sh "bibtex -terse ./#{ENV['FILE']}.aux"
-        sh "pdflatex -synctex=1 -interaction=nonstopmode -shell-escape -file-line-error ./#{ENV['FILE']}.tex | egrep \".*:[0-9]*:.*|LaTeX Warning:\""
-        sh "pdflatex -synctex=1 -interaction=nonstopmode -shell-escape -file-line-error ./#{ENV['FILE']}.tex | egrep \".*:[0-9]*:.*|LaTeX Warning:\""
-        puts "=> #{ENV['FILE']}.pdf produced!"
-      ensure
-        # now we need test
-        File.read("#{ENV['FILE']}.blg")
-      end
-    rescue Exception => e
-      print e
+    pdflatex = "pdflatex -synctex=1 -interaction=nonstopmode -shell-escape -file-line-error ./#{ENV['FILE']}.tex | egrep \".*:[0-9]*:.*|LaTeX Warning:\""
+    bibtex = "bibtex -terse ./#{ENV['FILE']}.aux"
+    sh pdflatex
+    if not File.exists? "./#{ENV['FILE']}.blg"
+      sh bibtex
+      2.times do sh pdflatex end
     end
+    puts "=> DONE: see #{ENV['FILE']}"
   end
 
   task :main do
-    ENV['FILE']="main"
-    ENV['SCORES'] = "tidal1 tidal2 tidal3 Jarret ask1 ask2 ask3 ask4"
+    ENV['FILE'] = "main"
+    file = File.open("./scores.json")
+    ENV['SCORES'] = JSON.load(file).join(" ")
     Rake::Task["tex:lytex"].invoke
     Rake::Task["tex:compile"].invoke
   end
