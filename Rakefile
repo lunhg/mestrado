@@ -29,6 +29,7 @@ namespace :tex do
   task :lytex do    
     Dir.glob("./*.ly") do |file|
       name = file.split("./")[1].split(".ly")[0]
+      puts "-------------\n#{name}\n--------------"
       lytex = "#{name}.lytex"
       if not File.exists?(lytex)
         File.open(lytex, "w+") do |f|
@@ -53,8 +54,6 @@ namespace :tex do
 
   task :main do
     ENV['FILE'] = "main"
-    file = File.open("./scores.json")
-    ENV['SCORES'] = JSON.load(file).join(" ")
     Rake::Task["tex:lytex"].invoke
     Rake::Task["tex:compile"].invoke
   end
