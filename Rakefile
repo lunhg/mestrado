@@ -42,6 +42,10 @@ namespace :tex do
   end
   desc "compile tex"
   task :compile do
+    if not ENV['FILE'] then ENV['FILE']="main" end
+    if ENV['LYTEX'] == "1"
+      Rake::Task["tex:lytex"].invoke
+    end
     pdflatex = "pdflatex -synctex=1 -interaction=nonstopmode -shell-escape -file-line-error ./#{ENV['FILE']}.tex | egrep \".*:[0-9]*:.*|LaTeX Warning:\""
     bibtex = "bibtex -terse ./#{ENV['FILE']}.aux"
     sh pdflatex
@@ -54,7 +58,8 @@ namespace :tex do
 
   task :main do
     ENV['FILE'] = "main"
-    Rake::Task["tex:lytex"].invoke
+    ENV['LYTEX'] = "1"
+    Rake::Task["tex:clean"].invoke
     Rake::Task["tex:compile"].invoke
   end
 end

@@ -17,7 +17,7 @@ staffPiano = \new PianoStaff {
   <<
     \new Staff = "RH" { % Right hand
       \clef treble
-      \key g \major
+      \key c \major
       \relative c'' {
 	\override Staff.NoteCollision.merge-differently-headed = ##t
 	<<
@@ -33,6 +33,10 @@ staffPiano = \new PianoStaff {
 	      \override #'(baseline-skip . 0.5)
               % Add color to markup in top staff
               \column { \with-color #red \small { ^ b5 } }
+	    }^\markup {
+	      \override #'(baseline-skip . 0.5)
+              % Add color to markup in top staff
+              \column { \with-color #red \small { ^ (b2) } }
 	    }
 	    s2.. f8^\markup {
 	      \override #'(baseline-skip . 0.5)
@@ -85,7 +89,7 @@ staffPiano = \new PianoStaff {
 
     \new Staff = "LH" { % Left hand
       \clef bass
-      \key g \major
+      \key c \major
       \relative c' {
 	\override Staff.NoteCollision.merge-differently-headed = ##t
 	<<
