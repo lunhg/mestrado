@@ -1,7 +1,7 @@
 \include "gregorian.ly"
 
-#(set-global-staff-size 36)
-#(set-default-paper-size "a8")
+#(set-global-staff-size 52)
+#(set-default-paper-size "a5")
 
 \paper {
   line-width    = 190\mm
@@ -9,7 +9,7 @@
   top-margin    = 0\mm
   bottom-margin = 20\mm
   indent = 20 \mm 
-  }
+}
   
 \score {
   <<
@@ -17,6 +17,14 @@
       % bipunctus	
       \[ c' c' c' \pes f'\]
       \[ ees' \pes f' g' \flexa c'\]
+    }
+    \new VaticanaVoice = "cantus" {
+      % bipunctus
+      \clef "hufnagel-fa2"
+      \[ g \flexa ees \]
+      \[g \flexa d\]
+      \[ g \flexa d\]
+      \[ ees ees \]
     }
   >>
 }

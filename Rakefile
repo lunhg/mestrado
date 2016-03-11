@@ -26,7 +26,8 @@ namespace :tex do
   end
 
   desc "compile lilypond"
-  task :lytex do    
+  task :lytex do
+    
     Dir.glob("./*.ly") do |file|
       name = file.split("./")[1].split(".ly")[0]
       puts "-------------\n#{name}\n--------------"
@@ -43,23 +44,25 @@ namespace :tex do
   desc "compile tex"
   task :compile do
     if not ENV['FILE'] then ENV['FILE']="main" end
-    if ENV['LYTEX'] == "1"
-      Rake::Task["tex:lytex"].invoke
-    end
     pdflatex = "pdflatex -synctex=1 -interaction=nonstopmode -shell-escape -file-line-error ./#{ENV['FILE']}.tex | egrep \".*:[0-9]*:.*|LaTeX Warning:\""
-    bibtex = "bibtex -terse ./#{ENV['FILE']}.aux"
     sh pdflatex
-    if not File.exists? "./#{ENV['FILE']}.blg"
-      sh bibtex
-      2.times do sh pdflatex end
-    end
-    puts "=> DONE: see #{ENV['FILE']}"
+  end
+
+  task :bibtex do
+    if not ENV['FILE'] then ENV['FILE']="main" end
+    bibtex = "bibtex -terse ./#{ENV['FILE']}.aux"
+    sh bibtex
   end
 
   task :main do
-    ENV['FILE'] = "main"
-    ENV['LYTEX'] = "1"
+    if not ENV['FILE']
+      ENV['FILE'] = "main"
+    end
     Rake::Task["tex:clean"].invoke
+    Rake::Task["tex:lytex"].invoke
+    Rake::Task["tex:compile"].invoke
+    Rake::Task["tex:bibtex"].invoke
+    Rake::Task["tex:compile"].invoke
     Rake::Task["tex:compile"].invoke
   end
 end

@@ -1,11 +1,4 @@
-%=============================================
-%   created by MuseScore Version: 1.3
-%          sexta-feira, 22 de janeiro de 2016
-%=============================================
-
-\version "2.12.0"
-
-
+% -*-coding: utf-8 -*-
 
 #(set-default-paper-size "a5")
 
@@ -32,43 +25,50 @@ AvoiceAA = \relative c'{
     \clef treble
     \key c \major  
     \time 3/4 
-    \repeat volta 2{r4 des8 bes c r 
+    \slurDown
+    
+    \repeat volta 2{
+      r2. 
      | % 1
-    des8 bes c2      |} % 2
-    r8 ges' \> \mp bes <des, ges> bes' ges      | % 3
-    bes  ges bes <des, ges> bes' ges  % end of repeatactive
+    r2.      |} % 2
+    \stemDown
+    r8 ges' \> \mp bes ges bes ges      | % 3
+    
+    bes  ges bes ges bes ges  % end of repeatactive
      %startrep 
     | % 4
     bes2. \!\pp     | % 5
-    r8 \f ges \> bes <des, ges> bes' ges      | % 6
-    bes ges bes <des, ges> bes' ges \!\breathe      | % 7
-    r \f f a \> <d, f> a' f      | % 8
-    r \! \f e \mp g <c, e> g' e |  % end of repeatactive
+    r8 \f ges \> bes ges bes ges      | % 6
+    bes ges bes ges bes ges \!\breathe      | % 7
+    r\f\> f a  f a f\p\!      | % 8
+    r \f e\> g e g e |  % end of repeatactive
          %| % 9
-    r8 \! e g <c, e> g' e\fermata  
+    r8 e g  e g e\!\p\fermata  
     \bar "|." 
 % end of last bar in partorvoice
 }
  
 AvoiceAC = \relative c'{
+    \stemUp
+    \slurUp
     s2.
     | % 1
     s2.      
     | % 2
     \repeat volta 2{
-    ges''2.~  
+    ges''2.(  
     | % 3
-    ges~  % end of repeatactive
+    ges)(  % end of repeatactive
     | % 4
-    ges\fermata       
+    ges)\fermata       
     |
     }% 5
-    \repeat volta 2{ges2.~      | % 6
-    ges2.      | % 7
+    \repeat volta 2{ges2.(      | % 6
+    ges2.)      | % 7
     f2.      | % 8
-    e2.~  % end of repeatactive
+    e2.(  % end of repeatactive
          | % 9
-    e2. \bar "|."} 
+    e2.) \bar "|."} 
 }% end of last bar in partorvoice
 
 
@@ -82,37 +82,42 @@ AvoiceBA = \relative c{
     \key c \major 
     %bartimesig: 
     \time 3/4 
+    \stemDown
     r8 \pp c4. r8 c~ 
      | % 1
-    c4 r8 c4.      | % 2
+    c4 r8 c4.\fermata      | % 2
     r8 \f c4. r8 c~      | % 3
     c4 r8 c4.  %startrep 
      | % 4
-    des'2. \pp      | % 5
+    c'2.\fermata \pp      | % 5
     r8 c,4. \p r8 c~      | % 6
     c4 r8 c4.      | % 7
     r8 c4. \mp r8 c~      | % 8
-    <c c>4 r8 c4.  % end of repeatactive
+    c4 r8 c4.  % end of repeatactive
          | % 9
-    bes'2. \bar "|."
+   r8 c4. \mp r8 c\fermata \bar "|." 
 }% end of last bar in partorvoice
 
  
 AvoiceBD = \relative c{
-      s2. 
+     \stemUp
+     r4 des'8( bes c) r  
      | % 1
-    s2.      | % 2
-    des'2.      | % 3
-    des2.  % end of repeatactive
+    des( bes c2\fermata)   
+     | % 2
+    des4. des
+     | % 3
+    des des % end of repeatactive
          %startrep 
      | % 4
     s2.      | % 5
-    des2.      | % 6
-    des2.      | % 7
-    c2.      | % 8
-    bes2.~ % end of repeatactive
+    des4. des      | % 6
+    des4. des     | % 7
+    c4. d      | % 8
+    bes4. c % end of repeatactive
          | % 9
-    s2. \bar "|." 
+    
+     bes4. c \bar "|."
 }% end of last bar in partorvoice
 
 

@@ -181,11 +181,11 @@ Como lembra \citeonline[p~.102--103]{McLean2011}, linguagens de programação vi
   \label{fig:pd}
 \end{figure}
 
-A especificidade da linguagem significa, para \citeonline[p.~97]{McLean2011}, que as dimensões cognitivas das linguagens visuais são usadas para separar os materiais (o que é representado como material sonoro), da maneira como serão manipulados (o como é representado o material sonoro), em um fluxo temporal. Na próxima seção, especificamos uma estratégia de codificação, de um programa elaborado por McLean, que controla este fluxo sonoro. Em outro momento, averiguamos um pequeno trecho de um fluxo temporal completo com outro improvisador-programador \ver{cap:estudos_de_caso}
+A especificidade da linguagem significa, para \citeonline[p.~97]{McLean2011}, que as dimensões cognitivas das linguagens visuais são usadas para separar os materiais (o que é representado como material sonoro), da maneira como serão manipulados (o como é representado o material sonoro), durante um fluxo temporal. Na próxima seção, especificamos uma estratégia de codificação, de um programa elaborado por McLean, que controla este fluxo sonoro. Em outro momento, averiguamos um pequeno trecho de um fluxo temporal completo com outro improvisador-programador \ver{cap:estudos_de_caso}
  
 \subsection{Comportamento Criativo por Bricolagem}\label{sec:tidal}
 
-Vamos ilustrar um pequeno processo da \emph{estratégia transversal} com o \emph{software} Tidal. A estratégia transversal é uma etapa de um processo criativo, chamado McLean, de programação por bricolagem. Dentro deste processo, o improvisador elabora imagens mentais, codifica, observa o resultado do código, e recodifica:
+Vamos ilustrar um pequeno processo da \emph{estratégia transversal} com o \emph{software} Tidal. A estratégia transversal é uma etapa de um processo criativo, chamado por McLean de programação por bricolagem. Dentro deste processo, o improvisador elabora imagens mentais, codifica, observa o resultado do código, e recodifica:
 
 \begin{figure}[h]
   \centering
@@ -201,7 +201,7 @@ Figure 6.2 characterises bricolage programming as a creative feedback loop encom
 }  
 \end{citacao}
 
-Segundo \citeonline[p.~2]{mclean_tidal_2010}, \emph{Tidal} é uma linguagem de composição generativa, onde \traducao{padrões podem ser compostos de numerosos subpadrões em uma variedade de maneiras e para uma profundidade arbitrária, para produzir $[$partes$]$ inteiras complexas de partes simples}{patterns may be composed of numerous subpatterns in a variety of ways and to arbitrary depth, to produce complex wholes from simple parts}. Amostras sonoras representam imagens mentais de suas fontes (por exemplo ``sn'' para \emph{snare}, caixa-clara), com ritmos organizados com o auxílio de símbolos delimitadores de tempo (como espaço, `` ``, e colchetes, ``$[$'',``$]$'', \verb|{| e \verb|}|). Ritmos podem ser revertidos (\verb|rev|), diminuídos e aumentados (\verb|slow|, \verb|density|), iterados (\verb|every|) para recombinação permutação, padrões mais complexos (\verb|can|), como o algoritmo de björklund que simula ritmos tradicionais\footnote{\cfcite{toussaint_euclidean_2005}}. Efeitos de panoramização, atraso (\emph{delay}), filtros e comunicação de rede. No Exemplo \ref{ex:tidal}. a imagem mental é a demanda da linguagem, que é produzir Música Eletrônica para Dançar.
+\citeonline[p.~2]{mclean_tidal_2010} descrevem o desenvolvimento de uma linguagem de domínio específico, \emph{Tidal}, como uma linguagem de composição generativa, onde \traducao{padrões podem ser compostos de numerosos subpadrões em uma variedade de maneiras e para uma profundidade arbitrária, para produzir $[$partes$]$ inteiras complexas de partes simples}{patterns may be composed of numerous subpatterns in a variety of ways and to arbitrary depth, to produce complex wholes from simple parts}. Amostras sonoras representam imagens mentais de suas fontes (por exemplo ``sn'' para \emph{snare}, caixa-clara), com ritmos organizados com o auxílio de símbolos delimitadores de tempo (como espaço, `` ``, e colchetes, ``$[$'',``$]$'', \verb|{| e \verb|}|). Ritmos podem ser revertidos (\verb|rev|), diminuídos e aumentados (\verb|slow|, \verb|density|), iterados (\verb|every|) para recombinação permutação, padrões mais complexos (\verb|can|), como o algoritmo de björklund que simula ritmos tradicionais\footnote{\cfcite{toussaint_euclidean_2005}}. Efeitos de panoramização, atraso (\emph{delay}), filtros e comunicação de rede. No Exemplo \ref{ex:tidal}. a imagem mental é a demanda da linguagem, que é produzir Música Eletrônica para Dançar.
 
 \begin{citacao}
 \traducao{Tidal é uma linguagem de padrões embebida em uma linguagem de programação Haskell, consistindo de representação de padrão, uma biblioteca de padrões geradores e combinadores, um $[$mecanismo$]$ de agendamento de eventos e uma interface para programar ao vivo. Esta é uma extensiva re-escrita de um trabalho anterior introduzido sobre o título \emph{Petrol} $[$\citeonline{mclean_petrol_2010}$]$. Extensões incluem melhoramentos de representação de padrão e um uma integração totalmente configurável do protocolo Open Sound Control $[$\citeonline{osc}$]$ \cite{mclean_tidal_2010}
@@ -273,15 +273,19 @@ Wiggins esclarece que Boden não reconhece de forma explícita $\mathcal{U}$, ``
 \citeonline[p.~452]{wiggins_framework_2006} considera  \traducao{(\ldots) um universo, $\mathcal{U}$, um espaço multidimensional, cujas dimensões são capazes de representar qualquer coisa, e todos possíveis conceitos distintos correspondentes com distintos pontos em $\mathcal{U}$.}{The universe, U, is a multidimensional space,whose dimensions are capable of representing anything, and all possible distinct concepts correspond with distinct points in U}. Uma incomensurabilidade é evitada através de uma restrição por meio de quatro axiomas. O primeiro axioma (Universalidade) estabelece que o universo $\mathcal{U}$ pode conter tanto conceitos bem definidos (completos), parcialmente definidos (incompletos), e  o mais incompleto dos conceitos. Os dois primeiros são representados pela letra $c$, enquanto o último é representado por \small{T}. O segundo axioma (Não-identidade dos conceitos), estabelece que dois conceitos em  $\mathcal{U}$ são mutuamente diferentes entre si ($c_1 \neq c_2$), e não são um Universo. Esta correção restringe a recursividade de conceitos, o que daria ênfase ao comportamento explorador e anularia a importância do comportamento transformacional. O terceiro axioma (Inclusão Universal 1) define que \emph{espaços conceituais} $\mathcal{C}$, que contêm instâncias de conceitos $c$, são subconjuntos não-estritos do conunto $\mathcal{U}$. O quarto axioma (Inclusão Universal 2) estabelece que existe um conceito vazio, \small{T}, em qualquer espaços conceitual $\mathcal{C}$.
 
 
-
-
-
-
- Wiggins define o Universo de Conceitos (\csf{U}{x}) como um conjunto não estrito dos \emph{Espaços Conceituais} (\csf{C}{x}) de Margaret \citeonline{boden_creative_1990}. Isto é, um Universo de Conceitos a respeito de alguma coisa, no nosso caso da improvisação de códigos \ver{eq:ul}. 
+Um universo de conceitos abstrato (\csf{U}{x}) for então formalizado como um conjunto não estrito dos espaços conceituais abstratos (\csf{C}{x}), no nosso caso, uma um conjunto não estrito de conceitos sobre a improvisação de códigos \ver{eq:ul}. 
 
 \begin{equation}
 \mathcal{U}_\emph{livecoding} = [\mathcal{C}_\emph{Tecelagem}, \mathcal{C}_\emph{Audiovisual}, \mathcal{C}_\emph{Dança} \mathcal{C}_\emph{Música}, \ldots, ?]
 \end{equation}\label{eq:ul}
+
+\citeonline{mclean_music_2006} descreve regras que validam concepções diferentes entre espaços conceituais diversos (ver \autoref{tab:universodeconceitos}) e realiza uma comparação entre o universo de possibilidades de Wiggins com o \emph{Modelo de Improvisação} de Pressing \ver{sec:im}. No entanto, McLean argumenta que:
+
+\begin{citacao}
+Pressing discute comportamento criativo no contexto do Modelo de Improvisação, e de fato é parte do Quadro conceitual de Sistemas Criativos. (\ldots) Durante a transferência de notação do Modelo de Improvisação para a Ferramenta de Sistemas Criativos, nós consideramos improvisação musical de uma maneira clara e temos uma linguagem comum na qual comparar com outros modelos \footnote{Tradução de \emph{However Pressing does discuss creative behaviour in the context of the IM, and indeed the CSF is in part. (\ldots) In transferring the IM to the notation of the CSF we may consider music improvisation in a clearer manner and have a common language in which to compare it with other models.}}.
+\end{citacao}
+
+\newpage
 
 \begin{table}[!h]
 \caption{Definições formais do Universo de possibilidades de \citeonline{wiggins_framework_2006}, ou Universo de Conceitos por \citeonline{mclean_music_2006}.}
@@ -354,12 +358,6 @@ Wiggins esclarece que Boden não reconhece de forma explícita $\mathcal{U}$, ``
     \end{tabular}
 \label{tab:universodeconceitos}
 \end{table}
-
-\citeonline{mclean_music_2006} ainda descreve regras que validam concepções diferentes entre espaços conceituais $\mathcal{C}$ diversos em um Universo de Conceitos $\mathcal{U}$ (ver \autoref{tab:universodeconceitos}). McLean realiza uma comparação entre o \emph{Universo de possibilidades} de Wiggins com o \emph{Modelo de Improvisação} de Pressing \ver{sec:im}. No entanto, McLean argumenta que:
-
-\begin{citacao}
-Pressing discute comportamento criativo no contexto do Modelo de Improvisação, e de fato é parte do Quadro conceitual de Sistemas Criativos. (\ldots) Durante a transferência de notação do Modelo de Improvisação para a Ferramenta de Sistemas Criativos, nós consideramos improvisação musical de uma maneira clara e temos uma linguagem comum na qual comparar com outros modelos \footnote{Tradução de \emph{However Pressing does discuss creative behaviour in the context of the IM, and indeed the CSF is in part. (\ldots) In transferring the IM to the notation of the CSF we may consider music improvisation in a clearer manner and have a common language in which to compare it with other models.}}.
-\end{citacao}
 
 
 \subsection{O modelo de improvisação}\label{sec:im}
@@ -445,11 +443,12 @@ from nltk import *
 # para uma frase especifica
 string = "Live coding is an improvisatory artistic technique"
 
-# Gera classificacoes gramticais
+# Gera classificacoes gramaticais
 tokens = pos_tag(word_tokenize(string))
 
 # Noun Phrase: no caso, um grupo de palavras
-# que funciona como um substantivo ou objeto:
+# que funciona como um substantivo ou objeto
+# que representa o conceito de Live coding
 # Determinante (?: pode ser que exista) + adjetivo + substantivo
 grammar = "NP: {<DT>?<JJ>*<NN>}"
 
@@ -469,52 +468,44 @@ O código acim gera a uma árvore sintática para adefinição da improvisação
 
 \end{example}
 
-Porém essa representação generativa não estabelece uma imagem mental adequada para estes espaços conceituais, de forma que usamos a representação de árvore para ilustrar um pensamento ortopédico. Ela ocorre da seguinte forma: uma geração de conceitos, como uma árvore de cabeça para baixo, começa com um conceito primitivo. \citeonline[p.~10]{thornton_quantitative_2007} descreve conceitos verticalizados. Mais adiante, esta árvore é representada como uma rede de conceitos, e por último, como zonas de conceitos. 
-
-A árvore representa um espaço conceitual construído por exploração a partir de um conceito-base. A rede representa uma qualidade complexa do espaço conceitual construído. Esta rede elabora novos conceitos, categóricos e conceitos compostos. Como buscamos demonstramos ao longo do trabalho, um conceito primitivo, como \emph{live coding}, pode gerar por exploração conceitos categóricos, como, \emph{sensibilidade computacional}, \emph{improvisação/agenciamento sonoro}, \emph{redes de composições}, \emph{sctweets}, etc. Por conceito composto, entende-se um conceito não existente anteriormente, mas foi criado por combinações categóricas (por exemplo, \emph{algorithm}, \emph{rave} formam \emph{algorave}). \citeonline[p.~11]{thornton_quantitative_2007} coloca da seguinte forma:
+Porém essa representação generativa não estabelece uma imagem mental adequada para estes espaços conceituais. \citeonline[p.~10]{thornton_quantitative_2007} descreve conceitos verticalizados, a começar com um conceito primitivo, cuja representação visual é transformada para redes de conceitos, e por último, como zonas de conceitos. A árvore representa um espaço conceitual construído por exploração a partir de um conceito-base. A rede representa uma qualidade complexa do espaço conceitual construído. Esta rede elabora novos conceitos, categóricos e conceitos compostos. Como buscamos demonstramos ao longo do trabalho, um conceito primitivo, como \emph{live coding}, pode gerar por exploração conceitos categóricos, como, \emph{sensibilidade computacional}, \emph{improvisação/agenciamento sonoro}, \emph{redes de composições}, \emph{sctweets}, etc. Por conceito composto, entende-se um conceito não existente anteriormente, mas foi criado por combinações categóricas (por exemplo, \emph{algorithm}, \emph{rave} formam \emph{algorave}). \citeonline[p.~11]{thornton_quantitative_2007} coloca da seguinte forma:
 
 \begin{citacao}
 \traducao{Na linguagem da lógica, categorização é simplismente o arranjo de contituintes de uma \emph{disjunção}. Composição, por outro lado, é o arranjo de constituintes de uma relação (i.e., uma função) tal como cada um que segue uma regra de uma parte ou componente. No caso mais simples, isso pode significar que a a formação de um conjunto simples (i.e., introdução da relação AND $[$E$]$). Mas o número de possibilidades depende de quantas relações podem ser aplicadas. Com mais de uma relação disponível, existem outras maneiras de formar conceitos compostos.}{n the language of logic, categorisation is simply the arrangement of the constituents  a disjunction. Composition, on the other hand, is the arrangement of the constituents in a relationship (i.e., a function) such that each one plays the role of a part or component. In a simple case this might mean the formation of a straightforward conjunction (i.e., introduction of the AND relationship). But the number of compositional possibilities depends on how many relationships can be applied. With more relationships available, there are more ways to form compositional concepts.}
 \end{citacao}
 
- Por último, a zona representa a constante transformação de idéias.
 \begin{figure}[!h]
   \centering
-  \includegraphics[scale=0.5]{imagens/rede1.png}
-  \caption{Verticalização de uma rede de conceitos. \textbf{Fonte}: \citeonline{thornton_quantitative_2007}.}
+  \includegraphics[scale=0.55]{imagens/rede1.png}
+  \caption{Verticalização de um espaço conceitual. \textbf{Fonte}: \citeonline{thornton_quantitative_2007}.}
   \label{fig:rede1}
 \end{figure}
 
-Esta composição é destacada na frase `` Pode ser empregada em muitos contextos diferentes de performance: dança, música, imagens em movimento e mesmo tecelagem.'' \ver{cap:introducao}. A partir da concatenação de diversos AND é possível tecer uma rede de conceitos para improvisação de códigos. No entanto, esta hierarquia verticalizada aumenta em complexidade conforme o número de relações aumenta, definido por \citeonline[p.~15-16]{thornton_quantitative_2007} como um conceito de complexidade conceitual bruta: \traducao{(\ldots) qualquer conceito $[$cujo$]$ o número de conceitos que deve ser desenvolvido a partir da fundação dada para garantir a sua construção}{The gross conceptual complexity of any concept is the number of concepts which must be developed from the given foundation to guarantee its construction} \label{fig:rede3}. Conceitos também podem ter extensões em um espaço conceitual, como um subgrupo que surge de uma nova verticalização, de maneira oposta, para encontrar, em um campo complexo de conceitos brutos, em conceitos úteis para a formação do espaço conceitual mínimo \ver{fig:rede4}. No entanto, como pontua \citeonline[p.~17]{thornton_quantitative_2007}, este procedimento de organização por redes de conceitos leva a uma \traducao{(\ldots) exaustiva enumeração de todas possibilidades construídas, podemos presumir que a maioria de tais conceitos são propensos a ter pouco valor}{(\ldots)exhaustive enumeration of all construction possibilities, it can be assumed that most such concepts are likely to have little value.}. No entanto, \citeonline[p.~520--521]{Forth2010} pontuam que essa concepção de uma desvalorização da abstração do conceito, em relação à rede de conceitos formada, ganha outras valorizações. Por exemplo, ao discutir a necessidade de um \emph{espaço conceitual mínimo} para estruturas de ritmos em uma linguagem de programaç\~ao \ver{sec:tidal}, o seguinte ponto de vista e colocado. como pontua  \citeonline[p.~17]{thornton_quantitative_2007}, ao sugerir observar a organização do espaço conceitual mínimo como a interesecção de regiões que se transformam o tempo inteiro, ou ``zonas esponjosas'' \ver{fig:rede4}.
+ A partir da concatenação de diversos AND é possível tecer uma rede de conceitos para improvisação de códigos. Por exemplo, o Live Coding como técnica artística de improvisação concatena outro, de que a técnica em questão `` Pode ser empregada em muitos contextos diferentes de performance: dança, música, imagens em movimento e mesmo tecelagem.'' \ver{cap:introducao}. Com pelo menos três deste conceitos, dança e música e tecelagem, foi possível criar algumas definições de base \ver{cap:introducao}.
 
-\begin{figure}[!h]
-  \centering
-  \includegraphics[scale=0.35]{imagens/rede2.png}
-  \includegraphics[scale=0.5]{imagens/rede3.png}
-  \includegraphics[scale=0.5]{imagens/rede4.png}
-  \includegraphics[scale=0.35]{imagens/rede5.png}
-  \caption{Conceitos primitivos, Conceitos Categóricos e Conceitos compostos em rede; complexificação da Verticalização de uma rede de conceitos, e extensões conceituais. E por último zonas conceituais. \textbf{Fonte}: \citeonline[p.~11--17]{thornton_quantitative_2007}.}
-  \label{fig:rede2}
-\end{figure}
+No entanto, esta hierarquia verticalizada aumenta em complexidade conforme o número de relações aumenta, definido por \citeonline[p.~15-16]{thornton_quantitative_2007} como um conceito de complexidade bruta: \traducao{(\ldots) qualquer conceito $[$cujo$]$ o número de conceitos que deve ser desenvolvido a partir da fundação dada para garantir a sua construção}{The gross conceptual complexity of any concept is the number of concepts which must be developed from the given foundation to guarantee its construction}.Conceitos também podem ter extensões em um espaço conceitual, como um subgrupo que surge de uma nova verticalização, de maneira oposta, para encontrar, em um campo complexo de conceitos brutos, em conceitos úteis para a formação do espaço conceitual mínimo \ver{fig:rede4}.
 
 \begin{citacao}
 \traducao{O nível mais baixo pode ser considerado como representativo de primitivos cognitivos, que são conceitos fortemente enraizados, intimamente relacionados com a experiência sensorial, tal como a percepção básica de intervalos de tempo, ou a sensação de periodicidade. Como o nível de abstrações aumenta, a conceituação torna-se menos enraizada na percepção e conceitos como ritmo, ou agrupamento, podem surgir, e assim por diante para conceitos ainda mais elevados culturalmente. À medida que o nível de abstracção muda, presume-se que as dimensões do espaço de qualidade também precisam mudar, exigindo, portanto, a capacidade para mapear pontos entre conjuntos alternativos de dimensões, como discutido por \citeonline{Rubal2004}.}{The lower level might be thought of as representing cognitive primitives, which are strongly grounded concepts, closely associated with sensory experience, such as the basic perception of time intervals, or the sensation of  periodicity. As the level of abstractions increases, conceptualization becomes less rooted in perception, and concepts such as tempo, or grouping, may emerge, and so on to still higher culturally concepts. As the level of abstraction changes, it is assumed that the quality dimensions of the space may also need change, thus requiring the ability to map points between alternative sets of dimensions, as discussed by Rubal(2004).}
 \end{citacao}
 
+\citeonline[p.~17]{thornton_quantitative_2007} problematiza este procedimento de organização por redes de conceitos, ao descrever como uma \traducao{(\ldots) exaustiva enumeração de todas possibilidades construídas, podemos presumir que a maioria de tais conceitos são propensos a ter pouco valor}{(\ldots)exhaustive enumeration of all construction possibilities, it can be assumed that most such concepts are likely to have little value.}.\citeonline[p.~520--521]{Forth2010} criticam essa concepção e, ao invés, lembram que conceitos possuem valores diferentes em função do tempo. Por exemplo, ao discutir a necessidade de um \emph{espaço conceitual mínimo} para estruturas de ritmos em uma linguagem de programaç\~ao \ver{sec:tidal}, o seguinte ponto de vista e colocado. como pontua  \citeonline[p.~17]{thornton_quantitative_2007}, ao sugerir observar a organização do espaço conceitual mínimo como a interesecção de regiões que se transformam o tempo inteiro, ou ``zonas esponjosas'' \ver{fig:rede4}.
 
-
-
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.3]{imagens/rede2.png}
+  \includegraphics[scale=0.45]{imagens/rede3.png}
+  \includegraphics[scale=0.5]{imagens/rede4.png}
+  \includegraphics[scale=0.5]{imagens/rede5.png}
+  \caption{Conceitos primitivos, Conceitos Categóricos e Conceitos compostos em rede; complexificação da Verticalização de uma rede de conceitos, e extensões conceituais. E por último zonas conceituais. \textbf{Fonte}: \citeonline[p.~11--17]{thornton_quantitative_2007}.}
+  \label{fig:rede2}
+\end{figure}
 
 \begin{citacao}
 \traducao{Um universo conceitual é então uma paisagem em que nós esperamos encontrar áreas pronunciadas de baixa e alta complexidade -- 'zonas esponjosas' como nós chamaremos -- localizadas em partes da hierarquia em que dominam imediatamente um conjunto de conceitos formados pelos constituintes de uma explicação útil de um quadro conceitual. Ao acessar conceitos nesta zona, o agente move-se em lucro representacional, colhendo uma recompensa de representação que excede o custo de desenvolvimento.}{A conceptual universe is thus a landscape in which we expect to find pronounced areas of low or negative complexity — ‘sponge zones’ as they will be termed — located in parts of the hierarchy which immediately dominate any set of concepts forming the constituents of an explanatorily useful conceptual ramework. By accessing concepts in these zones, the agent moves into representational profit, reaping a representational reward that exceeds the cost of development.}
 \end{citacao}
 
-\begin{figure}[!h]
-  \centering
-  \includegraphics[scale=0.5]{imagens/rede4.png}
-  \caption{ \textbf{Fonte}: \cite{thornton_quantitative_2007}}
-  \label{fig:rede4}
-\end{figure}
+\subsection*{Definição do estudo de caso}
 
 Para simplificação do nosso estudo , nossa zona esponjosa \exref{fig:contido} irá lidar com uma intersecção entre duas zonas conceituais diversas, a primeira de uma improvisação de códigos, e a segunda de seu referente opcional \csf{R}{ask} \ver{cap:estudos_de_caso}.
 
@@ -628,9 +619,12 @@ Por outro lado \csf{C}{Study in Keith} pode ser definido pelo modelo de improvis
 
 
 \begin{example}{Representação do modelo de improvisação para \emph{Study in Keith}.}
+
+Da especificação \csf{C}{Study in Keith} derivamos blocos de eventos, sequências de blocos de eventos, interrupções, referentes opcionais, objetivos, um objeto que carrega uma memória de algo, objetos (musicais, sonoros, visuais, etc.) e processos
+
 \begin{tikzpicture}
   [
-    grow                    = down,
+    grow                    = right,
     sibling distance        = 4em,
     level distance          = 12em,
     edge from parent/.style = {draw, -latex},
@@ -649,6 +643,40 @@ Por outro lado \csf{C}{Study in Keith} pode ser definido pelo modelo de improvis
 
 \end{tikzpicture}
 \end{example}
+
+No entanto, exploramos apenas os conceitos envolvidos em um ciclo de bricolagem de um código, o que limita nossos resultados:
+
+\begin{example}{Especificação do modelo de improvisação para \emph{Study in Keith}.}
+
+Da representação derivamos uma sequências de blocos de eventos, uma interrupção, três referentes opcionais, um objetivo, e uma classe objetos (musicais, sonoros, visuais, etc.).
+
+\begin{tikzpicture}
+  [
+    grow                    = right,
+    sibling distance        = 4em,
+    level distance          = 12em,
+    edge from parent/.style = {draw, -latex},
+    every node/.style       = {font=\footnotesize},
+    sloped
+  ]
+  \node [root] {\footnotesize \csf{C}{Study in Keith}}
+    child { node [env] {\footnotesize \pressingthree{K'}{Study in Keith}{0}}
+      child { node [env] {\footnotesize \pressingthree{E'}{Study in Keith}{0}}}
+      child { node [env] {\footnotesize \pressingthree{E'}{Study in Keith}{1}}}
+      child { node [env] {\footnotesize \pressingthree{E'}{Study in Keith}{2}}}
+    }
+    child { node [env] {\footnotesize \pressingthree{I'}{Study in Keith}{0}}}
+    child { node [env] {\footnotesize \pressingthree{G'}{Study in Keith}{0}}}
+    child { node [env] {\footnotesize \pressingthree{O'}{Study in Keith}{0}}}
+    child { node [env] {\footnotesize \csf{R'}{Study in Keith}}
+      child { node [env] {\footnotesize \pressingthree{R'}{Study in Keith}{0}}}
+      child { node [env] {\footnotesize \pressingthree{R'}{Study in Keith}{1}}}
+      child { node [env] {\footnotesize \pressingthree{R'}{Study in Keith}{2}}}
+    };
+
+\end{tikzpicture}
+\end{example}
+
 
 \section{Formalização}\label{sec:formaliza}
 

@@ -1,6 +1,6 @@
 \subsection{Definição do instrumento e do tempo}\label{sec:define_instr}
 
-Seu início é um pequeno comentário que contêm o nome do executante e seu email para contato (primeiros sete segundos), bem como a escrita de um código que inicializa o NI-Akoustik (até 0$'$43$''$, ver \autoref{fig:SIK_piano}). 
+Seu início é um pequeno comentário que contem o nome do executante e seu email para contato (primeiros sete segundos), bem como a escrita de um código que inicializa o NI-Akoustik (até 0$'$43$''$, ver \autoref{fig:SIK_piano}). 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{example}{Definição de instrumento}
@@ -133,7 +133,7 @@ Cada nota é executada com uma altura \verb|p|, para cada díade definida em \ve
 
 \subsection{Primeira sonoridade tonal}\label{sec:1aSonoridade}
 
-Este código inicial é então modificado, e finalizado em \tempo{1}{57}, momento em que aparece uma figura, duas díades, um intervalo de quarta justa entre Sol 2 (MIDI 55) e Dó 3 (MIDI 60). entre Mi bemol 2 (MIDI 51) e Dó 3 (MIDI 60).
+Este código inicial é então modificado, e finalizado em \tempo{1}{57}, momento em que é possível ouvir uma figura musical (uma classe de objeto \pressingthree{O}{ask}{0}), duas díades, um intervalo de quarta justa entre Sol 2 (MIDI 55) e Dó 3 (MIDI 60). entre Mi bemol 2 (MIDI 51) e Dó 3 (MIDI 60).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{example}{Estratégia transversal}
@@ -156,12 +156,14 @@ Este código inicial é então modificado, e finalizado em \tempo{1}{57}, moment
 \end{example}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Duas transcrições desta primeira figura seguem uma estrutura literal do código, e uma perceptiva. Os primeiros eventos sonoros que ocorrem após o momento de silêncio foram transcritos antes da análise do código. Enquanto Sorensen define um tempo regular de 110 BPM  \ver{ex:def_tempo}, transcrevemos este trecho com um andamento entre 35--40 BPM \ver{fig:ask1}. É interessante notar que tais figuras simbolizam neumas \ver{fig:bipunctum}. No caso específico desta primeira figura, na mão direita, um \emph{bipunctum} , e na mão esquerda, uma \emph{clivis} \ver{fig:neumaMD1}. 
+Duas transcrições desta primeira figura seguem uma estrutura literal do código, e uma perceptiva. Os primeiros eventos sonoros que ocorrem após o momento de silêncio foram transcritos antes da análise do código. Enquanto Sorensen define um tempo regular de 110 BPM  \ver{ex:def_tempo}, transcrevemos este trecho com um andamento entre 35--40 BPM \ver{fig:ask1}. É interessante notar que tais figuras simbolizam neumas, no caso, um \emph{bipunctum}, ou duas notas repetidas, na mão direita, e na mão esquerda um \emph{clivis}, ou um \traducao{acento agudo com um grave}{Unione dell'accento acuto col grave}\footnote{\cfcite[\emph{idem}]{gasperini_semiografia_1905}.}. No caso específico desta primeira figura, na mão direita, um \emph{bipunctum} , e na mão esquerda, uma \emph{clivis}.
 
 \begin{figure}[!h]
   \centering
+  \centering 
   \input{./ask1}
   \input{./ask2}
+  \input{./gregorian}
   \caption{Transcrição literal e perceptiva do primeiro evento em \emph{A Study in Keith}. \textbf{Fonte}: autor.}
   \label{fig:ask1}
 \end{figure}
@@ -174,9 +176,9 @@ Duas transcrições desta primeira figura seguem uma estrutura literal do códig
     (define chords
        (lambda (time degree dur) ...))
 \end{minted}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-A segunda alteração é a indicação de uma situação condicional na primeira transformação da estratégia transversal \csf{T}{ask}. Se o grau a ser executado for uma tônica, no caso, menor \ver{sec:iterativo}, a duração deste acorde será configurada para uma duração de três unidades de tempo -- no caso da nossa transcrição, uma unidade de pulso \ver{fig:ask1}.
+
+A segunda alteração é a indicação de uma situação condicional na primeira transformação da estratégia transversal \csf{T}{ask}. Se o grau a ser executado for uma tônica, no caso, menor, a duração deste acorde será configurada para uma duração de três unidades de tempo -- no caso da nossa transcrição, uma unidade de pulso.
 
 \begin{minted}[fontsize=\footnotesize]{cl}
 (define chords
@@ -198,6 +200,7 @@ Onde a a dinâmica específica ocorre como um comportamento periódico de volume
 (+ 50 (* 20 (cos (* pi time))))
 \end{minted}
 \end{example}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Regras de qualidade}\label{sec:regras_qualidade}
 
@@ -230,7 +233,7 @@ A \autoref{fig:ask3} indica uma primeira sequência de nêumas, gerados pelo alg
 
 \subsubsection*{Primeiro Bloco}
 
-O primeiro bloco de eventos \pressingthree{E}{ask}{0} é um contraponto de primeira espécie, aticulado em tempos fortes e fracos \ver{fig:ask3}. 
+O primeiro bloco de eventos \pressingthree{E}{ask}{0} aprensenta um contraponto de primeira espécie, aticulado em tempos fortes e fracos, de acordo com um movimento cadencial $i~\Rightarrow~vii$ \ver{fig:ask3}. Uma característica \pressingthree{F}{ask}{0} do algoritmo é sua direcionalidade em um âmbito de quinta em um número de compassos pares (4 nesse caso). 
 
 \begin{figure}[!h]
   \centering
@@ -242,13 +245,14 @@ O primeiro bloco de eventos \pressingthree{E}{ask}{0} é um contraponto de prime
 A aparente repetição de um mesma classe de eventos sonoros, este mesmo um objeto \pressingthree{O}{ask}{0}, pode ser diferenciada através de figuras neumáticas na mão direita e na mão esquerda \exref{fig:neumaMD1}:
 
 \begin{example}{Transcrição de neumas do primeiro bloco}\label{fig:neumaMD1}
-  Notação neumática para a um \emph{bipunctum}, dois \emph{podatus} e uma \emph{clivis} na mão direita.
+
+  Notação neumática para a um \emph{bipunctum}, dois \emph{podatus} e uma \emph{clivis} na mão direita. E na mão esquerda, três \emph{clivis} e um bipunctum. 
 
   \centering{\input{./ask6}}
 
-  E na mão esquerda, três \emph{clivis} e um bipunctum.
+  Notação schenkeriana que expõe um movimento plagal estrutural na mão direita (\^1-\^4-\^1), com um \emph{porrectus} (um acento agudo, um grave e um agudo) estrutural na mão esquerda (\^5-\^2-\^3).
 
-  \centering{\input{./ask7}}
+  \centering{\input{./ask12}}
 
 \end{example}
 
@@ -265,13 +269,13 @@ Que pode ser reescrito como neumas na mão direita:
 
 \begin{example}{Transcrição de neumas do segundo bloco}\label{fig:neumaMD2}
 
-  Notação neumática para cinco \emph{podatus} e uma \emph{clivis} na mão direita.
+  Notação neumática para cinco \emph{podatus} e uma \emph{clivis} na mão direita. E na mão esquerda uma \emph{clivis}, um \emph{podatus}, um \emph{bipunctus}, três \emph{podatus}.
 
   \centering{\input{./ask8}}
 
-  E na mão esquerda uma \emph{clivis}, um \emph{podatus}, um \emph{bipunctus}, três \emph{podatus}.
+ Notação schenkeriana que expõe um movimento autêntica estrutural na mão direita (\^1-\^5-\^1), com uma repetição do \emph{porrectus} anterior (\^5-\^2-\^3).
 
-  \centering{\input{./ask9}}
+  \centering{\input{./ask13}}
 \end{example}
 
 \subsubsection*{Terceiro Bloco}
@@ -315,6 +319,18 @@ O que, durante esta transição, gera uma transformação na acentuação \ver{f
   \caption{Terceiro bloco de eventos musicais. \textbf{Fonte}: autor.}
   \label{fig:ask4}
 \end{figure}
+
+\begin{example}{Transcrição de neumas do terceiro bloco}\label{fig:neumaMD3}
+
+  Notação neumática para: \emph{bipunctus}, um \emph{clivis}, um \emph{porrectus}, um \emph{clivis}, um \emph{torculus}, um \emph{clivis}, um \emph{torculus}, dois \emph{clivis} e um \emph{clivis subpunctum} na mão direita. E na mão esquerda um \emph{bipunctus}, um \emph{clivis}, um \emph{podatus}, um \emph{porrectus}, um \emph{torculus}, um \emph{podatus}, um \emph{torculus}, um \emph{climatus}, e um \emph{clivis}.
+
+  \centering{\input{./ask10}}
+
+  A notação schenkeriana sugere um \emph{torculus} estrutural na mão direita (\^1-\^2-\^1), onde existe um tetracorde decendente (\^5-\^4-\^3-\^2). Na mão esquerda, destacamos o ponto mais grave da tessitura aponta para um modalismo (\^5-\^7$b$-\^3), bem como alterações nas estruturas rítmicas do trecho citado.
+  
+
+  \centering{\input{./ask14}}
+\end{example}
 
 Esta estratégia modifica o o laço iterativo interno de cada altura da díade:
 
@@ -364,7 +380,7 @@ Estas variáveis irão tornar os ritmos de ambas as mãos independentes. O ritmo
 \end{example}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Se a diferença entre a duração total e a nova duração for inválida (igual a $0$), o ritmo da mão esquerda será igual ao da mão direita, mas sua altura será relativa à segundas menores ou maiores ascendentes ao modo eólico da escala (que no caso transforma a sonoridade tonal em sonoridade modal). 
+Se a diferença entre a duração total e a nova duração for inválida (igual a $0$), a nota tocada dependerá do resultado de \verb|pc:relative|. A função \verb|pc:relative| é definida\disponivelem{https://github.com/digego/extempore/blob/master/libs/core/pc_ivl.xtm} como \traducao{seleção de uma altura, de uma classe de alturas relativa à uma dada altura}\traducao{select pitch from pitch class relative to a given pitch}. Sua altura serão dadas em passos de segundas menores ou maiores ascendentes/descendentes, relativas ao modo eólico da escala (que no caso transforma a sonoridade tonal em sonoridade modal). 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{example}{Laço iterativo modificado}
@@ -376,7 +392,7 @@ Se a diferença entre a duração total e a nova duração for inválida (igual 
 \end{example}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-O seu ritmo depende da duração da mão direita:
+O ritmo da mão esquerda será semelhante ao da mão direita. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{example}{Laço iterativo modificado}
@@ -386,33 +402,6 @@ O seu ritmo depende da duração da mão direita:
 \end{example}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{example}{Transcrição de neumas do terceiro bloco}\label{fig:neumaMD3}
+\section{Discussão}
 
-  Notação neumática para um \emph{bipunctus}, uma \emph{clivis}, um \emph{porrectus subpunctis}, dois \emph{torculus}, uma \emph{clivis}  cinco \emph{podatus} e uma \emph{clivis subpunctis}, na mão direita.
-
-  \centering{\input{./ask10}}
-
-  E na mão esquerda, 
-
-  \centering{\input{./ask11}}
-\end{example}
-
-E na mão esquerda:
-
-%\begin{figure}[!h]
-%  \centering
-%  \includegraphics[scale=0.5]{imagens/SIK_motivo.png}
-%  \includegraphics[scale=0.5]{imagens/SIK_perturba.png}
-%  \caption{Primeiros perturbações sistêmicas. \textbf{Fonte}: autor.}
-%  \label{fig:SIKinicio}
-%\end{figure}
-
-Rascunho:
-
-\begin{figure}[!h]
-  \centering
-  \includegraphics[scale=0.5]{imagens/SIK_motivo.png}
-  \includegraphics[scale=0.5]{imagens/SIK_perturba.png}
-  \caption{Primeiros perturbações sistêmicas. \textbf{Fonte}: autor.}
-  \label{fig:SIKinicio}
-\end{figure}
+Este capítulo buscou analisar uma zona de conceitos que permeiam a improvisação \emph{A Study in Keith}, publicada em 2009 por Andrew Sorensen. Levantamos, através do quadro conceitual de sistemas criativos, um conjunto de informações sobre um contexto que estimulou o improvisador-programador para sua realização. A partir de uma outra improivisação,  definida como \emph{referente opcional}, ou os \emph{Concertos Sun Bear}, Sorensen buscou simular um estilo de \emph{jazz} do pianista e compositor Keith Jarret. No entanto, esta relação é metafórica, sendo que destacamos um discurso musical eclesiástico, ou baseado na no quarto grau de uma tonalidade. Na nossa transcrição de uma cadência da abertura do disco Kyoto I (que ela mesma, necessita de verificações), encontramos uma exploração da cadência plagal, através de uma substituição por trítono. Já em Sorensen o procedimento é bastante simplificado, quase pedagógico, de como programar figuras musicais -- interpretadas como neumas --, dentro de uma simples cadência autêntica imperfeita (i -- vii). A partir desta regra, foi possível apontar figuras musicias separadas em três blocos, que formam uma primeira sequência do improviso, separada por uma primeira interrupção de uma próxima sequência, ainda não analisada. Desta forma, foi possível delinear um objetivo da improvisação, que é transformar uma classe de objetos sonoros (cuja caracterísitca é ser um contraponto de primeira espécie, com articulação forte-fraco), dentro de um contorno melódico, em um contraponto de segunda espécie, cuja acentuação é alterada. Por outro lado, nossa análise não contemplou sequências seguintes, o que impediu observar detalhes sobre o processo geral da improvisação. Por fim, descrevemos esta análise como uma experiência preliminar em análise de códigos e, por isso mesmo, o Quadro Conceitual de Sistemas Criativos de Alex McLean, e o Modelo de Improvisação de Jeff Pressing, se apresentam como uma interessante ferramente metodológica. 

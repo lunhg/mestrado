@@ -1,10 +1,14 @@
 \chapter{Código fonte de um Universo Conceitual como nuvem de palavras sobre o improviso de códigos}\label{app:A}
 
-Apresentamos no exemplo A.1 o código-fonte, em linguagem python, utilizado para extração parcial do espaço conceitual da pesquisa (\autoref{fig:nuvemlivecoding}, p.~\pageref{fig:nuvemlivecoding}). A biblioteca utilizada, \emph{Wordcloud}, pode ser encontrada em \url{https://github.com/amueller/word_cloud}.
+Um dos interesses no tema da improvisação de códigos como um universo de conceitos, surgiu a partir de uma experiência com um código em linguagem python, utilizado para extração parcial de um espaço conceitual da pesquisa. Este espaço conceitual é apresentado na \autoref{fig:nuvemlivecoding}. A ferramenta utilizada para gerar esta imagem foi a biblioteca \emph{Wordcloud}\disponivelem{https://github.com/amueller/word_cloud}.
 
-O Código abaixo considera a seguinte situação: é possível converter um arquivo de texto em formato \emph{.pdf} para formato \emph{.txt}. Feita a conversão, é possível realizar um levantamento estatístico das palavras mais usadas (o que pode, parcialmente, indicar idéias e conceitos).
+\begin{figure}[!h]
+\includegraphics[scale=0.8]{imagens/nuvem.png}
+\caption{Nuvem de palavras do \citeonline{ICLC2015},  1$^o$ Congresso Internacional de Live Coding. \textbf{Fonte}: autor.}
+\label{fig:nuvemlivecoding}
+\end{figure}
 
- Existem programas online, como o encontrado no link \url{http://convertonlinefree.com/PDFToTXTEN.aspx}, que realizam a conversão. É necessária a correção de alguns erros de caracteres (ver \autoref{fig:utf8}). Além disso, informações de cabeçalho, códigos-fontes, e outros elementos de editoração, foram descartados por considerarmos que não eram parte do corpo textual. Em outras palavras, descartamos palavras que não faziam parte de um discurso de texto, ou atrapalhavam o processo de criação da imagem. O que por sí não resolve todos os problemas, mas auxilia na elaboração da imagem.
+O Código abaixo considera a seguinte situação: é possível converter um arquivo de texto em formato \emph{.pdf} para formato \emph{.txt}. Feita a conversão, é possível realizar um levantamento estatístico das palavras mais usadas (o que pode, parcialmente, indicar idéias e conceitos).Existem programas online, como o encontrado no link \url{http://convertonlinefree.com/PDFToTXTEN.aspx}, que realizam a conversão. É necessária a correção de alguns erros de caracteres (ver \autoref{fig:utf8}). Além disso, informações de cabeçalho, códigos-fontes, e outros elementos de editoração, foram descartados por considerarmos que não eram parte do corpo textual. Em outras palavras, descartamos palavras que não faziam parte de um discurso de texto, ou atrapalhavam o processo de criação da imagem. O que por sí não resolve todos os problemas, mas auxilia na elaboração da imagem.
 
 \begin{figure}[!h]
   \centering

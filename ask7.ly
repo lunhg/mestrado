@@ -1,7 +1,7 @@
 \include "gregorian.ly"
 
-#(set-global-staff-size 36)
-#(set-default-paper-size "a8")
+#(set-global-staff-size 52)
+#(set-default-paper-size "a5")
 
 \paper {
   line-width    = 190\mm
