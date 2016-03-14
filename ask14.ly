@@ -93,7 +93,7 @@ staffPiano = \new PianoStaff {
 	      \override #'(baseline-skip . 0.5)
               % Add color to markup in top staff
               \column { \with-color #red \small { ^ (5) } }
-	    }_\markup { \with-color #(x11-color "red") \bold iv/iv}
+	    }_\markup { \with-color #(x11-color "red") \bold 'v/iv}
             s4 s8
 	    \I ees8]^\markup {
 	      \override #'(baseline-skip . 0.5)
