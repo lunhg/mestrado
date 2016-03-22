@@ -1,26 +1,79 @@
+#!/usr/bin/python
+
+# Algumas bibliotecas principais
+from wordcloud import WordCloud     # Nuvem de palavras
+import nltk                         # Processamento de linguagem natural
+import matplotlib.pyplot as plt     # Desenha foto
+from subprocess import Popen, PIPE  # Acessa um o conversor de pdf
+from optparse import OptionParser   # Cria um programa
+
+# Bibliotecas basicas
 from os import path
-from wordcloud import WordCloud
 import math
-import nltk
-import matplotlib.pyplot as plt
 
-# Abra o arquivo em modo de leitura
-t = open("iclc2015.txt", "r").read()
-wc = WordCloud().generate(t)
-plt.figure()
-plt.imshow(wc)
-plt.axis("off")
-plt.show()
+# PROGRAMA PRINCIPAL
+def linha_de_comando(nome, versao, descricao): 
+    parser = OptionParser(usage='usage: %prog [OPTIONS, [ARGS]]', version='%s %s' % (nome, versao), description=descricao)
+    parser.add_option("-i","--input",action=None,help="arquivo pdf de entrada",dest="input",default=False)
+    parser.add_option("-q","--qualidades",action=None,help="classificacao por qualidades (0..n-1)",dest="qualidades",default=False)
+    parser.add_option("-f","--fotinha",action="store_true", help="arquivo de saida da foto",dest="fotinha",default=False),
+    parser.add_option("-p","--paginas",action=None,help="paginas processadas",dest="paginas",default=False)
+    parser.add_option("-c","--codec",action=None,help="tipo de codificacao do texto",dest="codec",default=False)
+    parser.add_option("-t","--latex-table",action=None,help="converte a nuvem para uma tabela tex",dest="tex",default=False)
 
-_groups = [[] for i in range(10)]
+    # Life cycle
+    (options, args) = parser.parse_args()
+    pages = []
+    if options.paginas:
+        split =  options.paginas.split("..") 
+        a = [ str(s) for s in range(int(split[0]), int(split[1])) ]
+        pages = ",".join(a)
+    else:
+        pages = [1,2]
+    text = convert_pdf_to_txt(options.input,pages,options.codec)
+    
+    # Nuvem
+    nuvem = WordCloud().generate(text)
+    if options.fotinha:
+        gera_figura(nuvem)
+        
+    # Taggins
+    tagging = nltk.pos_tag(nltk.word_tokenize(text))
+    qualidades = gera_grupos_qualitativos(nuvem, tagging, int(options.qualidades) or 10)
+    if(options.tex):
+        f = open("./livecoding-table.tex", "w+")
+        f.write(table(tagging, options.qualidades, options.tex, "tab:livecoding").decode(options.codec))
+        f.close()
+        print "=> writed ./livecoding-table.tex"
+    
+#http://davidmburke.com/2014/02/04/python-convert-documents-doc-docx-odt-pdf-to-plain-text-without-libreoffice/
+#http://stackoverflow.com/questions/5725278/python-help-using-pdfminer-as-a-library
+def convert_pdf_to_txt(p, pages, codec):
+    name = p.split(".pdf")[0].split("/")[-1]
+    _path = path.abspath("%s.txt") % name
+    print "converting %s to %s  ... " % (p,_path)
+    command = "pdf2txt.py -o %s -p %s -c %s %s" % (_path, pages, codec, p)
+    print command
+    #https://stackoverflow.com/questions/24340877/why-does-this-bash-call-from-python-not-work
+    result = Popen(command, stdout=PIPE, shell=isinstance(command, str))
+    print result.communicate()
+    print "... checking ascii characters"
+    f = open(_path)
+    s = ""
+    for i, line in enumerate(f.readlines()):
+        l = line.decode(codec)
+        s += l
 
-for i, t in enumerate(wc.words_):
-    freq = t[1]
-    word = t[0]
-    index = int(math.floor(freq*10))
-    if freq >= index/10.0 and freq < (index+1)/10.0:
-        _groups[index-1].append(word)
-        ###
+    return s
+    
+# gera figura a partir da nuvem
+def gera_figura(nuvem):
+    plt.figure()
+    plt.imshow(nuvem)
+    plt.axis("off")
+    plt.show()
+    
+###
 # CC: conjunction, coordinating
 # CD: numeral, cardinal
 # DT: determiner
@@ -57,31 +110,62 @@ for i, t in enumerate(wc.words_):
 # WP$: WH-pronoun, possessive
 # WRB: Wh-adverb
 ###
-groups = [nltk.pos_tag(e) for e in _groups]
+def criaGrupos(nuvem, tagging, n, groups={}):
+    for i, t in enumerate(nuvem.words_):
+        freq = t[1]
+        word = t[0].title()
+        index = int(math.floor(freq*n))
+        if freq >= index/float(n) and freq < (index+1)/float(n):
+            if not str(index) in groups.keys():
+                groups.__setitem__(str(index), {})
+                
+            for tag in tagging:
+                t = tag[0].title()
+                if word == t:
+                    if not str(tag[1]) in groups.__getitem__(str(index)):
+                        groups.__getitem__(str(index)).__setitem__(tag[1], [])
 
-def table(groups, caption,label):
-    n = len(group)
-    string =  """\begin{table}[]
-    \centering
-    \caption{%s}
-    \label{%label}
-    \begin{tabular}{""" % (caption, label)
-    string = "%s%s" %(string, ["l" for i in range(n)].join(""))
-    string = "}\n"
-    string = "%sQuality/Function%s \\\\\n" % (string, ["& %s" % i for i in range(n)].join(""))
+                    if not word in groups.__getitem__(str(index)).__getitem__(tag[1]):
+                        groups.__getitem__(str(index)).__getitem__(tag[1]).append(word)
+    
+    return groups
 
-def organiza(groups):
-    o = {}
-    for group in groups:
-        for el in group:
-            if not el[1] in o.keys():
-                o[el[1]] = []
-                for g in _groups:
-                    o[el[1]].append([])
-            for g in _groups:
-                for _g in g:
-                    if _g == el[1]:
-                        o[el[1]][groups.indexOf(g)] = _g
-    return o
+def gera_grupos_qualitativos(nuvem, tagging, n):
+    print "=>Most used words<="
+    groups = criaGrupos(nuvem, tagging, n)
+    print groups
+    return groups
 
-print organiza(groups)
+def table(groups, size, caption, label):
+    string =  """\\begin{table}
+\\centering
+\\caption{%s}
+\\label{%s}
+\\small
+\\begin{tabular}{""" % (caption, label)
+    string = string + "%s" % "".join([" | p{1.3cm}" for i in range(int(size))])
+    string = string + """ | }
+\\hline
+\\hline
+"""
+    string = string + "\\tiny \\textbf{Quality/Function} %s \\\\" %  "".join([" & \\textbf{%s}" % i for i in range(int(size))])
+    string = string + """
+\\hline 
+\\hline"""
+    for k,v in groups:
+        string = string + """
+
+\\tiny \\textbf{%s}
+""" % k
+        for _v in v:
+            string = string + """
+& %s
+""" % _v
+            string = string + """\\\\
+\\hline
+
+"""
+    print string
+    return string
+    
+linha_de_comando("claudio", "0.0.1", "Script python para gerar nuvem de arquivos pdf")
