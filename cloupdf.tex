@@ -1,4 +1,4 @@
-\begin{example}{Código-fonte do \emph{cloud.py}}
+\begin{example}{Código-fonte do \emph{cloud.py}}\label{ex:cloud}
 \begin{minted}[fontsize=\scriptsize]{python}
 #!/usr/bin/python
 
@@ -49,7 +49,7 @@ def linha_de_comando(nome, versao, descricao):
                       dest="table",
                       default=False)
 
-    # Life cycle
+    # Ciclo de vida
     (options, args) = parser.parse_args()
     pages = []
     if options.paginas:
@@ -67,7 +67,6 @@ def linha_de_comando(nome, versao, descricao):
     if options.fotinha:
         gera_figura(nuvem)
     
-    #if options.table:
     # Taggins
     print "\n\nA classificar e organizar palavras em uma tabela"
     tagging = nltk.pos_tag(nltk.word_tokenize(text))

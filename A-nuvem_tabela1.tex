@@ -29,6 +29,12 @@
 \end{tabular}
 \end{table}
 
+É possível notar possíveis erros de organização das palavras com a utilização da biblioteca NLTK. Isso é notável com a inclusão erros ortográficos \ver{tab:gen1} e var{tab:gen2}, ou inclusão de substantivos como um verbo \ver{tab:gen1}, ou adjetivos como verbos \ver{tab:gen3}.
+
+O primeiro tipo de erro pode ocorrer como um erro de método de codificação (ISO 8895-1). 
+ 
+ O segundo tipo de erro pode ocorrer pela definição de regras gramaticais, ao qual usamos um padrão,  a função \verb|nltk.word_tokenize| (ver  \autoref{ex:cloud}, p.~\pageref{ex:cloud}), dentre diversos possíveis\disponivelem{http://stackoverflow.com/questions/24975573/how-to-parse-custom-tags-using-nltk-regexp-parser}. 
+
 \begin{table}
 \centering
 \caption{VBG -- \emph{present participle}. VBD -- \emph{past tense}. VBN -- \emph{past participle}}
@@ -37,7 +43,7 @@
 \begin{tabular}{ | p{2.6cm} | p{2.6cm} | p{1.75cm} | p{1.75cm} | p{0.25cm} | p{0.25cm} | p{0.25cm} | p{1cm} | p{0.25cm} | p{0.25cm} | p{0.25cm} | p{0.25cm} |}
 \hline
 \hline
-\tiny \textbf{Qualidade/Funcao}
+\tiny \textbf{Qualidade/Função}
  & \textbf{0}
  & \textbf{1}
  & \textbf{2}
@@ -64,12 +70,14 @@
 \end{tabular}
 \end{table}
 
+Dado estes erros gramaticais, sugerimos observar algumas palavras, de acordo com uma polimorfia (se a palavra aparece ou não em várias das classes), ou seu grau na escala. Neste sentido \emph{Live} aparece tanto como verbo \ver{tab:gen1} e \ver{tab:gen2}, adjetivo \ver{tab:gen3} e substantivo \ver{tab:gen4} e \ver{tab:gen5}. 
+
 \begin{table}
 \centering
 \caption{VBP -- \emph{past tense}, sem ser 3$^a$ pessoa do singular. JJ -- \emph{adjetivo, numeral ou ordinal}.}
 \label{tab:gen3}
 \small
-\begin{tabular}{ | p{2.6cm} | p{2cm} | p{1.5cm} | p{1cm} | p{0.25cm} | p{0.75cm} | p{1.25cm} | p{0.25cm} | p{0.25cm} | p{0.25cm} | p{0.25cm} | p{0.25cm} |}
+\begin{tabular}{ | p{2.6cm} | p{2cm} | p{1.5cm} | p{1cm} | p{0.25cm} | p{0.75cm} | p{1cm} | p{0.25cm} | p{0.25cm} | p{0.25cm} | p{0.25cm} | p{0.5cm} |}
 \hline
 \hline
 \tiny \textbf{Qualidade/Funcao}
@@ -96,12 +104,14 @@
 \end{tabular}
 \end{table}
 
+É interessante notar um destaque dos termos \emph{Live} e \emph{Coding} ou \emph{Code}, tanto em polimorfia, quanto grupo numérico, em relação aos termos \emph{Music}, \emph{Sound} e \emph{Pratice}  \ver{tab:gen3} e \ver{tab:gen4}. Este ponto esclarece a definição de \citeonline{mori_analysing_2015} \ver{cap:introducao}
+
 \begin{table}
 \centering
-\caption{DT -- \emph{determinant}, sem ser 3$^a$ pessoa do singular. NN -- \emph{noun} (substantivo), comum, singular ou de massa.}
-\label{tab:gen3}
+\caption{DT -- \emph{determinant}, sem ser 3$^a$ pessoa do singular. RP -- P, partícula ou parte de um \emph{phrasal verb}. NN -- substantivo comum, singular ou de massa.}
+\label{tab:gen4}
 \small
-\begin{tabular}{ | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} |}
+\begin{tabular}{ | p{2.6cm} | p{2.5cm} | p{1.25cm} |  p{1.25cm} |  p{0.175cm} |  p{1.5cm} |  p{0.75cm} |  p{0.75cm} |  p{0.0425175cm} |  p{0.0425175cm} |  p{0.0425175cm} |  p{0.5cm} |}
 \hline
 \hline
 \tiny \textbf{Qualidade/Funcao}
@@ -114,7 +124,8 @@
  & \textbf{6}
  & \textbf{7}
  & \textbf{8}
- & \textbf{9} \\ 
+ & \textbf{9}
+ & \textbf{10} \\ 
 \hline
 \hline
 \tiny \textbf{DT}
@@ -129,13 +140,15 @@
  \hline
 \end{tabular}
 \end{table}
+
+Quanto aos substantivos próprios, é interessante destacar nomes como Collins, Davies, Blackwell, Mclean, Grossi, \emph{softwares}, e a relação destes com instituições \ver{tab:gen5}. 
  
 \begin{table}
 \centering
 \caption{NNS -- \emph{noun}, substantivo próprio no plural. NNP -- \emph{noun} substantivo próprio, singular ou de massa.}
-\label{tab:gen4}
+\label{tab:gen5}
 \small
-\begin{tabular}{ | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} |}
+\begin{tabular}{ | p{2.6cm} | p{2.5cm} | p{1.25cm} |  p{1.25cm} |  p{0.175cm} |  p{1.5cm} |  p{0.75cm} |  p{0.75cm} |  p{0.0425175cm} |  p{0.0425175cm} |  p{0.0425175cm} |  p{0.5cm} |}
 \hline
 \hline
 \tiny \textbf{Qualidade/Funcao}
@@ -148,7 +161,8 @@
  & \textbf{6}
  & \textbf{7}
  & \textbf{8}
- & \textbf{9} \\ 
+ & \textbf{9}
+ & \textbf{10} \\ 
 \hline
 \hline
 \tiny \textbf{NNS}
@@ -166,10 +180,10 @@
 \caption{RB -- \emph{adverb}. RBR -- advérbio comparativo. CD -- Numeral ou cardinal. MD -- Auxiliar modal. JJR -- Adjetivo comparativo. }
 \label{tab:gen5}
 \small
-\begin{tabular}{ | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} | p{1cm} |}
+\begin{tabular}{ | p{2.6cm} | p{2.6cm} | p{1.75cm} | p{1.75cm} | p{0.25cm} | p{0.25cm} | p{0.25cm} | p{1cm} | p{0.25cm} | p{0.25cm} | p{0.25cm} | p{0.25cm} |}
 \hline
 \hline
-\tiny \textbf{Qualidade/Funcao}
+\tiny \textbf{Qualidade/Função}
  & \textbf{0}
  & \textbf{1}
  & \textbf{2}
@@ -179,7 +193,8 @@
  & \textbf{6}
  & \textbf{7}
  & \textbf{8}
- & \textbf{9} \\ 
+ & \textbf{9}
+ & \textbf{10} \\ 
 \hline
 \hline
  \tiny \textbf{RB} & \tiny Well, Even, However, Rather, First, Show, Server, Explore, Video  & \tiny Also  & \tiny --  & \tiny --  & \tiny --  & \tiny --  & \tiny --  & \tiny --  & \tiny --  & \tiny --  & \tiny -- \\
