@@ -1,28 +1,8 @@
-\chapter{Definições de base da Improvisação de códigos}\label{cap:introducao}
-
-Giovanni \citeonline[p.~117]{mori_analysing_2015} define a improvisação de códigos em relação à Música, Imagens em Movimento, Dança ou Tecelagem. É importante esclarecer que essa definição denota a aplicação em qualquer outra área, não apenas como metáfora, mas como estratégia de gerenciamento de fluxos criativos, assistidos por computador:
-
-\begin{citacao}
-\traducao{\emph{Live coding} é uma técnica artística de improvisação. Pode ser empregada em muitos contextos diferentes de performance: dança, música, imagens em movimento e mesmo tecelagem. Eu concentrei minha atenção no lado musical, que parece ser o mais proeminente.}{Live coding is an improvisatory artistic technique. It can be employed in many different performative contexts: dance, music, moving images and even weaving. I have concentrated my attention on the music side, which seems to be the most prominent.}
-\end{citacao}
-
-O problema desta definição é que ela não contempla uma classe puramente técnica da improvisação de códigos, como por exemplo os registros audiovisuais de um tutorial de como escrever um aplicativo \emph{web}\disponivelem{https://www.youtube.com/watch?v=dHtyDron5ik}. No entanto, a premissa da pesquisa é, assim como Mori, situar a improvisação de códigos do ponto de vista musical. Descartamos uma discussão específica sobre imagens em movimento para evitar cair em uma digressão infinita; mas uma menção será feita em relação ao contexto musical. A discussão sobre tecelagem \ver{sec:tecelagem} contextualiza a história da computação, com suas bases conceituais do que é computação, com a prática artística investigada. Além disso, improvisadores-programadores influentes, Alex McLean, Dave Griffths (e Adrian Ward), serão apresentados. A discussão sobre Dança aprensenta a Música Eletrônica para Dançar \footnote{\cfcite{hillegonda_dj_2013}.} \ver{sec:algorave}, e a coreografia que nega o som como resultado da improvisação de códigos \ver{sec:coreografia}. Introduzindo a discussão musical \ver{sec:musica}, apresentamos alguns improvisadores brasileiros, porém nosso foco último será discutir um conjunto de regras práticas que emergiram durante uma disputa acadêmica. Isto é, a partir de uma problematização feita por \citeonline{schloss_dilemma_2003}, sobre o papel cênico (e visual) do músico que carrega um computador no palco de performance, uma resposta conjunta de McLean, Griffths, Amy Alexander, Adrian Ward, Fredrik Olofsson, Julian Rohrhuber e Nick Collins, \cite{ward_live_2004}, possibilitou a proliferação de idéias e a estruturação de um programa de investigação científica próprio para a improvisação de códigos \ver{sec:laptoptoplap}.
-
-\section{Tecelagem}\label{sec:tecelagem}
-
-Contextualizar a atividade têxtil é uma forma de criar uma imagem mental, de como funciona o processo de computação. Seria possível usar a imagem de um ábaco. Mas essa última imagem não considera potenciais leitores de um programa de pesquisa que inclui investigadores na área de Moda (como é o caso do Programa de Pós Graduação em Artes, Cultura e Linguagens da Universidade Federal de Juiz de Fora). Não aprofundaremos o assunto de Moda, mas sim buscamos ilustrar um código de computador. Nas palavras de \citeonline{griffths_weave2_2015},
-
-\begin{citacao}
- \traducao{Um dos potenciais da tecelagem que eu fiquei mais interessado é a capacidade de demonstrar fundamentos de \emph{softwares} por fios -- parcialmente tornar a natureza física da computação auto-evidente, mas também como uma maneira de modelar novas formas de aprender e a entender o que são os computadores.}{One of the potentials of weaving I’m most interested in is being able to demonstrate fundamentals of software in threads – partly to make the physical nature of computation self evident, but also as a way of designing new ways of learning and understanding what computers are.}
-\end{citacao}
-
-Buscamos demonstrar na próxima seção esta natureza física da computação, para auxiliar a inclusão da tecelagem na definição de Mori.
-
-\subsection{Charles Babbage e Joseph-Marie Jacquard}
+\chapter{Definições de base sobre computadores e Improvisação de códigos}\label{cap:introducao}
 
 Os computadores atuais são máquinas desenvolvidas com base no modelo teórico elaborado por Alan Turing (1912-1954). Uma representação simplista considera uma fita abstrata de tamanho variável (o quanto for necessário), dividida em células, cada uma com um alfabeto finito. Cada alfabeto possui uma quantidade de símbolos de representação finita. Um cabeçote leitor desta fita lê as instruções escritas em cada célula, e depois passa para a próxima célula. Um registrador de estados desta fita, memoriza qual foi a última operação realizada na última célula executada. Uma tabela de ações indicará novas instruções, que serão escritas nesta fita.
 
- Um modelo anterior ao de Turing foi elaborado por Charles Babbage (1791 -- 1871), \emph{a máquina analítica},  entre 1834 e 1836, revisado em 1837. Sua construção ocorreu após um colapso na construção de sua \emph{máquina diferencial}. O projeto não vingou, mas a partir de 1838, Babbage se envolveu com a exploração intelectual dos conceitos elaborados, para otimizar o projeto e reduzir seu custo de construção. Uma sequência de seminários em Turin (1840) resultou em uma publicação sobre a máquina analítica, em francês, escrita por um cientista italiano (L.F. Menebrea). A Condessa de Lovelace (Ada Augusta Byron King), traduziu, sob supervisão de Babbage, esta publicação para o inglês. Historicamente, os primeiros programas de computador (para serem executados na máquina analítica) foram escritos ambos por Ada e Babbage. O primeiro programa escrito era dedicado ao cálculo de uma sequência numérica conhecida como \emph{Números de Bernoulli} \footnote{Allan G. Broomley, \emph{Charles Babbage’s Analytical Engine, 1838}. Disponível em \url{http://athena.union.edu/~hemmendd/Courses/cs80/an-engine.pdf}}. Apenas uma parte da máquina foi construída antes da morte de Babbage\disponivelem{http://www.sciencemuseum.org.uk/objects/computing_and_data_processing/1878-3.aspx}.
+Um modelo anterior ao de Turing foi elaborado por Charles Babbage (1791 -- 1871), \emph{a máquina analítica},  entre 1834 e 1836, revisado em 1837. Sua construção ocorreu após um colapso na construção de sua \emph{máquina diferencial}. O projeto não vingou, mas a partir de 1838, Babbage se envolveu com a exploração intelectual dos conceitos elaborados, para otimizar o projeto e reduzir seu custo de construção. Uma sequência de seminários em Turin (1840) resultou em uma publicação sobre a máquina analítica, em francês, escrita por um cientista italiano (L.F. Menebrea). A Condessa de Lovelace (Ada Augusta Byron King), traduziu, sob supervisão de Babbage, esta publicação para o inglês. Historicamente, os primeiros programas de computador (para serem executados na máquina analítica) foram escritos ambos por Ada e Babbage. O primeiro programa escrito era dedicado ao cálculo de uma sequência numérica conhecida como \emph{Números de Bernoulli} \footnote{Allan G. Broomley, \emph{Charles Babbage’s Analytical Engine, 1838}. Disponível em \url{http://athena.union.edu/~hemmendd/Courses/cs80/an-engine.pdf}}. Apenas uma parte da máquina foi construída antes da morte de Babbage\disponivelem{http://www.sciencemuseum.org.uk/objects/computing_and_data_processing/1878-3.aspx}.
 
 Segundo \citeonline[p.14--21]{McLean2011}, o mecanismo do projeto de Babbage é inspirado na máquina de tear de Joseph-Marie Jacquard (1752 -- 1834). A principal contribuição da invenção, para a computação, foi um sistema que consiste em um cabeçote leitor de cartões perfurados. Na máquina de tear de Jacquard, a organização dos furos indicam, até hoje, uma rotina têxtil. Já no computador mecânico de Babbage, o cartão perfurado indicava estados binários que conduzem ao cálculo numérico:
 
@@ -39,7 +19,7 @@ The textile industry saw the first programmable machine to reach wide use: the h
 %  \label{fig:jacquard}
 %\end{figure} 
 
-\subsection{Weavecoding}\label{sec:weavecoding}
+\section{Weavecoding}\label{sec:tecelagem}
 
 Se até hoje o mesmo sistema de Jacquard é utilizado para materializar imagens mentais de formas geométricas, como improvisadores de códigos elaboram uma \emph{estratégia transversal} \ver{sec:tidal}, de transformar a imagem mental destas formas geométricas em códigos, e de códigos para o resultado desejado? De outra forma, como é realizada uma improvisação de códigos audio visuais, musicais e têxteis? Exemplificamos o caso com um grupo que criou o conceito \emph{weavecoding}. Sua definição será dada conforme apresentamos o grupo \emph{Weaving codes}\disponivelem{http://kairotic.org/about/}, em um encontro no espaço Foam Kernow\disponivelem{http://fo.am/kernow/}.
 
@@ -106,9 +86,9 @@ One of the original ideas we had was to combine weaving and coding in a performa
 }
 \end{citacao}
 
-Esta descrição de Griffths possui uma documentação audiovisual \disponivelem{https://www.youtube.com/watch?v=XrnIVUp9QgM}. É interessante notar que a menção ao grupo \emph{Slub} auxilia a discussão musical, e ao mesmo tempo articula esta seção com a próxima. 
+Esta descrição de Griffths possui uma documentação audiovisual \disponivelem{https://www.youtube.com/watch?v=XrnIVUp9QgM}.
 
-\subsubsection{Slub}
+\subsection{Slub}
 
 A banda \emph{Slub} começou em 2000, como uma colaboração entre Adrian Ward e Alex McLean. A premissa do duo era utilizar a atividade de programação para realização de uma Música Eletrônica de Dança\footnote{\cfcite{hillegonda_dj_2013}}. Sua primeira reunião foi em 2001, no \emph{Paradiso club} em Amsterdã, durante o festival \emph{Sonic Arts}. Em 2005 Griffths se juntou ao duo durante o festival \emph{Sonar}, o que abriu espaço para o desenvolvimento de uma estética de videogames \cite[p.~138--140]{McLean2011}.
 
@@ -183,7 +163,7 @@ O registro audiovisual do duo Canute, Matthew Yee-King (bateria eletrônica) e A
 
 Griffiths registra uma \emph{rave} na embarcação  MS Stubnitz, em Canary Wharf, Londres, em 2013. Cárdenas e Ernesto Romero/Jorge Ramírez -- Mico Rex, \ver{fig:micorex} -- tocam neste evento. Encontramos um registro audiovisual de curta duração da apresentação do duo Mico Rex\disponivelem{https://vimeo.com/65309754}, mas não de Cárdenas. Exemplos sonoros específicos estão disponíveis nas redes sociais \emph{SoundCloud} e \emph{Vimeo} \footnote{\url{https://soundcloud.com/tiemposdelruido} e \url{https://soundcloud.com/micorex/}.}. Notas descritivas nestes perfis especificam instrumentos e linguagens de programação, mas não o processo criativo. MicoRex utiliza voz e \emph{programação} ao vivo com o ambiente de programação \emph{SuperCollider}\ver{sec:supercollider}. Entre as categorizações musicais mencionadas, \emph{electro-pop}, \emph{8bits/glitch}, \emph{electro}, \emph{punk}, \emph{bolero} e \emph{breakz}. Cárdenas realiza suas performances com guitarra e programação ao vivo com o \emph{SuperCollider}. É interessante que Cárdenas menciona a utilização de\emph{techno}, \emph{dubstep} e \emph{noise} -- além de distorções, utliliza um misto de instrumento expandido (objetos diversos jogados, friccionados, apoiados na guitarra) e retroalimentação de sinais com níveis saturados.  
 
-\subsection{Coreografia}\label{sec:coreografia}
+\section{Coreografia}\label{sec:coreografia}
 
 O segundo exemplo de um contexto de dança é projeto de Kate Sichio, \emph{Hacking the Body}/\emph{Hacking Choreography}. Dois trabalhos (\emph{Hacking Coreography} \emph{v.01} e \emph{v.02}), mais um, \emph{Hacking The Body 2.0}, serão colocados em discussão para ilustrar: \emph{i}) uma estratégia metafórica do código em uma performance de dança; \emph{ii}) uma estratégia transversal \ver{sec:tidal} de codificação de movimentos ; \emph{iii}) problematização do som ou imagem como resultado da improvisação.
 
@@ -279,7 +259,7 @@ dancer b = rotate opposite direction
 
 Algumas seções são apresentadas como \emph{funções} (\emph{set up, movement, coreography \emph{e} run}). A função \emph{set up} define as posições iniciais de cada ator; \emph{movement} define os tipos de movimentos que serão executados por intérpretes; \emph{coreography} define uma estrutura de fluxo destes movimentos; e por último, uma ordem de execuções é estruturada em \emph{run}. É interessante notar que Sichio aponta para um outro \emph{hackeamento} da partitura. A utilização de números, como por exemplo na função \emph{coreography}, dificultou a leitura dos intérpretes durante ensaios. Uma alteração na função \emph{coreography}, notificada abaixo da linha \verb|/hack/|, foi feita pelos próprios intérpretes para alterar a notação numérica por uma descrição textual da ação. Isso tornou o código mais legível para humanos durante a execução de movimentos. 
 
-\subsubsection{Hacking the Body}
+\subsection{Hacking the Body}
 
 O \emph{Hacking The Body 2.0}, ou \emph{HTB2.0} (2015)\disponivelem{https://www.youtube.com/watch?v=iOAffWTBVE0} é uma performance mais formal. Se caracteriza por uma apresentação em um evento internacional, com um o palco-arena que reforça a hierarquia ator-público (o palco fica aproximadamente na linha da cabeça do espectador). A coreógrafa está sentada ao lado direito do palco, visível, mas debaixo de uma penumbra. Já a dançarina, cuja vestimenta branca equilibra com uma iluminação frontal e estática, expressa uma face de seriedade\ver{fig:iclcdanca}. A coreografia segue uma partitura de movimentos corporais.  Mas esta partitura não é visual (o registro não é feito em papel), o resultado da apresentação não são movimentos corporais pré-definidos, e tão pouco existe um acompanhamento musical. Esta partitura é um correlato acústico do tato, codificada por uma coreógrafa. Afastada de uma bailarina, controla a direção dos movimentos corpóreos da performance:
 
@@ -450,42 +430,54 @@ Resultado:
 \end{minted}
 \end{example}
 
-Correção para o algoritmo de Magno. Os novos caracteres foram inseridos por Caliman em 2$'$18$''$:
+Aqui admitimos um conflito ideológico (e espiritual) na análise do código. Apesar de compartilhar dos conceitos de agenciamento composicional, não compartilhamos de um significado inerente ao código. Neste sentido, o autor busca se defender da seguinte crítica feita na defesa deste documento: levar a piada a sério demais. 
+
+Tomando um erro de tipos numéricos, como erro lógico, demonstramos a piada como recurso ideológico inferior \cite[p.~]{McLean2011}, ainda que essa seja o \emph{modus operandi} da improvisação de códigos. Nesse sentido, sugerimos seguir a cartilha científica, e propor uma interessante modificação no algoritmo de Magno. Os novos caracteres são relativos àqueles inseridos por Caliman em 2$'$18$''$, trocando por uma escrita automática, no limite do possível, sem ideologias:
 
 \begin{example}{Correção}
 \begin{minted}[fontsize=\scriptsize]{c}
 # include <stdio.h>
 int main(){
   int i=0;
-  for (;;i++){
-      printf("=====  ______");
-      fflush(stdout);
-      // 30 frames por segundo 
-      // ou um limite aproximado da
-      // pecepcao humana (1/30)
-      system("sleep 0.033");
+  for(;;i++){
+    // ALgum conteudo randomico
+    putchar(rand()+ ('\n'*(i+1)));
+    fflush(stdout);
+    // 30 frames por segundo 
+    // ou um limite aproximado da
+    // pecepcao humana (1/30)
+    system("sleep 0.033");
+    if(i==10)i=0;
   }
 }
-\end{minted}
-
-Resultado:
-
-\begin{minted}[fontsize=\scriptsize]{bash}
-=====  ______=====  ______=====  ______=====  ______=====  ______=====
-  ______=====  ______=====  ______=====  ______=====  ______=====  ___
-___=====  ______=====  ______=====  ______=====  ______=====  ______==
-===  ______=====  ______=====  ______=====  ______=====  ______=====  
-______=====  ______=====  ______=====  ______=====  ______=====  _____
-_=====  ______=====  ______=====  ______=====  ______=====  ______====
-=  ______=====  ______=====  ______=====  ______=====  ______=====  __
-____=====  ______=====  ______=====  ______=====  ______=====  ______=
 
 \end{minted}
+
+O resultado não retorna erros:
+
+\includegraphics[scale=0.35]{./imagens/autoescrita.png}
+
 \end{example}
 
-\subsection{Telepresença e espaços virtuais}\label{sec:telepresenca}
+\section{Telepresença e espaços virtuais}\label{sec:telepresenca}
 
-Uma performance virtual de \emph{live coding} é aquela em que dois ou mais executantes, em endereços diferentes de uma rede de computadores. Isso situa três casos, do qual especificaremos um: i) uma rede local, com computadores diferentes, mas com os improvisadores fisicamente próximos; ii) uma rede remota, privada, que comunica um conjunto de pessoas fisicamente distantes; iii) a rede mundial de computadores, onde o navegador se torna o ambiente virtual de criação musical \cite{roberts_web_2013}. Nos três casos, a premissa é compartilhar o mesmo código entre improvisadores-programadores. Podem também compartilhar do mesmo som, mas isso depende de implementações técnicas . 
+Uma performance virtual de \emph{live coding} é aquela em que dois ou mais executantes, em endereços diferentes de uma rede de computadores. Isso situa três casos, que buscamos apenas categorizar: i) uma rede local, com computadores diferentes, mas com os improvisadores fisicamente próximos; ii) uma rede remota, privada, que comunica um conjunto de pessoas fisicamente distantes; iii) a rede mundial de computadores, onde o navegador se torna o ambiente virtual de criação musical \cite{roberts_web_2013}. Nos três casos, a premissa é compartilhar o mesmo código entre improvisadores-programadores. Podem também compartilhar do mesmo som, mas isso depende de implementações técnicas . 
+
+O primeiro caso é bastante documentado nas \emph{live coding sessions}, sessões de improvisações que ocorrem em encontros, simpósios e \emph{workshops}, ricamente documentadas\disponivelem{https://supercollider.github.io/archive}. São encontros informais, onde programadores estão próximos uns aos outros. No \autoref{cap:protohistoria} (ver p.~\pageref{cap:protohistoria}), investigamos mais de perto bases históricas desta prática com os grupos \emph{The League of Automatic composers}/\emph{The Hub}.
+
+ Dois exemplos do segundo caso são descritos por \citeonline[p.~152--153]{junior_supercopair_2015}.  Um trabalho original, \emph{Supercopair}\disponivelem{https://github.com/deusanyjunior/atom-supercopair}, possibilita a criação de um ambiente virtual para a improvisação de códigos. Através da computação em nuvem, dois usuários podem compartilhar códigos sem complicadas configurações \ver{fig:supercopair}. O segundo exemplo, similar, sem mas sem computação em nuvem.  Sua descrição pormenorizada é demasiadamente técnica para o escopo deste trabalho, e desta forma, apontamos artistas-programadores como Nick Collins, John Rohrhuber, Ben Swift e Andrew Sorensen. Os dois primeiros trabalham com redes TCP/IP, enquanto os dois últimos trabalham \traducao{entre dois intérpretes-programadores localizados na Alemanha e Estados Unidos usando um servidor SSH localizado na Australia}{between two live coders located in Germany and United States using an SSH server located in Australia.}. 
+
+ \begin{figure}[!h]
+   \centering
+   \includegraphics[scale=0.5]{imagens/supercopair.png}
+   \caption{Esquema prático do \emph{Supercopair}, um ambiente colaborativo para a improvisação de códigos com o \emph{SuperCollider} através da nuvem de servidores. \textbf{Fonte}: \citeonline[p.~55]{junior_supercopair_2015}.}
+   \label{fig:supercopair}
+ \end{figure}
+
+  
+
+Execuções remotas assíncronas (isto é, entre duas ou mais pessoas, em tempos diferentes) estão sendo exploradas a partir do uso musical de um navegador de \emph{internet}. São realizadas em \emph{apps} como \emph{Gibber} \cite{roberts_gibber:_2012}\disponivelem{http://gibber.mat.ucsb.edu/}, \emph{Wavepot}\disponivelem{http://www.wavepot.com} e \emph{Vivace} \cite{vieira_vivace:_2015}, através da biblioteca \emph{WebAudio API}\disponivelem{https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html}. Um \emph{software} na mesma direção foi desenvolvido, uma colaboração entre o autor deste documento e um membro da banca\footnote{\cfcite{lunhani_termpot_2015}}.  
+
 
 O primeiro caso é bastante documentado nas \emph{live coding sessions}, sessões de improvisações que ocorrem em encontros, simpósios e \emph{workshops}, ricamente documentadas\disponivelem{https://supercollider.github.io/archive}. Um exemplo do segundo caso é descrito por \citeonline[p.~152--153]{junior_supercopair_2015}. Uma performance telepresencial em 2014, por Ben Swift, Henry Gardner e Andrew Sorensen, realizada \traducao{entre dois intérpretes-programadores localizados na Alemanha e Estados Unidos usando um servidor SSH localizado na Australia}{between two live coders located in Germany and United States using an SSH server located in Australia.}. \citeauthoronline{junior_supercopair_2015} ainda descrevem o desenvolvimento de um ambiente chamado \emph{Supercopair}\disponivelem{https://github.com/deusanyjunior/atom-supercopair}, um ambiente cooperativo de improvisação de códigos, possível através de serviços de computação em nuvem.    
 

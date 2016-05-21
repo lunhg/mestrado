@@ -23,8 +23,8 @@
 \newcommand{\tabletraducao}[2]{``#1'' \tablefootnote{Tradução nossa de \emph{#2}.}}
 \newcommand{\traducaoparcial}[2]{``#1'' \footnote{Tradução parcial nossa de \emph{#2}.}}
 \newcommand{\csf}[2]{$\mathcal{#1}_\emph{#2}$}
-\newcommand{\traduzcitacao}[4]{\begin{citacao}
-#1\cite[#3]{#4}\footnote{Tradução de \emph{#2}}.
+\newcommand{\traduzcitacao}[2]{\begin{citacao}
+#1\footnote{Tradução de \emph{#2}}.
 \end{citacao}
 }
 
@@ -53,4 +53,16 @@
 		\begin{exa}[#1]
 }{%
 		\end{exa}
+}
+
+\newcommand{\csfeq}[2]{
+\mathcal{#1}_\emph{#2}
+}
+
+\newcommand{\unionspaces}[6]{
+\csfeq{#1}{#2} = \csfeq{#3}{#4} \bigcap \csfeq{#5}{#6}
+}
+
+\newcommand{\listspaces}[9]{
+\csfeq{#1}{#2}~=~[\csfeq{#3}{#2},~\csfeq{#4}{#2},~\csfeq{#5}{#2},~\csfeq{#6}{#2},~\csfeq{#7}{#2},~\csfeq{#8}{#2},~\csfeq{#9}{#2}
 }

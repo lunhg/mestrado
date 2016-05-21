@@ -1,4 +1,4 @@
-require "json"
+require "yaml"
 
 namespace :tex do
 
@@ -26,7 +26,7 @@ namespace :tex do
   end
 
   desc "compile lilypond"
-  task :lytex do
+  task :lilypond do
     
     Dir.glob("./*.ly") do |file|
       name = file.split("./")[1].split(".ly")[0]
@@ -41,6 +41,7 @@ namespace :tex do
       end
     end
   end
+  
   desc "compile tex"
   task :compile do
     if not ENV['FILE'] then ENV['FILE']="main" end
@@ -48,40 +49,36 @@ namespace :tex do
     sh pdflatex
   end
 
+  desc "compile bibliography"
   task :bibtex do
     if not ENV['FILE'] then ENV['FILE']="main" end
     bibtex = "bibtex -terse ./#{ENV['FILE']}.aux"
     sh bibtex
   end
 
+  desc "backup this to some computer that isnt dropbox or any cloud service"
+  task :ssh do
+    if not ENV['FILE'] then ENV['FILE'] = "main" end
+    conf = YAML::load File.open("./#{ENV['FILE']}.yml")
+    sh "rsync -avz -e ssh ./mestrado/ #{con['host']}:#{conf['path']}"
+  end
+
+  desc "make compilation, bibliography and compilation again 2 times to correct pdf"
+  task :make do
+    Rake::Task["tex:compile"].invoke
+    Rake::Task["tex:bibtex"].invoke
+    Rake::Task["tex:compile"].invoke
+  end
+
+  desc "if your project have a main.* files, then this will do all the things for you"
   task :main do
     if not ENV['FILE']
       ENV['FILE'] = "main"
     end
     Rake::Task["tex:clean"].invoke
-    Rake::Task["tex:lytex"].invoke
-    Rake::Task["tex:compile"].invoke
-    Rake::Task["tex:bibtex"].invoke
-    Rake::Task["tex:compile"].invoke
-    Rake::Task["tex:compile"].invoke
-  end
-end
-
-namespace :git do
-
-  desc "start git routines"
-  task :tex do
-    sh "git add *.md *.tex *.bib *.pdf imagens/"
-    puts "=== This is your current status: check before commit (type ctrl+C to stop)"
-    sh "git status"
-    puts "=== Commit message:"
-    text = gets.chomp
-    puts "=== Are you ok?"
-    ok = gets.chomp
-    if ok == "Y" or ok == "y" or ok == "S" or ok == "s"
-      sh "git commit -m #{text}"
-      sh "git push origin master "
-    end
+    Rake::Task["tex:lilypond"].invoke
+    Rake::Task["tex:make"].invoke
+    Rake::Task["tex:ssh"]
   end
 end
 
