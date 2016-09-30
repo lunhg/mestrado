@@ -30,7 +30,7 @@ Em \tempo{0}{52} Sorensen define um tempo base. Em seguida, Sorensen apaga o có
 \end{example}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Definição de uma sequência de blocos}
+\subsection{Definição de uma sequência de blocos}
 
 Até \tempo{1}{07}, uma rotina auxiliar é definida como um laço iterativo. Porém não encontramos sua especificação no código-fonte do \emph{Extempore}.
 
@@ -62,7 +62,7 @@ A abreviação \verb|pc| significa \emph{pitch class}, e a função \verb|pc:mak
 
 Este bloco de códigos cria uma díade, no âmbito de um Ré 2 (MIDI 50) e Si bemol 3 (MIDI 70), dentro de um campo harmônico diatônico (\verb|pc:diatonic|). Por sua vez, este último cria ``um acorde seguindo regras básicas de harmonia diatônca: baseado em uma raiz (0 para C, etc.), maior/menor (\verb|'-| ou \verb|'^|) e graus (i-vii)''\footnote{Tradução nossa de: \emph{(\ldots) a chord following basic diatonic harmony rules: based on root (0 for C etc.) maj/min ('- or '\^) and degree (i-vii)}.}. O resultado não é previsível, e depende de regras específicas de qualidade, que apresentaremos adiante, para classificar os \emph{pitch class} dentro de um grau de um campo harmônico.
 
-\subsubsection {Definição de blocos}\label{sec:define_chords}
+\subsection {Definição de blocos}\label{sec:define_chords}
 
 Em \tempo{1}{08}, a função \emph{chords} surge no fluxo audiovisual, sem nenhum processo de escrita. Este comportamento caracteriza a utilização de, ou uma cópia/cola de texto, ou de uma execução de um macro do editor de texto usado. Macros são pequenos programas no editor que auxiliam o processo de produção do código. De qualquer forma é importante salientar que o código é preparado por \citeonline{sorensen_youtube_2014}.
 
@@ -199,7 +199,7 @@ Onde a a dinâmica específica ocorre como um comportamento periódico de volume
 \end{example}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Regras de qualidade}\label{sec:regras_qualidade}
+\subsection{Regras de qualidade}\label{sec:regras_qualidade}
 
 A estrutura interna da estratégia \verb|chords| explicita algumas regras de qualidade, bem como permite apresentar uma primieira sequência de blocos de eventos \pressingthree{K}{ask}{0}, um conjunto de características \pressingthree{F}{ask}{0} e um pequeno grupo de objetos \pressingthree{O}{ask}{0}. Um conjunto de características é definido pelo momento de execução do evento,\pressingthree{F}{ask}{0}, o grau, \pressingthree{F}{ask}{1}, e a duração deste evento, \pressingthree{F}{ask}{2}. É importante destacar que o momento de execução é relativo ao tempo base, definido dentro do padrão \verb|* metro *| (que será explicado a seguir) de um campo harmônico, onde i representa uma tônica menor, e vii, um acorde de sétimo grau, e a duração deste acorde.
 
@@ -408,4 +408,4 @@ No entanto esta característica é um dos fios condutores de uma seção \pressi
 
 \section{Discussão}
 
-Este capítulo buscou analisar uma improvisação publicada em 2009 por Andrew Sorensen. Levantamos um conjunto de informações que estimularam o improvisador-programador a realizar \emph{A Study in Keith}. A partir de uma outra improivisação,  definida como \emph{referencial zero}, ou os \emph{Concertos Sun Bear}, Sorensen buscou simular um estilo de \emph{jazz} do pianista e compositor Keith Jarret. No entanto, esta relação é pouco significativa do ponto de vista harmônico. Na nossa transcrição de uma cadência da abertura do disco Kyoto I, encontramos uma exploração da cadência plagal do \emph{blues} por substituição de trítono. Já em Sorensen o procedimento é uma simples cadência \emph{i} -- \emph{vii}. A partir desta regra, foi possível apontar figuras musicias separadas em três blocos, o que delineou um método de análise para outras improvisações de código. Por outro lado, nossa análise não contemplou sequências seguintes, o que impediu observar detalhes sobre o processo geral da improvisação. Nosso interesse residiu em investigar o ciclo de elaboração/codificação apresentado na \autoref{fig:bricolagem} (ver p.~\pageref{fig:bricolagem}). Por fim, descrevemos esta análise como uma experiência preliminar em análise de códigos de um ponto de vista cognitivista. 
+Este capítulo buscou analisar uma improvisação publicada em 2009 por Andrew Sorensen. Levantamos um conjunto de informações que estimularam o improvisador-programador a realizar \emph{A Study in Keith}. A partir de uma outra improivisação,  definida como \emph{referencial zero}, ou os \emph{Concertos Sun Bear}, Sorensen buscou simular um estilo de \emph{jazz} do pianista e compositor Keith Jarret. No entanto, esta relação é pouco significativa do ponto de vista harmônico. Na nossa transcrição de uma cadência da abertura do disco Kyoto I, encontramos uma exploração da cadência plagal do \emph{blues} por substituição de trítono. Já em Sorensen o procedimento é uma simples cadência \emph{i} -- \emph{vii}. A partir desta regra, foi possível apontar figuras musicias separadas em três blocos, o que delineou um método de análise para outras improvisações de código. Por outro lado, nossa análise não contemplou sequências seguintes, o que impediu observar detalhes sobre o processo geral da improvisação. Nosso interesse residiu em investigar o ciclo de elaboração/codificação apresentado na \autoref{fig:bricolagem} (ver p.~\pageref{fig:bricolagem}) de um ponto de vista cognitivista. 
