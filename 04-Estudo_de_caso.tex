@@ -245,7 +245,7 @@ A questão se Jarret ou não improvisou este tema cria uma outra pergunta: o có
 
 %O padrão cromático \^1\^b2-\^1-\^7b forma uma figura alternada com um ostinato no baixo.Em seguida, o padrão \^{b5}-\^4-\^3 cria uma cadência progressiva de contra-polo da dominante, subdominante da dominante e dominante. No entanto, é importante destacar que a análise foi feita para uma sonoridade muito específica, que não considera outras sequências da improvisação.
 
-\emph{Song of the heart} apresenta três blocos de eventos iniciais: uma figura que alterna, a partir de um baixo, os intervalos nona menor, terça menor, segunda maior, e oitava, formando um ostinato. Nos compassos 3 a 5 aparecem uma nota que forma uma relação de trítono com o baixo. O acorde formado, um Sol bemol Maior (transcrito assim para facilitar a leitura), é expandido nos compassos 6 a 10, gerando uma figura cromática cuja transcrição apresenta a seguinte cadência: Sol Bemol Maior (com décima primeira aumentada adicionada, em terceira inversão), Fá Maior (que alterna o \^5 com o \^13\footnote{\cfcite[p.~]{terefenko2004}}) e Dó Maior com sétima menor (posição fundamental). Limitamo-nos a considerar a progressão do ponto de vista da exploração da subdominante e da cadência plagal (ver exemplo 3.1, p.~\pageref{ex:schenker}).  
+\emph{Song of the heart} apresenta três blocos de eventos iniciais: uma figura que alterna, a partir de um baixo, os intervalos nona menor, terça menor, segunda maior, e oitava, formando um ostinato. Nos compassos 3 a 5 aparecem uma nota que forma uma relação de trítono com o baixo. O acorde formado, um Sol bemol Maior (transcrito assim para facilitar a leitura), é expandido nos compassos 6 a 10, gerando uma figura cromática cuja transcrição apresenta a seguinte cadência: Sol Bemol Maior (com décima primeira aumentada adicionada, em terceira inversão), Fá Maior (que alterna o \^5 com o \^13\footnote{\cfcite[p.~]{terefenko2004}}) e Dó Maior com sétima menor (posição fundamental). Limitamo-nos a considerar a progressão do ponto de vista da exploração de um contra-polo seguido de uma subdominante da dominante e dominante.  
 
 \centering{\input{./JarretSchenker}}
 \end{example}
@@ -253,16 +253,18 @@ A questão se Jarret ou não improvisou este tema cria uma outra pergunta: o có
 
 \subsection{NI-Akoustik Piano}\label{sec:NI}
 
-\emph{A Study in Keith} pode ser observado como uma simulação para um trabalho posterior com o \emph{Disklavier} da Yamaha \ver{fig:disklavier}. Este último caso não é citado por \citeonline{sorensen_youtube_2014} e \citeonline{sorensen_keith_2009}, mas em \emph{Disklavier Sessions} \cite{sorensen_disklavier_2013}, sua execução musical é semelhante à atividade descrita em \emph{A Study in Keith}, exceto o fato de que no primeiro é utilizado um piano acústico e, no segundo, um piano virtual.
+\emph{A Study in Keith} pode ser observado como uma simulação de \emph{Disklavier Sessions} \citeonline{sorensen_disklavier_2013}. Este último caso não é citado por  \citeonline{sorensen_keith_2009} e \citeonline{sorensen_youtube_2014} mas a improvisação de códigos é semelhante àquela de \emph{A Study in Keith}.
 
-Este piano virtual, NI, é uma abreviação para \emph{Native Instruments}, uma empresa de tecnologias para áudio \footnote{Disponível em \url{http://www.native-instruments.com/en/company/}.}. O \emph{Akoustic Piano} é uma extensão (\emph{plugin}) VST, que emula diferentes pianos acústicos. Os instrumentos são gravados nota a nota por um complexo sistema de tomada de som, amostrados digitalmente, para então ser possível utilizar os registros como eventos MIDI\disponivelem{http://www.native-instruments.com/en/products/komplete/keys/definitive-piano-collection/}.
+\emph{A Study in Keith} utiliza o piano virtual \emph{Akoustic Piano NI} (\emph{Native Instruments})\footnote{Disponível em \url{http://www.native-instruments.com/en/company/}.}. Como um \emph{plugin} VST, os sons do instrumento virtual são gravações nota-a-nota de um piano acústico; a tomada de som é realizada em diversos pontos do tampo harmônico, de forma que detalha as ressonâncias do instrumento. São então amostrados digitalmente\disponivelem{http://www.native-instruments.com/en/products/komplete/keys/definitive-piano-collection/}.
 
-\begin{figure}[h]
- \centering
-  \includegraphics[scale=0.5]{imagens/disklavier.jpg}
-  \caption{Piano Disklavier de armário, com a parte interna exposta para exibir a placa-mãe. \textbf{Fonte}: wikimedia.org}
-  \label{fig:disklavier}
-\end{figure}
+\emph{Disklavier Sessions} utiliza um piano \emph{Disklavier} da Yamaha, um modelo que internalizou um computador registrador de eventos, que podem ser codificados e então são convertidos como movimentos do martelo do Piano:
+
+%\begin{figure}[h]
+% \centering
+%  \includegraphics[scale=0.5]{imagens/disklavier.jpg}
+%  \caption{Piano Disklavier de armário, com a parte interna exposta para exibir a placa-mãe. \textbf{Fonte}: wikimedia.org}
+%  \label{fig:disklavier}
+%\end{figure}
 
 \begin{citacao}
 \traducao{Em \emph{Disklavier Sessions} os programas escritos em tempo-real por Ben e Andrew geram um fluxo de dados de notas que é enviado para ser executado em um piano disklavier mecanizado. Assim como as alturas das notas, toda a performance do piano deve ser codificada na informação gerada pelo programa e enviada para o piano disklavier.}{In the Disklavier Sessions the programs beign written in real-time by Ben and Andrew are generating a live stream of note data which is sent to a mechanized disklavier piano to be performed. As well the individual note pitches all of the piano performance must be encoded into the information being generated by the program and sent to disklavier piano}
@@ -274,45 +276,51 @@ Este piano virtual, NI, é uma abreviação para \emph{Native Instruments}, uma 
 
 \begin{citacao}
 \traducao{
-Impromptu é uma linguagem e um ambiente de programação OSX\footnote{Sistema Operacional Mac OSX.} para compositores, artistas sonoros, VJ's e artistas gráficos  com um interesse em programação ao vivo ou interativa. Impromptu  é um ambiente de linguagem Scheme, um membro da família das linguages Lisp. Impromptu é usado por artistas-programadores em performances de \emph{livecoding} em torno do mundo.
+Impromptu é uma linguagem e um ambiente de programação OSX\footnote{Sistema Operacional Mac OSX.} para compositores, artistas sonoros, VJ's e artistas gráficos  com um interesse em programação ao vivo ou $[$programação$]$ interativa. Impromptu  é um ambiente de linguagem Scheme, um membro da família das linguages Lisp. Impromptu é usado por artistas-programadores em performances de \emph{livecoding} em torno do mundo.
 }{
 Impromptu is an OSX programming language and environment for composers, sound artists, VJ's and graphic artists with an interest in live or interactive programming. Impromptu is a Scheme language environment, a member of the Lisp family of languages. Impromptu is used by artist-programmers in livecoding performances around the globe.\emph{Disponível em \url{http://impromptu.moso.com.au/}}}
 \end{citacao}
 
-Segundo \citeonline[p.~823]{sorensen_impromptu_2010}, o Impromptu é um ambiente de programação ciberfísico, análogo à \emph{partitura} tradicional. O ambiente suporta a compilação de pequenos trechos de códigos executáveis em linguagem \emph{Scheme} (\csf{L}{ask}). Nos termos de \citeonline{magnusson_algorithms_2011}, os algoritmos codificados nesta linguagem são instrumento. Nos termos de \citeonline[p.~5]{fenerich_marulho_2014}, o código é uma programação-partitura:
+Segundo \citeonline[p.~823]{sorensen_impromptu_2010}, o Impromptu é um ambiente de programação ciberfísico, análogo à \emph{partitura} tradicional. O ambiente suporta a compilação de pequenos trechos de códigos executáveis em linguagem \emph{Scheme} (\csf{L}{ask}). Nos termos de \citeonline{magnusson_algorithms_2011}, os algoritmos codificados nesta linguagem \emph{são o instrumento}. Nos termos de \citeonline[p.~5]{fenerich_marulho_2014}, o código é uma programação-partitura:
 
 \begin{citacao}
 \traducao{Considere a analogia da partitura musical tradicional. A partitura provê uma especificação estática da intenção -- um programa de domínio estático. Musicistas, representam o domínio do processo, executam ações requeridas para realizar ou reificar a partitura. Finalmente, as ações no domínio do processo resultam em ondas sonoroas que são percebidas por uma audiência humana como música. Este estágio final é o nosso domínio real de trabalho. Agora considere um domínio de programação dinâmica no qual o compositor concebe e descreve uma partitura em \emph{tempo-real}. Nós geralmente chamamos este tipo de composição de improvisação. \textbf{Na improvisação o(a) musicista é envolvido em um circuito-fechado retroalimentado que envolve premeditação, movendo para ação casual e finalmente para reação, refinamento e reflexão.}}{
 Consider the analogy of a traditional musical score. The score provides a static specification of intention – a static program domain. Musicians, representing the process domain, perform the actions required to realise or reify the score. Finally, the actions in the process domain result in sound waves which are perceived by a human audience as music. This final stage is our real-world task domain. Now consider a dynamic program domain in which a composer conceives of and describes a musical score in real-time. We commonly call this type of composition improvisation. In it, the improvising musician is involved in a feedback loop involving forethought, moving to causal action and finally toreaction, refinement and reflection.}
 \end{citacao}
 
-Existe uma restrição quanto ao nicho de usuários do \emph{software}, com suporte para usuários de computadores Apple. Para lidar com outros sistemas (como por exemplo, sistemas operacionais Linux) e arquiteturas de processamento (32bit e 64 bit), o projeto foi liberado como código-aberto, com o nome \emph{Extempore}.
+Existe uma restrição quanto ao nicho de usuários do \emph{software}, com suporte para usuários de computadores Apple. 
+
+Para lidar com outros sistemas (como por exemplo, sistemas operacionais Linux) e outras arquiteturas de processamento (32bit e 64 bit), o projeto foi liberado como código-aberto, com o nome \emph{Extempore}.
 
 \subsection{Extempore}
 
 O \emph{Extempore} possui um sistema humano-máquina reflexivo \ver{sec:grossi}. Um nome específico, para a atividade de programar, escutar o resultado, e recodificar, é simbolicamente chamado de \emph{programação ciberfísica}:
 
 \begin{citacao}
-\traducao{\emph{Extempore} é projetado para suportar um estilo de programação apelidado de $[$''$]$programação ciberfísica''.Programação ciberfísica suporta a noção de um programador humano operando como um agente ativo em uma rede distribuída em tempo-real de sistemas ambientalmente conscientes.} {Extempore is designed to support a style of programming dubbed 'cyberphysical' programming. Cyberphysical programminEntre as diferenças do Lisp e Schemeg supports the notion of a human programmer operating as an active agent in a real-time distributed network of environmentally aware systems. \disponivelem{https://github.com/digego/extempore}. }
+\traducao{\emph{Extempore} é projetado para suportar um estilo de programação apelidado de $[$''$]$programação ciberfísica''. Programação ciberfísica suporta a noção de um programador humano operando como um agente ativo em uma rede distribuída em tempo-real de sistemas ambientalmente conscientes.} {Extempore is designed to support a style of programming dubbed 'cyberphysical' programming. Cyberphysical programming supports the notion of a human programmer operating as an active agent in a real-time distributed network of environmentally aware systems. \disponivelem{https://github.com/digego/extempore}. }
 \end{citacao}
 
-Entre suas características de interesse musical, incluem\disponivelem{http://benswift.me/2012/08/07/extempore-philosophy/}:
+Entre suas características incluímos \disponivelem{http://benswift.me/2012/08/07/extempore-philosophy/}:
+
+- Codificação  de alto-nível em linguagem Scheme;
 
 - Processamento de Sinais Digitais (DSP) \footnote{Sobre DSP, \cfcite{smith_dsp_2012}.} em  tempo-real;
 
-- Sequenciamento de áudio de alto-nível, baseado em notas, como o disparo de sons baseado em parâmetros como altura, intensidade e duração. \disponivelem{http://benswift.me/2012/10/15/playing-an-instrument-part-i/}.;
+- Sequenciamento de áudio, baseado em notas, como o disparo de sons parametrizados em altura, intensidade e duração \disponivelem{http://benswift.me/2012/10/15/playing-an-instrument-part-i/};
 
-A segunda característica será explorada neste capítulo como base técnica para o processo criativo em \emph{Study in Keith}
+As primeira e terceiras características serão explorada neste capítulo como base do processo de codificação na improvisação \emph{Study in Keith}.
 
 \subsection{Scheme}\label{sec:scheme}
 
-Scheme é citado em diferentes fontes na \emph{internet} como uma definição de linguagem, ou dialeto, da linguagem Lisp (criado por John McCarthy em 1958), criado por Guy L. Steele e Gerald Jay Sussman em 1975. Uma das características da linguagem LISP é o tipo de representação de um código, ou seu padrão de notação, baseado em uma gramática generativa:
+Esta subseção é dedicada a explicar a \emph{Linguagem de A Study in Keith} (\csf{L}{ask}) \ver{tab:universodeconceitos}, ou a linguagem de programação \emph{Scheme}.
 
-\begin{citacao}
-\traducao{Um sistema chamado LISP (para Processador de LISta) foi desenvolvido para um computador IBM 704 pelo grupo de Inteligência Artificial no M.I.T. O sistema foi projetado para facilitar experimentos com um sistema proposto chamado ``Recebedor de conselhos'' $[$Advice Taker$]$, onde uma máquina pode ser instruída para lidar com sentenças declarativas, bem como imperativas, e poderia exibir um ``senso comum'' no desempenho de suas instruções. A proposta original para o \emph{Advice Taker} foi feita em novembro de 1958. O principal requerimento foi um sistema de programação para manipular expressões que representam sentenças formais, declarativas e imperativas, de modo que o sistema \emph{Advice Taker} pode fazer deduções. No curso do desenvolvimento, o sistema LISP passou por diversas simplificações e, eventualmente, se baseou em um esquema para representar funções recursivas parciais de certas classes de expressões simbólicas. Esta representação é independente do computador IBM 704, ou qualquer outro computador eletrônico, e agora parece útil expor o sistema, começando com a classe de expressões chamadas expressões-S e as chamadas funções-S \cite[seção 1]{mccarthy_recursive_1960}.}{A programming system called LISP (for LISt Processor) has been developed for the IBM 704 computer by the Artificial Intelligence group at M.I.T. The system was designed to facilitate experiments with a proposed system called the Advice Taker, whereby a machine could be instructed to handle declarative as well as imperative sentences and could exhibit ``common sense'' in carrying out its instructions. The original proposal [1] for the Advice Taker was made in November 1958. The main requirement was a programming system for manipulating expressions representing formalized declarative and imperative sentences so that the Advice Taker system could make deductions.In the course of its development the LISP system went through several stages of simplification and eventually came to be based on a scheme for representing the partial recursive functions of a certain class of symbolic expressions. This representation is independent of the IBM 704 computer, or of any other electronic computer, and it now seems expedient to expound the system by starting with the class of expressions called S-expressions and the functions called S-functions.}
-\end{citacao}
+\emph{Scheme} é citado em diferentes fontes na \emph{internet} como uma definição de linguagem, ou dialeto, da linguagem Lisp (criado por John McCarthy em 1958), criado por Guy L. Steele e Gerald Jay Sussman em 1975. Uma das características da linguagem LISP é o tipo de representação de um código, ou seu padrão de notação, baseado em uma gramática generativa:
 
-A definição de funções-S foge do escopo de nossa pesquisa, mas ela pode ser compreendida de maneira intuitiva, a partir das expressões-S. \citeonline[seção~3]{mccarthy_recursive_1960} define expressões- S como ``átomos'' e listas de átomos, onde um átomo também pode ser uma lista de átomos. Existe uma classe de expressões simbólicas definida por parênteses. Dentro desta expressão simbólica são inseridos átomos (ver exemplo \ref{ex:s-expression}, \ref{ex:s-expression2} e \ref{ex:s-expression3}). 
+%\begin{citacao}
+%\traducao{Um sistema chamado LISP (para Processador de LISta) foi desenvolvido para um computador IBM 704 pelo grupo de Inteligência Artificial no M.I.T. O sistema foi projetado para facilitar experimentos com um sistema proposto chamado ``Recebedor de conselhos'' $[$Advice Taker$]$, onde uma máquina pode ser instruída para lidar com sentenças declarativas, bem como imperativas, e poderia exibir um ``senso comum'' no desempenho de suas instruções. A proposta original para o \emph{Advice Taker} foi feita em novembro de 1958. O principal requerimento foi um sistema de programação para manipular expressões que representam sentenças formais, declarativas e imperativas, de modo que o sistema \emph{Advice Taker} pode fazer deduções. No curso do desenvolvimento, o sistema LISP passou por diversas simplificações e, eventualmente, se baseou em um esquema para representar funções recursivas parciais de certas classes de expressões simbólicas. Esta representação é independente do computador IBM 704, ou qualquer outro computador eletrônico, e agora parece útil expor o sistema, começando com a classe de expressões chamadas expressões-S e as chamadas funções-S \cite[seção 1]{mccarthy_recursive_1960}.}{A programming system called LISP (for LISt Processor) has been developed for the IBM 704 computer by the Artificial Intelligence group at M.I.T. The system was designed to facilitate experiments with a proposed system called the Advice Taker, whereby a machine could be instructed to handle declarative as well as imperative sentences and could exhibit ``common sense'' in carrying out its instructions. The original proposal [1] for the Advice Taker was made in November 1958. The main requirement was a programming system for manipulating expressions representing formalized declarative and imperative sentences so that the Advice Taker system could make deductions.In the course of its development the LISP system went through several stages of simplification and eventually came to be based on a scheme for representing the partial recursive functions of a certain class of symbolic expressions. This representation is independent of the IBM 704 computer, or of any other electronic computer, and it now seems expedient to expound the system by starting with the class of expressions called S-expressions and the functions called S-functions.}
+%\end{citacao}
+
+%A definição de funções-S foge do escopo de nossa pesquisa, mas ela pode ser compreendida de maneira intuitiva, a partir das expressões-S. \citeonline[seção~3]{mccarthy_recursive_1960} define expressões- S como ``átomos'' e listas de átomos, onde um átomo também pode ser uma lista de átomos. Existe uma classe de expressões simbólicas definida por parênteses. Dentro desta expressão simbólica são inseridos átomos (ver exemplo \ref{ex:s-expression}, \ref{ex:s-expression2} e \ref{ex:s-expression3}). 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{example}{Expressão simbólica vazia}\label{ex:s-expression}
@@ -322,7 +330,7 @@ A definição de funções-S foge do escopo de nossa pesquisa, mas ela pode ser 
 \end{example}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Átomos, extraídos de sentenças abstratas, como listas de átomos:
+Átomos, extraídos de sentenças abstratas, como listas de átomos \citeonline[seção~3]{mccarthy_recursive_1960}:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{example}{Expressão simbólica com átomos}\label{ex:s-expression2}
@@ -371,7 +379,7 @@ A definição de funções-S foge do escopo de nossa pesquisa, mas ela pode ser 
 \end{example}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-A linguagem LISP implementa um tipo de notação chamada \emph{notação prefixada}, inventada por Jan Łukasiewicz em 1924, para simplificar a lógica proposicional ($P~\to~Q$). De fato, neste ponto, explicitamos uma característica da linguagem \csf{L}{ask}.Esta simplificação da notação pode, por exemplo, expressar uma proposição como  ``some uma unidade e uma unidade, logo teremos duas unidades'',  ou $1+1=2$, para uma operação indefinida, como ``some elementos, que neste caso, são dois unitários, logo duas unidades'', ou $+ 1 1$:
+Uma característica da \emph{Linguagem de A Study in Keith} (\csf{L}{ask}) é sua notação para expressar uma proposição como  ``some uma unidade e uma unidade, logo teremos duas unidades'',  ou $1+1=2$, para qualquer operação indefinida, como ``some elementos, que neste caso, são dois unitários, logo duas unidades'', ou $+ 1 1$:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{example}{Notação prefixada}
@@ -388,7 +396,7 @@ A linguagem LISP implementa um tipo de notação chamada \emph{notação prefixa
 \end{example}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Entre as diferenças do Lisp e Scheme, existe um vocabulário pré-definido para criação de sentenças, de forma que o significado do código possa ser legível, sem a necessidade de consideração de contextos. Para os propósitos deste trabalho definimos as variáveis e funções:
+Existe um vocabulário pré-definido para criação de sentenças, de forma que o significado do código possa ser legível para os propósitos desejados
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{example}{Notação Scheme}
@@ -411,7 +419,7 @@ Entre as diferenças do Lisp e Scheme, existe um vocabulário pré-definido para
 \end{example}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Para os propósitos deste trabalho, será útil exemplificar musicalmente. \citeonline[p.~823-824]{sorensen_impromptu_2010} apresenta um código musical fictício, mais especificamente, direcionado como uma experiência mental de uma sonoridade de \emph{jazz} tonal. 
+Para os propósitos deste trabalho, será útil apresentar um código musical fictício, mais especificamente, direcionado como uma experiência mental de uma sonoridade de \emph{jazz} tonal \citeonline[p.~823-824]{sorensen_impromptu_2010}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{example}{Exemplo musical para o Scheme}
@@ -480,7 +488,7 @@ Two performers are present on stage. One, a violinist, stands paused, bow at the
 \end{example}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Este código será discutido, na próxima seção, como a estratégia transversal, \csf{T}{ask}. Propomos um particionamento do código para melhor compreensão:
+Este código será discutido como uma estratégia transversal \csf{T}{ask}. Para isso, particionamos o código para uma melhor compreensão:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{example}{Nome da estratégia transversal}
