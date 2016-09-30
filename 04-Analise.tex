@@ -1,11 +1,9 @@
 \subsection{Definição do instrumento e do tempo}\label{sec:define_instr}
 
-Seu início é um pequeno comentário que contem o nome do executante e seu email para contato (primeiros sete segundos), bem como a escrita de um código que inicializa o NI-Akoustik (até 0$'$43$''$, ver \autoref{fig:SIK_piano}). 
+Seu início é um pequeno comentário que contem o nome do executante e seu email para contato (primeiros sete segundos), bem como a escrita de um código que inicializa o NI-Akoustik (até 0$'$43$''$): 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{example}{Definição de instrumento}
-  \centering 
-Primeiros eventos musicais gerados a partir das primeiras estruturas válidas de código. \textbf{Fonte}: \cite{sorensen_youtube_2014}.
   \begin{minted}[fontsize=\footnotesize]{cl}
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     ;; Andrew Sorensen andrew@moso.com.au
@@ -25,7 +23,6 @@ Em \tempo{0}{52} Sorensen define um tempo base. Em seguida, Sorensen apaga o có
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{example}{Definição de tempo}\label{ex:def_tempo}
   \centering
-  Definição do tempo base. \textbf{Fonte}: \cite{sorensen_youtube_2014}.
   \begin{minted}[fontsize=\footnotesize]{cl}
     (define *metro* (make-metro 110))
   \end{minted}
@@ -35,7 +32,7 @@ Em \tempo{0}{52} Sorensen define um tempo base. Em seguida, Sorensen apaga o có
 
 \subsubsection{Definição de uma sequência de blocos}
 
-Até \tempo{1}{07}, uma rotina auxiliar é definida como um laço iterativo. Porém não encontramos sua especificação no código-fonte do Extempore.
+Até \tempo{1}{07}, uma rotina auxiliar é definida como um laço iterativo. Porém não encontramos sua especificação no código-fonte do \emph{Extempore}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{example}{Definição de uma função auxiliar}
@@ -67,7 +64,7 @@ Este bloco de códigos cria uma díade, no âmbito de um Ré 2 (MIDI 50) e Si be
 
 \subsubsection {Definição de blocos}\label{sec:define_chords}
 
-Em \tempo{1}{08}, a função \emph{chords} surge no fluxo audiovisual, sem nenhum processo de escrita. Este comportamento caracteriza a utilização de, ou uma cópia/cola de texto, ou de uma execução de um macro do editor de texto usado. Macros são pequenos programas no editor que auxiliam o processo de produção do código. De qualquer forma é importante salientar que o código é preparado \cite{sorensen_youtube_2014}.
+Em \tempo{1}{08}, a função \emph{chords} surge no fluxo audiovisual, sem nenhum processo de escrita. Este comportamento caracteriza a utilização de, ou uma cópia/cola de texto, ou de uma execução de um macro do editor de texto usado. Macros são pequenos programas no editor que auxiliam o processo de produção do código. De qualquer forma é importante salientar que o código é preparado por \citeonline{sorensen_youtube_2014}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{example}{Algoritmo que define os acordes}
@@ -156,14 +153,14 @@ Este código inicial é então modificado, e finalizado em \tempo{1}{57}, moment
 \end{example}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Duas transcrições desta primeira figura seguem uma estrutura literal do código, e uma perceptiva. Os primeiros eventos sonoros que ocorrem após o momento de silêncio foram transcritos antes da análise do código. Enquanto Sorensen define um tempo regular de 110 BPM  \ver{ex:def_tempo}, transcrevemos este trecho com um andamento entre 35--40 BPM \ver{fig:ask1}. É interessante notar que tais figuras simbolizam neumas, no caso, um \emph{bipunctum}, ou duas notas repetidas, na mão direita, e na mão esquerda um \emph{clivis}, ou um \traducao{acento agudo com um grave}{\cfcite[\emph{idem}]{gasperini_semiografia_1905}. Unione dell'accento acuto col grave}. No caso específico desta primeira figura, na mão direita, um \emph{bipunctum} , e na mão esquerda, uma \emph{clivis}.
+Duas transcrições desta primeira figura seguem uma estrutura literal do código, e uma perceptiva. Os primeiros eventos sonoros que ocorrem após o momento de silêncio foram transcritos antes da análise do código. Enquanto Sorensen define um tempo regular de 110 BPM, transcrevemos este trecho com um andamento entre 35--40 BPM \ver{fig:ask1}. %É interessante notar que tais figuras simbolizam neumas, no caso, um \emph{bipunctum}, ou duas notas repetidas, na mão direita, e na mão esquerda um \emph{clivis}, ou um \traducao{acento agudo com um grave}{\cfcite[\emph{idem}]{gasperini_semiografia_1905}. Unione dell'accento acuto col grave}. No caso específico desta primeira figura, na mão direita, um \emph{bipunctum} , e na mão esquerda, uma \emph{clivis}.
 
 \begin{figure}[!h]
   \centering
   \centering 
   \input{./ask1}
   \input{./ask2}
-  \input{./gregorian}
+  %\input{./gregorian}
   \caption{Transcrição literal e perceptiva do primeiro evento em \emph{A Study in Keith}. \textbf{Fonte}: autor.}
   \label{fig:ask1}
 \end{figure}
@@ -227,13 +224,13 @@ O que permite executar como:
 \end{minted}
 \end{example}
 
-\subsubsection{Primeira sequência de blocos de eventos}\label{sec:primeiro_evento}
+\section{Primeira sequência de blocos de eventos}\label{sec:primeiro_evento}
 
-A \autoref{fig:ask3} indica uma primeira sequência de nêumas, gerados pelo algoritmo acima, em um padrão que é repetido por dois ciclos (blocos de eventos \pressingthree{E}{ask}{0} e \pressingthree{E}{ask}{1}). Durante este tempo, Sorensen realiza uma mudança (1$^o$ ciclo de bricolagem). Esta mudança transita entre o segundo bloco \pressingthree{E}{ask}{1} e terceiro bloco \pressingthree{E}{ask}{2}, e sua exeucção resulta em uma transformação da acentuação, o que termina por colocar, no último compasso deste ciclo, o sétimo grau no tempo forte e o primeiro grau no tempo fraco. 
+A \autoref{fig:ask3} indica uma primeira sequência de notas geradas pelo algoritmo, um padrão que é repetido por dois ciclos (blocos de eventos \pressingthree{E}{ask}{0} e \pressingthree{E}{ask}{1}). Durante este tempo, Sorensen realiza uma mudança \ver{fig:bricolagem}. Esta mudança transita entre o segundo bloco \pressingthree{E}{ask}{1} e terceiro bloco \pressingthree{E}{ask}{2}, e sua exeucção resulta em uma transformação da acentuação, o que termina por colocar, no último compasso deste ciclo, o sétimo grau no tempo forte e o primeiro grau no tempo fraco. 
 
-\subsubsection*{Primeiro Bloco}
+\subsection{Primeiro Bloco}
 
-O primeiro bloco de eventos \pressingthree{E}{ask}{0} aprensenta um contraponto de primeira espécie, aticulado em tempos fortes e fracos, de acordo com um movimento cadencial $i~\Rightarrow~vii$ \ver{fig:ask3}. Uma característica \pressingthree{F}{ask}{0} do algoritmo é sua direcionalidade em um âmbito de quinta em um número de compassos pares (4 nesse caso). 
+O primeiro bloco de eventos \pressingthree{E}{ask}{0} aprensenta um contraponto de primeira espécie, aticulado em tempos fortes e fracos, de acordo com um movimento cadencial $i~\Rightarrow~vii$ \ver{fig:ask3}. 
 
 \begin{figure}[!h]
   \centering
@@ -242,45 +239,51 @@ O primeiro bloco de eventos \pressingthree{E}{ask}{0} aprensenta um contraponto 
   \label{fig:ask3}
 \end{figure}
 
-A aparente repetição de um mesma classe de eventos sonoros, este mesmo um objeto \pressingthree{O}{ask}{0}, pode ser diferenciada através de figuras neumáticas na mão direita e na mão esquerda \exref{fig:neumaMD1}:
+Esta cadência descaracteriza \emph{A Study in Keith} ser uma peça, do ponto de vista harmônico, semelhante aos Concertos \emph{Sun Bear} de Keith Jarret. Em outras palavras, esta é uma razão pela qual \emph{A Study in Keith} é apenas inspirado por Keith Jarret, mas não é Keith Jarret, no sentido harmônico que a expressão carrega \ver{sec:proposicao}.
 
-\begin{example}{Transcrição de neumas do primeiro bloco}\label{fig:neumaMD1}
+Uma pequena comparação com o plano harmônico do concerto de Kyoto \ver{sec:sunbearanal} com primeiro bloco de \emph{A Study in Keith} pode elucidar a questão. Enquanto em Jarret temos uma estrutura cromática oblíqua a um baixo pedal, em Sorensen temos uma estrutura diatônica e com movimentos contrários:
 
-  Notação neumática para a um \emph{bipunctum}, dois \emph{podatus} e uma \emph{clivis} na mão direita. E na mão esquerda, três \emph{clivis} e um bipunctum. 
+%A aparente repetição de um mesma classe de eventos sonoros, este mesmo um objeto \pressingthree{O}{ask}{0}, pode ser diferenciada através de figuras neumáticas na mão direita e na mão esquerda \exref{fig:neumaMD1}:
 
-  \centering{\input{./ask6}}
+\begin{example}{Redução do primeiro bloco}\label{fig:neumaMD1}
 
-  Notação schenkeriana que expõe um movimento plagal estrutural na mão direita (\^1-\^4-\^1), com um \emph{porrectus} (um acento agudo, um grave e um agudo) estrutural na mão esquerda (\^5-\^2-\^3).
+%  Notação neumática para a um \emph{bipunctum}, dois \emph{podatus} e uma \emph{clivis} na mão direita. E na mão esquerda, três \emph{clivis} e um bipunctum. 
+
+%  \centering{\input{./ask6}}
+
+Movimentos da voz superior (\^1-\^4-\^1) e inferior (\^5-\^2-\^3).
 
   \centering{\input{./ask12}}
 
 \end{example}
 
-\subsubsection*{Segundo Bloco}
+\subsection{Segundo Bloco}
+
+O Segundo bloco dá continuidade ao contraponto inicial, de forma que o âmbito melódico da voz superior é mantida e da voz inferior é restringida:
 
 \begin{figure}[!h]
   \centering
   \input{./ask4}
   \caption{Segundo bloco de eventos musicais. \textbf{Fonte}: autor.}
-  \label{fig:ask3}
+  \label{fig:ask4}
 \end{figure}
 
-Que pode ser reescrito como neumas na mão direita:
+%Que pode ser reescrito como neumas na mão direita:
 
-\begin{example}{Transcrição de neumas do segundo bloco}\label{fig:neumaMD2}
+\begin{example}{Redução do segundo bloco}\label{fig:neumaMD2}
 
-  Notação neumática para cinco \emph{podatus} e uma \emph{clivis} na mão direita. E na mão esquerda uma \emph{clivis}, um \emph{podatus}, um \emph{bipunctus}, três \emph{podatus}.
+%  Notação neumática para cinco \emph{podatus} e uma \emph{clivis} na mão direita. E na mão esquerda uma \emph{clivis}, um \emph{podatus}, um \emph{bipunctus}, três \emph{podatus}.
 
-  \centering{\input{./ask8}}
+%  \centering{\input{./ask8}}
 
- Notação schenkeriana que expõe um movimento autêntica estrutural na mão direita (\^1-\^5-\^1), com uma repetição do \emph{porrectus} anterior (\^5-\^2-\^3).
+Movimento da voz superior (\^1-\^5-\^1) e inferior (\^5-\^2-\^3).
 
   \centering{\input{./ask13}}
 \end{example}
 
-\subsubsection*{Terceiro Bloco}
+\subsection{Terceiro Bloco}
 
-Enquanto nos blocos \pressingthree{E}{ask}{0} e \pressingthree{E}{ask}{1} existem eventos significativos do ponto de vista figurativo, o aspecto rítmico é único (um tempo forte no $i$ grau, um tempo fraco na $vii$ grau). É importante destacar que, entre estes blocos, Sorensen realiza uma transformação na estratégia transversal
+Enquanto nos blocos \pressingthree{E}{ask}{0} e \pressingthree{E}{ask}{1} existem eventos significativos do ponto de vista figurativo, o aspecto rítmico é único (um tempo forte no $i$ grau, um tempo fraco na $vii$ grau). É importante destacar que, entre estes blocos, Sorensen realiza uma transformação na estratégia transversal:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{example}{Primeira transformação da estratégia transversal}
@@ -320,15 +323,14 @@ O que, durante esta transição, gera uma transformação na acentuação \ver{f
   \label{fig:ask4}
 \end{figure}
 
-\begin{example}{Transcrição de neumas do terceiro bloco}\label{fig:neumaMD3}
+\begin{example}{Redução do terceiro bloco}\label{fig:neumaMD3}
 
-  Notação neumática para: \emph{bipunctus}, um \emph{clivis}, um \emph{porrectus}, um \emph{clivis}, um \emph{torculus}, um \emph{clivis}, um \emph{torculus}, dois \emph{clivis} e um \emph{clivis subpunctum} na mão direita. E na mão esquerda um \emph{bipunctus}, um \emph{clivis}, um \emph{podatus}, um \emph{porrectus}, um \emph{torculus}, um \emph{podatus}, um \emph{torculus}, um \emph{climatus}, e um \emph{clivis}.
+%Notação neumática para: \emph{bipunctus}, um \emph{clivis}, um \emph{porrectus}, um \emph{clivis}, um \emph{torculus}, um \emph{clivis}, um \emph{torculus}, dois \emph{clivis} e um \emph{clivis subpunctum} na mão direita. E na mão esquerda um \emph{bipunctus}, um \emph{clivis}, um \emph{podatus}, um \emph{porrectus}, um \emph{torculus}, um \emph{podatus}, um \emph{torculus}, um \emph{climatus}, e um \emph{clivis}.
 
-  \centering{\input{./ask10}}
+%  \centering{\input{./ask10}}
 
-  A notação schenkeriana sugere um \emph{torculus} estrutural na mão direita (\^1-\^2-\^1), onde existe um tetracorde decendente (\^5-\^4-\^3-\^2). Na mão esquerda, destacamos o ponto mais grave da tessitura aponta para um modalismo (\^5-\^7$b$-\^3), bem como alterações nas estruturas rítmicas do trecho citado.
+Movimento da voz superior (\^1-\^2-\^1) e da voz inferior (\^5-\^7$b$-\^3).
   
-
   \centering{\input{./ask14}}
 \end{example}
 
@@ -406,4 +408,4 @@ No entanto esta característica é um dos fios condutores de uma seção \pressi
 
 \section{Discussão}
 
-Este capítulo buscou analisar uma zona de conceitos que permeiam a improvisação \emph{A Study in Keith}, publicada em 2009 por Andrew Sorensen. Levantamos, através do quadro conceitual de sistemas criativos, um conjunto de informações sobre um contexto que estimulou o improvisador-programador para sua realização. A partir de uma outra improivisação,  definida como \emph{referente opcional}, ou os \emph{Concertos Sun Bear}, Sorensen buscou simular um estilo de \emph{jazz} do pianista e compositor Keith Jarret. No entanto, esta relação é metafórica, sendo que destacamos um discurso musical eclesiástico, ou baseado na no quarto grau de uma tonalidade. Na nossa transcrição de uma cadência da abertura do disco Kyoto I (que ela mesma, necessita de verificações), encontramos uma exploração da cadência plagal, através de uma substituição por trítono. Já em Sorensen o procedimento é bastante simplificado, quase pedagógico, de como programar figuras musicais -- interpretadas como neumas --, dentro de uma simples cadência autêntica imperfeita (i -- vii). A partir desta regra, foi possível apontar figuras musicias separadas em três blocos, que formam uma primeira sequência do improviso, separada por uma primeira interrupção de uma próxima sequência, ainda não analisada. Desta forma, foi possível delinear um objetivo da improvisação, que é transformar uma classe de objetos sonoros (cuja caracterísitca é ser um contraponto de primeira espécie, com articulação forte-fraco), dentro de um contorno melódico, em um contraponto de segunda espécie, cuja acentuação é alterada. Por outro lado, nossa análise não contemplou sequências seguintes, o que impediu observar detalhes sobre o processo geral da improvisação. Por fim, descrevemos esta análise como uma experiência preliminar em análise de códigos e, por isso mesmo, o Quadro Conceitual de Sistemas Criativos de Alex McLean, e o Modelo de Improvisação de Jeff Pressing, se apresentam como uma interessante ferramente metodológica. 
+Este capítulo buscou analisar uma improvisação publicada em 2009 por Andrew Sorensen. Levantamos um conjunto de informações que estimularam o improvisador-programador a realizar \emph{A Study in Keith}. A partir de uma outra improivisação,  definida como \emph{referencial zero}, ou os \emph{Concertos Sun Bear}, Sorensen buscou simular um estilo de \emph{jazz} do pianista e compositor Keith Jarret. No entanto, esta relação é pouco significativa do ponto de vista harmônico. Na nossa transcrição de uma cadência da abertura do disco Kyoto I, encontramos uma exploração da cadência plagal do \emph{blues} por substituição de trítono. Já em Sorensen o procedimento é uma simples cadência \emph{i} -- \emph{vii}. A partir desta regra, foi possível apontar figuras musicias separadas em três blocos, o que delineou um método de análise para outras improvisações de código. Por outro lado, nossa análise não contemplou sequências seguintes, o que impediu observar detalhes sobre o processo geral da improvisação. Nosso interesse residiu em investigar o ciclo de elaboração/codificação apresentado na \autoref{fig:bricolagem} (ver p.~\pageref{fig:bricolagem}). Por fim, descrevemos esta análise como uma experiência preliminar em análise de códigos de um ponto de vista cognitivista. 
